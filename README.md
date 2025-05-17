@@ -28,7 +28,7 @@ A simple and effective web app to help users learn and practice Danish vocabular
 ## 🚀 Deployment
 
 Deployed via **GitHub Pages**.  
-👉 Live Site: `https://github.com/GraceDuquiza/Danish_Vocab_Trainer`
+👉 Live Site: `https://github.com/GraceDuquiza/Danish_Vocab_Trainer/`
 
 ### To deploy:
 1. Push the project to your GitHub repository.
