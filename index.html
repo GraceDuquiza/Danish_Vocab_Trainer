@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Danish Vocabulary Trainer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Danish Vocabulary Trainer</h1>
+
+        <!-- STUDY MODE -->
+        <div id="study-mode">
+            <label for="category-select">Choose category:</label>
+            <select id="category-select">
+                <option value="verber">Verber</option>
+                <option value="substantiver">Substantiver</option>
+                <option value="adjektiver">Adjektiver</option>
+                <option value="adverbKonjunktion">Adverbier & Konjunktioner</option>
+            </select>
+
+            <div id="word-card" class="card">
+                <h2 id="study-danish-word">Ord</h2>
+                <p><strong>English:</strong> <span id="english-meaning">Meaning</span></p>
+                <p><strong>Example:</strong> <span id="example-sentence">Example sentence here</span></p>
+            </div>
+
+            <button id="next-btn">Next Word</button>
+        </div>
+
+        <!-- QUIZ MODE -->
+        <div id="quiz-mode" style="display: none;">
+
+            <!-- ✅ Move reverse switch here -->
+            <label style="margin-bottom: 15px; display: block;">
+                <input type="checkbox" id="reverse-mode" />
+                Switch to English ⇄ Danish
+            </label>
+            <div id="quiz-category-select">
+                <p><strong>Select a Category:</strong></p>
+                <button class="category-option" data-category="verber">Verber</button>
+                <button class="category-option" data-category="substantiver">Substantiver</button>
+                <button class="category-option" data-category="adjektiver">Adjektiver</button>
+                <button class="category-option" data-category="adverbKonjunktion">Adverbier & Konjunktioner</button>
+            </div>
+
+        
+            <!-- QUIZ QUESTION DISPLAY -->
+            <div id="quiz-question">
+                <h2 id="quiz-word">Ord</h2>
+            </div>
+
+            <!-- MULTIPLE CHOICE OPTIONS -->
+            <div id="choices" class="choice-container"></div>
+
+            <!-- QUIZ CONTROLS -->
+            <div class="controls">
+                <button id="show-answer-btn" style="display:none;">👁 Show Answer</button>
+                <button id="mark-correct-btn" style="display:none;">✅ Correct</button>
+                <button id="mark-wrong-btn" style="display:none;">❌ Wrong</button>
+                <button id="next-question-btn" style="display:none;">➡️ Next</button>
+                <button id="quit-quiz-btn" style="display:none;">🚪 Quit Quiz</button>
+            </div>
+
+            <p id="score">Score: 0/0</p>
+        </div>
+
+        <!-- MAIN START BUTTON -->
+        <button id="start-quiz-btn">🎯 Start Quiz</button>
+        <!-- Exit-->
+        <button id="exit-app-btn" class="exit-btn">🚪 Exit App</button>
+    </div>
+
+    <!-- SCRIPT FILES -->
+    <script src="verber.js"></script>
+    <script src="substantiver.js"></script>
+    <script src="adjektiver.js"></script>
+    <script src="adverbKonjunktion.js"></script>
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+
+
+    <footer class="app-footer">
+    <p>Bliv Klar til PD3 ordliste— Made with ❤️ by Grace D. O </a></p>
+    </footer>
+</body>
+</html>
