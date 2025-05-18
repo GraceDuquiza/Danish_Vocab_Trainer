@@ -55,20 +55,5 @@ window.addEventListener("DOMContentLoaded", function () {
         loadCategory(e.target.value);
     });
 
-        // ✅ Call it directly
-        loadCategory(categorySelect.value);
-
-        document.getElementById("exit-app-btn").addEventListener("click", () => {
-    // Clear the page to simulate exiting
-    document.body.innerHTML = `
-        <div class="exit-screen">
-        <h1>Tak og farvel! 👋</h1>
-        <p>Appen er nu lukket.</p>
-        <button onclick="location.reload()">🔁 Genstart</button>
-        </div>
-    `;
-    });
-
-
 
 });

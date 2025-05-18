@@ -100,8 +100,7 @@ select {
     margin: 24px 0;
 }
 
-/* BUTTONS */
-button {
+button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn) {
     width: 100%;
     max-width: 320px;
     margin: 10px auto;
@@ -116,15 +115,15 @@ button {
     transition: all 0.3s ease;
 }
 
-button:hover {
+button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):hover {
     background: linear-gradient(135deg, #1e3a8a, #2563eb);
     transform: translateY(-1px) scale(1.02);
 }
-
-button:disabled {
+button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     background: #9497f1;
     cursor: not-allowed;
 }
+
 
 /* CONTROL GROUP */
 .controls {
@@ -153,9 +152,9 @@ button:disabled {
 
 /* CHOICE BUTTONS */
 .choice-btn {
-    background-color: black;
-    color:white;
-    border: 2px solid #5a86e4;
+    background-color: #2563eb;       /* Bright blue */
+    color: white;
+    border: 2px solid #1d4ed8;
     padding: 14px 16px;
     font-size: 16px;
     font-weight: 600;
@@ -166,10 +165,10 @@ button:disabled {
 }
 
 .choice-btn:hover {
-    background-color: #01111b;
-    border-color: #2e1894;
+    background-color: #1e40af;       /* Darker blue */
     transform: scale(1.02);
 }
+
 
 .choice-btn.correct {
     background-color: #d1fae5;
@@ -183,20 +182,38 @@ button:disabled {
     border-color: #ef4444;
 }
 
-/* QUIT & EXIT BUTTONS */
-#quit-quiz-btn,
-.exit-btn {
-    background-color: #fef2f2;
-    color: #7f1d1d;
-    border: 2px solid #f87171;
+
+/* NEXT QUESTION BUTTON */
+#next-question-btn {
+    background-color: #111111;       /* Black */
+    color: white;
+    border: none;
     font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 10px;
+    transition: background-color 0.2s ease;
 }
 
-#quit-quiz-btn:hover,
-.exit-btn:hover {
-    background-color: #fee2e2;
-    color: #991b1b;
-    border-color: #dc2626;
+#next-question-btn:hover {
+    background-color: #333333;       /* Slightly lighter black */
+}
+
+* QUIT & EXIT BUTTONS */
+#quit-quiz-btn {
+    background-color: #dc2626;       /* Strong red */
+    color: white;
+    border: 2px solid #b91c1c;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 10px;
+    transition: background-color 0.2s ease;
+}
+
+#quit-quiz-btn:hover {
+    background-color: #b91c1c;       /* Darker red on hover */
+    color: white;
 }
 
 /* FOOTER */
