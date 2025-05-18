@@ -56,16 +56,32 @@ window.addEventListener("DOMContentLoaded", function () {
             btn.textContent = option;
             btn.classList.add("choice-btn");
             btn.addEventListener("click", () => {
-                const isCorrect = option === word[fieldAnswer];
-                btn.classList.add(isCorrect ? "correct" : "wrong");
-                if (isCorrect) score++;
+            const isCorrect = option === word[fieldAnswer];
 
+                // Highlight the clicked button
+            btn.classList.add(isCorrect ? "correct" : "wrong");
+
+                // 🔥 Show correct answer if clicked wrong
+                if (!isCorrect) {
+                    Array.from(choicesContainer.children).forEach(b => {
+                        if (b.textContent === word[fieldAnswer]) {
+                            b.classList.add("correct");
+                        }
+                    });
+                } else {
+                    score++;
+                }
+
+                    // Disable all buttons
                 Array.from(choicesContainer.children).forEach(b => b.disabled = true);
+
+                    // Show next button
                 nextQuestionBtn.style.display = "inline-block";
                 updateScore();
             });
             choicesContainer.appendChild(btn);
         });
+
     }
 
     function updateScore() {
@@ -162,5 +178,5 @@ window.addEventListener("DOMContentLoaded", function () {
         studyModeEl.style.display = "block";
         startQuizBtn.style.display = "inline-block";
     });
-    
+
 });
