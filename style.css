@@ -1,4 +1,3 @@
-
 /* RESET & BASE */
 * {
     box-sizing: border-box;
@@ -28,16 +27,19 @@ main {
 
 /* CONTAINER */
 .container {
-    background: #ffffff;
+    min-height: 100vh;
     width: 100%;
     max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    padding: 40px 30px;
+    padding: 20px 10px;
     text-align: center;
     animation: slideFadeIn 0.5s ease;
 }
 
+/* Animation */
 @keyframes slideFadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -100,6 +102,7 @@ select {
     margin: 24px 0;
 }
 
+/* GENERAL BUTTON STYLES (EXCLUDES NEXT/QUIT/CHOICES) */
 button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn) {
     width: 100%;
     max-width: 320px;
@@ -119,11 +122,11 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):hover {
     background: linear-gradient(135deg, #1e3a8a, #2563eb);
     transform: translateY(-1px) scale(1.02);
 }
+
 button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     background: #9497f1;
     cursor: not-allowed;
 }
-
 
 /* CONTROL GROUP */
 .controls {
@@ -152,7 +155,7 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
 
 /* CHOICE BUTTONS */
 .choice-btn {
-    background-color: #2563eb;       /* Bright blue */
+    background-color: #2563eb;
     color: white;
     border: 2px solid #1d4ed8;
     padding: 14px 16px;
@@ -165,10 +168,9 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
 }
 
 .choice-btn:hover {
-    background-color: #1e40af;       /* Darker blue */
+    background-color: #1e40af;
     transform: scale(1.02);
 }
-
 
 .choice-btn.correct {
     background-color: #d1fae5;
@@ -182,10 +184,9 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     border-color: #ef4444;
 }
 
-
-/* NEXT QUESTION BUTTON */
+/* NEXT BUTTON */
 #next-question-btn {
-    background-color: #111111;       /* Black */
+    background-color: #111111;
     color: white;
     border: none;
     font-weight: bold;
@@ -196,12 +197,12 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
 }
 
 #next-question-btn:hover {
-    background-color: #333333;       /* Slightly lighter black */
+    background-color: #333333;
 }
 
-* QUIT & EXIT BUTTONS */
+/* QUIT BUTTON */
 #quit-quiz-btn {
-    background-color: #dc2626;       /* Strong red */
+    background-color: #dc2626;
     color: white;
     border: 2px solid #b91c1c;
     font-weight: bold;
@@ -212,8 +213,7 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
 }
 
 #quit-quiz-btn:hover {
-    background-color: #b91c1c;       /* Darker red on hover */
-    color: white;
+    background-color: #b91c1c;
 }
 
 /* FOOTER */
@@ -232,6 +232,8 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     .container {
         padding: 24px 16px;
         margin: 16px auto;
+        min-height: 100vh;
+        border-radius: 0;
     }
 
     h1 {
