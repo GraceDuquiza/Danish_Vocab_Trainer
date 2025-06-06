@@ -55,5 +55,6 @@ window.addEventListener("DOMContentLoaded", function () {
         loadCategory(e.target.value);
     });
 
-
+    // Display words for the default selected category on initial load
+    loadCategory(categorySelect.value);
 });

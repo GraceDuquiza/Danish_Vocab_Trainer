@@ -110,7 +110,8 @@ window.addEventListener("DOMContentLoaded", function () {
         document.getElementById("mark-correct-btn").style.display = "none";
         document.getElementById("mark-wrong-btn").style.display = "none";
         quitQuizBtn.style.display = show ? "inline-block" : "none";
-        nextQuestionBtn.style.display = show ? "none" : "inline-block";
+        // Always hide the next question button until a choice is made
+        nextQuestionBtn.style.display = "none";
         document.getElementById("next-btn").style.display = show ? "none" : "inline-block";
         reverseModeCheckbox.parentElement.style.display = show ? "block" : "none";
         scoreDisplay.style.display = show ? "block" : "none";
