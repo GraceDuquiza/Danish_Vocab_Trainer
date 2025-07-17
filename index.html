@@ -67,7 +67,37 @@
 
         <!-- MAIN START BUTTON -->
         <button id="start-quiz-btn">🎯 Start Quiz</button>
+    
+
+        <!-- MODAL FOR REMINDER -->
+            <div id="reminder-settings">
+                <h3>Practice Reminder</h3>
+                <label>
+                    <input type="checkbox" id="reminder-toggle" />
+                    Enable reminder
+                </label>
+                <div style="margin: .5em 0;">
+                    <label for="reminder-time">Time:</label>
+                    <input type="time" id="reminder-time" value="18:00" />
+                </div>
+                <div style="margin-bottom:.5em;">
+                    <span>Days:</span>
+                    <div id="reminder-days" style="margin-top:.2em;">
+                    <label><input type="checkbox" value="0"> Sun</label>
+                    <label><input type="checkbox" value="1"> Mon</label>
+                    <label><input type="checkbox" value="2"> Tue</label>
+                    <label><input type="checkbox" value="3"> Wed</label>
+                    <label><input type="checkbox" value="4"> Thu</label>
+                    <label><input type="checkbox" value="5"> Fri</label>
+                    <label><input type="checkbox" value="6"> Sat</label>
+                    </div>
+                </div>
+                <button id="save-reminder">Save Reminder</button>
+                <div id="reminder-status"></div>
+            </div>
     </div>
+
+
 
     <!-- SCRIPT FILES -->
     <script src="verber.js"></script>
@@ -76,6 +106,7 @@
     <script src="adverbKonjunktion.js"></script>
     <script src="script.js"></script>
     <script src="quiz.js"></script>
+    <script src="reminder.js"></script>
 
 
     <footer class="app-footer">
