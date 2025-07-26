@@ -241,6 +241,7 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     color: #334155;
     text-align: left;
     opacity: 0.95;
+
 }
 
 #reminder-settings h3 {
@@ -251,6 +252,7 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     font-weight: 600;
     text-align: left;
     letter-spacing: 0.01em;
+
 }
 
 #reminder-settings label,
@@ -259,6 +261,7 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     font-size: 0.96em;
     font-weight: 400;
     display: inline;
+
 }
 
 #reminder-days {
@@ -270,9 +273,10 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
 
 #reminder-days label {
     margin: 0;
-    font-size: 0.97em;
+    font-size: 0.90em;
     color: #334155;
     font-weight: 400;
+
 }
 
 #save-reminder {
@@ -288,6 +292,9 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     transition: background 0.15s;
     width: auto;
     margin-bottom: 8px;
+    display: block;
+    min-width: 80px;
+
 }
 
 #save-reminder:hover {
@@ -299,6 +306,7 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     min-height: 1.2em;
     margin: 6px 0 0 0;
     color: #388e3c;
+    
 }
 
 
@@ -309,6 +317,7 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     color: #64748b;
     text-align: left;
     line-height: 1.5;
+    
 }
 
 
