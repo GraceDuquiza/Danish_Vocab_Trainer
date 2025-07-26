@@ -37,6 +37,8 @@ main {
     padding: 20px 10px;
     text-align: center;
     animation: slideFadeIn 0.5s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Animation */
@@ -227,66 +229,80 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
     width: 100%;
 }
 
-
+/* Reminder settings */
 #reminder-settings {
-    max-width: 330px;
-    margin: 30px auto 0;
-    padding: 1.2em 2em;
-    background: #f4f6fa;
-    border-radius: 16px;
-    box-shadow: 0 3px 12px rgba(35,47,85,0.06);
-    font-family: 'Segoe UI', Arial, sans-serif;
-    }
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 480px;
+    padding: 0;
+    margin: 38px auto 0 auto;  /* space from content above */
+    font-size: 0.95em;
+    color: #334155;
+    text-align: left;
+    opacity: 0.95;
+}
 
-    #reminder-settings h3 {
-        margin-top: 0;
-        font-size: 1.3em;
-        color: #235fa7;
-    }
+#reminder-settings h3 {
+    font-size: 1em;
+    color: #1e3a8a;
+    margin-bottom: 4px;
+    margin-top: 0;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.01em;
+}
 
-    #reminder-days {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: center;
-        margin-top: .2em;
-    }
-    #reminder-days label {
-        margin: 0 8px 0 0; /* right space only, no bottom margin */
-        white-space: nowrap;
-        font-size: 1em;
-    }
-    #reminder-status {
-        margin-top: 1em;
-        color: #388e3c;
-        font-weight: 500;
-        min-height: 1.5em;
-    }
+#reminder-settings label,
+#reminder-settings input[type="checkbox"],
+#reminder-settings input[type="time"] {
+    font-size: 0.96em;
+    font-weight: 400;
+    display: inline;
+}
 
-    #save-reminder {
-        margin-top: 1em;
-        background: #377ad1;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 8px 20px;
-        cursor: pointer;
-        font-size: 1em;
-        transition: background .2s;
-    }
-    #save-reminder:active { 
-        background: #235fa7; 
-    }
-    input[type="time"] {
-        margin-left: 8px;
-        padding: 3px 6px;
-        border-radius: 5px;
-        border: 1px solid #bbb;
-        }
-    
-    input[type="checkbox"] {
-        accent-color: #235fa7;
-    }
+#reminder-days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    margin: 0.4em 0 0.8em 0;
+}
+
+#reminder-days label {
+    margin: 0;
+    font-size: 0.97em;
+    color: #334155;
+    font-weight: 400;
+}
+
+#save-reminder {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 18px;
+    margin-top: 8px;
+    font-size: 0.96em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    width: auto;
+    margin-bottom: 8px;
+}
+
+#save-reminder:hover {
+    background: #1e3a8a;
+}
+
+#reminder-status {
+    font-size: 0.94em;
+    min-height: 1.2em;
+    margin: 6px 0 0 0;
+    color: #388e3c;
+}
+
+
+
 .footnote {
     margin-top: 16px;
     font-size: 12px;
@@ -321,6 +337,11 @@ button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
 
     #quiz-word {
         font-size: 22px;
+    }
+    #reminder-settings {
+        font-size: 0.92em;
+        padding: 0;
+        margin-top: 32px;
     }
 
 }
