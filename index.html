@@ -25,8 +25,9 @@
                 <p><strong>English:</strong> <span id="english-meaning">Meaning</span></p>
                 <p><strong>Example:</strong> <span id="example-sentence">Example sentence here</span></p>
             </div>
-
+            <button id="prev-btn">Previous Word</button>
             <button id="next-btn">Next Word</button>
+            
         </div>
 
         <!-- QUIZ MODE -->
@@ -59,64 +60,47 @@
                 <button id="show-answer-btn" style="display:none;">👁 Show Answer</button>
                 <button id="mark-correct-btn" style="display:none;">✅ Correct</button>
                 <button id="mark-wrong-btn" style="display:none;">❌ Wrong</button>
+                <button id="prev-question-btn" style="display:none;">⬅️ Previous</button> <!-- 🟢 New Button -->
                 <button id="next-question-btn" style="display:none;">➡️ Next</button>
             </div>
             <p id="score">Score: 0/0</p>
             <button id="quit-quiz-btn" style="display:none;">🚪 Quit Quiz</button> 
         </div>
 
-        <!-- MAIN START BUTTON -->
-        <button id="start-quiz-btn">🎯 Start Quiz</button>
-        
+        <!-- MAIN START BUTTONS -->
+        <div id="main-buttons">
+            <button id="start-quiz-btn">🎯 Start Quiz</button>
+            <button id="nav-skriveguide">📖 Skriveguide</button>
+            </div>
 
-        <!-- PRACTICE REMINDER -->
-        <!-- Place this at the bottom inside your main .container -->
-        <div id="reminder-settings" class="reminder-inline">
-            <h3>Practice Reminder</h3>
-            <label>
-                <input type="checkbox" id="reminder-toggle" />
-                Enable reminder
-            </label>
-            <div style="margin: .5em 0;">
-                <label for="reminder-time">Time:</label>
-                <input type="time" id="reminder-time" value="18:00" />
+            <!-- 🟢 Skriveguide Section (hidden initially) -->
+            <div id="skriveguide" style="display: none;">
+            <div id="main-content"></div>
+
+            <!-- 🟣 New Back to Quiz Button -->
+            <div class="guide-nav">
+                <button id="back-to-quiz-btn">⬅️ Back to Menu</button>
             </div>
-            <div style="margin-bottom:.5em;">
-                <span>Days:</span>
-                <div id="reminder-days" style="margin-top:.2em;">
-                    <label><input type="checkbox" value="0"> Sun</label>
-                    <label><input type="checkbox" value="1"> Mon</label>
-                    <label><input type="checkbox" value="2"> Tue</label>
-                    <label><input type="checkbox" value="3"> Wed</label>
-                    <label><input type="checkbox" value="4"> Thu</label>
-                    <label><input type="checkbox" value="5"> Fri</label>
-                    <label><input type="checkbox" value="6"> Sat</label>
-                </div>
-            </div>
-            <button id="save-reminder">Save Reminder</button>
-            <div id="reminder-status"></div>
         </div>
-
-    </div>
-
+                
 
 
-    <!-- SCRIPT FILES -->
-    <script src="verber.js"></script>
-    <script src="substantiver.js"></script>
-    <script src="adjektiver.js"></script>
-    <script src="adverbKonjunktion.js"></script>
-    <script src="script.js"></script>
-    <script src="quiz.js"></script>
-    <script src="reminder.js"></script>
+
+        <!-- SCRIPT FILES -->
+        <script src="verber.js"></script>
+        <script src="substantiver.js"></script>
+        <script src="adjektiver.js"></script>
+        <script src="adverbKonjunktion.js"></script>
+        <script src="script.js"></script>
+        <script src="quiz.js"></script>
+        <script src="skriveguide.js"></script>
 
 
-    <footer class="app-footer">
-    <p>Bliv Klar til PD3 ordliste— Made with ❤️ by Grace D. O </a></p>
-    </footer>
-    <div class="footnote">
-    * Practice reminder is sent via browser notifications. It works only if you allow notifications and keep this site open in a browser tab.
-    </div>
+
+        <footer class="app-footer">
+        <p>Bliv Klar til PD3 ordliste— Made with ❤️ by Grace D. O </a></p>
+        </footer>
+        
 </div>
 </body>
 </html>

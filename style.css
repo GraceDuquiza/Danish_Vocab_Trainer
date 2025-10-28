@@ -1,61 +1,75 @@
-/* RESET & BASE */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* =========================
+    RESET & BASE
+   ========================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
     height: 100%;
-    font-family: 'Poppins', 'Segoe UI', sans-serif;
-    background: #f1f5f9;
-    color: #111827;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                "Noto Sans", "Liberation Sans", Arial, "Poppins", sans-serif;
+    background: #f4f7fb;            /* soft background */
+    color: #0f172a;                  /* slate-900 */
 }
 
-/* MAIN LAYOUT */
+:root{
+    --brand: #2563eb;                /* primary blue */
+    --brand-600:#2563eb;
+    --brand-700:#1d4ed8;
+    --brand-800:#1e40af;
+    --ok:#16a34a;
+    --warn:#dc2626;
+    --ring:#60a5fa;                  /* focus ring */
+    --card:#ffffff;
+    --muted:#475569;                 /* slate-600 */
+    --muted-2:#64748b;               /* slate-500 */
+    --border:#e2e8f0;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Better focus visibility */
+:focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 10px;
+}
+
+/* =========================
+    LAYOUT
+   ========================= */
 main {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
+    min-height: 100dvh;
+    display: grid;
+    place-items: start center;
+    padding: 40px 16px;
 }
 
-/* CONTAINER */
 .container {
-    min-height: 100vh;
     width: 100%;
-    max-width: 950px;
-    margin: 0 auto;
-    background: #ffffff;
+    max-width: 960px;
+    background: var(--card);
     border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    padding: 20px 10px;
-    text-align: center;
-    animation: slideFadeIn 0.5s ease;
-    display: flex;
-    flex-direction: column;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 28px rgba(2,6,23,.07);
+    padding: 20px 16px 28px;
+    margin: 24px auto;
 }
 
-/* Animation */
-@keyframes slideFadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* HEADER */
+/* =========================
+    TYPOGRAPHY
+   ========================= */
 h1 {
-    font-size: 32px;
+    font-size: clamp(1.6rem, 1.4rem + 1vw, 2rem);
+    font-weight: 800;
+    letter-spacing: .2px;
+    color: var(--brand-800);
+    text-align: center;
     margin-bottom: 20px;
-    color: #1e40af;
-    font-weight: 700;
 }
 
-/* LABELS & SELECT */
 label {
     display: block;
     margin-bottom: 8px;
@@ -63,296 +77,359 @@ label {
     color: #1e293b;
 }
 
+/* =========================
+    SELECT
+   ========================= */
 select {
     width: 100%;
-    padding: 12px 16px;
+    padding: 12px 14px;
     font-size: 16px;
-    border: 2px solid #93c5fd;
+    border: 2px solid #bfdbfe;
     border-radius: 12px;
-    background-color: #ffffff;
+    background-color: #fff;
     color: #0f172a;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
+    display: block;
+    margin-inline: auto;
+}
+select:focus-visible {
+    border-color: var(--brand-600);
 }
 
-/* WORD CARD */
+/* =========================
+    WORD CARD
+   ========================= */
 .card {
     background: #f8fafc;
     border-radius: 16px;
-    padding: 24px;
-    border: 2px solid #dbeafe;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border: 1.5px solid #e2e8f0;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 14px rgba(2,6,23,.06);
 }
-
 .card h2 {
     font-size: 24px;
-    color: #1e3a8a;
-    margin-bottom: 10px;
+    color: var(--brand-800);
+    margin-bottom: 8px;
 }
-
 .card p {
     font-size: 16px;
-    color: #334155;
+    color: var(--muted);
     margin: 6px 0;
 }
 
-/* QUIZ WORD */
+/* =========================
+    QUIZ WORD
+   ========================= */
 #quiz-word {
-    font-size: 28px;
-    font-weight: bold;
-    color: black;
-    margin: 24px 0;
+    font-size: clamp(1.35rem, 1rem + 1.6vw, 1.8rem);
+    font-weight: 800;
+    color: #0b1220;
+    letter-spacing: .2px;
+    text-align: center;
+    margin: 20px 0 8px;
 }
 
-/* GENERAL BUTTON STYLES (EXCLUDES NEXT/QUIT/CHOICES) */
-button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn) {
+/* =========================
+    BUTTONS — GLOBAL
+    (Does NOT touch quiz nav or choices)
+   ========================= */
+button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):not(#prev-question-btn) {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
     margin: 10px auto;
-    padding: 14px 20px;
+    padding: 14px 18px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     color: #ffffff;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    background: linear-gradient(135deg, var(--brand-700), var(--brand-600));
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform .12s ease, filter .2s ease;
 }
-
-button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):hover {
-    background: linear-gradient(135deg, #1e3a8a, #2563eb);
-    transform: translateY(-1px) scale(1.02);
+button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):not(#prev-question-btn):hover {
+    filter: brightness(0.98);
+    transform: translateY(-1px);
 }
+button[disabled] { opacity: .6; cursor: not-allowed; }
 
-button:not(#next-question-btn):not(#quit-quiz-btn):not(.choice-btn):disabled {
-    background: #9497f1;
-    cursor: not-allowed;
-}
-
-/* CONTROL GROUP */
+/* Grouped controls (quiz nav row) */
 .controls {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 14px;
-    margin-top: 24px;
+    gap: 12px;
+    margin-top: 18px;
 }
 
-/* SCORE */
+/* =========================
+    SCORE
+   ========================= */
 #score {
-    margin-top: 24px;
-    font-weight: bold;
+    margin-top: 14px;
+    font-weight: 800;
     font-size: 16px;
-    color: #1d4ed8;
+    color: var(--brand-700);
+    text-align: center;
 }
 
-/* CHOICE CONTAINER */
+/* =========================
+    CHOICES
+   ========================= */
 .choice-container {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 24px;
+    gap: 12px;
+    margin-top: 18px;
 }
 
-/* CHOICE BUTTONS */
 .choice-btn {
-    background-color: #2563eb;
+    background-color: var(--brand-600);
     color: white;
-    border: 2px solid #1d4ed8;
+    border: 2px solid var(--brand-700);
     padding: 14px 16px;
     font-size: 16px;
-    font-weight: 600;
-    border-radius: 10px;
+    font-weight: 700;
+    border-radius: 12px;
     cursor: pointer;
     text-align: center;
-    transition: all 0.25s ease;
+    transition: transform .08s ease, background-color .2s ease, border-color .2s ease;
 }
-
-.choice-btn:hover {
-    background-color: #1e40af;
-    transform: scale(1.02);
-}
+.choice-btn:hover { transform: translateY(-1px); background-color: var(--brand-700); }
+.choice-btn:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
 
 .choice-btn.correct {
-    background-color: #d1fae5;
-    color: #166534;
+    background-color: #ecfdf5;
+    color: #065f46;
     border-color: #22c55e;
 }
-
 .choice-btn.wrong {
-    background-color: #edc4c4;
-    color: #991b1b;
+    background-color: #fef2f2;
+    color: #7f1d1d;
     border-color: #ef4444;
 }
 
-/* NEXT BUTTON */
+/* =========================
+    QUIZ NAV (Prev / Next) — unified pair
+   ========================= */
+.controls button { width: auto; max-width: none; }
+
+#prev-question-btn,
 #next-question-btn {
-    background-color: #111111;
-    color: white;
-    border: none;
-    font-weight: bold;
-    border-radius: 10px;
     padding: 12px 20px;
-    margin: 10px;
-    transition: background-color 0.2s ease;
+    font-weight: 800;
+    border-radius: 12px;
+    border: 2px solid var(--brand-700);
+    background: var(--brand-600);
+    color: #ffffff;
+    transition: transform .08s ease, background-color .2s ease, border-color .2s ease;
 }
+#prev-question-btn:hover,
+#next-question-btn:hover { transform: translateY(-1px); }
 
-#next-question-btn:hover {
-    background-color: #333333;
+#prev-question-btn {
+    background: var(--brand-800);       /* subtle contrast for “Prev” */
+    border-color: var(--brand-800);
 }
+#prev-question-btn:hover { background: #1f3b94; }
+#next-question-btn:hover { background: #1f4bd8; }
 
-/* QUIT BUTTON */
+/* Quit stays distinct */
 #quit-quiz-btn {
-    background-color: #dc2626;
+    background-color: var(--warn);
     color: white;
     border: 2px solid #b91c1c;
-    font-weight: bold;
-    border-radius: 10px;
+    font-weight: 800;
+    border-radius: 12px;
     padding: 12px 20px;
     margin: 10px;
-    transition: background-color 0.2s ease;
+    transition: transform .08s ease, background-color .2s ease;
 }
+#quit-quiz-btn:hover { background-color: #b91c1c; transform: translateY(-1px); }
 
-#quit-quiz-btn:hover {
-    background-color: #b91c1c;
-}
-
-/* FOOTER */
+/* =========================
+    FOOTER
+   ========================= */
 .app-footer {
     text-align: center;
     font-size: 13px;
-    color: #475569;
+    color: var(--muted);
     background-color: #f8fafc;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid var(--border);
     padding: 10px 6px;
     width: 100%;
 }
 
-/* Reminder settings */
-#reminder-settings {
-    background: none;
-    border: none;
-    box-shadow: none;
-    max-width: 480px;
-    padding: 0;
-    margin: 38px auto 0 auto;  /* space from content above */
-    font-size: 0.95em;
-    color: #334155;
-    text-align: left;
-    opacity: 0.95;
-
+/* =========================
+    SKRIVEGUIDE
+   ========================= */
+.guide-page {
+    background: #f9fafb;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 6px 14px rgba(2,6,23,.06);
+    line-height: 1.6;
+    border: 1px solid var(--border);
+}
+.guide-page h2 {
+    margin-bottom: 6px;
+    color: var(--brand-800);
+    font-weight: 800;
 }
 
-#reminder-settings h3 {
-    font-size: 1em;
-    color: #1e3a8a;
-    margin-bottom: 4px;
-    margin-top: 0;
-    font-weight: 600;
-    text-align: left;
-    letter-spacing: 0.01em;
-
-}
-
-#reminder-settings label,
-#reminder-settings input[type="checkbox"],
-#reminder-settings input[type="time"] {
-    font-size: 0.96em;
-    font-weight: 400;
-    display: inline;
-
-}
-
-#reminder-days {
+.guide-nav {
+    margin-top: 12px;
     display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 10px 12px;
-    margin: 0.4em 0 0.8em 0;
 }
-
-#reminder-days label {
-    margin: 0;
-    font-size: 0.90em;
-    color: #334155;
-    font-weight: 400;
-
-}
-
-#save-reminder {
-    background: #2563eb;
-    color: #fff;
+.guide-nav button {
+    padding: 10px 16px;
     border: none;
-    border-radius: 6px;
-    padding: 7px 18px;
-    margin-top: 8px;
-    font-size: 0.96em;
-    font-weight: 600;
+    border-radius: 10px;
+    background: var(--brand-600);
+    color: white;
     cursor: pointer;
-    transition: background 0.15s;
-    width: auto;
-    margin-bottom: 8px;
+    font-weight: 700;
+}
+.guide-nav button:disabled { background: #cbd5e1; cursor: not-allowed; }
+
+/* Back to Quiz */
+#back-to-quiz-btn {
+    background: var(--brand-700);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 700;
+}
+#back-to-quiz-btn:hover { filter: brightness(0.96); }
+
+/* =========================
+    RESPONSIVE
+   ========================= */
+@media (max-width: 640px) {
+    .container { padding: 20px 14px 24px; margin: 0; border-radius: 0; }
+    h1 { font-size: 22px; }
+    button, .choice-btn { font-size: 15px; padding: 12px 16px; }
+    select { font-size: 15px; padding: 10px 12px; }
+    #quiz-word { font-size: 22px; }
+}
+
+/* --- S/V/A role tags for examples --- */
+.ex { margin: .35rem 0 .6rem; font-size: 1rem; }
+.role-s, .role-v, .role-a, .role-h, .role-l {
+    padding: .06rem .35rem;
+    border-radius: .45rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.role-s { background: #e0f2fe; color: #075985; } /* S = subject (blue) */
+.role-v { background: #dcfce7; color: #065f46; } /* V = verb (green)  */
+.role-a { background: #fef3c7; color: #92400e; } /* A = adverbial (amber) */
+.role-h { background: #fef3c7; color: #b60a0a; } /* A = adverbial (red) */
+.role-l { background: #fef3c7; color: rgb(116, 116, 22); } /* A = adverbial (red) */
+
+.muted { color: #64748b; }
+
+/* compact lists */
+.tight { margin: .25rem 0 .5rem; padding-left: 1rem; }
+.tight li { margin: .15rem 0; }
+
+/* small chips to list short words cleanly */
+.chip-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 1rem; }
+.chip {
+    background: #eef2ff;
+    color: #3730a3;
+    border: 1px solid #c7d2fe;
+    padding: .2rem .55rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+/* grid for side-by-side blocks (collapses on mobile) */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+    margin: .3rem 0 1rem;
+}
+@media (max-width: 640px) {
+    .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* framed rule blocks */
+.rule-block {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: .65rem .8rem;
+    background: #f8fafc;
+    margin: .6rem 0;
+}
+.rule-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: .35rem;
+}
+
+/* --- Konjunktion cards (readable, accessible) --- */
+.konj-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 10px 0 16px;
+}
+@media (max-width: 720px) { .konj-grid { grid-template-columns: 1fr; } }
+
+.konj-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(2,6,23,.05);
+    padding: 12px 14px;
+}
+
+.konj-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+.konj-chip {
+    background: #eef2ff;
+    color: #1e3a8a;
+    border: 1px solid #c7d2fe;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-weight: 800;
+}
+.konj-meaning {
+    color: #334155;
+    font-weight: 600;
+}
+
+.konj-ex {
+    margin-top: 6px;
+    color: #0f172a;
+    line-height: 1.5;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+
+/* Optional tiny label above examples */
+.konj-ex::before {
+    content: "Eksempel";
     display: block;
-    min-width: 80px;
-
-}
-
-#save-reminder:hover {
-    background: #1e3a8a;
-}
-
-#reminder-status {
-    font-size: 0.94em;
-    min-height: 1.2em;
-    margin: 6px 0 0 0;
-    color: #388e3c;
-    
-}
-
-
-
-.footnote {
-    margin-top: 16px;
     font-size: 12px;
     color: #64748b;
-    text-align: left;
-    line-height: 1.5;
-    
-}
-
-
-/* RESPONSIVE */
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 24px 16px;
-        margin: 16px auto;
-        min-height: 100vh;
-        border-radius: 0;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    button, .choice-btn {
-        font-size: 15px;
-        padding: 12px 16px;
-    }
-
-    select {
-        font-size: 15px;
-        padding: 10px 12px;
-    }
-
-    #quiz-word {
-        font-size: 22px;
-    }
-    #reminder-settings {
-        font-size: 0.92em;
-        padding: 0;
-        margin-top: 32px;
-    }
-
+    margin-bottom: 4px;
 }
 
 
