@@ -432,4 +432,34 @@ button[disabled] { opacity: .6; cursor: not-allowed; }
     margin-bottom: 4px;
 }
 
+/* For cards that list multiple expressions inside one box */
+.konj-list { margin: 6px 0 0 0; padding-left: 1rem; }
+.konj-list li { margin: 2px 0; }
+.konj-list .en { color:#64748b; font-style: italic; }
 
+
+/* --- Checklist look --- */
+.checklist { display:grid; gap:.6rem; margin:.6rem 0 1rem; }
+.check-item {
+  display:flex; align-items:flex-start; gap:.6rem; padding:.6rem .75rem;
+  background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px;
+}
+.check-item .icon { font-size:1.1rem; line-height:1.2; }
+.check-item .txt { line-height:1.45; }
+.check-item .en { color:#6b7280; font-style:italic; margin-left:.25rem; }
+
+/* grammar pills */
+.pills { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.4rem; }
+.pill {
+  font-size:.85rem; padding:.18rem .5rem; border-radius:999px;
+  background:#eef2ff; color:#3730a3; border:1px solid #c7d2fe;
+}
+
+/* S / V / A tags */
+.tag { font-size:.78rem; font-weight:700; padding:.1rem .35rem; border-radius:.35rem; }
+.tag-s { background:#d1fae5; color:#065f46; }
+.tag-v { background:#fee2e2; color:#991b1b; }
+.tag-a { background:#e0e7ff; color:#3730a3; }
+
+/* section title helper */
+.subtle { color:#6b7280; font-weight:600; font-size:.92rem; margin:.25rem 0 .6rem; }
