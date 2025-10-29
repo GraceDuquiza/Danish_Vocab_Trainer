@@ -488,3 +488,29 @@ button[disabled] { opacity: .6; cursor: not-allowed; }
 #prev-page, #next-page{
   min-width: 110px;               /* same visual weight */
 }
+
+.card-actions{
+    display: flex;
+    gap: .75rem;                /* space between buttons */
+    justify-content: space-between; /* or center | flex-end */
+    margin-top: 1rem;
+}
+
+#prev-btn, #next-btn{
+    padding: .6rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+}
+
+#next-btn{
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* Optional: stack on very narrow screens */
+@media (max-width: 360px){
+    .card-actions{ flex-direction: column; }
+}
