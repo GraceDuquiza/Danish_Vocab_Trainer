@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Danish Vocabulary Trainer</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/icon-16.png">
+    <link rel="apple-touch-icon" href="./icons/icon-180.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.webmanifest">
+
+    <!-- Theme color (works for Android + iOS A2HS). Use light/dark if you can -->
+    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)">
+
+    <!-- iOS icon (needed so it doesn’t use a screenshot) -->
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+
+
+    <!-- SEO / Social -->
+    <meta name="description" content="Danish Vocabulary Trainer – study, quiz & skriveguide. Learn verbs, nouns, adjectives, and connectors with examples. Offline-ready PWA.">
+    <meta property="og:title" content="Danish Vocabulary Trainer" />
+    <meta property="og:description" content="Study mode, quizzes, and a simple skriveguide. Learn Danish words with examples. Offline-ready PWA." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/" />
+    <meta property="og:image" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/icons/icon-512.png">
+    <meta name="twitter:image" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/icons/icon-512.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Danish Vocabulary Trainer" />
+    <meta name="twitter:description" content="Study, quiz & skriveguide for Danish learners. Offline-ready PWA." />
 </head>
 <body>
     <div class="container">
@@ -76,27 +105,24 @@
             <!-- 🟢 Skriveguide Section (hidden initially) -->
             <div id="skriveguide" style="display: none;">
             <div id="main-content"></div>
-
-        
-                
-
+        </div>
 
 
         <!-- SCRIPT FILES -->
-        <script src="verber.js"></script>
-        <script src="substantiver.js"></script>
-        <script src="adjektiver.js"></script>
-        <script src="adverbKonjunktion.js"></script>
-        <script src="script.js"></script>
-        <script src="quiz.js"></script>
-        <script src="skriveguide.js"></script>
+        <script src="verber.js" defer></script>
+        <script src="substantiver.js" defer></script>
+        <script src="adjektiver.js" defer></script>
+        <script src="adverbKonjunktion.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="quiz.js" defer></script>
+        <script src="skriveguide.js" defer></script>
 
 
 
         <footer class="app-footer">
-        <p>Bliv Klar til PD3 ordliste— Made with ❤️ by Grace D. O </a></p>
+            <p>Bliv Klar til PD3 ordliste— Made with ❤️ by Grace D. O </a></p>
         </footer>
         
-</div>
+    </div>
 </body>
 </html>
