@@ -49,12 +49,12 @@ main {
 
 .container {
     width: 100%;
-    max-width: 960px;
+    max-width: 980px;
     background: var(--card);
     border-radius: 20px;
     border: 1px solid var(--border);
     box-shadow: 0 12px 28px rgba(2,6,23,.07);
-    padding: 20px 16px 28px;
+    padding: clamp(18px, 3vw, 28px);   /* responsive inner padding */
     margin: 24px auto;
 }
 
@@ -67,7 +67,7 @@ h1 {
     letter-spacing: .2px;
     color: var(--brand-800);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 label {
@@ -441,8 +441,8 @@ button[disabled] { opacity: .6; cursor: not-allowed; }
 /* --- Checklist look --- */
 .checklist { display:grid; gap:.6rem; margin:.6rem 0 1rem; }
 .check-item {
-  display:flex; align-items:flex-start; gap:.6rem; padding:.6rem .75rem;
-  background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px;
+    display:flex; align-items:flex-start; gap:.6rem; padding:.6rem .75rem;
+    background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px;
 }
 .check-item .icon { font-size:1.1rem; line-height:1.2; }
 .check-item .txt { line-height:1.45; }
@@ -451,8 +451,8 @@ button[disabled] { opacity: .6; cursor: not-allowed; }
 /* grammar pills */
 .pills { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.4rem; }
 .pill {
-  font-size:.85rem; padding:.18rem .5rem; border-radius:999px;
-  background:#eef2ff; color:#3730a3; border:1px solid #c7d2fe;
+    font-size:.85rem; padding:.18rem .5rem; border-radius:999px;
+    background:#eef2ff; color:#3730a3; border:1px solid #c7d2fe;
 }
 
 /* S / V / A tags */
@@ -463,3 +463,28 @@ button[disabled] { opacity: .6; cursor: not-allowed; }
 
 /* section title helper */
 .subtle { color:#6b7280; font-weight:600; font-size:.92rem; margin:.25rem 0 .6rem; }
+
+
+/* Keep guide nav in one row with clear left/center/right zones */
+.guide-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 12px;
+    flex-wrap: nowrap;              /* ⟵ prevent wrapping */
+    min-height: 48px;               /* comfy touch area */
+}
+
+.guide-nav .guide-counter{
+    flex: 1 1 auto;
+    text-align: center;
+    font-weight: 700;
+    color: #334155;
+    letter-spacing: .2px;
+    white-space: nowrap;            /* keep “x / y” on one line */
+}
+
+/* Make both buttons visually balanced */
+#prev-page, #next-page{
+  min-width: 110px;               /* same visual weight */
+}
