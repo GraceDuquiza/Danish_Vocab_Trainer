@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Danish Vocabulary Trainer</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- Use the versioned URL to bust cache -->
+    <link rel="stylesheet" href="./style.css?v=3">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -54,8 +55,13 @@
                 <p><strong>English:</strong> <span id="english-meaning">Meaning</span></p>
                 <p><strong>Example:</strong> <span id="example-sentence">Example sentence here</span></p>
             </div>
-            <button id="prev-btn">Previous Word</button>
-            <button id="next-btn">Next Word</button>
+            
+            <!-- NEW: uniform row wrapper -->
+        <div class="btn-row">
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+
             
         </div>
 
@@ -102,9 +108,22 @@
             <button id="nav-skriveguide">📖 Skriveguide</button>
             </div>
 
-            <!-- 🟢 Skriveguide Section (hidden initially) -->
-            <div id="skriveguide" style="display: none;">
-            <div id="main-content"></div>
+        <!-- Skriveguide Page -->
+        <div id="skriveguide" style="display:none">
+            <div class="guide-page">
+                <div class="guide-topbar">
+                    <button id="back-to-quiz-btn" aria-label="Back to main menu">⬅️ Main Menu</button>
+                </div>
+
+                <h2 id="guide-title">Titel</h2>
+                <div id="guide-content"></div>
+
+                <div class="guide-nav btn-row" role="group" aria-label="Skriveguide navigation">
+                    <button id="prev-page" aria-label="Previous page">⬅️ Forrige</button>
+                    <span class="guide-counter" id="guide-counter">1 / 1</span>
+                    <button id="next-page" aria-label="Next page">Næste ➡️</button>
+                </div>
+            </div>
         </div>
 
 

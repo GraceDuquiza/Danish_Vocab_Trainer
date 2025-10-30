@@ -10,18 +10,18 @@ const skriveguide = [
 
         <p><strong>Hovedsætning (HS):</strong> kan stå alene, fx. <br/>
         <span class="ex">
-            <span class="role-s">S: Vi</span>
-            <span class="role-v">V: spiser</span>.
-            <span class="role-h">hovedsætning: For vi er sultne. </span></p>
+            <p><span class="role-s">S: Vi</span>
+            <span class="role-v">V: spiser.</span>
+            <p><span class="role-h">hovedsætning: For vi er sultne.</span></p>
         </span>
-        </p>
+        </p></p>
 
         <p><strong>Ledsætning (LS):</strong> kan ikke stå alene – den skal stå sammen med en hovedsætning.Ledsætningen kan både stå før og efter hovedsætningen, fx<br/>
         <span class="ex">
-            <p></p><span class="role-h">hovedsætning: Vi spiser, </span>
-            <span class="role-l">ledsætning: når du kommer. </span> eller
-            <span class="role-l">ledsætning: Når du kommer, </span>
-            <span class="role-h">hovedsætning: vi spiser. </span></p>
+            <p><span class="role-h">hovedsætning: Vi spiser,</span>
+            <span class="role-l">ledsætning: når du kommer.</span> eller
+            <span class="role-l">ledsætning: Når du kommer,</span>
+            <span class="role-h">hovedsætning: spiser vi.</span></p></p>
         `
     },
 
@@ -445,9 +445,7 @@ const skriveguide = [
     `
     },
 
-    /* =========================================
-    Forbinderords betydning — Page 2 (Tilføjelse / Forklaring / Konsekvens)
-    ========================================= */
+
     /* =========================================
     Forbinderords betydning — Page 2 (Tilføjelse / Forklaring / Konsekvens)
     ========================================= */
@@ -858,7 +856,7 @@ const skriveguide = [
             <li><span class="tag tag-s">S</span><span class="tag tag-v">V</span><span class="tag tag-a">A</span>
                 — <strong>hovedsætning</strong> <span class="en">main clause</span></li>
             <li><span class="tag tag-v">V</span><span class="tag tag-s">S</span>
-                — efter adverbial/ledsætning <span class="en">inversion in main clause</span></li>
+                — efter <strong>adverbial/ledsætning </strong><span class="en">inversion in main clause</span></li>
             <li><span class="tag tag-s">S</span><span class="tag tag-a">A</span><span class="tag tag-v">V</span>
                 — <strong>ledsætning</strong> <span class="en">subordinate clause</span></li>
         </ul>
