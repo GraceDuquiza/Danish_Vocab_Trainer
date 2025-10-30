@@ -1,11 +1,11 @@
 // sw.js — cache-first app shell with subpath-safe URLs
-const CACHE = 'dk-vocab-v7';
+const CACHE = 'dk-vocab-v8';
 
 // Use RELATIVE paths so it works on GitHub Pages subpaths too
 const ASSETS = [
     './',
     './index.html',
-    './style.css?v=7',
+    './style.css?v=8',
     './script.js',
     './quiz.js',
     './skriveguide.js',
@@ -15,8 +15,8 @@ const ASSETS = [
     './verber.js',
     './icons/icon-192.png',
     './icons/icon-512.png',
-    './icons/icon-maskable-512.png',
-    '/manifest.webmanifest'
+    './icons/icon-maskable-512.png'
+    
 ];
 // ---------- INSTALL: pre-cache the app shell ----------
 self.addEventListener('install', (event) => {
