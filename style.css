@@ -1,40 +1,40 @@
 /* ======================================================================
-   Danish Vocab Trainer — Clean, Responsive UI
-   - Full-height main page
-   - Square, uniform Prev/Next across Study / Quiz / Skriveguide
-   - Restored/clear styling for Quiz category selection buttons
-   - Conflict-free: only target what we intend to style
+    Danish Vocab Trainer — Clean, Responsive UI
+    - Full-height main page
+    - Square, uniform Prev/Next across Study / Quiz / Skriveguide
+    - Restored/clear styling for Quiz category selection buttons
+    - Conflict-free: only target what we intend to style
    ====================================================================== */
 
 /* ---------------------------
-   0) Reset + Base Theme
+    0) Reset + Base Theme
    --------------------------- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root{
   /* Brand blues */
-  --brand-600:#2563eb;
-  --brand-700:#1d4ed8;
-  --brand-800:#1e40af;
+    --brand-600:#2563eb;
+    --brand-700:#1d4ed8;
+    --brand-800:#1e40af;
 
   /* Neutral palette */
-  --text:#0f172a;
-  --muted:#475569;
-  --muted-2:#64748b;
+    --text:#0f172a;
+    --muted:#475569;
+    --muted-2:#64748b;
 
   /* Surfaces / accents */
-  --card:#ffffff;
-  --border:#e2e8f0;
-  --ring:#60a5fa;
-  --danger:#dc2626;
+    --card:#ffffff;
+    --border:#e2e8f0;
+    --ring:#60a5fa;
+    --danger:#dc2626;
 }
 
 html, body {
-  height: 100%;
-  background: #f4f7fb;
-  color: var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-               "Noto Sans", "Liberation Sans", Arial, "Poppins", sans-serif;
+    height: 100%;
+    background: #f4f7fb;
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                "Noto Sans", "Liberation Sans", Arial, "Poppins", sans-serif;
 }
 
 /* Accessibility */
@@ -42,115 +42,115 @@ html, body {
   * { animation: none !important; transition: none !important; }
 }
 :focus-visible {
-  outline: 3px solid var(--ring);
-  outline-offset: 2px;
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
 }
 
 /* ---------------------------
-   1) Page Layout
+    1) Page Layout
    --------------------------- */
 main {
-  min-height: 100dvh;                /* include mobile dynamic areas */
-  display: grid;
-  place-items: center;
-  padding: clamp(16px, 4vw, 40px);
+    min-height: 100dvh;                /* include mobile dynamic areas */
+    display: grid;
+    place-items: center;
+    padding: clamp(16px, 4vw, 40px);
 }
 .container {
-  width: min(1080px, 100%);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  box-shadow: 0 14px 36px rgba(2,6,23,.08);
-  padding: clamp(18px, 3vw, 28px);
+    width: min(1080px, 100%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 14px 36px rgba(2,6,23,.08);
+    padding: clamp(18px, 3vw, 28px);
 
-  /* feel full-height even with little content */
-  min-height: min(92dvh, 1100px);
-  display: flex;
-  flex-direction: column;
-  gap: clamp(12px, 2vw, 18px);
+    /* feel full-height even with little content */
+    min-height: min(92dvh, 1100px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2vw, 18px);
 }
 
 /* Edge-to-edge on small phones for native feel */
 @media (max-width: 640px){
-  .container { border-radius: 0; min-height: 100dvh; }
+    .container { border-radius: 0; min-height: 100dvh; }
 }
 
 /* ---------------------------
-   2) Typography
+    2) Typography
    --------------------------- */
 h1 {
-  font-size: clamp(1.6rem, 1.4rem + 1vw, 2.2rem);
-  font-weight: 800;
-  color: var(--brand-800);
-  text-align: center;
+    font-size: clamp(1.6rem, 1.4rem + 1vw, 2.2rem);
+    font-weight: 800;
+    color: var(--brand-800);
+    text-align: center;
 }
 label { display: block; margin-bottom: 8px; font-weight: 600; color: #1e293b; }
 .section { margin-block: clamp(10px, 2vw, 20px); }
 
 /* ---------------------------
-   3) Select (Study category)
+    3) Select (Study category)
    --------------------------- */
 select {
-  width: 100%;
-  padding: 12px 14px;
-  font-size: 16px;
-  border: 2px solid #bfdbfe;
-  border-radius: 12px;
-  background: #fff;
-  color: var(--text);
-  margin-bottom: 18px;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 2px solid #bfdbfe;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--text);
+    margin-bottom: 18px;
 }
 select:focus-visible { border-color: var(--brand-600); }
 
 /* ---------------------------
-   4) Card (Study word panel)
+    4) Card (Study word panel)
    --------------------------- */
 .card {
-  background: #f8fafc;
-  border: 1.5px solid var(--border);
-  border-radius: 16px;
-  padding: clamp(16px, 2.5vw, 20px);
-  box-shadow: 0 6px 14px rgba(2,6,23,.06);
+    background: #f8fafc;
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: clamp(16px, 2.5vw, 20px);
+    box-shadow: 0 6px 14px rgba(2,6,23,.06);
 }
 .card h2 {
-  font-size: clamp(1.1rem, 1rem + .8vw, 1.4rem);
-  color: var(--brand-800);
-  margin-bottom: 8px;
+    font-size: clamp(1.1rem, 1rem + .8vw, 1.4rem);
+    color: var(--brand-800);
+    margin-bottom: 8px;
 }
 .card p { font-size: 16px; color: var(--muted); margin: 6px 0; }
 
 /* ---------------------------
-   5) Quiz big word
+    5) Quiz big word
    --------------------------- */
 #quiz-word {
-  font-size: clamp(1.35rem, 1rem + 1.6vw, 1.8rem);
-  font-weight: 800;
-  color: #0b1220;
-  text-align: center;
-  margin: 12px 0 8px;
+    font-size: clamp(1.35rem, 1rem + 1.6vw, 1.8rem);
+    font-weight: 800;
+    color: #0b1220;
+    text-align: center;
+    margin: 12px 0 8px;
 }
 
 /* ---------------------------
-   6) Primary big buttons (Start / Skriveguide)
-   - ONLY these are wide globally
-   --------------------------- */
+    6) Primary big buttons (Start / Skriveguide)
+    - ONLY these are wide globally
+    --------------------------- */
 #start-quiz-btn,
 #nav-skriveguide{
-  display: inline-block;
-  width: 100%;
-  max-width: 360px;
-  margin: 10px auto;
-  padding: 14px 18px;
+    display: inline-block;
+    width: 100%;
+    max-width: 360px;
+    margin: 10px auto;
+    padding: 14px 18px;
 
-  font-size: 16px;
-  font-weight: 700;
-  color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
 
-  background: linear-gradient(135deg, var(--brand-700), var(--brand-600));
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform .12s ease, filter .2s ease;
+    background: linear-gradient(135deg, var(--brand-700), var(--brand-600));
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .12s ease, filter .2s ease;
 }
 #start-quiz-btn:hover,
 #nav-skriveguide:hover { filter: brightness(.98); transform: translateY(-1px); }
@@ -158,126 +158,127 @@ select:focus-visible { border-color: var(--brand-600); }
 button[disabled] { opacity: .6; cursor: not-allowed; }
 
 /* ---------------------------
-   7) Quiz Category Selection (Accessible & Friendly)
-   - 2-col grid (stacks to 1-col on small screens)
-   - Big tap targets, clear focus ring, active feedback
-   - Optional .is-selected state supported
-   --------------------------- */
+    7) Quiz Category Selection (Accessible & Friendly)
+    - 2-col grid (stacks to 1-col on small screens)
+    - Big tap targets, clear focus ring, active feedback
+    - Optional .is-selected state supported
+    --------------------------- */
 #quiz-category-select {
-  margin-top: 6px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+    margin-top: 6px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
 }
 #quiz-category-select p {
-  grid-column: 1 / -1;
-  margin-bottom: 4px;
-  font-weight: 700;
-  color: #0f172a;
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+    font-weight: 700;
+    color: #0f172a;
 }
 
 @media (max-width: 520px){
-  #quiz-category-select { grid-template-columns: 1fr; }
+    #quiz-category-select { grid-template-columns: 1fr; }
 }
 
 button.category-option{
-  display: block;
-  width: 100%;
-  padding: 16px 18px;             /* bigger tap area */
-  min-height: 54px;               /* WCAG-friendly tap target */
-  line-height: 1.25;
+    display: block;
+    width: 100%;
+    padding: 16px 18px;             /* bigger tap area */
+    min-height: 54px;               /* WCAG-friendly tap target */
+    line-height: 1.25;
 
-  background: #ffffff;
-  color: var(--text, #0f172a);
-  border: 2px solid var(--border, #e2e8f0); /* stronger contrast */
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 800;
-  text-align: center;
-  cursor: pointer;
+    background: #ffffff;
+    color: var(--text, #0f172a);
+    border: 2px solid var(--border, #e2e8f0); /* stronger contrast */
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
 
-  box-shadow: 0 4px 10px rgba(2,6,23,.04);
-  transition: background .12s ease,
-              border-color .12s ease,
-              box-shadow .12s ease,
-              transform .12s ease;
+    box-shadow: 0 4px 10px rgba(2,6,23,.04);
+    transition: background .12s ease,
+                border-color .12s ease,
+                box-shadow .12s ease,
+                transform .12s ease;
 }
 
 /* Hover (pointer devices) */
 button.category-option:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;          /* slate-300 */
-  box-shadow: 0 6px 14px rgba(2,6,23,.08);
-  transform: translateY(-1px);
+    background: #f8fafc;
+    border-color: #cbd5e1;          /* slate-300 */
+    box-shadow: 0 6px 14px rgba(2,6,23,.08);
+    transform: translateY(-1px);
 }
 
 /* Active (pressed) */
 button.category-option:active {
-  background: #eef2ff;            /* faint indigo hint */
-  border-color: var(--brand-700, #1d4ed8);
-  box-shadow: 0 2px 6px rgba(2,6,23,.12);
-  transform: translateY(0);
+    background: #eef2ff;            /* faint indigo hint */
+    border-color: var(--brand-700, #1d4ed8);
+    box-shadow: 0 2px 6px rgba(2,6,23,.12);
+    transform: translateY(0);
 }
 
 /* Keyboard focus: strong ring + halo */
 button.category-option:focus-visible {
-  outline: 3px solid var(--ring, #60a5fa);
-  outline-offset: 2px;
-  border-color: var(--brand-700, #1d4ed8);
-  box-shadow: 0 0 0 4px rgba(96,165,250,.28); /* soft halo */
-  background: #f8fafc;
+    outline: 3px solid var(--ring, #60a5fa);
+    outline-offset: 2px;
+    border-color: var(--brand-700, #1d4ed8);
+    box-shadow: 0 0 0 4px rgba(96,165,250,.28); /* soft halo */
+    background: #f8fafc;
 }
 
 /* Disabled (future-proof) */
 button.category-option[disabled]{
-  opacity: .55;
-  cursor: not-allowed;
-  filter: grayscale(1);
+    opacity: .55;
+    cursor: not-allowed;
+    filter: grayscale(1);
 }
 
 /* Optional: show the chosen category distinctly */
 button.category-option.is-selected {
-  background: #eef2ff;                             /* subtle selected fill */
-  color: #0b1220;
-  border-color: var(--brand-700, #1d4ed8);
-  box-shadow: 0 0 0 2px rgba(29,78,216,.18) inset; /* inner accent */
+    background: #eef2ff;                             /* subtle selected fill */
+    color: #0b1220;
+    border-color: var(--brand-700, #1d4ed8);
+    box-shadow: 0 0 0 2px rgba(29,78,216,.18) inset; /* inner accent */
 }
 
 /* Motion-safety */
 @media (prefers-reduced-motion: reduce){
-  button.category-option { transition: none; }
+    button.category-option { transition: none; }
 }
 
 /* Very small screens: slightly tighter */
 @media (max-width: 340px){
-  button.category-option {
-    font-size: 15px;
-    padding: 14px 14px;
-    min-height: 50px;
-    border-radius: 10px;
-  }
+    button.category-option {
+        font-size: 15px;
+        padding: 14px 14px;
+        min-height: 50px;
+        border-radius: 10px;
+    }
 }
 
 /* ---------------------------
-   8) Multiple Choice options (Quiz)
+    8) Multiple Choice options (Quiz)
    --------------------------- */
 .choice-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
 }
+
 .choice-btn {
-  background-color: var(--brand-600);
-  color: white;
-  border: 2px solid var(--brand-700);
-  padding: 14px 16px;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 12px;
-  cursor: pointer;
-  text-align: center;
-  transition: transform .08s ease, background-color .2s ease, border-color .2s ease;
+    background-color: var(--brand-600);
+    color: white;
+    border: 2px solid var(--brand-700);
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform .08s ease, background-color .2s ease, border-color .2s ease;
 }
 .choice-btn:hover { transform: translateY(-1px); background-color: var(--brand-700); }
 .choice-btn:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
@@ -285,147 +286,147 @@ button.category-option.is-selected {
 .choice-btn.wrong   { background-color: #fef2f2; color: #7f1d1d; border-color: #ef4444; }
 
 /* ---------------------------
-   9) Quiz helpers (non-nav)
+    9) Quiz helpers (non-nav)
    --------------------------- */
 .controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 12px;
-  padding: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 8px 0;
 }
 #score {
-  margin-top: 8px;
-  font-weight: 800;
-  font-size: 16px;
-  color: var(--brand-700);
-  text-align: center;
+    margin-top: 8px;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--brand-700);
+    text-align: center;
 }
 
 /* ---------------------------
-   10) Uniform Inline Nav Row
-   - Use .btn-row for Prev/Next groups
-   - Square buttons; equal widths
-   --------------------------- */
+    10) Uniform Inline Nav Row
+    - Use .btn-row for Prev/Next groups
+    - Square buttons; equal widths
+    --------------------------- */
 .btn-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  margin-top:1rem;
-  flex-wrap:nowrap;                 /* keep a single row when possible */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-top:1rem;
+    flex-wrap:nowrap;                 /* keep a single row when possible */
 }
 .btn-row > button{
-  width:auto;
-  flex:1 1 0;                       /* equal widths */
-  min-width:0;
+    width:auto;
+    flex:1 1 0;                       /* equal widths */
+    min-width:0;
 
-  min-height:44px;                  /* accessible tap target */
-  padding:.7rem 1rem;
-  border-radius:0;                  /* SQUARE corners */
-  font-weight:800;
-  font-size:16px;
-  letter-spacing:.2px;
+    min-height:44px;                  /* accessible tap target */
+    padding:.7rem 1rem;
+    border-radius:0;                  /* SQUARE corners */
+    font-weight:800;
+    font-size:16px;
+    letter-spacing:.2px;
 
-  transition: background .15s ease, border-color .15s ease, filter .15s ease;
+    transition: background .15s ease, border-color .15s ease, filter .15s ease;
 }
 
 /* PREV (Study/Quiz/Skriveguide) = white + black */
 #prev-btn, #prev-question-btn, #prev-page{
-  background:#ffffff;
-  color:var(--text);
-  border:1px solid #cbd5e1;         /* slate-300 */
+    background:#ffffff;
+    color:var(--text);
+    border:1px solid #cbd5e1;         /* slate-300 */
 }
 #prev-btn:hover, #prev-question-btn:hover, #prev-page:hover{
-  background:#f1f5f9;               /* slate-100 */
-  border-color:#94a3b8;             /* slate-400 */
+    background:#f1f5f9;               /* slate-100 */
+    border-color:#94a3b8;             /* slate-400 */
 }
 
 /* NEXT (Study/Quiz/Skriveguide) = blue + white */
 #next-btn, #next-question-btn, #next-page{
-  background:var(--brand-700);
-  color:#ffffff;
-  border:1px solid var(--brand-700);
+    background:var(--brand-700);
+    color:#ffffff;
+    border:1px solid var(--brand-700);
 }
 #next-btn:hover, #next-question-btn:hover, #next-page:hover{
-  background:var(--brand-800);
-  border-color:var(--brand-800);
+    background:var(--brand-800);
+    border-color:var(--brand-800);
 }
 
 /* Disabled state for nav buttons */
 #prev-page:disabled, #next-page:disabled,
 #prev-question-btn:disabled, #next-question-btn:disabled,
 #prev-btn:disabled, #next-btn:disabled {
-  opacity: .6; cursor: not-allowed;
+    opacity: .6; cursor: not-allowed;
 }
 
 /* Skriveguide counter stays centered and compact */
 .guide-nav .guide-counter{
-  flex:0 0 auto;
-  min-width:64px;
-  text-align:center;
-  font-weight:800;
-  color:#334155;
-  white-space:nowrap;
+    flex:0 0 auto;
+    min-width:64px;
+    text-align:center;
+    font-weight:800;
+    color:#334155;
+    white-space:nowrap;
 }
 
 /* ---------------------------
-   11) Skriveguide Topbar "Main Menu" button
+    11) Skriveguide Topbar "Main Menu" button
    --------------------------- */
 .guide-topbar #back-to-quiz-btn{
-  background: var(--brand-700);
-  color: #ffffff;
-  border: 1px solid var(--brand-700);
-  border-radius: 0;        /* square */
-  padding: .6rem 1rem;
-  font-weight: 800;
+    background: var(--brand-700);
+    color: #ffffff;
+    border: 1px solid var(--brand-700);
+    border-radius: 0;        /* square */
+    padding: .6rem 1rem;
+    font-weight: 800;
 }
 .guide-topbar #back-to-quiz-btn:hover{
-  background: var(--brand-800);
-  border-color: var(--brand-800);
+    background: var(--brand-800);
+    border-color: var(--brand-800);
 }
 
 /* ---------------------------
-   12) Footer
+    12) Footer
    --------------------------- */
 .app-footer {
-  margin-top: auto;    /* pin to bottom when content is short */
-  text-align: center;
-  font-size: 13px;
-  color: var(--muted);
-  background: #f8fafc;
-  border-top: 1px solid var(--border);
-  padding: 10px 6px;
+    margin-top: auto;    /* pin to bottom when content is short */
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    background: #f8fafc;
+    border-top: 1px solid var(--border);
+    padding: 10px 6px;
 }
 
 /* ---------------------------
-   13) Responsive Tweaks
+    13) Responsive Tweaks
    --------------------------- */
 @media (max-width: 640px) {
-  h1 { font-size: 22px; }
-  button, .choice-btn { font-size: 15px; padding: 12px 16px; }
-  select { font-size: 15px; padding: 10px 12px; }
-  #quiz-word { font-size: 22px; }
+    h1 { font-size: 22px; }
+    button, .choice-btn { font-size: 15px; padding: 12px 16px; }
+    select { font-size: 15px; padding: 10px 12px; }
+    #quiz-word { font-size: 22px; }
 }
 @media (max-width: 420px){
-  .btn-row{ gap:8px; }
-  .btn-row > button{ padding:.6rem .8rem; font-size:15px; }
+    .btn-row{ gap:8px; }
+    .btn-row > button{ padding:.6rem .8rem; font-size:15px; }
 }
 @media (max-width: 300px){
-  .btn-row{ flex-wrap:wrap; }
-  .btn-row > button{ flex:1 1 100%; }
+    .btn-row{ flex-wrap:wrap; }
+    .btn-row > button{ flex:1 1 100%; }
 }
 
 /* ---------------------------
-   14) Utilities (unchanged)
+    14) Utilities (unchanged)
    --------------------------- */
 .ex { margin: .35rem 0 .6rem; font-size: 1rem; }
 .role-s, .role-v, .role-a, .role-h, .role-l {
-  padding: .06rem .35rem;
-  border-radius: .45rem;
-  font-weight: 700;
-  white-space: nowrap;
+    padding: .06rem .35rem;
+    border-radius: .45rem;
+    font-weight: 700;
+    white-space: nowrap;
 }
 .role-s { background: #e0f2fe; color: #075985; } /* Subject */
 .role-v { background: #dcfce7; color: #065f46; } /* Verb */
@@ -439,55 +440,52 @@ button.category-option.is-selected {
 
 .chip-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 1rem; }
 .chip {
-  background: #eef2ff;
-  color: #3730a3;
-  border: 1px solid #c7d2fe;
-  padding: .2rem .55rem;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: .9rem;
+    background: #eef2ff;
+    color: #3730a3;
+    border: 1px solid #c7d2fe;
+    padding: .2rem .55rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .9rem;
 }
 
 .grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .75rem;
-  margin: .3rem 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+    margin: .3rem 0 1rem;
 }
 @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
 
 .rule-block {
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: .65rem .8rem;
-  background: #f8fafc;
-  margin: .6rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: .65rem .8rem;
+    background: #f8fafc;
+    margin: .6rem 0;
 }
 .rule-title {
-  font-weight: 800;
-  color: #1e3a8a;
-  margin-bottom: .35rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: .35rem;
 }
 
 
-/* -----------------------------------------------
-   Quit Quiz button — red, centered, safely spaced
-   ----------------------------------------------- */
 /* Quit button — bold, square, safe spacing */
 #quit-quiz-btn{
-  display: inline-block;       /* ensure it shows when JS toggles it */
-  background: #ef4444;         /* red */
-  color: #ffffff;
-  border: 1px solid #dc2626;
-  border-radius: 0;            /* square */
-  font-weight: 900;
-  padding: .8rem 1.1rem;
-  min-width: 180px;
-  min-height: 44px;
-  letter-spacing: .2px;
-  transition: filter .15s ease, background .15s ease, border-color .15s ease;
-  /* extra gap above so it’s not close to prev/next controls */
-  margin-top: 10px;
+    display: inline-block;       /* ensure it shows when JS toggles it */
+    background: #ef4444;         /* red */
+    color: #ffffff;
+    border: 1px solid #dc2626;
+    border-radius: 0;            /* square */
+    font-weight: 900;
+    padding: .8rem 1.1rem;
+    min-width: 180px;
+    min-height: 44px;
+    letter-spacing: .2px;
+    transition: filter .15s ease, background .15s ease, border-color .15s ease;
+    /* extra gap above so it’s not close to prev/next controls */
+    margin-top: 10px;
 }
 
 /* Extra visual separation from Prev/Next area */
@@ -499,180 +497,171 @@ button.category-option.is-selected {
 
 /* Hover (pointer devices) */
 #quit-quiz-btn:hover{
-  background: #b91c1c;               /* red 700 */
-  border-color: #991b1b;             /* red 800 */
-  box-shadow: 0 8px 18px rgba(185,28,28,.22);
-  transform: translateY(-1px);
-   filter: brightness(.98);
+    background: #b91c1c;               /* red 700 */
+    border-color: #991b1b;             /* red 800 */
+    box-shadow: 0 8px 18px rgba(185,28,28,.22);
+    transform: translateY(-1px);
+    filter: brightness(.98);
 }
 
 /* Active (pressed) */
 #quit-quiz-btn:active{
-  background: #991b1b;               /* red 800 */
-  border-color: #7f1d1d;             /* red 900 */
-  box-shadow: 0 3px 8px rgba(127,29,29,.28);
-  transform: translateY(0);
+    background: #991b1b;               /* red 800 */
+    border-color: #7f1d1d;             /* red 900 */
+    box-shadow: 0 3px 8px rgba(127,29,29,.28);
+    transform: translateY(0);
 }
 
 /* Keyboard focus: strong, accessible ring */
 #quit-quiz-btn:focus-visible{
-  outline: 3px solid #fca5a5;        /* light red focus ring */
-  outline-offset: 3px;
+    outline: 3px solid #fca5a5;        /* light red focus ring */
+    outline-offset: 3px;
 }
 
 /* Disabled (future-proof) */
 #quit-quiz-btn[disabled]{
-  opacity: .6;
-  cursor: not-allowed;
-  filter: grayscale(0.2);
+    opacity: .6;
+    cursor: not-allowed;
+    filter: grayscale(0.2);
 }
 
 /* Motion-safety */
 @media (prefers-reduced-motion: reduce){
-  #quit-quiz-btn{ transition: none; }
+    #quit-quiz-btn{ transition: none; }
 }
 
 /* Small phones: slightly tighter */
 @media (max-width: 360px){
-  #quit-quiz-btn{
-    width: 92%;
-    min-height: 46px;
-    border-radius: 10px;
-  }
+    #quit-quiz-btn{
+        width: 92%;
+        min-height: 46px;
+        border-radius: 10px;
+    }
 }
 
 
 /* --- Align the page layout so content starts at the top --- */
 main{
-  /* you already have min-height:100dvh; keep it */
-  display: grid;
-  place-items: start center; /* was "center" in some versions */
+    /* you already have min-height:100dvh; keep it */
+    display: grid;
+    place-items: start center; /* was "center" in some versions */
 }
 
 /* --- Bottom bar for the main buttons (Start Quiz + Skriveguide) --- */
 #main-buttons{
-  margin-top: auto;               /* push this section to the bottom of .container */
-  padding-top: 14px;
-  border-top: 1px solid var(--border);
+    margin-top: auto;               /* push this section to the bottom of .container */
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
 
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Make both buttons roomy, accessible, and consistent */
 #main-buttons > button{
-  flex: 1 1 260px;               /* grow to fill row; wrap on small screens */
-  max-width: 360px;
-  min-height: 48px;              /* comfy tap target */
-  font-weight: 800;
-  letter-spacing: .2px;
+    flex: 1 1 260px;               /* grow to fill row; wrap on small screens */
+    max-width: 360px;
+    min-height: 48px;              /* comfy tap target */
+    font-weight: 800;
+    letter-spacing: .2px;
 }
 
 /* Keep your existing gradient look for these two */
 #start-quiz-btn,
 #nav-skriveguide{
-  border-radius: 12px;           /* keep rounded look (not the square nav style) */
+    border-radius: 12px;           /* keep rounded look (not the square nav style) */
 }
 
 /* Small phones */
 @media (max-width: 480px){
-  #main-buttons{
-    gap: 10px;
-    padding-top: 12px;
-  }
-  #main-buttons > button{
-    min-height: 46px;
-  }
+    #main-buttons{
+        gap: 10px;
+        padding-top: 12px;
+    }
+    #main-buttons > button{
+        min-height: 46px;
+    }
 }
 
 /* (Optional) tiny safe-area padding for iOS bottom bars */
 @supports (padding: max(0px)){
-  #main-buttons{
-    padding-bottom: max(0px, env(safe-area-inset-bottom));
-  }
+    #main-buttons{
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
+    }
 }
 
 
 /* =========================================================
-   SKRIVEGUIDE — Readable, Boxed, Breathable Layout
-   (Namespaced so it won't affect Study/Quiz)
-   ========================================================= */
+    SKRIVEGUIDE — Readable, Boxed, Breathable Layout
+    (Namespaced so it won't affect Study/Quiz)
+    ========================================================= */
 
 /* ---- Page frame -------------------------------------------------------- */
 #skriveguide .guide-page{
-  background: #f9fafb;
-  border: 1px solid var(--border, #e2e8f0);
-  border-radius: 16px;
-  padding: clamp(16px, 2.5vw, 22px);
-  box-shadow: 0 6px 14px rgba(2,6,23,.06);
-  display: flex;
-  flex-direction: column;
-  gap: clamp(14px, 2vw, 18px);
+    background: #f9fafb;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 16px;
+    padding: clamp(16px, 2.5vw, 22px);
+    box-shadow: 0 6px 14px rgba(2,6,23,.06);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(14px, 2vw, 18px);
 }
 
 /* Keep the top bar small and out of the way */
 #skriveguide .guide-topbar{
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
 }
 
 /* Blue “Main Menu” button, square corners */
 #skriveguide .guide-topbar #back-to-quiz-btn{
-  background: var(--brand-700, #1d4ed8);
-  color: #fff;
-  border: 1px solid var(--brand-700, #1d4ed8);
-  border-radius: 0;
-  padding: .6rem 1rem;
-  font-weight: 800;
+    background: var(--brand-700, #1d4ed8);
+    color: #fff;
+    border: 1px solid var(--brand-700, #1d4ed8);
+    border-radius: 0;
+    padding: .6rem 1rem;
+    font-weight: 800;
 }
 #skriveguide .guide-topbar #back-to-quiz-btn:hover{
-  background: var(--brand-800, #1e40af);
-  border-color: var(--brand-800, #1e40af);
+    background: var(--brand-800, #1e40af);
+    border-color: var(--brand-800, #1e40af);
 }
 
 /* ---- Title + content width / rhythm ----------------------------------- */
 #skriveguide #guide-title{
-  font-size: clamp(1.25rem, 1rem + 1.1vw, 1.6rem);
-  color: var(--brand-800, #1e40af);
-  font-weight: 800;
-  letter-spacing: .2px;
-  line-height: 1.2;
+    font-size: clamp(1.25rem, 1rem + 1.1vw, 1.6rem);
+    color: var(--brand-800, #1e40af);
+    font-weight: 800;
+    letter-spacing: .2px;
+    line-height: 1.2;
 }
 
 #skriveguide #guide-content{
   /* Comfortable reading width on desktop; full width on mobile */
-  max-width: 72ch;
-  width: 100%;
-  line-height: 1.65;
-  color: var(--text, #0f172a);
-  display: grid;
-  gap: clamp(12px, 1.8vw, 16px);
-}
-
-/* Paragraphs and subheads spacing inside the content */
-#skriveguide #guide-content p{ margin: .25rem 0; }
-#skriveguide #guide-content h3{
-  font-size: clamp(1.05rem, .95rem + .6vw, 1.25rem);
-  margin: .25rem 0 .35rem;
-  color: #0b1220;
-  font-weight: 800;
+    max-width: 72ch;
+    width: 100%;
+    line-height: 1.65;
+    color: var(--text, #0f172a);
+    display: grid;
+    gap: clamp(12px, 1.8vw, 16px);
 }
 
 /* ---- Reusable content BOX --------------------------------------------- */
 #skriveguide .box{
-  background: #ffffff;
-  border: 1px solid var(--border, #e2e8f0);
-  border-radius: 14px;
-  padding: clamp(12px, 1.8vw, 16px);
-  box-shadow: 0 3px 10px rgba(2,6,23,.05);
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 14px;
+    padding: clamp(12px, 1.8vw, 16px);
+    box-shadow: 0 3px 10px rgba(2,6,23,.05);
 }
 
 /* Callouts: tip/info/warn variations */
 #skriveguide .callout{
-  border-left: 6px solid var(--brand-700, #1d4ed8);
-  background: #f8fbff;
+    border-left: 6px solid var(--brand-700, #1d4ed8);
+    background: #f8fbff;
 }
 #skriveguide .callout.tip     { border-left-color: #22c55e; background: #f0fff4; }
 #skriveguide .callout.info    { border-left-color: #06b6d4; background: #effafe; }
@@ -682,12 +671,12 @@ main{
 
 /* ---- Two-column grid that collapses nicely ---------------------------- */
 #skriveguide .grid-2{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
 }
 @media (max-width: 720px){
-  #skriveguide .grid-2{ grid-template-columns: 1fr; }
+    #skriveguide .grid-2{ grid-template-columns: 1fr; }
 }
 
 /* Tight list helper (already used in your data) */
@@ -696,53 +685,54 @@ main{
 
 /* ---- Konjunktion card (inside .box or alone) -------------------------- */
 #skriveguide .konj-card{
-  border: 1px solid var(--border, #e2e8f0);
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(2,6,23,.05);
-  padding: 12px 14px;
-  display: grid;
-  gap: 8px;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(2,6,23,.05);
+    padding: 12px 14px;
+    display: grid;
+    gap: 8px;
 }
 
 /* Compact header row in each card */
 #skriveguide .konj-head{
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2px;
 }
 #skriveguide .konj-chip{
-  background: #eef2ff;
-  color: #1e3a8a;
-  border: 1px solid #c7d2fe;
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-weight: 800;
-  font-size: .95rem;
+    background: #eef2ff;
+    color: #1e3a8a;
+    border: 1px solid #c7d2fe;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-weight: 800;
+    font-size: .95rem;
 }
 #skriveguide .konj-meaning{
-  color: #334155;
-  font-weight: 600;
+    color: #334155;
+    font-weight: 600;
 }
 #skriveguide .konj-meaning .en{
-  color:#64748b;
-  font-style: italic;
+    color:#64748b;
+    font-style: italic;
 }
 
 /* Example box inside the card */
 #skriveguide .konj-ex{
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 8px 10px;
-  line-height: 1.55;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 8px 10px;
+    line-height: 1.55;
 }
 #skriveguide .konj-ex::before{
-  content: "Eksempel";
-  display: block;
-  font-size: 12px;
-  color: #64748b;
-  margin-bottom: 4px;
+    content: "Eksempel";
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
 }
 
 /* Optional little “role” tags you already use */
@@ -751,11 +741,11 @@ main{
 #skriveguide .role-a, 
 #skriveguide .role-h, 
 #skriveguide .role-l{
-  padding: .06rem .35rem;
-  border-radius: .45rem;
-  font-weight: 700;
-  white-space: nowrap;
-  font-size: .9rem;
+    padding: .06rem .35rem;
+    border-radius: .45rem;
+    font-weight: 700;
+    white-space: nowrap;
+    font-size: .9rem;
 }
 #skriveguide .role-s{ background: #e0f2fe; color: #075985; }
 #skriveguide .role-v{ background: #dcfce7; color: #065f46; }
@@ -765,70 +755,70 @@ main{
 
 /* ---- Rule block (SAV/SVA) --------------------------------------------- */
 #skriveguide .rule-block{
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: .7rem .85rem;
-  background: #f8fafc;
-  display: grid;
-  gap: .5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: .7rem .85rem;
+    background: #f8fafc;
+    display: grid;
+    gap: .5rem;
 }
 #skriveguide .rule-title{
-  font-weight: 800;
-  color: #1e3a8a;
-  margin-bottom: .25rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: .25rem;
 }
 
 /* ---- Guide navigation (Prev | counter | Next) ------------------------- */
 #skriveguide .guide-nav.btn-row{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: .5rem;
-  flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: .5rem;
+    flex-wrap: nowrap;
 }
 
 /* Square, equal-width buttons; unique styles for prev/next IDs */
 #skriveguide .guide-nav.btn-row > button{
-  flex: 1 1 0;
-  min-width: 0;
-  min-height: 44px;
-  padding: .7rem 1rem;
-  border-radius: 0;
-  font-weight: 800;
-  letter-spacing: .2px;
-  font-size: 16px;
-  transition: background .15s ease, border-color .15s ease, filter .15s ease;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 44px;
+    padding: .7rem 1rem;
+    border-radius: 0;
+    font-weight: 800;
+    letter-spacing: .2px;
+    font-size: 16px;
+    transition: background .15s ease, border-color .15s ease, filter .15s ease;
 }
 
 /* Forrige = white; Næste = blue */
 #skriveguide #prev-page{
-  background:#ffffff;
-  color:#0f172a;
-  border:1px solid #cbd5e1;
+    background:#ffffff;
+    color:#0f172a;
+    border:1px solid #cbd5e1;
 }
 #skriveguide #prev-page:hover{
-  background:#f1f5f9;
-  border-color:#94a3b8;
+    background:#f1f5f9;
+    border-color:#94a3b8;
 }
 #skriveguide #next-page{
-  background: var(--brand-700, #1d4ed8);
-  color:#ffffff;
-  border:1px solid var(--brand-700, #1d4ed8);
+    background: var(--brand-700, #1d4ed8);
+    color:#ffffff;
+    border:1px solid var(--brand-700, #1d4ed8);
 }
 #skriveguide #next-page:hover{
-  background: var(--brand-800, #1e40af);
-  border-color: var(--brand-800, #1e40af);
+    background: var(--brand-800, #1e40af);
+    border-color: var(--brand-800, #1e40af);
 }
 
 /* Center counter (doesn't stretch) */
 #skriveguide .guide-counter{
-  flex: 0 0 auto;
-  min-width: 64px;
-  text-align: center;
-  font-weight: 800;
-  color: #334155;
-  white-space: nowrap;
+    flex: 0 0 auto;
+    min-width: 64px;
+    text-align: center;
+    font-weight: 800;
+    color: #334155;
+    white-space: nowrap;
 }
 
 /* Disabled states */
@@ -837,9 +827,9 @@ main{
 
 /* ---- Spacing & readability on small screens --------------------------- */
 @media (max-width: 640px){
-  #skriveguide .guide-page{ border-radius: 12px; }
-  #skriveguide #guide-content{ gap: 14px; }
-  #skriveguide .grid-2 > .box{ margin-bottom: 4px; } /* extra air per card */
+    #skriveguide .guide-page{ border-radius: 12px; }
+    #skriveguide #guide-content{ gap: 14px; }
+    #skriveguide .grid-2 > .box{ margin-bottom: 4px; } /* extra air per card */
 }
 
 /* ---- Optional helpers used in your content ---------------------------- */
@@ -848,198 +838,165 @@ main{
 
 /* If you list multiple short items as chips */
 #skriveguide .chip-row{
-  display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 1rem;
+    display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 1rem;
 }
 #skriveguide .chip{
-  background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe;
-  padding: .2rem .55rem; border-radius: 999px; font-weight: 700; font-size: .9rem;
+    background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe;
+    padding: .2rem .55rem; border-radius: 999px; font-weight: 700; font-size: .9rem;
 }
 
 
 /* =========================================================
-   SKRIVEGUIDE — Tjekliste (Checklist) styling
-   - Namespaced under #skriveguide only
-   - Readable rows with icons + text
-   - Boxed cards, pills, grammar tags (S/V/A)
-   ========================================================= */
+    SKRIVEGUIDE — Tjekliste (Checklist) styling
+    - Namespaced under #skriveguide only
+    - Readable rows with icons + text
+    - Boxed cards, pills, grammar tags (S/V/A)
+    ========================================================= */
 
 /* ---- Section headings inside this page ------------------ */
 #skriveguide #guide-content h3 {
-  font-size: clamp(1.05rem, .95rem + .6vw, 1.25rem);
-  margin: .35rem 0 .45rem;
-  color: #0b1220;
-  font-weight: 800;
+    font-size: clamp(1.05rem, .95rem + .6vw, 1.25rem);
+    margin: .35rem 0 .45rem;
+    color: #0b1220;
+    font-weight: 800;
 }
 
 /* ---- Checklist container -------------------------------- */
 #skriveguide .checklist{
-  display: grid;
-  gap: 10px;                         /* vertical rhythm between items */
-  margin: 6px 0 14px;
+    display: grid;
+    gap: 10px;                         /* vertical rhythm between items */
+    margin: 6px 0 14px;
 }
 
 /* Each checklist row: icon + text in a soft card */
 #skriveguide .check-item{
-  display: grid;
-  grid-template-columns: 40px 1fr;   /* icon column + text */
-  align-items: start;
-  gap: 10px;
+    display: grid;
+    grid-template-columns: 40px 1fr;   /* icon column + text */
+    align-items: start;
+    gap: 10px;
 
-  background: #ffffff;
-  border: 1px solid var(--border, #e2e8f0);
-  border-radius: 14px;
-  box-shadow: 0 3px 10px rgba(2,6,23,.05);
-  padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(2,6,23,.05);
+    padding: 10px 12px;
 }
 
 /* Emoji/mini icon column */
 #skriveguide .check-item .icon{
-  display: grid;
-  place-items: center;
-  font-size: 1.3rem;
-  line-height: 1;
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+    line-height: 1;
 }
 
 /* Text column (title + gloss + helper) */
 #skriveguide .check-item .txt{
-  line-height: 1.55;
-  color: var(--text, #0f172a);
+    line-height: 1.55;
+    color: var(--text, #0f172a);
 }
 #skriveguide .check-item .txt .en{
-  color:#64748b;                     /* English gloss muted */
-  font-style: italic;
-  margin-left: .2rem;
+    color:#64748b;                     /* English gloss muted */
+    font-style: italic;
+    margin-left: .2rem;
 }
 #skriveguide .check-item .txt .muted{
-  color:#64748b;
-  display:inline-block;
-  margin-top: .15rem;
+    color:#64748b;
+    display:inline-block;
+    margin-top: .15rem;
 }
 
 /* ---- Subtle helper paragraphs used later ----------------- */
 #skriveguide .subtle{
-  color:#475569;
-  font-size:.95rem;
-  margin:.25rem 0 .35rem;
+    color:#475569;
+    font-size:.95rem;
+    margin:.25rem 0 .35rem;
 }
 
 /* ---- Grammar lists reuse --------------------------------- */
 #skriveguide .konj-list{
-  margin: .45rem 0 0 0;
-  padding-left: 1rem;
+    margin: .45rem 0 0 0;
+    padding-left: 1rem;
 }
 #skriveguide .konj-list li{ margin: .2rem 0; }
 #skriveguide .konj-list .en{ color:#64748b; font-style: italic; }
 
 /* ---- Pills for quick examples ---------------------------- */
 #skriveguide .pills{
-  display:flex; flex-wrap:wrap; gap:.4rem;
-  margin:.5rem 0 .2rem;
+    display:flex; flex-wrap:wrap; gap:.4rem;
+    margin:.5rem 0 .2rem;
 }
 #skriveguide .pill{
-  background:#eef2ff;
-  color:#1e3a8a;
-  border:1px solid #c7d2fe;
-  padding:.25rem .6rem;
-  border-radius:999px;
-  font-weight:700;
-  font-size:.92rem;
-  white-space:nowrap;
+    background:#eef2ff;
+    color:#1e3a8a;
+    border:1px solid #c7d2fe;
+    padding:.25rem .6rem;
+    border-radius:999px;
+    font-weight:700;
+    font-size:.92rem;
+    white-space:nowrap;
 }
 
 /* ---- S / V / A tags for order-of-words patterns ---------- */
 #skriveguide .tag{
-  display:inline-block;
-  min-width: 1.6rem;
-  text-align:center;
-  font-weight:800;
-  border-radius: .4rem;
-  padding: .06rem .35rem;
-  margin-right: .2rem;
-  font-size:.92rem;
+    display:inline-block;
+    min-width: 1.6rem;
+    text-align:center;
+    font-weight:800;
+    border-radius: .4rem;
+    padding: .06rem .35rem;
+    margin-right: .2rem;
+    font-size:.92rem;
 }
 #skriveguide .tag-s{ background:#e0f2fe; color:#075985; } /* Subject */
 #skriveguide .tag-v{ background:#dcfce7; color:#065f46; } /* Verb */
 #skriveguide .tag-a{ background:#fef3c7; color:#92400e; } /* Adverbial */
 
-/* ---- Boxes around major subparts (optional wrapper) ------ */
-/* If you want to wrap blocks (like the “1. Verber” card) with extra air: */
-#skriveguide .konj-card{
-  border: 1px solid var(--border, #e2e8f0);
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(2,6,23,.05);
-  padding: 12px 14px;
-  display: grid;
-  gap: 8px;
-}
-
-/* Header row inside those cards */
-#skriveguide .konj-head{
-  display: flex; align-items: center; gap: 10px; margin-bottom: 2px;
-}
-#skriveguide .konj-chip{
-  background: #eef2ff; color:#1e3a8a; border:1px solid #c7d2fe;
-  border-radius: 999px; padding: 4px 10px; font-weight: 800; font-size: .95rem;
-}
-#skriveguide .konj-meaning{ color:#334155; font-weight:600; }
-#skriveguide .konj-meaning .en{ color:#64748b; font-style: italic; }
-
-/* Example panel inside card */
-#skriveguide .konj-ex{
-  background: #f8fafc; border:1px solid #e2e8f0; border-radius: 10px;
-  padding: 8px 10px; line-height: 1.55;
-}
-#skriveguide .konj-ex::before{
-  content: "Eksempel";
-  display: block; font-size: 12px; color:#64748b; margin-bottom: 4px;
-}
-
 /* ---- Responsive tweaks ----------------------------------- */
 @media (max-width: 580px){
-  #skriveguide .check-item{
+    #skriveguide .check-item{
     grid-template-columns: 32px 1fr; /* smaller icon col on phones */
     padding: 10px;
-  }
-  #skriveguide .check-item .icon{ font-size: 1.15rem; }
+    }
+    #skriveguide .check-item .icon{ font-size: 1.15rem; }
 }
 
 /* Quiz question container */
 #quiz-question{
-  /* space from the top of the page */
-  margin: 24px auto 12px;
-  max-width: 720px;
+    /* space from the top of the page */
+    margin: 24px auto 12px;
+    max-width: 720px;
 
-  /* padding inside the box so the word isn't squished */
-  padding: 20px 18px;
+    /* padding inside the box so the word isn't squished */
+    padding: 20px 18px;
 
-  background: #ffffff;
-  border: 1px solid #e5e7eb;   /* light gray */
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    background: #ffffff;
+    border: 1px solid #e5e7eb;   /* light gray */
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
 
 /* The word itself */
 #quiz-question #quiz-word{
-  margin: 0;                   /* remove default h2 margin */
-  padding-block: 6px;          /* a bit of inner space */
-  text-align: center;
-  line-height: 1.2;
-  font-weight: 700;
-  font-size: clamp(1.6rem, 2.2vw + 0.6rem, 2.6rem);
+    margin: 0;                   /* remove default h2 margin */
+    padding-block: 6px;          /* a bit of inner space */
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 2.2vw + 0.6rem, 2.6rem);
 
-  /* prevent awkward overflow on long words */
-  word-break: break-word;
-  hyphens: auto;
+    /* prevent awkward overflow on long words */
+    word-break: break-word;
+    hyphens: auto;
 }
 
 /* If you have a fixed header, add safe space from the top */
 :root { --safe-top: 72px; }    /* tweak to your header height */
 body.has-fixed-header #quiz-question{
-  margin-top: calc(var(--safe-top) + 16px);
+    margin-top: calc(var(--safe-top) + 16px);
 }
 
 /* Small screens: add a bit more padding */
 @media (max-width: 480px){
-  #quiz-question{ padding: 22px 16px; }
+    #quiz-question{ padding: 22px 16px; }
 }
