@@ -293,6 +293,7 @@ button.category-option.is-selected {
   justify-content: center;
   gap: 12px;
   margin-top: 12px;
+  padding: 8px 0;
 }
 #score {
   margin-top: 8px;
