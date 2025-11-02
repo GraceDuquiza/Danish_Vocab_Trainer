@@ -525,7 +525,7 @@ const skriveguide = [
             <div class="konj-head"><span class="konj-chip">så</span>
             <span class="konj-meaning">konsekvens <span class="sep">/</span> <span class="en">so / therefore</span></span>
             </div>
-            <div class="konj-ex">Det regnede, <strong>så</strong> vi blev hjemme.</div>
+            <div class="konj-ex">Det regnede, <strong>så</strong> blev vi hjemme.</div>
         </div>
 
         <div class="konj-card">
