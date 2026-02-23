@@ -30,11 +30,15 @@
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
     background: #f4f7fb;
     color: var(--text);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
                 "Noto Sans", "Liberation Sans", Arial, "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
 }
 
 /* Accessibility */
@@ -58,22 +62,17 @@ html, body {
 /* ---------------------------
     1) Page Layout
    --------------------------- */
-main {
-    min-height: 100dvh;                /* include mobile dynamic areas */
-    display: grid;
-    place-items: center;
-    padding: clamp(16px, 4vw, 40px);
-}
 .container {
-    width: min(1080px, 100%);
+    width: 100%;
+    max-width: none;
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    box-shadow: 0 14px 36px rgba(2,6,23,.08);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
     padding: clamp(18px, 3vw, 28px);
 
-    /* feel full-height even with little content */
-    min-height: min(92dvh, 1100px);
+    /* full-page layout on desktop and mobile */
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     gap: clamp(12px, 2vw, 18px);
@@ -81,7 +80,7 @@ main {
 
 /* Edge-to-edge on small phones for native feel */
 @media (max-width: 640px){
-    .container { border-radius: 0; min-height: 100dvh; }
+    .container { padding: 16px; }
 }
 
 /* ---------------------------
@@ -551,9 +550,7 @@ button.category-option.is-selected {
 
 /* --- Align the page layout so content starts at the top --- */
 main{
-    /* you already have min-height:100dvh; keep it */
-    display: grid;
-    place-items: start center; /* was "center" in some versions */
+    min-height: 100dvh;
 }
 
 /* --- Bottom bar for the main buttons (Start Quiz + Skriveguide) --- */
