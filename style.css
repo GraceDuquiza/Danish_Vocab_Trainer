@@ -46,6 +46,15 @@ html, body {
     outline-offset: 2px;
 }
 
+.is-hidden {
+    display: none;
+}
+
+.reverse-toggle {
+    display: block;
+    margin-bottom: 15px;
+}
+
 /* ---------------------------
     1) Page Layout
    --------------------------- */

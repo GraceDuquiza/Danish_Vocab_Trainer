@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danish Vocabulary Trainer</title>
     <!-- Use the versioned URL to bust cache -->
-    <link rel="stylesheet" href="./style.css?v=9">
+    <link rel="stylesheet" href="./style.css?v=10">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -16,25 +16,21 @@
     <!-- PWA -->
     <link rel="manifest" href="./manifest.webmanifest">
 
-    <!-- Theme color (works for Android + iOS A2HS). Use light/dark if you can -->
-    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)">
-
     <!-- iOS icon (needed so it doesn’t use a screenshot) -->
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
 
     <!-- SEO / Social -->
-    <meta name="description" content="Danish Vocabulary Trainer – study, quiz & skriveguide. Learn verbs, nouns, adjectives, and connectors with examples. Offline-ready PWA.">
-    <meta property="og:title" content="Danish Vocabulary Trainer" />
-    <meta property="og:description" content="Study mode, quizzes, and a simple skriveguide. Learn Danish words with examples. Offline-ready PWA." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/" />
+    <meta name="description" content="Danish Vocabulary Trainer – study, quiz &amp; skriveguide. Learn verbs, nouns, adjectives, and connectors with examples. Offline-ready PWA.">
+    <meta property="og:title" content="Danish Vocabulary Trainer">
+    <meta property="og:description" content="Study mode, quizzes, and a simple skriveguide. Learn Danish words with examples. Offline-ready PWA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/">
     <meta property="og:image" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/icons/icon-512.png">
     <meta name="twitter:image" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/icons/icon-512.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Danish Vocabulary Trainer" />
-    <meta name="twitter:description" content="Study, quiz & skriveguide for Danish learners. Offline-ready PWA." />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Danish Vocabulary Trainer">
+    <meta name="twitter:description" content="Study, quiz &amp; skriveguide for Danish learners. Offline-ready PWA.">
 </head>
 <body>
     <div class="container">
@@ -47,7 +43,7 @@
                 <option value="verber">Verber</option>
                 <option value="substantiver">Substantiver</option>
                 <option value="adjektiver">Adjektiver</option>
-                <option value="adverbKonjunktion">Adverbier & Konjunktioner</option>
+                <option value="adverbKonjunktion">Adverbier &amp; Konjunktioner</option>
             </select>
 
             <div id="word-card" class="card">
@@ -55,33 +51,33 @@
                 <p><strong>English:</strong> <span id="english-meaning">Meaning</span></p>
                 <p><strong>Example:</strong> <span id="example-sentence">Example sentence here</span></p>
             </div>
-            
+
             <!-- NEW: uniform row wrapper -->
         <div class="btn-row">
-            <button id="prev-btn">Previous</button>
-            <button id="next-btn">Next</button>
+            <button type="button" id="prev-btn">Previous</button>
+            <button type="button" id="next-btn">Next</button>
         </div>
 
-            
+
         </div>
 
         <!-- QUIZ MODE -->
-        <div id="quiz-mode" style="display: none;">
+        <div id="quiz-mode" class="is-hidden">
 
             <!-- ✅ Move reverse switch here -->
-            <label style="margin-bottom: 15px; display: block;">
-                <input type="checkbox" id="reverse-mode" />
+            <label class="reverse-toggle">
+                <input type="checkbox" id="reverse-mode">
                 Switch to English ⇄ Danish
             </label>
             <div id="quiz-category-select">
                 <p><strong>Select a Category:</strong></p>
-                <button class="category-option" data-category="verber">Verber</button>
-                <button class="category-option" data-category="substantiver">Substantiver</button>
-                <button class="category-option" data-category="adjektiver">Adjektiver</button>
-                <button class="category-option" data-category="adverbKonjunktion">Adverbier & Konjunktioner</button>
+                <button type="button" class="category-option" data-category="verber">Verber</button>
+                <button type="button" class="category-option" data-category="substantiver">Substantiver</button>
+                <button type="button" class="category-option" data-category="adjektiver">Adjektiver</button>
+                <button type="button" class="category-option" data-category="adverbKonjunktion">Adverbier &amp; Konjunktioner</button>
             </div>
 
-        
+
             <!-- QUIZ QUESTION DISPLAY -->
             <div id="quiz-question">
                 <h2 id="quiz-word">Ord</h2>
@@ -92,36 +88,36 @@
 
             <!-- QUIZ CONTROLS -->
             <div class="controls">
-                <button id="show-answer-btn" style="display:none;">👁 Show Answer</button>
-                <button id="mark-correct-btn" style="display:none;">✅ Correct</button>
-                <button id="mark-wrong-btn" style="display:none;">❌ Wrong</button>
-                <button id="prev-question-btn" style="display:none;">⬅️ Previous</button> <!-- 🟢 New Button -->
-                <button id="next-question-btn" style="display:none;">➡️ Next</button>
+                <button type="button" id="show-answer-btn" class="is-hidden">👁 Show Answer</button>
+                <button type="button" id="mark-correct-btn" class="is-hidden">✅ Correct</button>
+                <button type="button" id="mark-wrong-btn" class="is-hidden">❌ Wrong</button>
+                <button type="button" id="prev-question-btn" class="is-hidden">⬅️ Previous</button> <!-- 🟢 New Button -->
+                <button type="button" id="next-question-btn" class="is-hidden">➡️ Next</button>
             </div>
             <p id="score">Score: 0/0</p>
-            <button id="quit-quiz-btn" style="display:none;">🚪 Quit Quiz</button> 
+            <button type="button" id="quit-quiz-btn" class="is-hidden">🚪 Quit Quiz</button>
         </div>
 
         <!-- MAIN START BUTTONS -->
         <div id="main-buttons">
-            <button id="start-quiz-btn">🎯 Start Quiz</button>
-            <button id="nav-skriveguide">📖 Skriveguide</button>
+            <button type="button" id="start-quiz-btn">🎯 Start Quiz</button>
+            <button type="button" id="nav-skriveguide">📖 Skriveguide</button>
             </div>
 
         <!-- Skriveguide Page -->
-        <div id="skriveguide" style="display:none">
+        <div id="skriveguide" class="is-hidden">
             <div class="guide-page">
                 <div class="guide-topbar">
-                    <button id="back-to-quiz-btn" aria-label="Back to main menu">⬅️ Main Menu</button>
+                    <button type="button" id="back-to-quiz-btn" aria-label="Back to main menu">⬅️ Main Menu</button>
                 </div>
 
                 <h2 id="guide-title">Titel</h2>
                 <div id="guide-content"></div>
 
                 <div class="guide-nav btn-row" role="group" aria-label="Skriveguide navigation">
-                    <button id="prev-page" aria-label="Previous page">⬅️ Forrige</button>
+                    <button type="button" id="prev-page" aria-label="Previous page">⬅️ Forrige</button>
                     <span class="guide-counter" id="guide-counter">1 / 1</span>
-                    <button id="next-page" aria-label="Next page">Næste ➡️</button>
+                    <button type="button" id="next-page" aria-label="Next page">Næste ➡️</button>
                 </div>
             </div>
         </div>
@@ -139,9 +135,9 @@
 
 
         <footer class="app-footer">
-            <p>Bliv Klar til PD3 ordliste— Made with ❤️ by Grace D. O </a></p>
+            <p>Bliv Klar til PD3 ordliste— Made with ❤️ by Grace D. O</p>
         </footer>
-        
+
     </div>
 </body>
 </html>
