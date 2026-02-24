@@ -304,6 +304,16 @@ button.category-option.is-selected {
     margin-top: 12px;
     padding: 8px 0;
 }
+
+/* Make quiz navigation buttons larger and easier to tap */
+#prev-question-btn,
+#next-question-btn {
+    min-width: 190px;
+    min-height: 56px;
+    padding: 14px 22px;
+    font-size: 18px;
+    font-weight: 800;
+}
 #score {
     margin-top: 8px;
     font-weight: 800;
@@ -416,6 +426,13 @@ button.category-option.is-selected {
     button, .choice-btn { font-size: 15px; padding: 12px 16px; }
     select { font-size: 15px; padding: 10px 12px; }
     #quiz-word { font-size: 22px; }
+    #prev-question-btn,
+    #next-question-btn {
+        min-width: 46%;
+        min-height: 56px;
+        font-size: 17px;
+        padding: 14px 18px;
+    }
 }
 @media (max-width: 420px){
     .btn-row{ gap:8px; }
