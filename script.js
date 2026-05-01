@@ -8,6 +8,87 @@
 
 window.addEventListener("DOMContentLoaded", function () {
     // ------------------------------------------------------------------
+    // GDPR COOKIE CONSENT — Google Analytics loads only after acceptance
+    // ------------------------------------------------------------------
+    const analyticsMeasurementId = "G-7DTJDCT4EG";
+    const placeholderMeasurementId = "G-XXXXXXXXXX";
+    const cookieBanner = document.getElementById("cookie-banner");
+    const cookieAcceptBtn = document.getElementById("cookie-accept");
+    const cookieDeclineBtn = document.getElementById("cookie-decline");
+    const consentStorageKey = "danishVocabAnalyticsConsent";
+    const consentAccepted = "accepted";
+    const consentDeclined = "declined";
+    const analyticsScriptId = "google-analytics-script";
+    const analyticsScriptUrl = `https://www.googletagmanager.com/gtag/js?id=${analyticsMeasurementId}`;
+
+    function getSavedConsent() {
+        try {
+            return localStorage.getItem(consentStorageKey);
+        } catch {
+            return null;
+        }
+    }
+
+    function saveConsent(value) {
+        try {
+            localStorage.setItem(consentStorageKey, value);
+            return true;
+        } catch {
+            // If storage is unavailable, still respect the current page choice.
+            return false;
+        }
+    }
+
+    function hideCookieBanner() {
+        cookieBanner?.classList.add("is-hidden");
+    }
+
+    function showCookieBanner() {
+        cookieBanner?.classList.remove("is-hidden");
+    }
+
+    function loadGoogleAnalytics() {
+        const hasValidMeasurementId = analyticsMeasurementId && analyticsMeasurementId !== placeholderMeasurementId;
+        const isAnalyticsLoaded = document.getElementById(analyticsScriptId);
+
+        if (!hasValidMeasurementId || isAnalyticsLoaded) {
+            return;
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() { window.dataLayer.push(arguments); };
+        window.gtag("js", new Date());
+        window.gtag("config", analyticsMeasurementId, { anonymize_ip: true });
+
+        const analyticsScript = document.createElement("script");
+        analyticsScript.id = analyticsScriptId;
+        analyticsScript.async = true;
+        analyticsScript.src = analyticsScriptUrl;
+        document.head.appendChild(analyticsScript);
+    }
+
+    const savedConsent = getSavedConsent();
+    if (savedConsent === consentAccepted) {
+        hideCookieBanner();
+        loadGoogleAnalytics();
+    } else if (savedConsent === consentDeclined) {
+        hideCookieBanner();
+    } else {
+        showCookieBanner();
+    }
+
+    cookieAcceptBtn?.addEventListener("click", () => {
+        saveConsent(consentAccepted);
+        hideCookieBanner();
+        loadGoogleAnalytics();
+    });
+
+    cookieDeclineBtn?.addEventListener("click", () => {
+        saveConsent(consentDeclined);
+        hideCookieBanner();
+    });
+
+    // ------------------------------------------------------------------
     // SHARED STATE (Study uses `index`; quiz.js manages its own state)
     // ------------------------------------------------------------------
     let index = 0;                 // current position in currentList (Study Mode)
