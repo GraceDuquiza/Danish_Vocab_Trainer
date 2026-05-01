@@ -15,11 +15,21 @@ window.addEventListener("DOMContentLoaded", function () {
     const cookieBanner = document.getElementById("cookie-banner");
     const cookieAcceptBtn = document.getElementById("cookie-accept");
     const cookieDeclineBtn = document.getElementById("cookie-decline");
+    const cookieSettingsBtn = document.getElementById("cookie-settings");
     const consentStorageKey = "danishVocabAnalyticsConsent";
     const consentAccepted = "accepted";
     const consentDeclined = "declined";
     const analyticsScriptId = "google-analytics-script";
     const analyticsScriptUrl = `https://www.googletagmanager.com/gtag/js?id=${analyticsMeasurementId}`;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+    window.gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+    });
 
     function getSavedConsent() {
         try {
@@ -47,16 +57,55 @@ window.addEventListener("DOMContentLoaded", function () {
         cookieBanner?.classList.remove("is-hidden");
     }
 
+    function deleteCookie(name, domain) {
+        document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax${domain ? `; domain=${domain}` : ""}`;
+    }
+
+    function clearGoogleAnalyticsCookies() {
+        const cookieNames = document.cookie
+            .split(";")
+            .map(cookie => cookie.trim().split("=")[0])
+            .filter(name => name === "_ga" || name === "_gid" || name === "_gat" || name.startsWith("_ga_"));
+        const host = window.location.hostname;
+        const domains = ["", host, host.startsWith(".") ? host : `.${host}`];
+
+        cookieNames.forEach(name => {
+            domains.forEach(domain => deleteCookie(name, domain));
+        });
+    }
+
+    function grantAnalyticsConsent() {
+        window[`ga-disable-${analyticsMeasurementId}`] = false;
+        window.gtag("consent", "update", {
+            analytics_storage: "granted"
+        });
+    }
+
+    function denyAnalyticsConsent() {
+        window[`ga-disable-${analyticsMeasurementId}`] = true;
+        window.gtag("consent", "update", {
+            analytics_storage: "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+        });
+        clearGoogleAnalyticsCookies();
+    }
+
     function loadGoogleAnalytics() {
         const hasValidMeasurementId = analyticsMeasurementId && analyticsMeasurementId !== placeholderMeasurementId;
         const isAnalyticsLoaded = document.getElementById(analyticsScriptId);
 
-        if (!hasValidMeasurementId || isAnalyticsLoaded) {
+        if (!hasValidMeasurementId) {
             return;
         }
 
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function gtag() { window.dataLayer.push(arguments); };
+        grantAnalyticsConsent();
+
+        if (isAnalyticsLoaded) {
+            return;
+        }
+
         window.gtag("js", new Date());
         window.gtag("config", analyticsMeasurementId, { anonymize_ip: true });
 
@@ -72,6 +121,7 @@ window.addEventListener("DOMContentLoaded", function () {
         hideCookieBanner();
         loadGoogleAnalytics();
     } else if (savedConsent === consentDeclined) {
+        denyAnalyticsConsent();
         hideCookieBanner();
     } else {
         showCookieBanner();
@@ -85,8 +135,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
     cookieDeclineBtn?.addEventListener("click", () => {
         saveConsent(consentDeclined);
+        denyAnalyticsConsent();
         hideCookieBanner();
     });
+
+    cookieSettingsBtn?.addEventListener("click", showCookieBanner);
 
     // ------------------------------------------------------------------
     // SHARED STATE (Study uses `index`; quiz.js manages its own state)

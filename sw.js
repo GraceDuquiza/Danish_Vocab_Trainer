@@ -1,10 +1,11 @@
 // sw.js — cache-first app shell with subpath-safe URLs
-const CACHE = 'dk-vocab-v12';
+const CACHE = 'dk-vocab-v13';
 
 // Use RELATIVE paths so it works on GitHub Pages subpaths too
 const ASSETS = [
     './',
     './index.html',
+    './cookie-policy.html',
     './style.css?v=11',
     './script.js?v=12',
     './quiz.js',

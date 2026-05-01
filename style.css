@@ -488,6 +488,101 @@ button.category-option.is-selected {
     border-top: 1px solid var(--border);
     padding: 10px 6px;
 }
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+.footer-links a,
+.cookie-banner a {
+    color: var(--brand-700);
+    font-weight: 700;
+}
+.cookie-settings-btn {
+    padding: 6px 10px;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.cookie-settings-btn:hover,
+.cookie-settings-btn:focus-visible {
+    color: var(--brand-700);
+    border-color: var(--border);
+    background: #ffffff;
+}
+
+.policy-page {
+    width: min(920px, 100%);
+    margin: 0 auto;
+    padding: clamp(18px, 4vw, 36px);
+    color: var(--text);
+}
+.policy-back-link {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--brand-700);
+    font-weight: 800;
+}
+.policy-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+.policy-header h1 {
+    text-align: left;
+}
+.policy-header p {
+    margin-top: 8px;
+    color: var(--muted);
+}
+.policy-section {
+    margin: 22px 0;
+}
+.policy-section h2 {
+    margin-bottom: 8px;
+    color: var(--brand-800);
+    font-size: clamp(1.1rem, 1rem + .6vw, 1.35rem);
+}
+.policy-section p {
+    margin: 8px 0;
+    color: var(--muted);
+    line-height: 1.65;
+}
+.policy-table {
+    width: 100%;
+    margin-top: 12px;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid var(--border);
+}
+.policy-table th,
+.policy-table td {
+    padding: 12px;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+.policy-table th {
+    background: #f8fafc;
+    color: #1e293b;
+}
+.policy-table code {
+    white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+    .policy-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
 
 /* ---------------------------
     13) Responsive Tweaks
