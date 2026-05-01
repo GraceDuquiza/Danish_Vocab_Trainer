@@ -1,12 +1,12 @@
 // sw.js — cache-first app shell with subpath-safe URLs
-const CACHE = 'dk-vocab-v9';
+const CACHE = 'dk-vocab-v12';
 
 // Use RELATIVE paths so it works on GitHub Pages subpaths too
 const ASSETS = [
     './',
     './index.html',
-    './style.css?v=9',
-    './script.js',
+    './style.css?v=11',
+    './script.js?v=12',
     './quiz.js',
     './skriveguide.js',
     './adjektiver.js',          
@@ -90,7 +90,7 @@ self.addEventListener('install', (event) => {
 
     event.respondWith((async () => {
         // Try cache first (fast)
-        const cached = await caches.match(req, { ignoreSearch: true });
+        const cached = await caches.match(req);
         if (cached) return cached;
 
         // Otherwise fetch and cache if OK
