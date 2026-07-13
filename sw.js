@@ -1,18 +1,19 @@
 // sw.js — network-first app shell with offline fallback and subpath-safe URLs
-const CACHE = 'dk-vocab-v60';
+const CACHE = 'dk-vocab-v62';
 
 // Use RELATIVE paths so it works on GitHub Pages subpaths too
 const ASSETS = [
     './',
     './index.html',
     './cookie-policy.html',
-    './style.css?v=41',
-    './script.js?v=31',
+    './style.css?v=42',
+    './script.js?v=32',
     './quiz.js',
     './skriveguide.js',
     './Grammatik_Adverbiel.js',
     './Grammatik_Substantiv.js',
     './Grammatik_Adjektiv.js',
+    './Grammatik_Pronomen.js',
     './Grammatik_Verber.js',
     './adjektiver.js',          
     './adverbKonjunktion.js',

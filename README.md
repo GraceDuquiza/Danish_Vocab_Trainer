@@ -15,6 +15,7 @@ A simple and effective web app to help users learn and practice Danish vocabular
 - 🇩🇰🇬🇧 Bilingual Danish–English lesson about adverbs
 - 📘 Bilingual noun grammar guide with explanations, exercises, and answer keys
 - 📙 Bilingual adjective grammar guide covering agreement, definite forms, comparison, adjective/adverb use, exercises, and answers
+- 📕 Bilingual pronoun grammar guide adapted from `Pronomen.docx`, with personal, possessive, reflexive, relative, and indefinite pronouns, exercises, and answers
 - 📗 Bilingual verb grammar guide covering tense, verb phrases, modal verbs, passive voice, exercises, and answer keys
 - 🗂️ Mobile-friendly learning cards that group grammar rules, examples, and exercises into clear sections
 
@@ -29,6 +30,7 @@ A simple and effective web app to help users learn and practice Danish vocabular
 ├── Grammatik_Adverbiel.js
 ├── Grammatik_Substantiv.js
 ├── Grammatik_Adjektiv.js
+├── Grammatik_Pronomen.js
 ├── Grammatik_Verber.js
 ├── verber.js
 ├── substantiver.js
@@ -36,7 +38,7 @@ A simple and effective web app to help users learn and practice Danish vocabular
 ├── adverbKonjunktion.js
 ```
 
-`Grammatik_Adverbiel.js`, `Grammatik_Substantiv.js`, `Grammatik_Adjektiv.js`, and `Grammatik_Verber.js` store the bilingual grammar lessons separately from the navigation and rendering logic. The lessons are displayed inside `index.html`; no separate grammar lesson pages are required.
+`Grammatik_Adverbiel.js`, `Grammatik_Substantiv.js`, `Grammatik_Adjektiv.js`, `Grammatik_Pronomen.js`, and `Grammatik_Verber.js` store the bilingual grammar lessons separately from the navigation and rendering logic. The lessons are displayed inside `index.html`; no separate grammar lesson pages are required.
 
 ## 🚀 Deployment
 

@@ -6,7 +6,7 @@
     <title>Danish-English Learning Guide</title>
 
     <!-- Use the versioned URL to bust cache -->
-        <link rel="stylesheet" href="./style.css?v=41">
+        <link rel="stylesheet" href="./style.css?v=42">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -164,6 +164,10 @@
                         <span lang="da">Adjektiv</span>
                         <span lang="en">Adjectives</span>
                     </button>
+                    <button type="button" class="grammar-topic-card" id="open-pronoun-lesson">
+                        <span lang="da">Pronomen</span>
+                        <span lang="en">Pronouns</span>
+                    </button>
                     <button type="button" class="grammar-topic-card" id="open-verb-lesson">
                         <span lang="da">Verbum</span>
                         <span lang="en">Verbs</span>
@@ -234,6 +238,26 @@
             </article>
         </section>
 
+        <!-- Pronoun lesson -->
+        <section id="pronoun-lesson" class="is-hidden" aria-labelledby="pronoun-lesson-title">
+            <article class="grammar-page">
+                <nav class="grammar-topbar" aria-label="Pronoun lesson destinations">
+                    <button type="button" id="pronoun-to-grammar">⬅️ Grammatik</button>
+                    <button type="button" id="pronoun-to-home">🏠 Main Menu</button>
+                </nav>
+
+                <p class="grammar-section-label">Pronomen – Pronouns</p>
+                <h2 id="pronoun-lesson-title" tabindex="-1">Pronomen – Pronouns</h2>
+                <div id="pronoun-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                <nav class="grammar-lesson-nav btn-row" aria-label="Pronoun lesson navigation">
+                    <button type="button" id="pronoun-prev" aria-label="Previous pronoun lesson section">⬅️ Forrige</button>
+                    <span class="guide-counter" id="pronoun-counter" aria-live="polite">1 / …</span>
+                    <button type="button" id="pronoun-next" aria-label="Next pronoun lesson section">Næste ➡️</button>
+                </nav>
+            </article>
+        </section>
+
         <!-- Verb lesson -->
         <section id="verb-lesson" class="is-hidden" aria-labelledby="verb-lesson-title">
             <article class="grammar-page">
@@ -263,8 +287,9 @@
         <script src="./Grammatik_Adverbiel.js" defer></script>
         <script src="./Grammatik_Substantiv.js" defer></script>
         <script src="./Grammatik_Adjektiv.js" defer></script>
+        <script src="./Grammatik_Pronomen.js" defer></script>
         <script src="./Grammatik_Verber.js" defer></script>
-        <script src="./script.js?v=31" defer></script>
+        <script src="./script.js?v=32" defer></script>
         <script src="./quiz.js" defer></script>
 
 

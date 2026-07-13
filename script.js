@@ -242,6 +242,16 @@ window.addEventListener("DOMContentLoaded", function () {
     const adjectiveToGrammarBtn  = document.getElementById("adjective-to-grammar");
     const adjectiveToHomeBtn     = document.getElementById("adjective-to-home");
     let currentAdjectivePage = 0;
+    const openPronounLessonBtn = document.getElementById("open-pronoun-lesson");
+    const pronounLessonEl      = document.getElementById("pronoun-lesson");
+    const pronounTitleEl       = document.getElementById("pronoun-lesson-title");
+    const pronounContentEl     = document.getElementById("pronoun-lesson-content");
+    const pronounCounterEl     = document.getElementById("pronoun-counter");
+    const pronounPrevBtn       = document.getElementById("pronoun-prev");
+    const pronounNextBtn       = document.getElementById("pronoun-next");
+    const pronounToGrammarBtn  = document.getElementById("pronoun-to-grammar");
+    const pronounToHomeBtn     = document.getElementById("pronoun-to-home");
+    let currentPronounPage = 0;
     const openVerbLessonBtn = document.getElementById("open-verb-lesson");
     const verbLessonEl      = document.getElementById("verb-lesson");
     const verbTitleEl       = document.getElementById("verb-lesson-title");
@@ -354,6 +364,7 @@ window.addEventListener("DOMContentLoaded", function () {
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
 
         // Hide main buttons row
@@ -381,6 +392,7 @@ window.addEventListener("DOMContentLoaded", function () {
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
 
         // Show the home navigation hub.
@@ -648,6 +660,7 @@ window.addEventListener("DOMContentLoaded", function () {
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         grammarSelectionEl?.classList.remove("is-hidden");
         document.getElementById("grammar-selection-title")?.focus?.();
@@ -664,6 +677,7 @@ window.addEventListener("DOMContentLoaded", function () {
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         if (studyModeEl) studyModeEl.style.display = "block";
         if (studyNavRow) studyNavRow.style.display = "flex";
@@ -679,6 +693,7 @@ window.addEventListener("DOMContentLoaded", function () {
         grammarSelectionEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.remove("is-hidden");
         currentAdverbPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
@@ -734,6 +749,7 @@ window.addEventListener("DOMContentLoaded", function () {
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.remove("is-hidden");
         currentNounPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
@@ -790,10 +806,67 @@ window.addEventListener("DOMContentLoaded", function () {
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.remove("is-hidden");
         currentAdjectivePage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
         renderAdjectivePage(currentAdjectivePage);
         adjectiveTitleEl?.focus();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function renderPronounPage(pageIndex) {
+        const pages = (typeof pronomenGrammarPages !== "undefined" && Array.isArray(pronomenGrammarPages))
+            ? pronomenGrammarPages
+            : [];
+        const page = pages[pageIndex];
+
+        if (!page) {
+            if (pronounTitleEl) pronounTitleEl.textContent = "No lesson content";
+            if (pronounContentEl) pronounContentEl.innerHTML = "<p>Please check the pronoun lesson data.</p>";
+            if (pronounCounterEl) pronounCounterEl.textContent = "0 / 0";
+            if (pronounPrevBtn) pronounPrevBtn.disabled = true;
+            if (pronounNextBtn) pronounNextBtn.disabled = true;
+            return;
+        }
+
+        if (pronounTitleEl) {
+            const danishTitle = document.createElement("span");
+            danishTitle.lang = "da";
+            danishTitle.textContent = `${pageIndex + 1}. ${page.titleDa}`;
+
+            const englishTitle = document.createElement("span");
+            englishTitle.className = "grammar-title-english";
+            englishTitle.lang = "en";
+            englishTitle.textContent = page.titleEn;
+
+            pronounTitleEl.replaceChildren(danishTitle, englishTitle);
+        }
+        if (pronounContentEl) {
+            pronounContentEl.innerHTML = page.content || "";
+            pronounContentEl.classList.remove("grammar-single-column-page");
+            markGrammarEnglishTranslations(pronounContentEl);
+            arrangeGrammarLanguagePairs(pronounContentEl);
+            createGrammarLearningCards(pronounContentEl);
+        }
+        if (pronounCounterEl) pronounCounterEl.textContent = `${pageIndex + 1} / ${pages.length}`;
+        if (pronounPrevBtn) pronounPrevBtn.disabled = pageIndex === 0;
+        if (pronounNextBtn) pronounNextBtn.disabled = pageIndex === pages.length - 1;
+    }
+
+    function openPronounLesson(startIndex = 0) {
+        const pageCount = (typeof pronomenGrammarPages !== "undefined" && Array.isArray(pronomenGrammarPages))
+            ? pronomenGrammarPages.length
+            : 0;
+        hideHomeViews();
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.remove("is-hidden");
+        currentPronounPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
+        renderPronounPage(currentPronounPage);
+        pronounTitleEl?.focus();
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -845,6 +918,7 @@ window.addEventListener("DOMContentLoaded", function () {
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.remove("is-hidden");
         currentVerbPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
         renderVerbPage(currentVerbPage);
@@ -856,6 +930,7 @@ window.addEventListener("DOMContentLoaded", function () {
     openAdverbLessonBtn?.addEventListener("click", () => openAdverbLesson(0));
     openNounLessonBtn?.addEventListener("click", () => openNounLesson(0));
     openAdjectiveLessonBtn?.addEventListener("click", () => openAdjectiveLesson(0));
+    openPronounLessonBtn?.addEventListener("click", () => openPronounLesson(0));
     openVerbLessonBtn?.addEventListener("click", () => openVerbLesson(0));
     grammarToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbToGrammarBtn?.addEventListener("click", openGrammarSelection);
@@ -864,6 +939,8 @@ window.addEventListener("DOMContentLoaded", function () {
     nounToHomeBtn?.addEventListener("click", goToMainMenu);
     adjectiveToGrammarBtn?.addEventListener("click", openGrammarSelection);
     adjectiveToHomeBtn?.addEventListener("click", goToMainMenu);
+    pronounToGrammarBtn?.addEventListener("click", openGrammarSelection);
+    pronounToHomeBtn?.addEventListener("click", goToMainMenu);
     verbToGrammarBtn?.addEventListener("click", openGrammarSelection);
     verbToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbPrevBtn?.addEventListener("click", () => {
@@ -914,6 +991,23 @@ window.addEventListener("DOMContentLoaded", function () {
             currentAdjectivePage++;
             renderAdjectivePage(currentAdjectivePage);
             adjectiveTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    pronounPrevBtn?.addEventListener("click", () => {
+        if (currentPronounPage > 0) {
+            currentPronounPage--;
+            renderPronounPage(currentPronounPage);
+            pronounTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    pronounNextBtn?.addEventListener("click", () => {
+        const lastPage = (typeof pronomenGrammarPages !== "undefined" ? pronomenGrammarPages.length : 1) - 1;
+        if (currentPronounPage < lastPage) {
+            currentPronounPage++;
+            renderPronounPage(currentPronounPage);
+            pronounTitleEl?.focus();
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     });
@@ -985,6 +1079,7 @@ window.addEventListener("DOMContentLoaded", function () {
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
         adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         if (mainButtons) mainButtons.style.display = "none";
 
