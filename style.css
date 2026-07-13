@@ -214,6 +214,7 @@ select:focus-visible { border-color: var(--brand-600); }
     - ONLY these are wide globally
     --------------------------- */
 #start-quiz-btn,
+#nav-vocabulary,
 #nav-skriveguide,
 #nav-grammatik{
     display: inline-block;
@@ -233,6 +234,7 @@ select:focus-visible { border-color: var(--brand-600); }
     transition: transform .12s ease, filter .2s ease;
 }
 #start-quiz-btn:hover,
+#nav-vocabulary:hover,
 #nav-skriveguide:hover,
 #nav-grammatik:hover { filter: brightness(.98); transform: translateY(-1px); }
 
@@ -498,6 +500,9 @@ button.category-option.is-selected {
     justify-content: center;
     margin-top: 8px;
 }
+.footer-links.is-hidden {
+    display: none;
+}
 .footer-links a,
 .cookie-banner a {
     color: var(--brand-700);
@@ -738,32 +743,121 @@ main{
     min-height: 100dvh;
 }
 
-/* --- Bottom bar for the main buttons (Start Quiz + Skriveguide) --- */
-#main-buttons{
-    margin-top: auto;               /* push this section to the bottom of .container */
-    padding-top: 14px;
-    border-top: 1px solid var(--border);
-
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
+/* --- Home navigation hub --- */
+.home-welcome {
+    width: min(100%, 760px);
+    margin: clamp(14px, 5vh, 48px) auto 4px;
+    text-align: center;
 }
 
-/* Make both buttons roomy, accessible, and consistent */
-#main-buttons > button{
-    flex: 1 1 260px;               /* grow to fill row; wrap on small screens */
-    max-width: 360px;
-    min-height: 48px;              /* comfy tap target */
+.home-welcome__eyebrow {
+    margin-bottom: 8px;
+    color: var(--brand-700);
+    font-size: .8rem;
     font-weight: 800;
-    letter-spacing: .2px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
 }
 
-/* Keep your existing gradient look for these two */
+.home-welcome h2 {
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: clamp(1.35rem, 1.1rem + 1vw, 2rem);
+}
+
+.home-welcome > p:last-child {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+#main-buttons{
+    width: min(100%, 1100px);
+    margin: clamp(12px, 3vw, 28px) auto auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+#main-buttons > button{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: none;
+    min-height: 92px;
+    margin: 0;
+    padding: 16px;
+    color: var(--text);
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, .07);
+}
+
+#main-buttons > button:hover {
+    color: var(--brand-800);
+    background: #f8fbff;
+    border-color: #bfdbfe;
+    box-shadow: 0 12px 26px rgba(37, 99, 235, .12);
+}
+
+.home-nav-icon {
+    display: grid;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--brand-800), var(--brand-600));
+    border-radius: 12px;
+}
+
+.home-nav-text {
+    display: grid;
+    gap: 3px;
+}
+
+.home-nav-text strong {
+    font-size: 1rem;
+}
+
+.home-nav-text small {
+    color: var(--muted);
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
 #start-quiz-btn,
+#nav-vocabulary,
 #nav-skriveguide,
 #nav-grammatik{
-    border-radius: 12px;           /* keep rounded look (not the square nav style) */
+    border-radius: 14px;
+}
+
+.study-topbar {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+#study-to-home {
+    min-height: 44px;
+    padding: 10px 14px;
+    color: var(--brand-800);
+    font-weight: 800;
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    #main-buttons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 /* =========================================================
@@ -771,7 +865,8 @@ main{
     ========================================================= */
 #grammar-selection,
 #adverb-lesson,
-#noun-lesson {
+#noun-lesson,
+#verb-lesson {
     width: 100%;
 }
 
@@ -924,12 +1019,31 @@ main{
     font-weight: 600;
 }
 
+.grammar-paired-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 9px;
+}
+
 .grammar-paired-label > * {
-    display: block;
+    display: inline;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
 }
 
 .grammar-paired-label > .grammar-english {
-    margin-top: 4px;
+    margin-top: 0;
+}
+
+.grammar-content th .grammar-paired-label {
+    gap: 2px 5px;
+    flex-wrap: nowrap;
+}
+
+.grammar-content th .grammar-paired-label > .grammar-english {
+    font-size: .8em;
 }
 
 .grammar-heading-language-pair,
@@ -954,7 +1068,9 @@ main{
     margin: 0;
     padding-left: 12px;
     border-left: 1px solid var(--border);
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
 }
 
 .grammar-heading-language-pair > .grammar-english {
@@ -1389,7 +1505,9 @@ main{
         min-width: 0;
         width: 100%;
         border-right: 0;
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: auto;
     }
 
     .grammar-content tr > :last-child {
@@ -1409,7 +1527,9 @@ main{
     .grammar-content .grammar-example-table td {
         min-width: 0;
         width: auto;
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: auto;
     }
 
     .grammar-content .grammar-bilingual-table tr > :first-child {
@@ -1437,23 +1557,27 @@ main{
     }
 
     .grammar-paired-label {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 2px 8px;
     }
 
     .grammar-paired-label > * {
         min-width: 0;
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: auto;
     }
 
     .grammar-paired-label > .grammar-english {
         margin-top: 0;
-        padding-left: 10px;
-        border-left: 1px solid var(--border);
+        padding-left: 0;
+        border-left: 0;
     }
 
     .grammar-paired-label > :first-child {
-        padding-right: 10px;
+        padding-right: 0;
     }
 
     /* Keep the requested comparison and correction layouts as unified tables. */
@@ -1489,7 +1613,22 @@ main{
         min-width: 0;
         width: auto;
         border-right: 1px solid var(--border);
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: auto;
+    }
+
+    .grammar-content .grammar-comparison-table th,
+    .grammar-content .grammar-correction-table th,
+    .grammar-content .grammar-exercise-table th {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    .grammar-content .grammar-comparison-table tr > :last-child:not(:only-child),
+    .grammar-content .grammar-correction-table tr > :last-child:not(:only-child) {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
     }
 
     .grammar-content .grammar-comparison-table th,
@@ -1550,11 +1689,17 @@ main{
         min-width: 0;
         width: auto;
         border-right: 1px solid var(--border);
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: auto;
     }
 
     .grammar-content .grammar-exercise-table tr > :last-child {
         border-right: 0;
+    }
+
+    .grammar-content .grammar-exercise-table tr > :last-child:not(:only-child) {
+        border-bottom: 1px solid var(--border);
     }
 
     .grammar-content .grammar-exercise-table--numbered th:first-child,
@@ -1583,21 +1728,21 @@ main{
     }
 
     .grammar-content .grammar-exercise-table th .grammar-paired-label {
-        display: block;
+        display: flex;
     }
 
     .grammar-content .grammar-exercise-table th .grammar-paired-label > .grammar-english {
-        margin-top: 4px;
+        margin-top: 0;
         padding-left: 0;
         border-left: 0;
     }
 
     .grammar-content .grammar-correction-table th .grammar-paired-label {
-        display: block;
+        display: flex;
     }
 
     .grammar-content .grammar-correction-table th .grammar-paired-label > .grammar-english {
-        margin-top: 4px;
+        margin-top: 0;
         padding-left: 0;
         border-left: 0;
     }
@@ -1636,6 +1781,16 @@ main{
         border-left: 0;
     }
 
+    .grammar-single-column-page th .grammar-paired-label {
+        flex-direction: row;
+    }
+
+    .grammar-single-column-page th .grammar-paired-label > .grammar-english {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+    }
+
     .grammar-language-pair .grammar-danish,
     .grammar-language-pair .grammar-translation-panel {
         border-top-width: 4px;
@@ -1655,6 +1810,10 @@ main{
 }
 
 @media (max-width: 380px) {
+    .grammar-content th .grammar-paired-label {
+        flex-wrap: wrap;
+    }
+
     .grammar-page {
         padding: 12px;
     }
@@ -1686,11 +1845,11 @@ main{
 /* Small phones */
 @media (max-width: 480px){
     #main-buttons{
+        grid-template-columns: 1fr;
         gap: 10px;
-        padding-top: 12px;
     }
     #main-buttons > button{
-        min-height: 46px;
+        min-height: 78px;
     }
 }
 
