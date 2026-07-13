@@ -16,11 +16,13 @@ window.addEventListener("DOMContentLoaded", function () {
     const cookieAcceptBtn = document.getElementById("cookie-accept");
     const cookieDeclineBtn = document.getElementById("cookie-decline");
     const cookieSettingsBtn = document.getElementById("cookie-settings");
+    const footerPrivacyLinks = document.querySelector(".footer-links");
     const consentStorageKey = "danishVocabAnalyticsConsent";
     const consentAccepted = "accepted";
     const consentDeclined = "declined";
     const analyticsScriptId = "google-analytics-script";
     const analyticsScriptUrl = `https://www.googletagmanager.com/gtag/js?id=${analyticsMeasurementId}`;
+    let isHomeView = true;
 
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
@@ -54,7 +56,20 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function showCookieBanner() {
-        cookieBanner?.classList.remove("is-hidden");
+        if (isHomeView) {
+            cookieBanner?.classList.remove("is-hidden");
+        }
+    }
+
+    function setHomePrivacyVisibility(showOnHome) {
+        isHomeView = showOnHome;
+        footerPrivacyLinks?.classList.toggle("is-hidden", !showOnHome);
+
+        if (!showOnHome) {
+            hideCookieBanner();
+        } else if (!getSavedConsent()) {
+            showCookieBanner();
+        }
     }
 
     function deleteCookie(name, domain) {
@@ -158,6 +173,8 @@ window.addEventListener("DOMContentLoaded", function () {
     const nextBtn        = document.getElementById("next-btn");
     const prevBtn        = document.getElementById("prev-btn");
     const categorySelect = document.getElementById("category-select");
+    const studyToHomeBtn = document.getElementById("study-to-home");
+    const studyNavRow    = studyModeEl?.querySelector(".btn-row");
 
     // ------------------------------------------------------------------
     // QUIZ — DOM references (routing only; logic lives in quiz.js)
@@ -172,6 +189,8 @@ window.addEventListener("DOMContentLoaded", function () {
     const quizWordEl          = document.getElementById("quiz-word");
     const scoreDisplay        = document.getElementById("score");
     const mainButtons         = document.getElementById("main-buttons"); // Start/Skriveguide row
+    const homeWelcome         = document.getElementById("home-welcome");
+    const navVocabulary       = document.getElementById("nav-vocabulary");
     const btnRow              = document.querySelector(".btn-row");      // Prev/Next container row
 
     // ------------------------------------------------------------------
@@ -213,6 +232,16 @@ window.addEventListener("DOMContentLoaded", function () {
     const nounToGrammarBtn  = document.getElementById("noun-to-grammar");
     const nounToHomeBtn     = document.getElementById("noun-to-home");
     let currentNounPage = 0;
+    const openVerbLessonBtn = document.getElementById("open-verb-lesson");
+    const verbLessonEl      = document.getElementById("verb-lesson");
+    const verbTitleEl       = document.getElementById("verb-lesson-title");
+    const verbContentEl     = document.getElementById("verb-lesson-content");
+    const verbCounterEl     = document.getElementById("verb-counter");
+    const verbPrevBtn       = document.getElementById("verb-prev");
+    const verbNextBtn       = document.getElementById("verb-next");
+    const verbToGrammarBtn  = document.getElementById("verb-to-grammar");
+    const verbToHomeBtn     = document.getElementById("verb-to-home");
+    let currentVerbPage = 0;
 
     // ================================================================
     // STUDY MODE — rendering + category loading
@@ -305,12 +334,16 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openSkriveguide(startIndex = 0) {
+        setHomePrivacyVisibility(false);
+
         // Hide study + quiz
         if (studyModeEl) studyModeEl.style.display = "none";
         if (quizModeEl)  quizModeEl.style.display  = "none";
+        if (homeWelcome) homeWelcome.style.display = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
 
         // Hide main buttons row
         if (startQuizBtn)   startQuizBtn.style.display   = "none";
@@ -328,24 +361,31 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function goToMainMenu() {
+        setHomePrivacyVisibility(true);
+
         // Hide non-main sections
         if (skriveguideEl) skriveguideEl.style.display = "none";
         if (quizModeEl)    quizModeEl.style.display    = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
 
-        // Show default: Study + main buttons row
-        if (studyModeEl)   studyModeEl.style.display   = "block";
-        if (startQuizBtn)   startQuizBtn.style.display   = "inline-block";
-        if (navSkriveguide) navSkriveguide.style.display = "inline-block";
-        if (navGrammatik) navGrammatik.style.display = "inline-block";
+        // Show the home navigation hub.
+        if (studyModeEl)   studyModeEl.style.display   = "none";
+        if (homeWelcome)   homeWelcome.style.display   = "block";
+        if (navVocabulary) navVocabulary.style.display = "";
+        if (startQuizBtn)   startQuizBtn.style.display   = "";
+        if (navSkriveguide) navSkriveguide.style.display = "";
+        if (navGrammatik) navGrammatik.style.display = "";
         if (mainButtons)    mainButtons.style.display    = "";
 
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     // Skriveguide bindings
+    navVocabulary?.addEventListener("click", openVocabulary);
+    studyToHomeBtn?.addEventListener("click", goToMainMenu);
     navSkriveguide?.addEventListener("click", () => openSkriveguide(0));
     guidePrevBtn?.addEventListener("click", () => {
         if (currentGuidePage > 0) {
@@ -467,13 +507,23 @@ window.addEventListener("DOMContentLoaded", function () {
             danish.lang = "da";
             danish.textContent = danishText.trim();
 
-            const english = document.createElement("strong");
+            const english = document.createElement("em");
             english.className = "grammar-english";
             english.lang = "en";
             english.textContent = englishText;
 
             pair.append(danish, english);
             label.replaceWith(pair);
+        });
+
+        container.querySelectorAll("th .grammar-paired-label > .grammar-english").forEach((translation) => {
+            if (translation.matches("em")) return;
+
+            const emphasis = document.createElement("em");
+            emphasis.className = translation.className;
+            emphasis.lang = translation.lang || "en";
+            emphasis.append(...translation.childNodes);
+            translation.replaceWith(emphasis);
         });
     }
 
@@ -572,9 +622,12 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function hideHomeViews() {
+        setHomePrivacyVisibility(false);
+
         if (studyModeEl) studyModeEl.style.display = "none";
         if (quizModeEl) quizModeEl.style.display = "none";
         if (skriveguideEl) skriveguideEl.style.display = "none";
+        if (homeWelcome) homeWelcome.style.display = "none";
         if (mainButtons) mainButtons.style.display = "none";
     }
 
@@ -582,8 +635,25 @@ window.addEventListener("DOMContentLoaded", function () {
         hideHomeViews();
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
         grammarSelectionEl?.classList.remove("is-hidden");
         document.getElementById("grammar-selection-title")?.focus?.();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function openVocabulary() {
+        setHomePrivacyVisibility(false);
+        if (homeWelcome) homeWelcome.style.display = "none";
+        if (mainButtons) mainButtons.style.display = "none";
+        if (quizModeEl) quizModeEl.style.display = "none";
+        if (skriveguideEl) skriveguideEl.style.display = "none";
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
+        if (studyModeEl) studyModeEl.style.display = "block";
+        if (studyNavRow) studyNavRow.style.display = "flex";
+        categorySelect?.focus();
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -594,6 +664,7 @@ window.addEventListener("DOMContentLoaded", function () {
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.remove("is-hidden");
         currentAdverbPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
         renderAdverbPage(currentAdverbPage);
@@ -647,6 +718,7 @@ window.addEventListener("DOMContentLoaded", function () {
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.remove("is-hidden");
         currentNounPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
         renderNounPage(currentNounPage);
@@ -654,14 +726,71 @@ window.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
+    function renderVerbPage(pageIndex) {
+        const pages = (typeof verbumGrammarPages !== "undefined" && Array.isArray(verbumGrammarPages))
+            ? verbumGrammarPages
+            : [];
+        const page = pages[pageIndex];
+
+        if (!page) {
+            if (verbTitleEl) verbTitleEl.textContent = "No lesson content";
+            if (verbContentEl) verbContentEl.innerHTML = "<p>Please check the verb lesson data.</p>";
+            if (verbCounterEl) verbCounterEl.textContent = "0 / 0";
+            if (verbPrevBtn) verbPrevBtn.disabled = true;
+            if (verbNextBtn) verbNextBtn.disabled = true;
+            return;
+        }
+
+        if (verbTitleEl) {
+            const danishTitle = document.createElement("span");
+            danishTitle.lang = "da";
+            danishTitle.textContent = `${pageIndex + 1}. ${page.titleDa}`;
+
+            const englishTitle = document.createElement("span");
+            englishTitle.className = "grammar-title-english";
+            englishTitle.lang = "en";
+            englishTitle.textContent = page.titleEn;
+
+            verbTitleEl.replaceChildren(danishTitle, englishTitle);
+        }
+        if (verbContentEl) {
+            verbContentEl.innerHTML = page.content || "";
+            verbContentEl.classList.remove("grammar-single-column-page");
+            markGrammarEnglishTranslations(verbContentEl);
+            arrangeGrammarLanguagePairs(verbContentEl);
+            createGrammarLearningCards(verbContentEl);
+        }
+        if (verbCounterEl) verbCounterEl.textContent = `${pageIndex + 1} / ${pages.length}`;
+        if (verbPrevBtn) verbPrevBtn.disabled = pageIndex === 0;
+        if (verbNextBtn) verbNextBtn.disabled = pageIndex === pages.length - 1;
+    }
+
+    function openVerbLesson(startIndex = 0) {
+        const pageCount = (typeof verbumGrammarPages !== "undefined" && Array.isArray(verbumGrammarPages))
+            ? verbumGrammarPages.length
+            : 0;
+        hideHomeViews();
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.remove("is-hidden");
+        currentVerbPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
+        renderVerbPage(currentVerbPage);
+        verbTitleEl?.focus();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     navGrammatik?.addEventListener("click", openGrammarSelection);
     openAdverbLessonBtn?.addEventListener("click", () => openAdverbLesson(0));
     openNounLessonBtn?.addEventListener("click", () => openNounLesson(0));
+    openVerbLessonBtn?.addEventListener("click", () => openVerbLesson(0));
     grammarToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbToGrammarBtn?.addEventListener("click", openGrammarSelection);
     adverbToHomeBtn?.addEventListener("click", goToMainMenu);
     nounToGrammarBtn?.addEventListener("click", openGrammarSelection);
     nounToHomeBtn?.addEventListener("click", goToMainMenu);
+    verbToGrammarBtn?.addEventListener("click", openGrammarSelection);
+    verbToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbPrevBtn?.addEventListener("click", () => {
         if (currentAdverbPage > 0) {
             currentAdverbPage--;
@@ -693,6 +822,23 @@ window.addEventListener("DOMContentLoaded", function () {
             currentNounPage++;
             renderNounPage(currentNounPage);
             nounTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    verbPrevBtn?.addEventListener("click", () => {
+        if (currentVerbPage > 0) {
+            currentVerbPage--;
+            renderVerbPage(currentVerbPage);
+            verbTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    verbNextBtn?.addEventListener("click", () => {
+        const lastPage = (typeof verbumGrammarPages !== "undefined" ? verbumGrammarPages.length : 1) - 1;
+        if (currentVerbPage < lastPage) {
+            currentVerbPage++;
+            renderVerbPage(currentVerbPage);
+            verbTitleEl?.focus();
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     });
@@ -736,13 +882,17 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // Enter quiz landing: show quiz section + category grid, notify quiz.js to reset
     function enterQuizLanding() {
+        setHomePrivacyVisibility(false);
+
         // Hide other sections
         if (skriveguideEl) skriveguideEl.style.display = "none";
         if (studyModeEl)   studyModeEl.style.display   = "none";
+        if (homeWelcome)   homeWelcome.style.display   = "none";
         if (startQuizBtn)  startQuizBtn.style.display  = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
         if (mainButtons) mainButtons.style.display = "none";
 
         // Show quiz section + category selection
