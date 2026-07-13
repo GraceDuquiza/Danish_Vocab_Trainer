@@ -6,7 +6,7 @@
     <title>Danish-English Learning Guide</title>
 
     <!-- Use the versioned URL to bust cache -->
-        <link rel="stylesheet" href="./style.css?v=40">
+        <link rel="stylesheet" href="./style.css?v=41">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -160,6 +160,10 @@
                         <span lang="da">Substantiv</span>
                         <span lang="en">Nouns</span>
                     </button>
+                    <button type="button" class="grammar-topic-card" id="open-adjective-lesson">
+                        <span lang="da">Adjektiv</span>
+                        <span lang="en">Adjectives</span>
+                    </button>
                     <button type="button" class="grammar-topic-card" id="open-verb-lesson">
                         <span lang="da">Verbum</span>
                         <span lang="en">Verbs</span>
@@ -210,6 +214,26 @@
             </article>
         </section>
 
+        <!-- Adjective lesson -->
+        <section id="adjective-lesson" class="is-hidden" aria-labelledby="adjective-lesson-title">
+            <article class="grammar-page">
+                <nav class="grammar-topbar" aria-label="Adjective lesson destinations">
+                    <button type="button" id="adjective-to-grammar">⬅️ Grammatik</button>
+                    <button type="button" id="adjective-to-home">🏠 Main Menu</button>
+                </nav>
+
+                <p class="grammar-section-label">Adjektiv – Adjectives</p>
+                <h2 id="adjective-lesson-title" tabindex="-1">Adjektiv – Adjectives</h2>
+                <div id="adjective-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                <nav class="grammar-lesson-nav btn-row" aria-label="Adjective lesson navigation">
+                    <button type="button" id="adjective-prev" aria-label="Previous adjective lesson section">⬅️ Forrige</button>
+                    <span class="guide-counter" id="adjective-counter" aria-live="polite">1 / …</span>
+                    <button type="button" id="adjective-next" aria-label="Next adjective lesson section">Næste ➡️</button>
+                </nav>
+            </article>
+        </section>
+
         <!-- Verb lesson -->
         <section id="verb-lesson" class="is-hidden" aria-labelledby="verb-lesson-title">
             <article class="grammar-page">
@@ -238,8 +262,9 @@
         <script src="./skriveguide.js" defer></script>
         <script src="./Grammatik_Adverbiel.js" defer></script>
         <script src="./Grammatik_Substantiv.js" defer></script>
+        <script src="./Grammatik_Adjektiv.js" defer></script>
         <script src="./Grammatik_Verber.js" defer></script>
-        <script src="./script.js?v=30" defer></script>
+        <script src="./script.js?v=31" defer></script>
         <script src="./quiz.js" defer></script>
 
 
@@ -257,7 +282,7 @@
     <div class="cookie-banner is-hidden" id="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-title" aria-describedby="cookie-text">
         <div class="cookie-banner__content">
             <h2 id="cookie-title">Cookie preferences</h2>
-            <p id="cookie-text">This site uses optional Google Analytics cookies to understand visits and improve the Danish Vocabulary Trainer. Analytics only starts if you accept, and you can change your choice later from Cookie settings. <a href="./cookie-policy.html">Read the cookie and privacy notice</a>.</p>
+            <p id="cookie-text">This site uses optional Google Analytics cookies to understand visits and improve the Danish-English Learning Guide. Analytics only starts if you accept, and you can change your choice later from Cookie settings. <a href="./cookie-policy.html">Read the cookie and privacy notice</a>.</p>
         </div>
         <div class="cookie-banner__actions">
             <button type="button" class="cookie-btn cookie-btn--secondary" id="cookie-decline">Decline</button>
