@@ -6,7 +6,7 @@
     <title>Danish Vocabulary Trainer</title>
 
     <!-- Use the versioned URL to bust cache -->
-    <link rel="stylesheet" href="./style.css?v=30">
+        <link rel="stylesheet" href="./style.css?v=33">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -137,6 +137,10 @@
                         <span lang="da">Adverbium</span>
                         <span lang="en">Adverbs</span>
                     </button>
+                    <button type="button" class="grammar-topic-card" id="open-noun-lesson">
+                        <span lang="da">Substantiv</span>
+                        <span lang="en">Nouns</span>
+                    </button>
                 </nav>
 
                 <button type="button" class="grammar-home-btn" id="grammar-to-home">⬅️ Main Menu</button>
@@ -163,14 +167,35 @@
             </article>
         </section>
 
+        <!-- Noun lesson -->
+        <section id="noun-lesson" class="is-hidden" aria-labelledby="noun-lesson-title">
+            <article class="grammar-page">
+                <nav class="grammar-topbar" aria-label="Noun lesson destinations">
+                    <button type="button" id="noun-to-grammar">⬅️ Grammatik</button>
+                    <button type="button" id="noun-to-home">🏠 Main Menu</button>
+                </nav>
+
+                <p class="grammar-section-label">Substantiv – Nouns</p>
+                <h2 id="noun-lesson-title" tabindex="-1">Substantiv – Nouns</h2>
+                <div id="noun-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                <nav class="grammar-lesson-nav btn-row" aria-label="Noun lesson navigation">
+                    <button type="button" id="noun-prev" aria-label="Previous noun lesson section">⬅️ Forrige</button>
+                    <span class="guide-counter" id="noun-counter" aria-live="polite">1 / …</span>
+                    <button type="button" id="noun-next" aria-label="Next noun lesson section">Næste ➡️</button>
+                </nav>
+            </article>
+        </section>
+
         <!-- SCRIPT FILES -->
         <script src="./verber.js" defer></script>
         <script src="./substantiver.js" defer></script>
         <script src="./adjektiver.js" defer></script>
         <script src="./adverbKonjunktion.js" defer></script>
         <script src="./skriveguide.js" defer></script>
-        <script src="./adverbiel.js" defer></script>
-        <script src="./script.js?v=23" defer></script>
+        <script src="./Grammatik_Adverbiel.js" defer></script>
+        <script src="./Grammatik_Substantiv.js" defer></script>
+        <script src="./script.js?v=24" defer></script>
         <script src="./quiz.js" defer></script>
 
 

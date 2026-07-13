@@ -203,6 +203,16 @@ window.addEventListener("DOMContentLoaded", function () {
     const adverbToGrammarBtn  = document.getElementById("adverb-to-grammar");
     const adverbToHomeBtn     = document.getElementById("adverb-to-home");
     let currentAdverbPage = 0;
+    const openNounLessonBtn = document.getElementById("open-noun-lesson");
+    const nounLessonEl      = document.getElementById("noun-lesson");
+    const nounTitleEl       = document.getElementById("noun-lesson-title");
+    const nounContentEl     = document.getElementById("noun-lesson-content");
+    const nounCounterEl     = document.getElementById("noun-counter");
+    const nounPrevBtn       = document.getElementById("noun-prev");
+    const nounNextBtn       = document.getElementById("noun-next");
+    const nounToGrammarBtn  = document.getElementById("noun-to-grammar");
+    const nounToHomeBtn     = document.getElementById("noun-to-home");
+    let currentNounPage = 0;
 
     // ================================================================
     // STUDY MODE — rendering + category loading
@@ -300,6 +310,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (quizModeEl)  quizModeEl.style.display  = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
 
         // Hide main buttons row
         if (startQuizBtn)   startQuizBtn.style.display   = "none";
@@ -322,6 +333,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (quizModeEl)    quizModeEl.style.display    = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
 
         // Show default: Study + main buttons row
         if (studyModeEl)   studyModeEl.style.display   = "block";
@@ -569,6 +581,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function openGrammarSelection() {
         hideHomeViews();
         adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
         grammarSelectionEl?.classList.remove("is-hidden");
         document.getElementById("grammar-selection-title")?.focus?.();
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -580,6 +593,7 @@ window.addEventListener("DOMContentLoaded", function () {
             : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.remove("is-hidden");
         currentAdverbPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
         renderAdverbPage(currentAdverbPage);
@@ -587,11 +601,67 @@ window.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
+    function renderNounPage(pageIndex) {
+        const pages = (typeof substantivGrammarPages !== "undefined" && Array.isArray(substantivGrammarPages))
+            ? substantivGrammarPages
+            : [];
+        const page = pages[pageIndex];
+
+        if (!page) {
+            if (nounTitleEl) nounTitleEl.textContent = "No lesson content";
+            if (nounContentEl) nounContentEl.innerHTML = "<p>Please check the noun lesson data.</p>";
+            if (nounCounterEl) nounCounterEl.textContent = "0 / 0";
+            if (nounPrevBtn) nounPrevBtn.disabled = true;
+            if (nounNextBtn) nounNextBtn.disabled = true;
+            return;
+        }
+
+        if (nounTitleEl) {
+            const danishTitle = document.createElement("span");
+            danishTitle.lang = "da";
+            danishTitle.textContent = `${pageIndex + 1}. ${page.titleDa}`;
+
+            const englishTitle = document.createElement("span");
+            englishTitle.className = "grammar-title-english";
+            englishTitle.lang = "en";
+            englishTitle.textContent = page.titleEn;
+
+            nounTitleEl.replaceChildren(danishTitle, englishTitle);
+        }
+        if (nounContentEl) {
+            nounContentEl.innerHTML = page.content || "";
+            nounContentEl.classList.remove("grammar-single-column-page");
+            markGrammarEnglishTranslations(nounContentEl);
+            arrangeGrammarLanguagePairs(nounContentEl);
+            createGrammarLearningCards(nounContentEl);
+        }
+        if (nounCounterEl) nounCounterEl.textContent = `${pageIndex + 1} / ${pages.length}`;
+        if (nounPrevBtn) nounPrevBtn.disabled = pageIndex === 0;
+        if (nounNextBtn) nounNextBtn.disabled = pageIndex === pages.length - 1;
+    }
+
+    function openNounLesson(startIndex = 0) {
+        const pageCount = (typeof substantivGrammarPages !== "undefined" && Array.isArray(substantivGrammarPages))
+            ? substantivGrammarPages.length
+            : 0;
+        hideHomeViews();
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.remove("is-hidden");
+        currentNounPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
+        renderNounPage(currentNounPage);
+        nounTitleEl?.focus();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     navGrammatik?.addEventListener("click", openGrammarSelection);
     openAdverbLessonBtn?.addEventListener("click", () => openAdverbLesson(0));
+    openNounLessonBtn?.addEventListener("click", () => openNounLesson(0));
     grammarToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbToGrammarBtn?.addEventListener("click", openGrammarSelection);
     adverbToHomeBtn?.addEventListener("click", goToMainMenu);
+    nounToGrammarBtn?.addEventListener("click", openGrammarSelection);
+    nounToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbPrevBtn?.addEventListener("click", () => {
         if (currentAdverbPage > 0) {
             currentAdverbPage--;
@@ -606,6 +676,23 @@ window.addEventListener("DOMContentLoaded", function () {
             currentAdverbPage++;
             renderAdverbPage(currentAdverbPage);
             adverbTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    nounPrevBtn?.addEventListener("click", () => {
+        if (currentNounPage > 0) {
+            currentNounPage--;
+            renderNounPage(currentNounPage);
+            nounTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    nounNextBtn?.addEventListener("click", () => {
+        const lastPage = (typeof substantivGrammarPages !== "undefined" ? substantivGrammarPages.length : 1) - 1;
+        if (currentNounPage < lastPage) {
+            currentNounPage++;
+            renderNounPage(currentNounPage);
+            nounTitleEl?.focus();
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     });
@@ -655,6 +742,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (startQuizBtn)  startQuizBtn.style.display  = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
         if (mainButtons) mainButtons.style.display = "none";
 
         // Show quiz section + category selection

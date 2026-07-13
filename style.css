@@ -770,7 +770,8 @@ main{
     GRAMMATIK — topic selection and bilingual lesson pages
     ========================================================= */
 #grammar-selection,
-#adverb-lesson {
+#adverb-lesson,
+#noun-lesson {
     width: 100%;
 }
 
@@ -1025,17 +1026,22 @@ main{
 
 .grammar-bilingual-table td > strong,
 .grammar-bilingual-table .grammar-word-list,
-.grammar-bilingual-table .grammar-example-line {
+.grammar-bilingual-table .grammar-example-line,
+.grammar-example-table td > strong,
+.grammar-example-table .grammar-word-list,
+.grammar-example-table .grammar-example-line {
     display: block;
 }
 
-.grammar-bilingual-table td > strong {
+.grammar-bilingual-table td > strong,
+.grammar-example-table td > strong {
     margin-bottom: 4px;
     color: var(--brand-800);
     font-size: 1.02rem;
 }
 
-.grammar-bilingual-table .grammar-word-list {
+.grammar-bilingual-table .grammar-word-list,
+.grammar-example-table .grammar-word-list {
     margin-bottom: 8px;
 }
 
@@ -1491,6 +1497,11 @@ main{
         width: 33.333%;
     }
 
+    .grammar-content .grammar-form-table--four-column th,
+    .grammar-content .grammar-form-table--four-column .grammar-comparison-forms td {
+        width: 25%;
+    }
+
     .grammar-content .grammar-comparison-table--two-column th,
     .grammar-content .grammar-comparison-table--two-column .grammar-comparison-forms td {
         width: 50%;
@@ -1511,6 +1522,74 @@ main{
     .grammar-content .grammar-correction-table td:last-child {
         width: 32%;
         border-right: 0;
+    }
+
+    .grammar-content .grammar-exercise-table {
+        display: table;
+        table-layout: fixed;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: var(--card);
+    }
+
+    .grammar-content .grammar-exercise-table thead,
+    .grammar-content .grammar-exercise-table tbody {
+        display: table-row-group;
+    }
+
+    .grammar-content .grammar-exercise-table tr {
+        display: table-row;
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .grammar-content .grammar-exercise-table th,
+    .grammar-content .grammar-exercise-table td {
+        display: table-cell;
+        min-width: 0;
+        width: auto;
+        border-right: 1px solid var(--border);
+        overflow-wrap: anywhere;
+    }
+
+    .grammar-content .grammar-exercise-table tr > :last-child {
+        border-right: 0;
+    }
+
+    .grammar-content .grammar-exercise-table--numbered th:first-child,
+    .grammar-content .grammar-exercise-table--numbered td:first-child {
+        width: 16%;
+        text-align: center;
+    }
+
+    .grammar-content .grammar-exercise-table--numbered th:nth-child(2),
+    .grammar-content .grammar-exercise-table--numbered td:nth-child(2),
+    .grammar-content .grammar-exercise-table--numbered th:nth-child(3),
+    .grammar-content .grammar-exercise-table--numbered td:nth-child(3) {
+        width: 42%;
+    }
+
+    .grammar-content .grammar-exercise-table--compounds th:nth-child(1),
+    .grammar-content .grammar-exercise-table--compounds td:nth-child(1),
+    .grammar-content .grammar-exercise-table--compounds th:nth-child(2),
+    .grammar-content .grammar-exercise-table--compounds td:nth-child(2) {
+        width: 25%;
+    }
+
+    .grammar-content .grammar-exercise-table--compounds th:nth-child(3),
+    .grammar-content .grammar-exercise-table--compounds td:nth-child(3) {
+        width: 50%;
+    }
+
+    .grammar-content .grammar-exercise-table th .grammar-paired-label {
+        display: block;
+    }
+
+    .grammar-content .grammar-exercise-table th .grammar-paired-label > .grammar-english {
+        margin-top: 4px;
+        padding-left: 0;
+        border-left: 0;
     }
 
     .grammar-content .grammar-correction-table th .grammar-paired-label {

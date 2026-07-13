@@ -15,6 +15,7 @@ Read `README.md` before making broad product changes. There is no package manage
 - `quiz.js` owns quiz state and interactions. It communicates with `script.js` through custom window events such as `quiz:start-fresh` and `quiz:quit`.
 - `verber.js`, `substantiver.js`, `adjektiver.js`, and `adverbKonjunktion.js` define global vocabulary arrays.
 - `skriveguide.js` defines the global writing-guide page array; its `content` fields contain trusted HTML rendered by the app.
+- `Grammatik_Adverbiel.js` and `Grammatik_Substantiv.js` define the bilingual grammar-lesson page arrays rendered by the shared grammar UI.
 - `sw.js` implements the offline app shell and static-asset caching.
 - `manifest.webmanifest` and `icons/` contain PWA metadata and assets.
 
@@ -37,7 +38,8 @@ The browser scripts are classic scripts, not ES modules. Their order in `index.h
 - Follow the established Skriveguide visual pattern for lesson content: a clear page title, short sections in distinct cards or boxes, visually separated rules and examples, and prominent previous/next navigation.
 - Break dense learning material into meaningful visual groups. Prefer one concept, rule, example set, or exercise per card instead of presenting a long uninterrupted block.
 - Keep lesson pages reasonably balanced in scope and reading length. Split oversized topics at meaningful subsection boundaries, but keep a rule together with the examples or exercise needed to understand it; never design navigation around a fixed page count.
-- Present Danish as the primary learning text and English as a clearly separate translation using explicit language labels or `lang` attributes. Style English consistently with lighter, italic text so it cannot be mistaken for a continuation of the Danish explanation.
+- Present Danish as the primary learning text and English as a clearly separate translation using `lang="da"` and `lang="en"` attributes. Style English consistently with lighter, italic text so it cannot be mistaken for a continuation of the Danish explanation.
+- Keep paired grammar explanations side by side with Danish on the left and English on the right. Do not add standalone `Dansk` or `English` titles or prefixes such as `<strong>Dansk:</strong>` and `<strong>English:</strong>` when the language is already clear from this order, the `lang` attributes, and the lighter italic English styling. Use visible language names only for navigation, controls, or genuinely ambiguous data-table headings.
 - Keep direct Danish/English comparisons in two language columns, including on phones when the content remains readable. For three-column example tables, place the shared category or function across the full width and put the Danish and English examples side by side beneath it.
 - For inflection or form-comparison tables, keep the related Danish forms together in one unified two- or three-column row and place the English meaning in a full-width row directly underneath. Do not split each form into a separate mobile card when this relationship is important.
 - When responsive tables become stacked row cards, keep the final card visually consistent with every preceding card: preserve its outer border, rounded corners, and all internal horizontal separators. Remove the bottom border only from the last visual cell (`tr > :last-child`), never from every cell in the final source row (`tr:last-child > *`).
