@@ -6,6 +6,7 @@ A simple and effective web app to help users learn and practice Danish vocabular
 ## ✨ Features
 
 - ✅ Study Mode: Browse Danish words with English meanings and examples
+- 🧭 A focused home navigation hub for Vocabulary, Quiz, Skriveguide, and Grammatik
 - 🎯 Quiz Mode: Answer randomized multiple choice questions
 - 🔁 Reverse Mode: Practice English → Danish
 - 📱 Mobile responsive and accessible design
@@ -13,6 +14,7 @@ A simple and effective web app to help users learn and practice Danish vocabular
 - 🧩 Grammatik section with lessons rendered inside the existing single-page app
 - 🇩🇰🇬🇧 Bilingual Danish–English lesson about adverbs
 - 📘 Bilingual noun grammar guide with explanations, exercises, and answer keys
+- 📗 Bilingual verb grammar guide covering tense, verb phrases, modal verbs, passive voice, exercises, and answer keys
 - 🗂️ Mobile-friendly learning cards that group grammar rules, examples, and exercises into clear sections
 
 ## 📁 Project Structure
@@ -25,13 +27,14 @@ A simple and effective web app to help users learn and practice Danish vocabular
 ├── quiz.js
 ├── Grammatik_Adverbiel.js
 ├── Grammatik_Substantiv.js
+├── Grammatik_Verber.js
 ├── verber.js
 ├── substantiver.js
 ├── adjektiver.js
 ├── adverbKonjunktion.js
 ```
 
-`Grammatik_Adverbiel.js` and `Grammatik_Substantiv.js` store the bilingual grammar lessons separately from the navigation and rendering logic. The lessons are displayed inside `index.html`; no separate grammar lesson pages are required.
+`Grammatik_Adverbiel.js`, `Grammatik_Substantiv.js`, and `Grammatik_Verber.js` store the bilingual grammar lessons separately from the navigation and rendering logic. The lessons are displayed inside `index.html`; no separate grammar lesson pages are required.
 
 ## 🚀 Deployment
 

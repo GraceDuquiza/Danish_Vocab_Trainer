@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danish Vocabulary Trainer</title>
+    <title>Danish-English Learning Guide</title>
 
     <!-- Use the versioned URL to bust cache -->
-        <link rel="stylesheet" href="./style.css?v=33">
+        <link rel="stylesheet" href="./style.css?v=40">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -35,10 +35,39 @@
 </head>
 <body>
     <main class="container">
-        <h1>Danish Vocabulary Trainer</h1>
+        <h1>Danish-English Learning Guide</h1>
+
+        <section class="home-welcome" id="home-welcome" aria-labelledby="home-welcome-title">
+            <p class="home-welcome__eyebrow">Danish study tools</p>
+            <h2 id="home-welcome-title">What would you like to practise?</h2>
+            <p>Choose an area below to study vocabulary, take a quiz, improve your writing, or review grammar.</p>
+        </section>
+
+        <nav id="main-buttons" aria-label="Main learning areas">
+            <button type="button" id="nav-vocabulary">
+                <span class="home-nav-icon" aria-hidden="true">Aa</span>
+                <span class="home-nav-text"><strong>Vocabulary</strong><small>Study words and examples</small></span>
+            </button>
+            <button type="button" id="start-quiz-btn">
+                <span class="home-nav-icon" aria-hidden="true">✓</span>
+                <span class="home-nav-text"><strong>Quiz</strong><small>Test what you remember</small></span>
+            </button>
+            <button type="button" id="nav-skriveguide">
+                <span class="home-nav-icon" aria-hidden="true">✎</span>
+                <span class="home-nav-text"><strong>Skriveguide</strong><small>Build stronger writing</small></span>
+            </button>
+            <button type="button" id="nav-grammatik">
+                <span class="home-nav-icon" aria-hidden="true">A</span>
+                <span class="home-nav-text"><strong>Grammatik</strong><small>Review language rules</small></span>
+            </button>
+        </nav>
 
         <!-- STUDY MODE -->
-        <div id="study-mode">
+        <div id="study-mode" class="is-hidden">
+            <div class="study-topbar">
+                <button type="button" id="study-to-home">⬅️ Main Menu</button>
+            </div>
+
             <label for="category-select">Choose category:</label>
             <select id="category-select">
                 <option value="verber">Verber</option>
@@ -53,13 +82,10 @@
                 <p><strong>Example:</strong> <span id="example-sentence">Example sentence here</span></p>
             </div>
 
-            <!-- NEW: uniform row wrapper -->
-        <div class="btn-row">
-            <button type="button" id="prev-btn">Previous</button>
-            <button type="button" id="next-btn">Next</button>
-        </div>
-
-
+            <div class="btn-row">
+                <button type="button" id="prev-btn">Previous</button>
+                <button type="button" id="next-btn">Next</button>
+            </div>
         </div>
 
         <!-- QUIZ MODE -->
@@ -99,13 +125,6 @@
             <button type="button" id="quit-quiz-btn" class="is-hidden">🚪 Quit Quiz</button>
         </div>
 
-        <!-- MAIN START BUTTONS -->
-        <div id="main-buttons">
-            <button type="button" id="start-quiz-btn">🎯 Start Quiz</button>
-            <button type="button" id="nav-skriveguide">📖 Skriveguide</button>
-            <button type="button" id="nav-grammatik">🧩 Grammatik</button>
-        </div>
-
         <!-- Skriveguide Page -->
         <div id="skriveguide" class="is-hidden">
             <div class="guide-page">
@@ -140,6 +159,10 @@
                     <button type="button" class="grammar-topic-card" id="open-noun-lesson">
                         <span lang="da">Substantiv</span>
                         <span lang="en">Nouns</span>
+                    </button>
+                    <button type="button" class="grammar-topic-card" id="open-verb-lesson">
+                        <span lang="da">Verbum</span>
+                        <span lang="en">Verbs</span>
                     </button>
                 </nav>
 
@@ -187,6 +210,26 @@
             </article>
         </section>
 
+        <!-- Verb lesson -->
+        <section id="verb-lesson" class="is-hidden" aria-labelledby="verb-lesson-title">
+            <article class="grammar-page">
+                <nav class="grammar-topbar" aria-label="Verb lesson destinations">
+                    <button type="button" id="verb-to-grammar">⬅️ Grammatik</button>
+                    <button type="button" id="verb-to-home">🏠 Main Menu</button>
+                </nav>
+
+                <p class="grammar-section-label">Verbum – Verbs</p>
+                <h2 id="verb-lesson-title" tabindex="-1">Verbum – Verbs</h2>
+                <div id="verb-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                <nav class="grammar-lesson-nav btn-row" aria-label="Verb lesson navigation">
+                    <button type="button" id="verb-prev" aria-label="Previous verb lesson section">⬅️ Forrige</button>
+                    <span class="guide-counter" id="verb-counter" aria-live="polite">1 / …</span>
+                    <button type="button" id="verb-next" aria-label="Next verb lesson section">Næste ➡️</button>
+                </nav>
+            </article>
+        </section>
+
         <!-- SCRIPT FILES -->
         <script src="./verber.js" defer></script>
         <script src="./substantiver.js" defer></script>
@@ -195,13 +238,14 @@
         <script src="./skriveguide.js" defer></script>
         <script src="./Grammatik_Adverbiel.js" defer></script>
         <script src="./Grammatik_Substantiv.js" defer></script>
-        <script src="./script.js?v=24" defer></script>
+        <script src="./Grammatik_Verber.js" defer></script>
+        <script src="./script.js?v=30" defer></script>
         <script src="./quiz.js" defer></script>
 
 
 
         <footer class="app-footer">
-            <p>Bliv Klar til PD3 ordliste— Made with ❤️ by Grace D. O</p>
+            <p>Learning Guide — Made with ❤️ by Grace D. O</p>
             <p class="footer-links">
                 <button type="button" class="cookie-settings-btn" id="cookie-settings">Cookie settings</button>
                 <a href="./cookie-policy.html">Cookie and privacy notice</a>
