@@ -15,7 +15,7 @@ Read `README.md` before making broad product changes. There is no package manage
 - `quiz.js` owns quiz state and interactions. It communicates with `script.js` through custom window events such as `quiz:start-fresh` and `quiz:quit`.
 - `verber.js`, `substantiver.js`, `adjektiver.js`, and `adverbKonjunktion.js` define global vocabulary arrays.
 - `skriveguide.js` defines the global writing-guide page array; its `content` fields contain trusted HTML rendered by the app.
-- `Grammatik_Adverbiel.js` and `Grammatik_Substantiv.js` define the bilingual grammar-lesson page arrays rendered by the shared grammar UI.
+- `Grammatik_Adverbiel.js`, `Grammatik_Substantiv.js`, and `Grammatik_Verber.js` define the bilingual grammar-lesson page arrays rendered by the shared grammar UI.
 - `sw.js` implements the offline app shell and static-asset caching.
 - `manifest.webmanifest` and `icons/` contain PWA metadata and assets.
 
@@ -43,6 +43,7 @@ The browser scripts are classic scripts, not ES modules. Their order in `index.h
 - Keep direct Danish/English comparisons in two language columns, including on phones when the content remains readable. For three-column example tables, place the shared category or function across the full width and put the Danish and English examples side by side beneath it.
 - For inflection or form-comparison tables, keep the related Danish forms together in one unified two- or three-column row and place the English meaning in a full-width row directly underneath. Do not split each form into a separate mobile card when this relationship is important.
 - When responsive tables become stacked row cards, keep the final card visually consistent with every preceding card: preserve its outer border, rounded corners, and all internal horizontal separators. Remove the bottom border only from the last visual cell (`tr > :last-child`), never from every cell in the final source row (`tr:last-child > *`).
+- When comparison, correction, or exercise tables remain unified tables on narrow screens, preserve each horizontal row separator through the rightmost column. The stacked-card rule for `tr > :last-child` must not remove the rightmost cell's bottom border; only its right border should be removed.
 - Keep visual hierarchy consistent across lessons. Use headings, spacing, borders, and restrained color to explain structure; decoration must support comprehension rather than add clutter.
 - On narrow screens, cards and controls must fit the viewport without horizontal scrolling. Let content wrap, stack multi-column layouts, and keep navigation controls easy to tap and understand.
 - Preserve the meaning and reading order of educational content when adapting tables or desktop layouts for mobile. Do not rely on color alone to identify grammar roles or learning states.
