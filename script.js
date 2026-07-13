@@ -232,6 +232,16 @@ window.addEventListener("DOMContentLoaded", function () {
     const nounToGrammarBtn  = document.getElementById("noun-to-grammar");
     const nounToHomeBtn     = document.getElementById("noun-to-home");
     let currentNounPage = 0;
+    const openAdjectiveLessonBtn = document.getElementById("open-adjective-lesson");
+    const adjectiveLessonEl      = document.getElementById("adjective-lesson");
+    const adjectiveTitleEl       = document.getElementById("adjective-lesson-title");
+    const adjectiveContentEl     = document.getElementById("adjective-lesson-content");
+    const adjectiveCounterEl     = document.getElementById("adjective-counter");
+    const adjectivePrevBtn       = document.getElementById("adjective-prev");
+    const adjectiveNextBtn       = document.getElementById("adjective-next");
+    const adjectiveToGrammarBtn  = document.getElementById("adjective-to-grammar");
+    const adjectiveToHomeBtn     = document.getElementById("adjective-to-home");
+    let currentAdjectivePage = 0;
     const openVerbLessonBtn = document.getElementById("open-verb-lesson");
     const verbLessonEl      = document.getElementById("verb-lesson");
     const verbTitleEl       = document.getElementById("verb-lesson-title");
@@ -343,6 +353,7 @@ window.addEventListener("DOMContentLoaded", function () {
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
 
         // Hide main buttons row
@@ -369,6 +380,7 @@ window.addEventListener("DOMContentLoaded", function () {
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
 
         // Show the home navigation hub.
@@ -635,6 +647,7 @@ window.addEventListener("DOMContentLoaded", function () {
         hideHomeViews();
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         grammarSelectionEl?.classList.remove("is-hidden");
         document.getElementById("grammar-selection-title")?.focus?.();
@@ -650,6 +663,7 @@ window.addEventListener("DOMContentLoaded", function () {
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         if (studyModeEl) studyModeEl.style.display = "block";
         if (studyNavRow) studyNavRow.style.display = "flex";
@@ -664,6 +678,7 @@ window.addEventListener("DOMContentLoaded", function () {
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.remove("is-hidden");
         currentAdverbPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
@@ -718,11 +733,67 @@ window.addEventListener("DOMContentLoaded", function () {
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.remove("is-hidden");
         currentNounPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
         renderNounPage(currentNounPage);
         nounTitleEl?.focus();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function renderAdjectivePage(pageIndex) {
+        const pages = (typeof adjektivGrammarPages !== "undefined" && Array.isArray(adjektivGrammarPages))
+            ? adjektivGrammarPages
+            : [];
+        const page = pages[pageIndex];
+
+        if (!page) {
+            if (adjectiveTitleEl) adjectiveTitleEl.textContent = "No lesson content";
+            if (adjectiveContentEl) adjectiveContentEl.innerHTML = "<p>Please check the adjective lesson data.</p>";
+            if (adjectiveCounterEl) adjectiveCounterEl.textContent = "0 / 0";
+            if (adjectivePrevBtn) adjectivePrevBtn.disabled = true;
+            if (adjectiveNextBtn) adjectiveNextBtn.disabled = true;
+            return;
+        }
+
+        if (adjectiveTitleEl) {
+            const danishTitle = document.createElement("span");
+            danishTitle.lang = "da";
+            danishTitle.textContent = `${pageIndex + 1}. ${page.titleDa}`;
+
+            const englishTitle = document.createElement("span");
+            englishTitle.className = "grammar-title-english";
+            englishTitle.lang = "en";
+            englishTitle.textContent = page.titleEn;
+
+            adjectiveTitleEl.replaceChildren(danishTitle, englishTitle);
+        }
+        if (adjectiveContentEl) {
+            adjectiveContentEl.innerHTML = page.content || "";
+            adjectiveContentEl.classList.remove("grammar-single-column-page");
+            markGrammarEnglishTranslations(adjectiveContentEl);
+            arrangeGrammarLanguagePairs(adjectiveContentEl);
+            createGrammarLearningCards(adjectiveContentEl);
+        }
+        if (adjectiveCounterEl) adjectiveCounterEl.textContent = `${pageIndex + 1} / ${pages.length}`;
+        if (adjectivePrevBtn) adjectivePrevBtn.disabled = pageIndex === 0;
+        if (adjectiveNextBtn) adjectiveNextBtn.disabled = pageIndex === pages.length - 1;
+    }
+
+    function openAdjectiveLesson(startIndex = 0) {
+        const pageCount = (typeof adjektivGrammarPages !== "undefined" && Array.isArray(adjektivGrammarPages))
+            ? adjektivGrammarPages.length
+            : 0;
+        hideHomeViews();
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.remove("is-hidden");
+        currentAdjectivePage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
+        renderAdjectivePage(currentAdjectivePage);
+        adjectiveTitleEl?.focus();
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -773,6 +844,7 @@ window.addEventListener("DOMContentLoaded", function () {
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.remove("is-hidden");
         currentVerbPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
         renderVerbPage(currentVerbPage);
@@ -783,12 +855,15 @@ window.addEventListener("DOMContentLoaded", function () {
     navGrammatik?.addEventListener("click", openGrammarSelection);
     openAdverbLessonBtn?.addEventListener("click", () => openAdverbLesson(0));
     openNounLessonBtn?.addEventListener("click", () => openNounLesson(0));
+    openAdjectiveLessonBtn?.addEventListener("click", () => openAdjectiveLesson(0));
     openVerbLessonBtn?.addEventListener("click", () => openVerbLesson(0));
     grammarToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbToGrammarBtn?.addEventListener("click", openGrammarSelection);
     adverbToHomeBtn?.addEventListener("click", goToMainMenu);
     nounToGrammarBtn?.addEventListener("click", openGrammarSelection);
     nounToHomeBtn?.addEventListener("click", goToMainMenu);
+    adjectiveToGrammarBtn?.addEventListener("click", openGrammarSelection);
+    adjectiveToHomeBtn?.addEventListener("click", goToMainMenu);
     verbToGrammarBtn?.addEventListener("click", openGrammarSelection);
     verbToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbPrevBtn?.addEventListener("click", () => {
@@ -822,6 +897,23 @@ window.addEventListener("DOMContentLoaded", function () {
             currentNounPage++;
             renderNounPage(currentNounPage);
             nounTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    adjectivePrevBtn?.addEventListener("click", () => {
+        if (currentAdjectivePage > 0) {
+            currentAdjectivePage--;
+            renderAdjectivePage(currentAdjectivePage);
+            adjectiveTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    adjectiveNextBtn?.addEventListener("click", () => {
+        const lastPage = (typeof adjektivGrammarPages !== "undefined" ? adjektivGrammarPages.length : 1) - 1;
+        if (currentAdjectivePage < lastPage) {
+            currentAdjectivePage++;
+            renderAdjectivePage(currentAdjectivePage);
+            adjectiveTitleEl?.focus();
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     });
@@ -892,6 +984,7 @@ window.addEventListener("DOMContentLoaded", function () {
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
         verbLessonEl?.classList.add("is-hidden");
         if (mainButtons) mainButtons.style.display = "none";
 
