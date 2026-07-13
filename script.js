@@ -1,6 +1,6 @@
 // script.js
 // ====================================================================
-// Danish Vocab Trainer — Router + Study + Skriveguide
+// Danish Vocab Trainer — Router + Study + Skriveguide + Grammatik
 // - This file controls WHAT section is visible (routing).
 // - quiz.js controls HOW the quiz runs (questions, scoring, etc.).
 // - Fresh-start fix: when you Quit and Start again, UI is spotless.
@@ -187,6 +187,23 @@ window.addEventListener("DOMContentLoaded", function () {
     const guideBackBtn    = document.getElementById("back-to-quiz-btn");
     let currentGuidePage  = 0;
 
+    // ------------------------------------------------------------------
+    // GRAMMATIK — DOM references and lesson state
+    // ------------------------------------------------------------------
+    const navGrammatik        = document.getElementById("nav-grammatik");
+    const grammarSelectionEl  = document.getElementById("grammar-selection");
+    const openAdverbLessonBtn = document.getElementById("open-adverb-lesson");
+    const grammarToHomeBtn    = document.getElementById("grammar-to-home");
+    const adverbLessonEl      = document.getElementById("adverb-lesson");
+    const adverbTitleEl       = document.getElementById("adverb-lesson-title");
+    const adverbContentEl     = document.getElementById("adverb-lesson-content");
+    const adverbCounterEl     = document.getElementById("adverb-counter");
+    const adverbPrevBtn       = document.getElementById("adverb-prev");
+    const adverbNextBtn       = document.getElementById("adverb-next");
+    const adverbToGrammarBtn  = document.getElementById("adverb-to-grammar");
+    const adverbToHomeBtn     = document.getElementById("adverb-to-home");
+    let currentAdverbPage = 0;
+
     // ================================================================
     // STUDY MODE — rendering + category loading
     // ================================================================
@@ -281,6 +298,8 @@ window.addEventListener("DOMContentLoaded", function () {
         // Hide study + quiz
         if (studyModeEl) studyModeEl.style.display = "none";
         if (quizModeEl)  quizModeEl.style.display  = "none";
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
 
         // Hide main buttons row
         if (startQuizBtn)   startQuizBtn.style.display   = "none";
@@ -301,12 +320,15 @@ window.addEventListener("DOMContentLoaded", function () {
         // Hide non-main sections
         if (skriveguideEl) skriveguideEl.style.display = "none";
         if (quizModeEl)    quizModeEl.style.display    = "none";
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
 
         // Show default: Study + main buttons row
         if (studyModeEl)   studyModeEl.style.display   = "block";
         if (startQuizBtn)   startQuizBtn.style.display   = "inline-block";
         if (navSkriveguide) navSkriveguide.style.display = "inline-block";
-        if (mainButtons)    mainButtons.style.display    = "block";
+        if (navGrammatik) navGrammatik.style.display = "inline-block";
+        if (mainButtons)    mainButtons.style.display    = "";
 
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -326,6 +348,267 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     });
     guideBackBtn?.addEventListener("click", goToMainMenu);
+
+    // ================================================================
+    // GRAMMATIK — selection, lesson rendering, and navigation
+    // ================================================================
+    function createGrammarLearningCards(container) {
+        const contentNodes = Array.from(container.children);
+        let card = null;
+        let cardIndex = 0;
+
+        const startCard = () => {
+            cardIndex++;
+            card = document.createElement("section");
+            card.className = "grammar-learning-card";
+            card.setAttribute("aria-label", `Lesson section ${cardIndex}`);
+            container.appendChild(card);
+        };
+
+        contentNodes.forEach((node) => {
+            if (!card || node.matches("h3")) startCard();
+            card.appendChild(node);
+
+            if (node.matches("h3")) {
+                if (!node.id) node.id = `grammar-section-${cardIndex}`;
+                card.removeAttribute("aria-label");
+                card.setAttribute("aria-labelledby", node.id);
+            }
+        });
+    }
+
+    function markGrammarEnglishTranslations(container) {
+        container.querySelectorAll("em, .en, [lang='en']").forEach((element) => {
+            element.classList.add("grammar-english");
+        });
+
+        container.querySelectorAll("table").forEach((table) => {
+            const headingRow = table.querySelector("thead tr") || table.querySelector("tr");
+            if (!headingRow) return;
+
+            const headingText = Array.from(headingRow.children)
+                .map((cell) => cell.textContent.trim().toLowerCase());
+
+            const danishColumn = headingText.findIndex((text) => text.includes("dansk"));
+            const englishColumn = headingText.findIndex((text) => text.includes("english"));
+
+            if (danishColumn >= 0 && englishColumn >= 0) {
+                table.classList.add("grammar-example-table");
+
+                table.querySelectorAll("tr").forEach((row) => {
+                    Array.from(row.children).forEach((cell, index) => {
+                        if (index === danishColumn) {
+                            cell.classList.add("grammar-danish-column");
+                        } else if (index === englishColumn) {
+                            cell.classList.add("grammar-english-column");
+                        } else {
+                            cell.classList.add("grammar-shared-column");
+                        }
+                    });
+                });
+            }
+
+            const englishColumns = Array.from(headingRow.children)
+                .map((cell, index) => (/english/i.test(cell.textContent) ? index : -1))
+                .filter((index) => index >= 0);
+
+            table.querySelectorAll("tr").forEach((row) => {
+                englishColumns.forEach((index) => {
+                    row.children[index]?.classList.add("grammar-english");
+                });
+            });
+        });
+
+        container.querySelectorAll("strong").forEach((label) => {
+            if (/^english\s*:/i.test(label.textContent.trim())) {
+                label.closest("th, td, p, li")?.classList.add("grammar-english");
+            }
+        });
+
+        container.querySelectorAll("h3").forEach((heading) => {
+            const [danishText, ...englishParts] = heading.textContent.split("/");
+            const englishText = englishParts.join("/").trim();
+            if (!danishText.trim() || !englishText) return;
+
+            const danish = document.createElement("strong");
+            danish.lang = "da";
+            danish.textContent = danishText.trim();
+
+            const english = document.createElement("span");
+            english.className = "grammar-english grammar-heading-english";
+            english.lang = "en";
+            english.textContent = englishText;
+
+            heading.classList.add("grammar-heading-language-pair");
+            heading.replaceChildren(danish, english);
+        });
+
+        container.querySelectorAll("th > strong").forEach((label) => {
+            const [danishText, ...englishParts] = label.textContent.split("/");
+            const englishText = englishParts.join("/").trim();
+            if (!danishText.trim() || !englishText) return;
+
+            const pair = document.createElement("span");
+            pair.className = "grammar-paired-label";
+
+            const danish = document.createElement("strong");
+            danish.lang = "da";
+            danish.textContent = danishText.trim();
+
+            const english = document.createElement("strong");
+            english.className = "grammar-english";
+            english.lang = "en";
+            english.textContent = englishText;
+
+            pair.append(danish, english);
+            label.replaceWith(pair);
+        });
+    }
+
+    function arrangeGrammarLanguagePairs(container) {
+        const isEnglishOnlyParagraph = (paragraph) => {
+            const meaningfulNodes = Array.from(paragraph.childNodes).filter((node) =>
+                node.nodeType === Node.ELEMENT_NODE || node.textContent.trim()
+            );
+            return meaningfulNodes.length === 1
+                && meaningfulNodes[0].nodeType === Node.ELEMENT_NODE
+                && meaningfulNodes[0].matches("em, .grammar-english, [lang='en']");
+        };
+
+        Array.from(container.querySelectorAll("p")).forEach((danish) => {
+            const english = danish.nextElementSibling;
+            if (!english?.matches("p") || !isEnglishOnlyParagraph(english)) return;
+            if (!danish.textContent.trim() || danish.closest(".grammar-text-pair")) return;
+
+            const pair = document.createElement("div");
+            pair.className = "grammar-text-pair";
+            danish.lang = "da";
+            english.lang = "en";
+            english.classList.add("grammar-english");
+            danish.before(pair);
+            pair.append(danish, english);
+        });
+
+        container.querySelectorAll("p, td, th").forEach((element) => {
+            if (element.closest(".grammar-text-pair")) return;
+            if (element.classList.contains("grammar-inline-language-pair")) return;
+
+            const english = Array.from(element.children).find((child) =>
+                child.matches("em, .grammar-english[lang='en']")
+            );
+            if (!english || english !== element.lastElementChild) return;
+
+            const precedingNodes = Array.from(element.childNodes).slice(0, Array.from(element.childNodes).indexOf(english));
+            const hasDanishText = precedingNodes.some((node) => node.textContent.trim());
+            if (!hasDanishText) return;
+
+            while (precedingNodes.at(-1)?.nodeName === "BR") precedingNodes.pop()?.remove();
+
+            const danish = document.createElement("span");
+            danish.lang = "da";
+            precedingNodes.forEach((node) => danish.appendChild(node));
+            element.classList.add("grammar-inline-language-pair");
+            english.lang = "en";
+            english.classList.add("grammar-english");
+            element.prepend(danish);
+        });
+    }
+
+    function renderAdverbPage(pageIndex) {
+        const pages = (typeof adverbielPages !== "undefined" && Array.isArray(adverbielPages))
+            ? adverbielPages
+            : [];
+        const page = pages[pageIndex];
+
+        if (!page) {
+            if (adverbTitleEl) adverbTitleEl.textContent = "No lesson content";
+            if (adverbContentEl) adverbContentEl.innerHTML = "<p>Please check the adverb lesson data.</p>";
+            if (adverbCounterEl) adverbCounterEl.textContent = "0 / 0";
+            if (adverbPrevBtn) adverbPrevBtn.disabled = true;
+            if (adverbNextBtn) adverbNextBtn.disabled = true;
+            return;
+        }
+
+        if (adverbTitleEl) {
+            const danishTitle = document.createElement("span");
+            danishTitle.lang = "da";
+            danishTitle.textContent = `${pageIndex + 1}. ${page.titleDa}`;
+
+            const englishTitle = document.createElement("span");
+            englishTitle.className = "grammar-title-english";
+            englishTitle.lang = "en";
+            englishTitle.textContent = page.titleEn;
+
+            adverbTitleEl.replaceChildren(danishTitle, englishTitle);
+        }
+        if (adverbContentEl) {
+            adverbContentEl.innerHTML = page.content || "";
+            const singleColumnPageIds = new Set([
+                "section-6-4",
+                "section-7-2"
+            ]);
+            adverbContentEl.classList.toggle("grammar-single-column-page", singleColumnPageIds.has(page.id));
+            markGrammarEnglishTranslations(adverbContentEl);
+            arrangeGrammarLanguagePairs(adverbContentEl);
+            createGrammarLearningCards(adverbContentEl);
+        }
+        if (adverbCounterEl) {
+            adverbCounterEl.textContent = `${pageIndex + 1} / ${pages.length}`;
+        }
+        if (adverbPrevBtn) adverbPrevBtn.disabled = pageIndex === 0;
+        if (adverbNextBtn) adverbNextBtn.disabled = pageIndex === pages.length - 1;
+    }
+
+    function hideHomeViews() {
+        if (studyModeEl) studyModeEl.style.display = "none";
+        if (quizModeEl) quizModeEl.style.display = "none";
+        if (skriveguideEl) skriveguideEl.style.display = "none";
+        if (mainButtons) mainButtons.style.display = "none";
+    }
+
+    function openGrammarSelection() {
+        hideHomeViews();
+        adverbLessonEl?.classList.add("is-hidden");
+        grammarSelectionEl?.classList.remove("is-hidden");
+        document.getElementById("grammar-selection-title")?.focus?.();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function openAdverbLesson(startIndex = 0) {
+        const pageCount = (typeof adverbielPages !== "undefined" && Array.isArray(adverbielPages))
+            ? adverbielPages.length
+            : 0;
+        hideHomeViews();
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.remove("is-hidden");
+        currentAdverbPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
+        renderAdverbPage(currentAdverbPage);
+        adverbTitleEl?.focus();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    navGrammatik?.addEventListener("click", openGrammarSelection);
+    openAdverbLessonBtn?.addEventListener("click", () => openAdverbLesson(0));
+    grammarToHomeBtn?.addEventListener("click", goToMainMenu);
+    adverbToGrammarBtn?.addEventListener("click", openGrammarSelection);
+    adverbToHomeBtn?.addEventListener("click", goToMainMenu);
+    adverbPrevBtn?.addEventListener("click", () => {
+        if (currentAdverbPage > 0) {
+            currentAdverbPage--;
+            renderAdverbPage(currentAdverbPage);
+            adverbTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    adverbNextBtn?.addEventListener("click", () => {
+        const lastPage = (typeof adverbielPages !== "undefined" ? adverbielPages.length : 1) - 1;
+        if (currentAdverbPage < lastPage) {
+            currentAdverbPage++;
+            renderAdverbPage(currentAdverbPage);
+            adverbTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
 
     // Optional: arrow key nav for Skriveguide
     document.addEventListener("keydown", (e) => {
@@ -370,6 +653,9 @@ window.addEventListener("DOMContentLoaded", function () {
         if (skriveguideEl) skriveguideEl.style.display = "none";
         if (studyModeEl)   studyModeEl.style.display   = "none";
         if (startQuizBtn)  startQuizBtn.style.display  = "none";
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
+        if (mainButtons) mainButtons.style.display = "none";
 
         // Show quiz section + category selection
         if (quizModeEl)         quizModeEl.style.display        = "block";
@@ -397,14 +683,48 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
     // ================================================================
-    // Service Worker — register using relative paths (GitHub Pages safe)
+    // Service Worker — disable local caching during development and register in production
     // ================================================================
     if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-        navigator.serviceWorker
-            .register("./sw.js", { scope: "./" })
-            .then(reg => console.log("SW registered:", reg.scope))
-            .catch(err => console.error("SW registration failed:", err));
+            const localDevelopmentHosts = new Set(["localhost", "127.0.0.1", "0.0.0.0", "::1"]);
+
+            if (localDevelopmentHosts.has(window.location.hostname)) {
+                const wasControlled = Boolean(navigator.serviceWorker.controller);
+
+                // Remove older registrations/caches so local servers always serve current files.
+                Promise.all([
+                    navigator.serviceWorker.getRegistrations().then(registrations =>
+                        Promise.all(registrations.map(registration => registration.unregister()))
+                    ),
+                    caches.keys().then(cacheNames =>
+                        Promise.all(
+                            cacheNames
+                                .filter(cacheName => cacheName.startsWith("dk-vocab-"))
+                                .map(cacheName => caches.delete(cacheName))
+                        )
+                    )
+                ])
+                    .then(() => {
+                        console.log("Local development: service worker cache disabled.");
+
+                        // A worker controlling this load releases the page only after a reload.
+                        if (wasControlled && !sessionStorage.getItem("dk-vocab-dev-cache-reset")) {
+                            sessionStorage.setItem("dk-vocab-dev-cache-reset", "true");
+                            window.location.reload();
+                            return;
+                        }
+
+                        sessionStorage.removeItem("dk-vocab-dev-cache-reset");
+                    })
+                    .catch(err => console.error("Local cache cleanup failed:", err));
+                return;
+            }
+
+            navigator.serviceWorker
+                .register("./sw.js", { scope: "./" })
+                .then(reg => console.log("SW registered:", reg.scope))
+                .catch(err => console.error("SW registration failed:", err));
         });
     }
 });

@@ -214,7 +214,8 @@ select:focus-visible { border-color: var(--brand-600); }
     - ONLY these are wide globally
     --------------------------- */
 #start-quiz-btn,
-#nav-skriveguide{
+#nav-skriveguide,
+#nav-grammatik{
     display: inline-block;
     width: 100%;
     max-width: 360px;
@@ -232,7 +233,8 @@ select:focus-visible { border-color: var(--brand-600); }
     transition: transform .12s ease, filter .2s ease;
 }
 #start-quiz-btn:hover,
-#nav-skriveguide:hover { filter: brightness(.98); transform: translateY(-1px); }
+#nav-skriveguide:hover,
+#nav-grammatik:hover { filter: brightness(.98); transform: translateY(-1px); }
 
 button[disabled] { opacity: .6; cursor: not-allowed; }
 
@@ -759,8 +761,847 @@ main{
 
 /* Keep your existing gradient look for these two */
 #start-quiz-btn,
-#nav-skriveguide{
+#nav-skriveguide,
+#nav-grammatik{
     border-radius: 12px;           /* keep rounded look (not the square nav style) */
+}
+
+/* =========================================================
+    GRAMMATIK — topic selection and bilingual lesson pages
+    ========================================================= */
+#grammar-selection,
+#adverb-lesson {
+    width: 100%;
+}
+
+.grammar-page {
+    width: min(100%, 960px);
+    min-width: 0;
+    margin: 0 auto;
+    padding: clamp(16px, 2.5vw, 24px);
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(2, 6, 23, .06);
+}
+
+.grammar-page > h2 {
+    margin-bottom: 8px;
+    color: var(--brand-800);
+    font-size: clamp(1.35rem, 1.1rem + 1vw, 1.8rem);
+}
+
+.grammar-page > p {
+    margin-bottom: 6px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.grammar-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.grammar-topic-card {
+    display: grid;
+    gap: 4px;
+    min-height: 112px;
+    padding: 20px;
+    color: var(--text);
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(2, 6, 23, .05);
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+
+.grammar-topic-card span[lang="en"] {
+    color: var(--muted);
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+.grammar-topic-card:hover {
+    border-color: var(--brand-600);
+    box-shadow: 0 7px 16px rgba(2, 6, 23, .1);
+    transform: translateY(-2px);
+}
+
+.grammar-home-btn,
+.grammar-topbar button {
+    min-height: 44px;
+    padding: .7rem 1rem;
+    color: #fff;
+    background: var(--brand-700);
+    border: 1px solid var(--brand-700);
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.grammar-home-btn:hover,
+.grammar-topbar button:hover {
+    background: var(--brand-800);
+    border-color: var(--brand-800);
+}
+
+.grammar-topbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.grammar-section-label {
+    color: var(--muted-2);
+    font-size: .9rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.grammar-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0 24px;
+    line-height: 1.65;
+}
+
+.grammar-content > :not(table, .grammar-learning-card) {
+    width: min(100%, 76ch);
+}
+
+.grammar-learning-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    width: min(100%, 76ch);
+    padding: clamp(14px, 2vw, 20px);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--brand-600);
+    border-radius: 12px;
+    box-shadow: 0 5px 14px rgba(15, 23, 42, .06);
+}
+
+.grammar-learning-card > h3:first-child {
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #bfdbfe;
+}
+
+.grammar-learning-card > table {
+    margin: 0;
+}
+
+.grammar-title-english {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted-2);
+    font-size: .78em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.grammar-english {
+    color: var(--muted-2);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.grammar-english strong {
+    font-weight: 600;
+}
+
+.grammar-paired-label > * {
+    display: block;
+}
+
+.grammar-paired-label > .grammar-english {
+    margin-top: 4px;
+}
+
+.grammar-heading-language-pair,
+.grammar-text-pair,
+.grammar-inline-language-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+}
+
+.grammar-heading-language-pair > :first-child,
+.grammar-text-pair > :first-child,
+.grammar-inline-language-pair > :first-child {
+    min-width: 0;
+    padding-right: 12px;
+}
+
+.grammar-heading-language-pair > .grammar-english,
+.grammar-text-pair > .grammar-english,
+.grammar-inline-language-pair > .grammar-english {
+    min-width: 0;
+    margin: 0;
+    padding-left: 12px;
+    border-left: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+
+.grammar-heading-language-pair > .grammar-english {
+    align-self: center;
+}
+
+.grammar-text-pair > p {
+    margin: 0;
+}
+
+.grammar-comparison-table .grammar-comparison-meaning td {
+    background: #f8fafc;
+    border-bottom: 2px solid #bfdbfe;
+}
+
+.grammar-comparison-table .grammar-comparison-meaning:last-child td {
+    border-bottom: 0;
+}
+
+.grammar-direction-table .grammar-example-line {
+    display: block;
+    margin-top: 5px;
+}
+
+.grammar-result > * {
+    display: block;
+}
+
+.grammar-result--incorrect {
+    background: #fef2f2;
+    border-left: 5px solid #dc2626;
+}
+
+.grammar-result--correct {
+    background: #f0fdf4;
+    border-left: 5px solid #16a34a;
+}
+
+.grammar-correction-reason td {
+    background: #f8fafc;
+    border-bottom: 3px solid #bfdbfe;
+}
+
+.grammar-language-pair th {
+    vertical-align: top;
+}
+
+.grammar-language-pair th > strong,
+.grammar-language-text {
+    display: block;
+}
+
+.grammar-language-pair th > strong {
+    margin-bottom: 6px;
+}
+
+.grammar-language-pair .grammar-danish {
+    border-top: 4px solid var(--brand-700);
+}
+
+.grammar-language-pair .grammar-translation-panel {
+    border-top: 4px solid #94a3b8;
+    background: #f8fafc;
+}
+
+.grammar-heading-english {
+    font-size: .9em;
+}
+
+.grammar-bilingual-table td > strong,
+.grammar-bilingual-table .grammar-word-list,
+.grammar-bilingual-table .grammar-example-line {
+    display: block;
+}
+
+.grammar-bilingual-table td > strong {
+    margin-bottom: 4px;
+    color: var(--brand-800);
+    font-size: 1.02rem;
+}
+
+.grammar-bilingual-table .grammar-word-list {
+    margin-bottom: 8px;
+}
+
+.grammar-bilingual-table .grammar-word-list::before,
+.grammar-bilingual-table .grammar-example-line::before {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--muted-2);
+    font-size: .72rem;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.grammar-bilingual-table td[lang="da"] .grammar-word-list::before {
+    content: "Typiske ord";
+}
+
+.grammar-bilingual-table td[lang="en"] .grammar-word-list::before {
+    content: "Common words";
+}
+
+.grammar-bilingual-table td[lang="da"] .grammar-example-line::before {
+    content: "Eksempel";
+}
+
+.grammar-bilingual-table td[lang="en"] .grammar-example-line::before {
+    content: "Example";
+}
+
+.grammar-bilingual-table .grammar-example-line {
+    padding: 7px 9px;
+    background: #f8fafc;
+    border-left: 4px solid var(--brand-600);
+    border-radius: 5px;
+}
+
+.grammar-bilingual-table .grammar-english .grammar-example-line {
+    border-left-color: #94a3b8;
+}
+
+/* Tables and headings converted directly from Adverbier.docx */
+.grammar-content h3 {
+    margin-top: 8px;
+    color: var(--brand-800);
+    font-size: clamp(1.05rem, .95rem + .5vw, 1.3rem);
+    line-height: 1.3;
+}
+
+.grammar-content ul,
+.grammar-content ol {
+    padding-left: 1.4rem;
+}
+
+.grammar-content li {
+    margin: .35rem 0;
+}
+
+.grammar-content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-gutter: stable;
+    scrollbar-color: var(--brand-600) #dbeafe;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    border-collapse: collapse;
+    background: var(--card);
+}
+
+.grammar-content table::-webkit-scrollbar {
+    height: 10px;
+}
+
+.grammar-content table::-webkit-scrollbar-track {
+    background: #dbeafe;
+    border-radius: 999px;
+}
+
+.grammar-content table::-webkit-scrollbar-thumb {
+    background: var(--brand-600);
+    border: 2px solid #dbeafe;
+    border-radius: 999px;
+}
+
+.grammar-content th,
+.grammar-content td {
+    min-width: 150px;
+    padding: 10px 12px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.grammar-content th {
+    color: var(--text);
+    background: #eff6ff;
+}
+
+.grammar-content th:last-child,
+.grammar-content td:last-child {
+    border-right: 0;
+}
+
+.grammar-content table p + p {
+    margin-top: 6px;
+}
+
+.grammar-language,
+.grammar-example,
+.grammar-tip,
+.grammar-correction,
+.grammar-exercise,
+.grammar-pairs,
+.grammar-type-grid > div {
+    padding: clamp(12px, 2vw, 16px);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.grammar-translation {
+    color: var(--muted);
+    border-left: 5px solid var(--brand-600);
+}
+
+.grammar-example {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.grammar-example p + p {
+    margin-top: 4px;
+    color: var(--muted);
+}
+
+.grammar-tip {
+    background: #fffbeb;
+    border-left: 5px solid #f59e0b;
+}
+
+.grammar-type-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.grammar-type-grid dt {
+    margin-bottom: 5px;
+    color: var(--brand-800);
+    font-weight: 800;
+}
+
+.grammar-type-grid dd span[lang="en"] {
+    color: var(--muted);
+}
+
+.grammar-list,
+.grammar-exercise ol {
+    padding-left: 1.4rem;
+}
+
+.grammar-list li,
+.grammar-exercise li {
+    margin: .45rem 0;
+}
+
+.grammar-pattern {
+    font-weight: 800;
+    text-align: center;
+}
+
+.grammar-pattern span {
+    display: inline-block;
+    margin: 3px;
+    padding: 5px 9px;
+    background: #dbeafe;
+    border: 1px solid #93c5fd;
+    border-radius: 7px;
+}
+
+.grammar-correction del {
+    color: #991b1b;
+}
+
+.grammar-correction p + p {
+    margin-top: 5px;
+}
+
+.grammar-exercise h3 {
+    margin-bottom: 8px;
+    color: var(--brand-800);
+    font-size: 1.05rem;
+}
+
+.grammar-table-wrap {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-top: 12px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.grammar-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    background: var(--card);
+    font-size: .95rem;
+}
+
+.grammar-table th,
+.grammar-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.grammar-table th {
+    color: var(--brand-800);
+    background: #eff6ff;
+    font-weight: 800;
+}
+
+.grammar-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.grammar-checklist {
+    display: grid;
+    gap: 8px;
+    margin: 10px 0 14px;
+    padding: 0;
+    list-style: none;
+}
+
+.grammar-checklist li::before {
+    content: "☐";
+    margin-right: 8px;
+    font-weight: 800;
+}
+
+.grammar-lesson-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.grammar-lesson-nav > button {
+    flex: 1 1 0;
+}
+
+.grammar-lesson-nav .guide-counter {
+    min-width: 64px;
+    color: var(--muted);
+    font-weight: 800;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .grammar-page {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .grammar-type-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grammar-topbar button {
+        flex: 1 1 150px;
+    }
+
+    .grammar-content {
+        margin-top: 16px;
+        font-size: .96rem;
+        line-height: 1.6;
+    }
+
+    .grammar-learning-card {
+        gap: 10px;
+        padding: 12px;
+        border-top-width: 4px;
+        box-shadow: none;
+    }
+
+    .grammar-content table {
+        font-size: .9rem;
+    }
+
+    .grammar-content th,
+    .grammar-content td {
+        min-width: 130px;
+        padding: 9px 10px;
+    }
+
+    .grammar-content th:first-child,
+    .grammar-content td:first-child {
+        min-width: 120px;
+    }
+
+    /* Turn wide lesson tables into wrapping cards on phones. */
+    .grammar-content table {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow-x: visible;
+        border: 0;
+        background: transparent;
+    }
+
+    .grammar-content colgroup {
+        display: none;
+    }
+
+    .grammar-content thead,
+    .grammar-content tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grammar-content tr {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--card);
+    }
+
+    .grammar-content th,
+    .grammar-content td,
+    .grammar-content th:first-child,
+    .grammar-content td:first-child {
+        flex: 1 1 100%;
+        min-width: 0;
+        width: 100%;
+        border-right: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .grammar-content tr > :last-child {
+        border-bottom: 0;
+    }
+
+    /* Keep bilingual comparisons side by side instead of making one long row stack. */
+    .grammar-content .grammar-bilingual-table tr,
+    .grammar-content .grammar-example-table tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grammar-content .grammar-bilingual-table th,
+    .grammar-content .grammar-bilingual-table td,
+    .grammar-content .grammar-example-table th,
+    .grammar-content .grammar-example-table td {
+        min-width: 0;
+        width: auto;
+        overflow-wrap: anywhere;
+    }
+
+    .grammar-content .grammar-bilingual-table tr > :first-child {
+        border-right: 1px solid var(--border);
+    }
+
+    .grammar-content .grammar-example-table .grammar-shared-column {
+        grid-column: 1 / -1;
+        border-right: 0;
+        background: #f8fafc;
+        font-weight: 700;
+    }
+
+    .grammar-content .grammar-example-table .grammar-danish-column {
+        grid-column: 1;
+        border-right: 1px solid var(--border);
+    }
+
+    .grammar-content .grammar-example-table .grammar-english-column {
+        grid-column: 2;
+    }
+
+    .grammar-content .grammar-example-table thead .grammar-shared-column {
+        background: #dbeafe;
+    }
+
+    .grammar-paired-label {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grammar-paired-label > * {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .grammar-paired-label > .grammar-english {
+        margin-top: 0;
+        padding-left: 10px;
+        border-left: 1px solid var(--border);
+    }
+
+    .grammar-paired-label > :first-child {
+        padding-right: 10px;
+    }
+
+    /* Keep the requested comparison and correction layouts as unified tables. */
+    .grammar-content .grammar-comparison-table,
+    .grammar-content .grammar-correction-table {
+        display: table;
+        table-layout: fixed;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: var(--card);
+    }
+
+    .grammar-content .grammar-comparison-table thead,
+    .grammar-content .grammar-comparison-table tbody,
+    .grammar-content .grammar-correction-table thead,
+    .grammar-content .grammar-correction-table tbody {
+        display: table-row-group;
+    }
+
+    .grammar-content .grammar-comparison-table tr,
+    .grammar-content .grammar-correction-table tr {
+        display: table-row;
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .grammar-content .grammar-comparison-table th,
+    .grammar-content .grammar-comparison-table td,
+    .grammar-content .grammar-correction-table th,
+    .grammar-content .grammar-correction-table td {
+        display: table-cell;
+        min-width: 0;
+        width: auto;
+        border-right: 1px solid var(--border);
+        overflow-wrap: anywhere;
+    }
+
+    .grammar-content .grammar-comparison-table th,
+    .grammar-content .grammar-comparison-table .grammar-comparison-forms td {
+        width: 33.333%;
+    }
+
+    .grammar-content .grammar-comparison-table--two-column th,
+    .grammar-content .grammar-comparison-table--two-column .grammar-comparison-forms td {
+        width: 50%;
+    }
+
+    .grammar-content .grammar-comparison-table .grammar-comparison-meaning td,
+    .grammar-content .grammar-correction-table .grammar-correction-reason td {
+        width: auto;
+        border-right: 0;
+    }
+
+    .grammar-content .grammar-correction-table th:first-child,
+    .grammar-content .grammar-correction-table td:first-child {
+        width: 68%;
+    }
+
+    .grammar-content .grammar-correction-table th:last-child,
+    .grammar-content .grammar-correction-table td:last-child {
+        width: 32%;
+        border-right: 0;
+    }
+
+    .grammar-content .grammar-correction-table th .grammar-paired-label {
+        display: block;
+    }
+
+    .grammar-content .grammar-correction-table th .grammar-paired-label > .grammar-english {
+        margin-top: 4px;
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    /* Pages 10 and 12 intentionally use one reading column on phones. */
+    .grammar-single-column-page .grammar-example-table tr,
+    .grammar-single-column-page .grammar-bilingual-table tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .grammar-single-column-page .grammar-heading-language-pair,
+    .grammar-single-column-page .grammar-text-pair,
+    .grammar-single-column-page .grammar-inline-language-pair,
+    .grammar-single-column-page .grammar-paired-label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grammar-single-column-page .grammar-example-table .grammar-shared-column,
+    .grammar-single-column-page .grammar-example-table .grammar-danish-column,
+    .grammar-single-column-page .grammar-example-table .grammar-english-column {
+        width: 100%;
+        border-right: 0;
+    }
+
+    .grammar-single-column-page .grammar-heading-language-pair > .grammar-english,
+    .grammar-single-column-page .grammar-text-pair > .grammar-english,
+    .grammar-single-column-page .grammar-inline-language-pair > .grammar-english,
+    .grammar-single-column-page .grammar-paired-label > .grammar-english {
+        margin-top: 7px;
+        padding-top: 7px;
+        padding-left: 0;
+        border-top: 1px solid var(--border);
+        border-left: 0;
+    }
+
+    .grammar-language-pair .grammar-danish,
+    .grammar-language-pair .grammar-translation-panel {
+        border-top-width: 4px;
+    }
+
+    .grammar-lesson-nav {
+        flex-wrap: wrap;
+    }
+
+    .grammar-lesson-nav .guide-counter {
+        order: -1;
+        flex: 1 1 100%;
+        padding: 6px;
+        background: #eff6ff;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .grammar-page {
+        padding: 12px;
+    }
+
+    .grammar-topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .grammar-topbar button {
+        width: 100%;
+    }
+
+    .grammar-lesson-nav {
+        flex-wrap: wrap;
+    }
+
+    .grammar-lesson-nav .guide-counter {
+        order: -1;
+        flex: 1 1 100%;
+    }
+
+    .grammar-lesson-nav > button {
+        min-width: 0;
+        padding-inline: 8px;
+    }
 }
 
 /* Small phones */

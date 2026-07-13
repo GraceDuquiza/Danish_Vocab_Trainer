@@ -6,7 +6,7 @@
     <title>Danish Vocabulary Trainer</title>
 
     <!-- Use the versioned URL to bust cache -->
-    <link rel="stylesheet" href="./style.css?v=11">
+    <link rel="stylesheet" href="./style.css?v=30">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -34,7 +34,7 @@
     <meta name="twitter:description" content="Study, quiz &amp; skriveguide for Danish learners. Offline-ready PWA.">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1>Danish Vocabulary Trainer</h1>
 
         <!-- STUDY MODE -->
@@ -103,7 +103,8 @@
         <div id="main-buttons">
             <button type="button" id="start-quiz-btn">🎯 Start Quiz</button>
             <button type="button" id="nav-skriveguide">📖 Skriveguide</button>
-            </div>
+            <button type="button" id="nav-grammatik">🧩 Grammatik</button>
+        </div>
 
         <!-- Skriveguide Page -->
         <div id="skriveguide" class="is-hidden">
@@ -124,14 +125,53 @@
         </div>
 
 
+        <!-- Grammar topic selection -->
+        <section id="grammar-selection" class="is-hidden" aria-labelledby="grammar-selection-title">
+            <div class="grammar-page">
+                <h2 id="grammar-selection-title" lang="da" tabindex="-1">Grammatik</h2>
+                <p lang="da">Vælg et emne, og lær dansk grammatik trin for trin.</p>
+                <p lang="en">Choose a topic and learn Danish grammar step by step.</p>
+
+                <nav class="grammar-topic-grid" aria-label="Grammar topics">
+                    <button type="button" class="grammar-topic-card" id="open-adverb-lesson">
+                        <span lang="da">Adverbium</span>
+                        <span lang="en">Adverbs</span>
+                    </button>
+                </nav>
+
+                <button type="button" class="grammar-home-btn" id="grammar-to-home">⬅️ Main Menu</button>
+            </div>
+        </section>
+
+        <!-- Adverb lesson -->
+        <section id="adverb-lesson" class="is-hidden" aria-labelledby="adverb-lesson-title">
+            <article class="grammar-page">
+                <nav class="grammar-topbar" aria-label="Adverb lesson destinations">
+                    <button type="button" id="adverb-to-grammar">⬅️ Grammatik</button>
+                    <button type="button" id="adverb-to-home">🏠 Main Menu</button>
+                </nav>
+
+                <p class="grammar-section-label" id="adverb-section-label">Adverbium – Adverbs</p>
+                <h2 id="adverb-lesson-title" tabindex="-1">Adverbium – Adverbs</h2>
+                <div id="adverb-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                <nav class="grammar-lesson-nav btn-row" aria-label="Adverb lesson navigation">
+                    <button type="button" id="adverb-prev" aria-label="Previous adverb lesson section">⬅️ Forrige</button>
+                    <span class="guide-counter" id="adverb-counter" aria-live="polite">1 / …</span>
+                    <button type="button" id="adverb-next" aria-label="Next adverb lesson section">Næste ➡️</button>
+                </nav>
+            </article>
+        </section>
+
         <!-- SCRIPT FILES -->
-        <script src="verber.js" defer></script>
-        <script src="substantiver.js" defer></script>
-        <script src="adjektiver.js" defer></script>
-        <script src="adverbKonjunktion.js" defer></script>
-        <script src="script.js?v=12" defer></script>
-        <script src="quiz.js" defer></script>
-        <script src="skriveguide.js" defer></script>
+        <script src="./verber.js" defer></script>
+        <script src="./substantiver.js" defer></script>
+        <script src="./adjektiver.js" defer></script>
+        <script src="./adverbKonjunktion.js" defer></script>
+        <script src="./skriveguide.js" defer></script>
+        <script src="./adverbiel.js" defer></script>
+        <script src="./script.js?v=23" defer></script>
+        <script src="./quiz.js" defer></script>
 
 
 
@@ -143,7 +183,7 @@
             </p>
         </footer>
 
-    </div>
+    </main>
 
     <div class="cookie-banner is-hidden" id="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-title" aria-describedby="cookie-text">
         <div class="cookie-banner__content">

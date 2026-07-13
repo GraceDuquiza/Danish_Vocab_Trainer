@@ -10,6 +10,9 @@ A simple and effective web app to help users learn and practice Danish vocabular
 - 🔁 Reverse Mode: Practice English → Danish
 - 📱 Mobile responsive and accessible design
 - 🚪 Clearly styled Quit and Exit buttons
+- 🧩 Grammatik section with lessons rendered inside the existing single-page app
+- 🇩🇰🇬🇧 Bilingual Danish–English lesson about adverbs
+- 🗂️ Mobile-friendly learning cards that group grammar rules, examples, and exercises into clear sections
 
 ## 📁 Project Structure
 
@@ -19,11 +22,14 @@ A simple and effective web app to help users learn and practice Danish vocabular
 ├── style.css
 ├── script.js
 ├── quiz.js
+├── adverbiel.js
 ├── verber.js
 ├── substantiver.js
 ├── adjektiver.js
 ├── adverbKonjunktion.js
 ```
+
+`adverbiel.js` stores the bilingual adverb lesson separately from the navigation and rendering logic. The lesson is displayed inside `index.html`; no separate grammar lesson page is required.
 
 ## 🚀 Deployment
 
@@ -35,6 +41,8 @@ Deployed via **GitHub Pages**.
 2. Go to **Settings > Pages**
 3. Set the source to `main` branch, root directory
 4. GitHub Pages will provide a live link.
+
+During local development on `localhost` or `127.0.0.1`, the app automatically unregisters its service worker and clears its own PWA caches. If an older worker controls the first load, the page reloads once automatically and then continues without caching. Production remains offline-capable and checks the network before using cached static assets.
 
 ## 🛠 Built With
 

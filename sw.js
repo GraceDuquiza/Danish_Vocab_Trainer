@@ -1,15 +1,16 @@
-// sw.js — cache-first app shell with subpath-safe URLs
-const CACHE = 'dk-vocab-v13';
+// sw.js — network-first app shell with offline fallback and subpath-safe URLs
+const CACHE = 'dk-vocab-v38';
 
 // Use RELATIVE paths so it works on GitHub Pages subpaths too
 const ASSETS = [
     './',
     './index.html',
     './cookie-policy.html',
-    './style.css?v=11',
-    './script.js?v=12',
+    './style.css?v=30',
+    './script.js?v=23',
     './quiz.js',
     './skriveguide.js',
+    './adverbiel.js',
     './adjektiver.js',          
     './adverbKonjunktion.js',
     './substantiver.js',
@@ -83,18 +84,13 @@ self.addEventListener('install', (event) => {
         return; // don't let it fall through to the asset handler
     }
 
-    // 2) Static assets: cache-first, then network (cache successful GETs)
+    // 2) Static assets: network-first so online users always receive current files.
     if (!isCacheableGetFromSameOrigin(req)) {
         // Let the browser handle cross-origin or non-GET requests
         return;
     }
 
     event.respondWith((async () => {
-        // Try cache first (fast)
-        const cached = await caches.match(req);
-        if (cached) return cached;
-
-        // Otherwise fetch and cache if OK
         try {
         const resp = await fetch(req);
         if (resp.ok) {
@@ -103,7 +99,8 @@ self.addEventListener('install', (event) => {
         }
         return resp;
         } catch {
-        return Response.error();
+        // Keep the installed app usable when the network is unavailable.
+        return (await caches.match(req)) || Response.error();
         }
     })());
 });
