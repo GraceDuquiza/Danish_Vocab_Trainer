@@ -19,6 +19,7 @@ A simple and effective web app to help users learn and practice Danish vocabular
 - 📗 Bilingual verb grammar guide covering tense, verb phrases, modal verbs, passive voice, exercises, and answer keys
 - 🔗 Bilingual conjunction grammar guide adapted from `Konjunktion.docx`, with clause types, word order, punctuation, exercises, and answers
 - 📍 Bilingual preposition grammar guide adapted from `Praepositioner.docx`, covering place, direction, time, fixed combinations, exercises, and answers
+- 🧱 Bilingual word-order grammar guide adapted from `Ordstilling.docx`, covering sentence elements, V2, inversion, subordinate clauses, questions, objects, exercises, and answers
 - 🗂️ Mobile-friendly learning cards that group grammar rules, examples, and exercises into clear sections
 
 ## 📁 Project Structure
@@ -36,13 +37,14 @@ A simple and effective web app to help users learn and practice Danish vocabular
 ├── Grammatik_Verber.js
 ├── Grammatik_Konjunktion.js
 ├── Grammatik_Præpositioner.js
+├── Grammatik_Ordstilling.js
 ├── verber.js
 ├── substantiver.js
 ├── adjektiver.js
 ├── adverbKonjunktion.js
 ```
 
-`Grammatik_Adverbiel.js`, `Grammatik_Substantiv.js`, `Grammatik_Adjektiv.js`, `Grammatik_Pronomen.js`, `Grammatik_Verber.js`, `Grammatik_Konjunktion.js`, and `Grammatik_Præpositioner.js` store the bilingual grammar lessons separately from the navigation and rendering logic. The lessons are displayed inside `index.html`; no separate grammar lesson pages are required.
+`Grammatik_Adverbiel.js`, `Grammatik_Substantiv.js`, `Grammatik_Adjektiv.js`, `Grammatik_Pronomen.js`, `Grammatik_Verber.js`, `Grammatik_Konjunktion.js`, `Grammatik_Præpositioner.js`, and `Grammatik_Ordstilling.js` store the bilingual grammar lessons separately from the navigation and rendering logic. The lessons are displayed inside `index.html`; no separate grammar lesson pages are required.
 
 ## 🚀 Deployment
 

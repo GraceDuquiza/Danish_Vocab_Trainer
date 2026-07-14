@@ -6,7 +6,7 @@
     <title>Danish-English Learning Guide</title>
 
     <!-- Use the versioned URL to bust cache -->
-        <link rel="stylesheet" href="./style.css?v=47">
+        <link rel="stylesheet" href="./style.css?v=51">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -180,6 +180,10 @@
                         <span lang="da">Præpositioner</span>
                         <span lang="en">Prepositions</span>
                     </button>
+                    <button type="button" class="grammar-topic-card" id="open-word-order-lesson">
+                        <span lang="da">Ordstilling</span>
+                        <span lang="en">Word order</span>
+                    </button>
                 </nav>
 
                 <button type="button" class="grammar-home-btn" id="grammar-to-home">⬅️ Main Menu</button>
@@ -326,6 +330,26 @@
             </article>
         </section>
 
+        <!-- Word-order lesson -->
+        <section id="word-order-lesson" class="is-hidden" aria-labelledby="word-order-lesson-title">
+            <article class="grammar-page">
+                <nav class="grammar-topbar" aria-label="Word-order lesson destinations">
+                    <button type="button" id="word-order-to-grammar">⬅️ Grammatik</button>
+                    <button type="button" id="word-order-to-home">🏠 Main Menu</button>
+                </nav>
+
+                <p class="grammar-section-label">Ordstilling – Word order</p>
+                <h2 id="word-order-lesson-title" tabindex="-1">Ordstilling – Word order</h2>
+                <div id="word-order-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                <nav class="grammar-lesson-nav btn-row" aria-label="Word-order lesson navigation">
+                    <button type="button" id="word-order-prev" aria-label="Previous word-order lesson section">⬅️ Forrige</button>
+                    <span class="guide-counter" id="word-order-counter" aria-live="polite">1 / …</span>
+                    <button type="button" id="word-order-next" aria-label="Next word-order lesson section">Næste ➡️</button>
+                </nav>
+            </article>
+        </section>
+
         <!-- SCRIPT FILES -->
         <script src="./verber.js" defer></script>
         <script src="./substantiver.js" defer></script>
@@ -339,7 +363,8 @@
         <script src="./Grammatik_Verber.js" defer></script>
         <script src="./Grammatik_Konjunktion.js" defer></script>
         <script src="./Grammatik_Præpositioner.js" defer></script>
-        <script src="./script.js?v=34" defer></script>
+        <script src="./Grammatik_Ordstilling.js" defer></script>
+        <script src="./script.js?v=35" defer></script>
         <script src="./quiz.js" defer></script>
 
 

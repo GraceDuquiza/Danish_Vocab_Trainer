@@ -870,7 +870,8 @@ main{
 #pronoun-lesson,
 #verb-lesson,
 #conjunction-lesson,
-#preposition-lesson {
+#preposition-lesson,
+#word-order-lesson {
     width: 100%;
 }
 
@@ -1388,6 +1389,31 @@ main{
     width: 38%;
 }
 
+.grammar-content .grammar-focus-example-table {
+    table-layout: fixed;
+}
+
+.grammar-content .grammar-focus-example-table th:first-child,
+.grammar-content .grammar-focus-example-table td:first-child,
+.grammar-content .grammar-focus-example-table th:nth-child(2),
+.grammar-content .grammar-focus-example-table td:nth-child(2) {
+    width: 28%;
+}
+
+.grammar-content .grammar-focus-example-table th:nth-child(3),
+.grammar-content .grammar-focus-example-table td:nth-child(3) {
+    width: 44%;
+}
+
+.grammar-content .grammar-glossary-table {
+    table-layout: fixed;
+}
+
+.grammar-content .grammar-glossary-table th,
+.grammar-content .grammar-glossary-table td {
+    width: 25%;
+}
+
 .grammar-content th {
     color: var(--text);
     background: #eff6ff;
@@ -1707,6 +1733,73 @@ main{
 
     .grammar-content .grammar-example-table thead .grammar-shared-column {
         background: #dbeafe;
+    }
+
+    /* Focus tables: two label columns above one full-width example. */
+    .grammar-content .grammar-focus-example-table tr > :first-child {
+        grid-column: 1;
+        width: auto;
+        border-right: 1px solid var(--border);
+        background: #f8fafc;
+    }
+
+    .grammar-content .grammar-focus-example-table tr > :nth-child(2) {
+        grid-column: 2;
+        width: auto;
+        background: #f8fafc;
+    }
+
+    .grammar-content .grammar-focus-example-table tr > :nth-child(3) {
+        grid-column: 1 / -1;
+        width: auto;
+        border-right: 0;
+        background: var(--card);
+    }
+
+    .grammar-content .grammar-focus-example-table thead tr > :first-child,
+    .grammar-content .grammar-focus-example-table thead tr > :nth-child(2) {
+        background: #dbeafe;
+    }
+
+    .grammar-content .grammar-focus-example-table thead tr > :nth-child(3) {
+        background: #eff6ff;
+    }
+
+    /* Glossary cards: Danish left, English right on both visual rows. */
+    .grammar-content .grammar-glossary-table tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grammar-content .grammar-glossary-table th,
+    .grammar-content .grammar-glossary-table td {
+        min-width: 0;
+        width: auto;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+    }
+
+    .grammar-content .grammar-glossary-table tr > :nth-child(odd) {
+        border-right: 1px solid var(--border);
+    }
+
+    .grammar-content .grammar-glossary-table tr > :nth-child(even) {
+        border-right: 0;
+    }
+
+    .grammar-content .grammar-glossary-table tr > :nth-child(1),
+    .grammar-content .grammar-glossary-table tr > :nth-child(3) {
+        grid-column: 1;
+    }
+
+    .grammar-content .grammar-glossary-table tr > :nth-child(2),
+    .grammar-content .grammar-glossary-table tr > :nth-child(4) {
+        grid-column: 2;
+    }
+
+    .grammar-content .grammar-glossary-table tbody tr > :nth-child(3),
+    .grammar-content .grammar-glossary-table tbody tr > :nth-child(4) {
+        background: var(--card);
     }
 
     /* Conjunction tables: conjunction above, meaning and example side by side. */

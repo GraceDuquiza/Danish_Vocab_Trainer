@@ -282,6 +282,16 @@ window.addEventListener("DOMContentLoaded", function () {
     const prepositionToGrammarBtn  = document.getElementById("preposition-to-grammar");
     const prepositionToHomeBtn     = document.getElementById("preposition-to-home");
     let currentPrepositionPage = 0;
+    const openWordOrderLessonBtn = document.getElementById("open-word-order-lesson");
+    const wordOrderLessonEl      = document.getElementById("word-order-lesson");
+    const wordOrderTitleEl       = document.getElementById("word-order-lesson-title");
+    const wordOrderContentEl     = document.getElementById("word-order-lesson-content");
+    const wordOrderCounterEl     = document.getElementById("word-order-counter");
+    const wordOrderPrevBtn       = document.getElementById("word-order-prev");
+    const wordOrderNextBtn       = document.getElementById("word-order-next");
+    const wordOrderToGrammarBtn  = document.getElementById("word-order-to-grammar");
+    const wordOrderToHomeBtn     = document.getElementById("word-order-to-home");
+    let currentWordOrderPage = 0;
 
     // ================================================================
     // STUDY MODE — rendering + category loading
@@ -388,6 +398,7 @@ window.addEventListener("DOMContentLoaded", function () {
         verbLessonEl?.classList.add("is-hidden");
         conjunctionLessonEl?.classList.add("is-hidden");
         prepositionLessonEl?.classList.add("is-hidden");
+        wordOrderLessonEl?.classList.add("is-hidden");
 
         // Hide main buttons row
         if (startQuizBtn)   startQuizBtn.style.display   = "none";
@@ -418,6 +429,7 @@ window.addEventListener("DOMContentLoaded", function () {
         verbLessonEl?.classList.add("is-hidden");
         conjunctionLessonEl?.classList.add("is-hidden");
         prepositionLessonEl?.classList.add("is-hidden");
+        wordOrderLessonEl?.classList.add("is-hidden");
 
         // Show the home navigation hub.
         if (studyModeEl)   studyModeEl.style.display   = "none";
@@ -679,6 +691,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (mainButtons) mainButtons.style.display = "none";
         conjunctionLessonEl?.classList.add("is-hidden");
         prepositionLessonEl?.classList.add("is-hidden");
+        wordOrderLessonEl?.classList.add("is-hidden");
     }
 
     function openGrammarSelection() {
@@ -690,6 +703,7 @@ window.addEventListener("DOMContentLoaded", function () {
         verbLessonEl?.classList.add("is-hidden");
         conjunctionLessonEl?.classList.add("is-hidden");
         prepositionLessonEl?.classList.add("is-hidden");
+        wordOrderLessonEl?.classList.add("is-hidden");
         grammarSelectionEl?.classList.remove("is-hidden");
         document.getElementById("grammar-selection-title")?.focus?.();
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -709,6 +723,7 @@ window.addEventListener("DOMContentLoaded", function () {
         verbLessonEl?.classList.add("is-hidden");
         conjunctionLessonEl?.classList.add("is-hidden");
         prepositionLessonEl?.classList.add("is-hidden");
+        wordOrderLessonEl?.classList.add("is-hidden");
         if (studyModeEl) studyModeEl.style.display = "block";
         if (studyNavRow) studyNavRow.style.display = "flex";
         categorySelect?.focus();
@@ -1071,6 +1086,65 @@ window.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
+    function renderWordOrderPage(pageIndex) {
+        const pages = (typeof ordstillingGrammarPages !== "undefined" && Array.isArray(ordstillingGrammarPages))
+            ? ordstillingGrammarPages
+            : [];
+        const page = pages[pageIndex];
+
+        if (!page) {
+            if (wordOrderTitleEl) wordOrderTitleEl.textContent = "No lesson content";
+            if (wordOrderContentEl) wordOrderContentEl.innerHTML = "<p>Please check the word-order lesson data.</p>";
+            if (wordOrderCounterEl) wordOrderCounterEl.textContent = "0 / 0";
+            if (wordOrderPrevBtn) wordOrderPrevBtn.disabled = true;
+            if (wordOrderNextBtn) wordOrderNextBtn.disabled = true;
+            return;
+        }
+
+        if (wordOrderTitleEl) {
+            const danishTitle = document.createElement("span");
+            danishTitle.lang = "da";
+            danishTitle.textContent = `${pageIndex + 1}. ${page.titleDa}`;
+
+            const englishTitle = document.createElement("span");
+            englishTitle.className = "grammar-title-english";
+            englishTitle.lang = "en";
+            englishTitle.textContent = page.titleEn;
+
+            wordOrderTitleEl.replaceChildren(danishTitle, englishTitle);
+        }
+        if (wordOrderContentEl) {
+            wordOrderContentEl.innerHTML = page.content || "";
+            wordOrderContentEl.classList.remove("grammar-single-column-page");
+            markGrammarEnglishTranslations(wordOrderContentEl);
+            arrangeGrammarLanguagePairs(wordOrderContentEl);
+            createGrammarLearningCards(wordOrderContentEl);
+        }
+        if (wordOrderCounterEl) wordOrderCounterEl.textContent = `${pageIndex + 1} / ${pages.length}`;
+        if (wordOrderPrevBtn) wordOrderPrevBtn.disabled = pageIndex === 0;
+        if (wordOrderNextBtn) wordOrderNextBtn.disabled = pageIndex === pages.length - 1;
+    }
+
+    function openWordOrderLesson(startIndex = 0) {
+        const pageCount = (typeof ordstillingGrammarPages !== "undefined" && Array.isArray(ordstillingGrammarPages))
+            ? ordstillingGrammarPages.length
+            : 0;
+        hideHomeViews();
+        grammarSelectionEl?.classList.add("is-hidden");
+        adverbLessonEl?.classList.add("is-hidden");
+        nounLessonEl?.classList.add("is-hidden");
+        adjectiveLessonEl?.classList.add("is-hidden");
+        pronounLessonEl?.classList.add("is-hidden");
+        verbLessonEl?.classList.add("is-hidden");
+        conjunctionLessonEl?.classList.add("is-hidden");
+        prepositionLessonEl?.classList.add("is-hidden");
+        wordOrderLessonEl?.classList.remove("is-hidden");
+        currentWordOrderPage = Math.min(Math.max(startIndex, 0), Math.max(pageCount - 1, 0));
+        renderWordOrderPage(currentWordOrderPage);
+        wordOrderTitleEl?.focus();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     navGrammatik?.addEventListener("click", openGrammarSelection);
     openAdverbLessonBtn?.addEventListener("click", () => openAdverbLesson(0));
     openNounLessonBtn?.addEventListener("click", () => openNounLesson(0));
@@ -1079,6 +1153,7 @@ window.addEventListener("DOMContentLoaded", function () {
     openVerbLessonBtn?.addEventListener("click", () => openVerbLesson(0));
     openConjunctionLessonBtn?.addEventListener("click", () => openConjunctionLesson(0));
     openPrepositionLessonBtn?.addEventListener("click", () => openPrepositionLesson(0));
+    openWordOrderLessonBtn?.addEventListener("click", () => openWordOrderLesson(0));
     grammarToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbToGrammarBtn?.addEventListener("click", openGrammarSelection);
     adverbToHomeBtn?.addEventListener("click", goToMainMenu);
@@ -1094,6 +1169,8 @@ window.addEventListener("DOMContentLoaded", function () {
     conjunctionToHomeBtn?.addEventListener("click", goToMainMenu);
     prepositionToGrammarBtn?.addEventListener("click", openGrammarSelection);
     prepositionToHomeBtn?.addEventListener("click", goToMainMenu);
+    wordOrderToGrammarBtn?.addEventListener("click", openGrammarSelection);
+    wordOrderToHomeBtn?.addEventListener("click", goToMainMenu);
     adverbPrevBtn?.addEventListener("click", () => {
         if (currentAdverbPage > 0) {
             currentAdverbPage--;
@@ -1213,6 +1290,23 @@ window.addEventListener("DOMContentLoaded", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     });
+    wordOrderPrevBtn?.addEventListener("click", () => {
+        if (currentWordOrderPage > 0) {
+            currentWordOrderPage--;
+            renderWordOrderPage(currentWordOrderPage);
+            wordOrderTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+    wordOrderNextBtn?.addEventListener("click", () => {
+        const lastPage = (typeof ordstillingGrammarPages !== "undefined" ? ordstillingGrammarPages.length : 1) - 1;
+        if (currentWordOrderPage < lastPage) {
+            currentWordOrderPage++;
+            renderWordOrderPage(currentWordOrderPage);
+            wordOrderTitleEl?.focus();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
 
     // Optional: arrow key nav for Skriveguide
     document.addEventListener("keydown", (e) => {
@@ -1268,6 +1362,7 @@ window.addEventListener("DOMContentLoaded", function () {
         verbLessonEl?.classList.add("is-hidden");
         conjunctionLessonEl?.classList.add("is-hidden");
         prepositionLessonEl?.classList.add("is-hidden");
+        wordOrderLessonEl?.classList.add("is-hidden");
         if (mainButtons) mainButtons.style.display = "none";
 
         // Show quiz section + category selection
