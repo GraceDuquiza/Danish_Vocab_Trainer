@@ -28,6 +28,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const quizModeEl          = document.getElementById("quiz-mode");
     const studyModeEl         = document.getElementById("study-mode");
     const reverseModeCheckbox = document.getElementById("reverse-mode");
+    const reverseDirectionLabel = document.getElementById("reverse-direction-label");
     const quizCategorySelect  = document.getElementById("quiz-category-select");
     const categoryButtons     = document.querySelectorAll(".category-option");
 
@@ -48,6 +49,14 @@ window.addEventListener("DOMContentLoaded", function () {
     const hide   = (el) => el && (el.style.display = "none");
     const enable = (el) => el && el.removeAttribute("disabled");
     const disable= (el) => el && el.setAttribute("disabled", "");
+
+    function updateDirectionLabel() {
+        if (reverseDirectionLabel) {
+            reverseDirectionLabel.textContent = reverseModeCheckbox?.checked
+                ? "English → Danish"
+                : "Danish → English";
+        }
+    }
 
     function shuffleArray(array) {
         return array.slice().sort(() => Math.random() - 0.5);
@@ -86,6 +95,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     function freshState() {
         isQuizMode = false;
+        quizModeEl?.classList.remove("is-active");
         quizList = [];
         score = 0;
         index = 0;
@@ -130,6 +140,9 @@ window.addEventListener("DOMContentLoaded", function () {
         btn.classList.add("choice-btn");
 
         btn.addEventListener("click", () => {
+            // A question accepts only its first answer, including after review navigation.
+            if (answers[index]) return;
+
             const isCorrect = option === word[fieldAnswer];
 
             // Record answer
@@ -192,6 +205,7 @@ window.addEventListener("DOMContentLoaded", function () {
     // ===============================
     function startFlashQuiz() {
         isQuizMode = true;
+        quizModeEl?.classList.add("is-active");
         quizList = shuffleArray(window.currentList || []);
         score = 0;
         index = 0;
@@ -240,6 +254,18 @@ window.addEventListener("DOMContentLoaded", function () {
         startFlashQuiz();
         });
     });
+
+    reverseModeCheckbox?.addEventListener("change", () => {
+        updateDirectionLabel();
+
+        // Apply the new direction immediately while the current question is unanswered.
+        // Already answered questions keep their original, locked feedback.
+        if (isQuizMode && !answers[index]) {
+            showQuestion();
+        }
+    });
+
+    updateDirectionLabel();
 
     // ===============================
     // ➡️ NEXT QUESTION

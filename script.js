@@ -185,6 +185,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const nextQuestionBtn     = document.getElementById("next-question-btn");
     const prevQuestionBtn     = document.getElementById("prev-question-btn");
     const quitQuizBtn         = document.getElementById("quit-quiz-btn");
+    const quizToHomeBtn       = document.getElementById("quiz-to-home");
     const choicesContainer    = document.getElementById("choices");
     const quizWordEl          = document.getElementById("quiz-word");
     const scoreDisplay        = document.getElementById("score");
@@ -1323,6 +1324,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // Helper: wipe visible quiz controls so there's never stale Prev/Next/Quit
     function resetQuizLandingUI() {
+        quizModeEl?.classList.remove("is-active");
+
         // Hide & disable Prev/Next on landing
         if (prevQuestionBtn) {
         prevQuestionBtn.style.display = "none";
@@ -1381,14 +1384,17 @@ window.addEventListener("DOMContentLoaded", function () {
     // Start Quiz (routing only; quiz.js will take over after category is picked)
     startQuizBtn?.addEventListener("click", enterQuizLanding);
 
-    // Quit Quiz: notify quiz.js and route home
-    quitQuizBtn?.addEventListener("click", (e) => {
+    // Leave Quiz: notify quiz.js and route home from either landing or an active quiz.
+    function exitQuizToHome(e) {
         e.preventDefault();
         // Allow quiz.js to stop timers / clear its state
         window.dispatchEvent(new CustomEvent("quiz:quit"));
         // Return to main menu
         goToMainMenu();
-    });
+    }
+
+    quitQuizBtn?.addEventListener("click", exitQuizToHome);
+    quizToHomeBtn?.addEventListener("click", exitQuizToHome);
 
     // ================================================================
     // Service Worker — disable local caching during development and register in production

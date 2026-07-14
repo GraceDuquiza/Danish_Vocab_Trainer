@@ -10,6 +10,7 @@ A simple and effective web app to help users learn and practice Danish vocabular
 - 🎯 Quiz Mode: Answer randomized multiple choice questions
 - 🔁 Reverse Mode: Practice English → Danish
 - 📱 Mobile responsive and accessible design
+- 🌊 Calm ocean-sky visual theme with airy navigation and relaxing learning surfaces
 - 🚪 Clearly styled Quit and Exit buttons
 - 🧩 Grammatik section with lessons rendered inside the existing single-page app
 - 🇩🇰🇬🇧 Bilingual Danish–English lesson about adverbs
