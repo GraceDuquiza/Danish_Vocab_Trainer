@@ -869,7 +869,8 @@ main{
 #adjective-lesson,
 #pronoun-lesson,
 #verb-lesson,
-#conjunction-lesson {
+#conjunction-lesson,
+#preposition-lesson {
     width: 100%;
 }
 
@@ -1120,6 +1121,26 @@ main{
     border-bottom: 3px solid #bfdbfe;
 }
 
+.grammar-correction-reason td.grammar-inline-language-pair {
+    display: table-cell;
+}
+
+.grammar-correction-reason td.grammar-inline-language-pair > :first-child,
+.grammar-correction-reason td.grammar-inline-language-pair > .grammar-english {
+    display: block;
+    padding: 0;
+    border-left: 0;
+}
+
+.grammar-correction-reason td.grammar-inline-language-pair > .grammar-english {
+    margin-top: 3px;
+}
+
+.grammar-correction-reason [lang="en"] {
+    display: block;
+    margin-top: 3px;
+}
+
 .grammar-language-pair th {
     vertical-align: top;
 }
@@ -1266,24 +1287,31 @@ main{
     hyphens: auto;
 }
 
-.grammar-content .grammar-conjunction-table {
+.grammar-content .grammar-conjunction-table,
+.grammar-content .grammar-preposition-table {
     display: table;
     table-layout: fixed;
     overflow: hidden;
 }
 
 .grammar-content .grammar-conjunction-table th:first-child,
-.grammar-content .grammar-conjunction-table td:first-child {
+.grammar-content .grammar-conjunction-table td:first-child,
+.grammar-content .grammar-preposition-table th:first-child,
+.grammar-content .grammar-preposition-table td:first-child {
     width: 22%;
 }
 
 .grammar-content .grammar-conjunction-table th:nth-child(2),
-.grammar-content .grammar-conjunction-table td:nth-child(2) {
+.grammar-content .grammar-conjunction-table td:nth-child(2),
+.grammar-content .grammar-preposition-table th:nth-child(2),
+.grammar-content .grammar-preposition-table td:nth-child(2) {
     width: 30%;
 }
 
 .grammar-content .grammar-conjunction-table th:nth-child(3),
-.grammar-content .grammar-conjunction-table td:nth-child(3) {
+.grammar-content .grammar-conjunction-table td:nth-child(3),
+.grammar-content .grammar-preposition-table th:nth-child(3),
+.grammar-content .grammar-preposition-table td:nth-child(3) {
     width: 48%;
 }
 
@@ -1303,6 +1331,61 @@ main{
 .grammar-meaning-pair > [lang="en"] {
     color: var(--muted);
     font-style: italic;
+}
+
+.grammar-content .grammar-fixed-combination-table {
+    display: table;
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+.grammar-content .grammar-fixed-combination-table th:first-child,
+.grammar-content .grammar-fixed-combination-table td:first-child {
+    width: 44%;
+}
+
+.grammar-content .grammar-fixed-combination-table th:last-child,
+.grammar-content .grammar-fixed-combination-table td:last-child {
+    width: 56%;
+}
+
+.grammar-fixed-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 10px;
+}
+
+.grammar-fixed-heading > * {
+    flex: 1 1 120px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.grammar-fixed-heading > [lang="en"] {
+    color: var(--muted);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.grammar-fixed-combination-table td > .grammar-english {
+    display: block;
+    margin-top: 4px;
+}
+
+.grammar-content .grammar-decision-table th:first-child,
+.grammar-content .grammar-decision-table td:first-child {
+    width: 40%;
+}
+
+.grammar-content .grammar-decision-table th:nth-child(2),
+.grammar-content .grammar-decision-table td:nth-child(2) {
+    width: 22%;
+}
+
+.grammar-content .grammar-decision-table th:nth-child(3),
+.grammar-content .grammar-decision-table td:nth-child(3) {
+    width: 38%;
 }
 
 .grammar-content th {
@@ -1456,6 +1539,28 @@ main{
     font-weight: 800;
 }
 
+.grammar-checklist li > [lang] {
+    display: block;
+}
+
+.grammar-checklist li > .grammar-english {
+    margin-top: 3px;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.grammar-checklist .grammar-inline-language-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.grammar-checklist .grammar-inline-language-pair > :first-child,
+.grammar-checklist .grammar-inline-language-pair > .grammar-english {
+    padding: 0;
+    border-left: 0;
+}
+
 .grammar-lesson-nav {
     display: flex;
     align-items: center;
@@ -1605,17 +1710,21 @@ main{
     }
 
     /* Conjunction tables: conjunction above, meaning and example side by side. */
-    .grammar-content .grammar-example-table.grammar-conjunction-table {
+    .grammar-content .grammar-example-table.grammar-conjunction-table,
+    .grammar-content .grammar-preposition-table {
         display: flex;
         table-layout: auto;
         overflow: visible;
     }
 
-    .grammar-content .grammar-example-table.grammar-conjunction-table tr {
+    .grammar-content .grammar-example-table.grammar-conjunction-table tr,
+    .grammar-content .grammar-preposition-table tr {
+        display: grid;
         grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
     }
 
-    .grammar-content .grammar-conjunction-table tr > :first-child {
+    .grammar-content .grammar-conjunction-table tr > :first-child,
+    .grammar-content .grammar-preposition-table tr > :first-child {
         grid-column: 1 / -1;
         width: auto;
         border-right: 0;
@@ -1623,19 +1732,115 @@ main{
         font-weight: 700;
     }
 
-    .grammar-content .grammar-conjunction-table thead tr > :first-child {
+    .grammar-content .grammar-conjunction-table thead tr > :first-child,
+    .grammar-content .grammar-preposition-table thead tr > :first-child {
         background: #dbeafe;
     }
 
-    .grammar-content .grammar-conjunction-table tr > :nth-child(2) {
+    .grammar-content .grammar-conjunction-table tr > :nth-child(2),
+    .grammar-content .grammar-preposition-table tr > :nth-child(2) {
         grid-column: 1;
         width: auto;
         border-right: 1px solid var(--border);
     }
 
-    .grammar-content .grammar-conjunction-table tr > :nth-child(3) {
+    .grammar-content .grammar-conjunction-table tr > :nth-child(3),
+    .grammar-content .grammar-preposition-table tr > :nth-child(3) {
         grid-column: 2;
         width: auto;
+    }
+
+    /* Detail cards: preposition, paired meanings, then a full-width example. */
+    .grammar-content .grammar-preposition-detail-table tr > :nth-child(2),
+    .grammar-content .grammar-preposition-detail-table tr > :nth-child(3) {
+        grid-column: 1 / -1;
+        width: auto;
+        border-right: 0;
+    }
+
+    .grammar-content .grammar-preposition-detail-table tr > :nth-child(2) {
+        padding: 0;
+    }
+
+    .grammar-content .grammar-preposition-detail-table .grammar-meaning-pair,
+    .grammar-content .grammar-preposition-detail-table thead .grammar-paired-label {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        height: 100%;
+    }
+
+    .grammar-content .grammar-preposition-detail-table .grammar-meaning-pair > *,
+    .grammar-content .grammar-preposition-detail-table thead .grammar-paired-label > * {
+        min-width: 0;
+        padding: 9px 10px;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+    }
+
+    .grammar-content .grammar-preposition-detail-table .grammar-meaning-pair > :first-child,
+    .grammar-content .grammar-preposition-detail-table thead .grammar-paired-label > :first-child {
+        border-right: 1px solid var(--border);
+    }
+
+    .grammar-content .grammar-preposition-detail-table tr > :nth-child(3) {
+        background: var(--card);
+    }
+
+    .grammar-content .grammar-preposition-detail-table thead tr > :nth-child(3) {
+        background: #eff6ff;
+    }
+
+    /* Fixed combinations: bilingual meaning in the heading, example below. */
+    .grammar-content .grammar-fixed-combination-table {
+        display: flex;
+        table-layout: auto;
+        overflow: visible;
+        border: 0;
+        background: transparent;
+    }
+
+    .grammar-content .grammar-fixed-combination-table thead,
+    .grammar-content .grammar-fixed-combination-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grammar-content .grammar-fixed-combination-table tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+    }
+
+    .grammar-content .grammar-fixed-combination-table thead tr {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grammar-content .grammar-fixed-combination-table th,
+    .grammar-content .grammar-fixed-combination-table td,
+    .grammar-content .grammar-fixed-combination-table th:first-child,
+    .grammar-content .grammar-fixed-combination-table td:first-child,
+    .grammar-content .grammar-fixed-combination-table th:last-child,
+    .grammar-content .grammar-fixed-combination-table td:last-child {
+        min-width: 0;
+        width: auto;
+        border-right: 0;
+    }
+
+    .grammar-content .grammar-fixed-combination-table thead th:first-child {
+        border-right: 1px solid var(--border);
+    }
+
+    .grammar-content .grammar-fixed-combination-table tbody th {
+        background: #f8fafc;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .grammar-content .grammar-fixed-combination-table tbody td {
+        border-bottom: 0;
     }
 
     .grammar-paired-label {

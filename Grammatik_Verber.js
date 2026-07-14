@@ -2652,7 +2652,7 @@ const verbumGrammarPages = [
 <span lang="da">Tjek din tekst</span>
 <span class="grammar-english grammar-heading-english" lang="en">Check your text</span>
 </h3>
-<ul>
+<ul class="grammar-checklist">
 <li>
 <p class="grammar-inline-language-pair">
 <span lang="da">Har sætningen et finit verbum?</span>

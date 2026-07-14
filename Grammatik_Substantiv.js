@@ -929,31 +929,31 @@ const substantivGrammarPages = [
 <tbody>
 <tr><td lang="da" class="grammar-result grammar-result--incorrect"><strong>Forkert</strong>Jeg har en børn.</td><td lang="en" class="grammar-result grammar-result--incorrect"><strong>Incorrect</strong>I have a children.</td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--correct"><strong>Korrekt</strong>Jeg har et barn / to børn.</td><td lang="en" class="grammar-result grammar-result--correct"><strong>Correct</strong>I have one child / two children.</td></tr>
-<tr class="grammar-correction-reason"><td lang="da"><strong>Hvorfor?</strong> en er ental; børn er flertal.</td><td lang="en"><strong>Why?</strong> en is singular; børn is plural.</td></tr>
+<tr class="grammar-correction-reason"><td colspan="2"><strong lang="da">Hvorfor?</strong> en er ental; børn er flertal.<br><em class="grammar-english" lang="en">Why? en is singular; børn is plural.</em></td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--incorrect"><strong>Forkert</strong>Min datteren hedder Liva.</td><td lang="en" class="grammar-result grammar-result--incorrect"><strong>Incorrect</strong>My the daughter is called Liva.</td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--correct"><strong>Korrekt</strong>Min datter hedder Liva.</td><td lang="en" class="grammar-result grammar-result--correct"><strong>Correct</strong>My daughter is called Liva.</td></tr>
-<tr class="grammar-correction-reason"><td lang="da"><strong>Hvorfor?</strong> Ingen bestemt endelse efter min.</td><td lang="en"><strong>Why?</strong> Do not use the definite ending after min.</td></tr>
+<tr class="grammar-correction-reason"><td colspan="2"><strong lang="da">Hvorfor?</strong> Ingen bestemt endelse efter min.<br><em class="grammar-english" lang="en">Why? Do not use the definite ending after min.</em></td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--incorrect"><strong>Forkert</strong>Den lejligheden er stor.</td><td lang="en" class="grammar-result grammar-result--incorrect"><strong>Incorrect</strong>The the apartment is large.</td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--correct"><strong>Korrekt</strong>Lejligheden er stor / Den store lejlighed er stor.</td><td lang="en" class="grammar-result grammar-result--correct"><strong>Correct</strong>The apartment is large / The large apartment is large.</td></tr>
-<tr class="grammar-correction-reason"><td lang="da"><strong>Hvorfor?</strong> Undgå dobbelt bestemthed.</td><td lang="en"><strong>Why?</strong> Avoid double definiteness.</td></tr>
+<tr class="grammar-correction-reason"><td colspan="2"><strong lang="da">Hvorfor?</strong> Undgå dobbelt bestemthed.<br><em class="grammar-english" lang="en">Why? Avoid double definiteness.</em></td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--incorrect"><strong>Forkert</strong>Han har to god lærer.</td><td lang="en" class="grammar-result grammar-result--incorrect"><strong>Incorrect</strong>He has two good teacher.</td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--correct"><strong>Korrekt</strong>Han har to gode lærere.</td><td lang="en" class="grammar-result grammar-result--correct"><strong>Correct</strong>He has two good teachers.</td></tr>
-<tr class="grammar-correction-reason"><td lang="da"><strong>Hvorfor?</strong> Adjektiv og substantiv skal stå i flertal.</td><td lang="en"><strong>Why?</strong> The adjective and noun must both be plural.</td></tr>
+<tr class="grammar-correction-reason"><td colspan="2"><strong lang="da">Hvorfor?</strong> Adjektiv og substantiv skal stå i flertal.<br><em class="grammar-english" lang="en">Why? The adjective and noun must both be plural.</em></td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--incorrect"><strong>Forkert</strong>Hun er en lærer.</td><td lang="en" class="grammar-result grammar-result--incorrect"><strong>Incorrect</strong>She is a teacher (with an unnecessary Danish article).</td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--correct"><strong>Korrekt</strong>Hun er lærer.</td><td lang="en" class="grammar-result grammar-result--correct"><strong>Correct</strong>She is a teacher.</td></tr>
-<tr class="grammar-correction-reason"><td lang="da"><strong>Hvorfor?</strong> Job efter være står ofte uden artikel.</td><td lang="en"><strong>Why?</strong> A job after være often has no article.</td></tr>
+<tr class="grammar-correction-reason"><td colspan="2"><strong lang="da">Hvorfor?</strong> Job efter være står ofte uden artikel.<br><em class="grammar-english" lang="en">Why? A job after være often has no article.</em></td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--incorrect"><strong>Forkert</strong>Jeg drikker en kaffe hver dag.</td><td lang="en" class="grammar-result grammar-result--incorrect"><strong>Incorrect</strong>I drink one coffee every day (when coffee is meant generally).</td></tr>
 <tr><td lang="da" class="grammar-result grammar-result--correct"><strong>Korrekt</strong>Jeg drikker kaffe hver dag.</td><td lang="en" class="grammar-result grammar-result--correct"><strong>Correct</strong>I drink coffee every day.</td></tr>
-<tr class="grammar-correction-reason"><td lang="da"><strong>Hvorfor?</strong> Generel betydning; en kaffe kan betyde én portion i talesprog.</td><td lang="en"><strong>Why?</strong> General meaning; en kaffe can mean one serving colloquially.</td></tr>
+<tr class="grammar-correction-reason"><td colspan="2"><strong lang="da">Hvorfor?</strong> Generel betydning; en kaffe kan betyde én portion i talesprog.<br><em class="grammar-english" lang="en">Why? General meaning; en kaffe can mean one serving colloquially.</em></td></tr>
 </tbody>
 </table>
 <h3 id="tjek-din-tekst-check-your-text">Tjek din tekst / Check your text</h3>
-<ul>
-<li><p>Har hvert tælleligt substantiv den rigtige artikel: en eller et? - <em>Does each countable singular noun have the correct article: en or et?</em></p></li>
-<li><p>Passer ental eller flertal til talordet? - <em>Does singular or plural agree with the number?</em></p></li>
-<li><p>Er informationen ny eller kendt? - <em>Is the information new or known?</em></p></li>
-<li><p>Har du undgået dobbelt bestemthed? - <em>Have you avoided double definiteness?</em></p></li>
-<li><p>Har du tjekket den korrekte flertalsform? - <em>Have you checked the correct plural form?</em></p></li>
+<ul class="grammar-checklist">
+<li><span lang="da">Har hvert tælleligt substantiv den rigtige artikel: en eller et?</span><span class="grammar-english" lang="en">Does each countable singular noun have the correct article: en or et?</span></li>
+<li><span lang="da">Passer ental eller flertal til talordet?</span><span class="grammar-english" lang="en">Does singular or plural agree with the number?</span></li>
+<li><span lang="da">Er informationen ny eller kendt?</span><span class="grammar-english" lang="en">Is the information new or known?</span></li>
+<li><span lang="da">Har du undgået dobbelt bestemthed?</span><span class="grammar-english" lang="en">Have you avoided double definiteness?</span></li>
+<li><span lang="da">Har du tjekket den korrekte flertalsform?</span><span class="grammar-english" lang="en">Have you checked the correct plural form?</span></li>
 </ul>
         `
     },

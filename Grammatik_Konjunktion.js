@@ -235,6 +235,14 @@ const konjunktionGrammarPages = [
 <tr class="grammar-correction-reason"><td colspan="2"><strong lang="da">Forklaring:</strong> Konstruktionen <em>så … at</em> viser et resultat.<br><em class="grammar-english" lang="en">The construction så … at expresses a result.</em></td></tr>
 <tr><td class="grammar-result grammar-result--incorrect">Jeg læser, fordi at jeg vil lære.</td><td class="grammar-result grammar-result--correct">Jeg læser, fordi jeg vil lære.</td></tr>
 <tr class="grammar-correction-reason"><td colspan="2"><strong lang="da">Forklaring:</strong> <em>Fordi</em> står normalt ikke sammen med <em>at</em>.<br><em class="grammar-english" lang="en">Fordi is not normally combined with at.</em></td></tr>
+</tbody></table>
+<h3>Tjek din tekst / Check your text</h3>
+<ul class="grammar-checklist">
+<li><span lang="da">Har hver ledsætning den rigtige konjunktion?</span><span class="grammar-english" lang="en">Does each subordinate clause use the correct conjunction?</span></li>
+<li><span lang="da">Står <em>ikke</em> før det finitte verbum i ledsætninger?</span><span class="grammar-english" lang="en">Does <em>ikke</em> come before the finite verb in subordinate clauses?</span></li>
+<li><span lang="da">Har hovedsætningen inversion efter en indledende ledsætning?</span><span class="grammar-english" lang="en">Does the main clause use inversion after an opening subordinate clause?</span></li>
+<li><span lang="da">Har du valgt <em>at</em> til en oplysning og <em>om</em> til et indirekte ja/nej-spørgsmål?</span><span class="grammar-english" lang="en">Did you choose <em>at</em> for a statement and <em>om</em> for an indirect yes/no question?</span></li>
+</ul>
         `
     },
     
