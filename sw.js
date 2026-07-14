@@ -1,13 +1,13 @@
 // sw.js — network-first app shell with offline fallback and subpath-safe URLs
-const CACHE = 'dk-vocab-v62';
+const CACHE = 'dk-vocab-v65';
 
 // Use RELATIVE paths so it works on GitHub Pages subpaths too
 const ASSETS = [
     './',
     './index.html',
     './cookie-policy.html',
-    './style.css?v=42',
-    './script.js?v=32',
+    './style.css?v=44',
+    './script.js?v=33',
     './quiz.js',
     './skriveguide.js',
     './Grammatik_Adverbiel.js',
@@ -15,6 +15,7 @@ const ASSETS = [
     './Grammatik_Adjektiv.js',
     './Grammatik_Pronomen.js',
     './Grammatik_Verber.js',
+    './Grammatik_Konjunktion.js',
     './adjektiver.js',          
     './adverbKonjunktion.js',
     './substantiver.js',
@@ -73,11 +74,12 @@ self.addEventListener('install', (event) => {
     // 1) Page navigations (address bar, links, reload)
     if (req.mode === 'navigate') {
         event.respondWith((async () => {
-        // Fast path if browser provides a preloaded response
-        const preload = await event.preloadResponse;
-        if (preload) return preload;
-
         try {
+            // Fast path if browser provides a preloaded response.
+            // Keep it inside the try block because preload rejects when offline.
+            const preload = await event.preloadResponse;
+            if (preload) return preload;
+
             // Prefer network (fresh content)
             return await fetch(req);
         } catch {

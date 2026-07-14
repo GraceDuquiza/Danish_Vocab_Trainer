@@ -868,7 +868,8 @@ main{
 #noun-lesson,
 #adjective-lesson,
 #pronoun-lesson,
-#verb-lesson {
+#verb-lesson,
+#conjunction-lesson {
     width: 100%;
 }
 
@@ -1030,7 +1031,7 @@ main{
 
 .grammar-paired-label > * {
     display: inline;
-    overflow-wrap: normal;
+    overflow-wrap: anywhere;
     word-break: normal;
     hyphens: auto;
 }
@@ -1061,6 +1062,9 @@ main{
 .grammar-inline-language-pair > :first-child {
     min-width: 0;
     padding-right: 12px;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
 }
 
 .grammar-heading-language-pair > .grammar-english,
@@ -1070,7 +1074,7 @@ main{
     margin: 0;
     padding-left: 12px;
     border-left: 1px solid var(--border);
-    overflow-wrap: normal;
+    overflow-wrap: anywhere;
     word-break: normal;
     hyphens: auto;
 }
@@ -1257,6 +1261,48 @@ main{
     border-bottom: 1px solid var(--border);
     text-align: left;
     vertical-align: top;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+}
+
+.grammar-content .grammar-conjunction-table {
+    display: table;
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+.grammar-content .grammar-conjunction-table th:first-child,
+.grammar-content .grammar-conjunction-table td:first-child {
+    width: 22%;
+}
+
+.grammar-content .grammar-conjunction-table th:nth-child(2),
+.grammar-content .grammar-conjunction-table td:nth-child(2) {
+    width: 30%;
+}
+
+.grammar-content .grammar-conjunction-table th:nth-child(3),
+.grammar-content .grammar-conjunction-table td:nth-child(3) {
+    width: 48%;
+}
+
+.grammar-meaning-pair {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 8px;
+}
+
+.grammar-meaning-pair > * {
+    flex: 1 1 90px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.grammar-meaning-pair > [lang="en"] {
+    color: var(--muted);
+    font-style: italic;
 }
 
 .grammar-content th {
@@ -1507,7 +1553,7 @@ main{
         min-width: 0;
         width: 100%;
         border-right: 0;
-        overflow-wrap: normal;
+        overflow-wrap: anywhere;
         word-break: normal;
         hyphens: auto;
     }
@@ -1529,7 +1575,7 @@ main{
     .grammar-content .grammar-example-table td {
         min-width: 0;
         width: auto;
-        overflow-wrap: normal;
+        overflow-wrap: anywhere;
         word-break: normal;
         hyphens: auto;
     }
@@ -1558,6 +1604,40 @@ main{
         background: #dbeafe;
     }
 
+    /* Conjunction tables: conjunction above, meaning and example side by side. */
+    .grammar-content .grammar-example-table.grammar-conjunction-table {
+        display: flex;
+        table-layout: auto;
+        overflow: visible;
+    }
+
+    .grammar-content .grammar-example-table.grammar-conjunction-table tr {
+        grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    }
+
+    .grammar-content .grammar-conjunction-table tr > :first-child {
+        grid-column: 1 / -1;
+        width: auto;
+        border-right: 0;
+        background: #f8fafc;
+        font-weight: 700;
+    }
+
+    .grammar-content .grammar-conjunction-table thead tr > :first-child {
+        background: #dbeafe;
+    }
+
+    .grammar-content .grammar-conjunction-table tr > :nth-child(2) {
+        grid-column: 1;
+        width: auto;
+        border-right: 1px solid var(--border);
+    }
+
+    .grammar-content .grammar-conjunction-table tr > :nth-child(3) {
+        grid-column: 2;
+        width: auto;
+    }
+
     .grammar-paired-label {
         display: flex;
         flex-wrap: wrap;
@@ -1567,7 +1647,7 @@ main{
 
     .grammar-paired-label > * {
         min-width: 0;
-        overflow-wrap: normal;
+        overflow-wrap: anywhere;
         word-break: normal;
         hyphens: auto;
     }
@@ -1615,7 +1695,7 @@ main{
         min-width: 0;
         width: auto;
         border-right: 1px solid var(--border);
-        overflow-wrap: normal;
+        overflow-wrap: anywhere;
         word-break: normal;
         hyphens: auto;
     }
@@ -1665,6 +1745,13 @@ main{
         border-right: 0;
     }
 
+    .grammar-content .grammar-correction-table--paired th:first-child,
+    .grammar-content .grammar-correction-table--paired td:first-child,
+    .grammar-content .grammar-correction-table--paired th:last-child,
+    .grammar-content .grammar-correction-table--paired td:last-child {
+        width: 50%;
+    }
+
     .grammar-content .grammar-exercise-table {
         display: table;
         table-layout: fixed;
@@ -1691,7 +1778,7 @@ main{
         min-width: 0;
         width: auto;
         border-right: 1px solid var(--border);
-        overflow-wrap: normal;
+        overflow-wrap: anywhere;
         word-break: normal;
         hyphens: auto;
     }

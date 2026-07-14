@@ -6,7 +6,7 @@
     <title>Danish-English Learning Guide</title>
 
     <!-- Use the versioned URL to bust cache -->
-        <link rel="stylesheet" href="./style.css?v=42">
+        <link rel="stylesheet" href="./style.css?v=44">
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
@@ -153,24 +153,28 @@
 
                 <nav class="grammar-topic-grid" aria-label="Grammar topics">
                     <button type="button" class="grammar-topic-card" id="open-adverb-lesson">
-                        <span lang="da">Adverbium</span>
+                        <span lang="da">Adverbier</span>
                         <span lang="en">Adverbs</span>
                     </button>
                     <button type="button" class="grammar-topic-card" id="open-noun-lesson">
-                        <span lang="da">Substantiv</span>
+                        <span lang="da">Substantiver</span>
                         <span lang="en">Nouns</span>
                     </button>
                     <button type="button" class="grammar-topic-card" id="open-adjective-lesson">
-                        <span lang="da">Adjektiv</span>
+                        <span lang="da">Adjektiver</span>
                         <span lang="en">Adjectives</span>
                     </button>
                     <button type="button" class="grammar-topic-card" id="open-pronoun-lesson">
-                        <span lang="da">Pronomen</span>
+                        <span lang="da">Pronominer</span>
                         <span lang="en">Pronouns</span>
                     </button>
                     <button type="button" class="grammar-topic-card" id="open-verb-lesson">
-                        <span lang="da">Verbum</span>
+                        <span lang="da">Verber</span>
                         <span lang="en">Verbs</span>
+                    </button>
+                    <button type="button" class="grammar-topic-card" id="open-conjunction-lesson">
+                        <span lang="da">Konjunktioner</span>
+                        <span lang="en">Conjunctions</span>
                     </button>
                 </nav>
 
@@ -186,8 +190,8 @@
                     <button type="button" id="adverb-to-home">🏠 Main Menu</button>
                 </nav>
 
-                <p class="grammar-section-label" id="adverb-section-label">Adverbium – Adverbs</p>
-                <h2 id="adverb-lesson-title" tabindex="-1">Adverbium – Adverbs</h2>
+                <p class="grammar-section-label" id="adverb-section-label">Adverbier – Adverbs</p>
+                <h2 id="adverb-lesson-title" tabindex="-1">Adverbier – Adverbs</h2>
                 <div id="adverb-lesson-content" class="grammar-content" aria-live="polite"></div>
 
                 <nav class="grammar-lesson-nav btn-row" aria-label="Adverb lesson navigation">
@@ -206,8 +210,8 @@
                     <button type="button" id="noun-to-home">🏠 Main Menu</button>
                 </nav>
 
-                <p class="grammar-section-label">Substantiv – Nouns</p>
-                <h2 id="noun-lesson-title" tabindex="-1">Substantiv – Nouns</h2>
+                <p class="grammar-section-label">Substantiver – Nouns</p>
+                <h2 id="noun-lesson-title" tabindex="-1">Substantiver – Nouns</h2>
                 <div id="noun-lesson-content" class="grammar-content" aria-live="polite"></div>
 
                 <nav class="grammar-lesson-nav btn-row" aria-label="Noun lesson navigation">
@@ -226,8 +230,8 @@
                     <button type="button" id="adjective-to-home">🏠 Main Menu</button>
                 </nav>
 
-                <p class="grammar-section-label">Adjektiv – Adjectives</p>
-                <h2 id="adjective-lesson-title" tabindex="-1">Adjektiv – Adjectives</h2>
+                <p class="grammar-section-label">Adjektiver – Adjectives</p>
+                <h2 id="adjective-lesson-title" tabindex="-1">Adjektiver – Adjectives</h2>
                 <div id="adjective-lesson-content" class="grammar-content" aria-live="polite"></div>
 
                 <nav class="grammar-lesson-nav btn-row" aria-label="Adjective lesson navigation">
@@ -246,8 +250,8 @@
                     <button type="button" id="pronoun-to-home">🏠 Main Menu</button>
                 </nav>
 
-                <p class="grammar-section-label">Pronomen – Pronouns</p>
-                <h2 id="pronoun-lesson-title" tabindex="-1">Pronomen – Pronouns</h2>
+                <p class="grammar-section-label">Pronominer – Pronouns</p>
+                <h2 id="pronoun-lesson-title" tabindex="-1">Pronominer – Pronouns</h2>
                 <div id="pronoun-lesson-content" class="grammar-content" aria-live="polite"></div>
 
                 <nav class="grammar-lesson-nav btn-row" aria-label="Pronoun lesson navigation">
@@ -266,14 +270,34 @@
                     <button type="button" id="verb-to-home">🏠 Main Menu</button>
                 </nav>
 
-                <p class="grammar-section-label">Verbum – Verbs</p>
-                <h2 id="verb-lesson-title" tabindex="-1">Verbum – Verbs</h2>
+                <p class="grammar-section-label">Verber – Verbs</p>
+                <h2 id="verb-lesson-title" tabindex="-1">Verber – Verbs</h2>
                 <div id="verb-lesson-content" class="grammar-content" aria-live="polite"></div>
 
                 <nav class="grammar-lesson-nav btn-row" aria-label="Verb lesson navigation">
                     <button type="button" id="verb-prev" aria-label="Previous verb lesson section">⬅️ Forrige</button>
                     <span class="guide-counter" id="verb-counter" aria-live="polite">1 / …</span>
                     <button type="button" id="verb-next" aria-label="Next verb lesson section">Næste ➡️</button>
+                </nav>
+            </article>
+        </section>
+
+        <!-- Conjunction lesson -->
+        <section id="conjunction-lesson" class="is-hidden" aria-labelledby="conjunction-lesson-title">
+            <article class="grammar-page">
+                <nav class="grammar-topbar" aria-label="Conjunction lesson destinations">
+                    <button type="button" id="conjunction-to-grammar">⬅️ Grammatik</button>
+                    <button type="button" id="conjunction-to-home">🏠 Main Menu</button>
+                </nav>
+
+                <p class="grammar-section-label">Konjunktioner – Conjunctions</p>
+                <h2 id="conjunction-lesson-title" tabindex="-1">Konjunktioner – Conjunctions</h2>
+                <div id="conjunction-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                <nav class="grammar-lesson-nav btn-row" aria-label="Conjunction lesson navigation">
+                    <button type="button" id="conjunction-prev" aria-label="Previous conjunction lesson section">⬅️ Forrige</button>
+                    <span class="guide-counter" id="conjunction-counter" aria-live="polite">1 / …</span>
+                    <button type="button" id="conjunction-next" aria-label="Next conjunction lesson section">Næste ➡️</button>
                 </nav>
             </article>
         </section>
@@ -289,7 +313,8 @@
         <script src="./Grammatik_Adjektiv.js" defer></script>
         <script src="./Grammatik_Pronomen.js" defer></script>
         <script src="./Grammatik_Verber.js" defer></script>
-        <script src="./script.js?v=32" defer></script>
+        <script src="./Grammatik_Konjunktion.js" defer></script>
+        <script src="./script.js?v=33" defer></script>
         <script src="./quiz.js" defer></script>
 
 
