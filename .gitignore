@@ -1,9 +1,17 @@
-debug.log
+# Node.js dependencies
+node_modules/
 
-# docx
-Adverbier.docx
-Substantiver.docx
-Verber.docx
-Adjektiver.docx
+# Generated production build
+dist/
+
+# Logs
+debug.log
+npm-debug.log*
+
+# Local environment files
+.env
+.env.*
+
+# Source documents not used by the website
 *.docx
 *.pdf
