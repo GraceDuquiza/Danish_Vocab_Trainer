@@ -47,16 +47,27 @@ A simple and effective web app to help users learn and practice Danish vocabular
 
 `Grammatik_Adverbiel.js`, `Grammatik_Substantiv.js`, `Grammatik_Adjektiv.js`, `Grammatik_Pronomen.js`, `Grammatik_Verber.js`, `Grammatik_Konjunktion.js`, `Grammatik_Præpositioner.js`, and `Grammatik_Ordstilling.js` store the bilingual grammar lessons separately from the navigation and rendering logic. The lessons are displayed inside `index.html`; no separate grammar lesson pages are required.
 
-## 🚀 Deployment
+## 🚀 Development and deployment
 
-Deployed via **GitHub Pages**.  
-👉 Live Site: `https://github.com/GraceDuquiza/Danish_Vocab_Trainer/`
+The files in the repository root are the readable development source. To create the
+production site locally:
 
-### To deploy:
-1. Push the project to your GitHub repository.
-2. Go to **Settings > Pages**
-3. Set the source to `main` branch, root directory
-4. GitHub Pages will provide a live link.
+```sh
+npm install
+npm run build
+```
+
+The generated `dist/` directory contains minified HTML and CSS plus minified,
+obfuscated JavaScript. Production source maps are disabled and the build fails if a
+source map file or reference is generated. `dist/` is intentionally ignored by Git.
+
+Pushing `main` runs `.github/workflows/deploy-pages.yml`, which builds and publishes
+only `dist/` to GitHub Pages. In **Settings > Pages**, set **Source** to
+**GitHub Actions** once; do not select deployment from the repository root.
+
+Obfuscation makes browser-delivered JavaScript harder to read, but it is not a
+security boundary. The browser must still receive the application and learning
+content, and the readable source remains visible when the GitHub repository is public.
 
 During local development on `localhost` or `127.0.0.1`, the app automatically unregisters its service worker and clears its own PWA caches. If an older worker controls the first load, the page reloads once automatically and then continues without caching. Production remains offline-capable and checks the network before using cached static assets.
 

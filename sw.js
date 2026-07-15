@@ -1,5 +1,5 @@
 // sw.js — network-first app shell with offline fallback and subpath-safe URLs
-const CACHE = 'dk-vocab-v85';
+const CACHE = 'dk-vocab-v86';
 
 // Use RELATIVE paths so it works on GitHub Pages subpaths too
 const ASSETS = [
