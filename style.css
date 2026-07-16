@@ -1251,9 +1251,6 @@ main{
     max-width: 100%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    scrollbar-gutter: stable;
-    scrollbar-color: var(--brand-600) #dbeafe;
-    -webkit-overflow-scrolling: touch;
     border: 1px solid var(--border);
     border-radius: 10px;
     border-collapse: collapse;
@@ -2702,6 +2699,7 @@ body {
     border: 1px solid rgba(164, 209, 221, .75);
     border-radius: 30px;
     box-shadow: var(--ocean-shadow);
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
 }
 
@@ -3501,6 +3499,7 @@ button.category-option.is-selected {
     border-color: #b8dce5;
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(20, 89, 112, .2);
+    -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
 }
 
@@ -3901,4 +3900,173 @@ button.category-option.is-selected {
     background: #fde8e8;
     border-color: #df6a6a;
     opacity: 1;
+}
+
+/* Desktop layout refinements. Mobile and tablet rules remain unchanged. */
+@media (min-width: 901px) {
+    .container {
+        width: min(1280px, calc(100% - 64px));
+        min-height: calc(100dvh - 48px);
+        margin-block: 24px;
+        padding: 38px clamp(42px, 5vw, 68px) 30px;
+    }
+
+    .container > h1 {
+        font-size: clamp(2rem, 2.4vw, 2.65rem);
+    }
+
+    .home-welcome {
+        width: min(100%, 720px);
+        margin-top: clamp(36px, 7vh, 76px);
+    }
+
+    .home-welcome h2 {
+        font-size: clamp(1.75rem, 2.2vw, 2.3rem);
+    }
+
+    #main-buttons {
+        width: min(100%, 980px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    #main-buttons > button {
+        min-height: 132px;
+        padding: 24px;
+    }
+
+    .home-nav-icon {
+        flex-basis: 58px;
+        width: 58px;
+        height: 58px;
+        font-size: 1.1rem;
+    }
+
+    .home-nav-text strong {
+        font-size: 1.12rem;
+    }
+
+    .home-nav-text small {
+        font-size: .9rem;
+    }
+
+    #study-mode,
+    #quiz-mode {
+        width: min(100%, 880px);
+        margin-inline: auto;
+    }
+
+    #study-mode .mode-topbar,
+    #quiz-mode .mode-topbar {
+        padding: 18px 22px;
+    }
+
+    #study-mode > label,
+    #study-mode > select {
+        width: min(100%, 420px);
+    }
+
+    #study-mode .card {
+        min-height: 220px;
+        padding: 34px 38px;
+    }
+
+    #study-mode .card h2 {
+        margin-bottom: 18px;
+        font-size: 1.75rem;
+    }
+
+    #study-mode .card p {
+        margin-block: 12px;
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+
+    #study-mode > .btn-row {
+        max-width: 520px;
+        margin: 24px auto 0;
+    }
+
+    #quiz-category-select {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding: 28px;
+    }
+
+    #quiz-mode button.category-option {
+        min-height: 96px;
+        padding: 18px 20px;
+    }
+
+    .grammar-page,
+    #skriveguide .guide-page {
+        width: min(100%, 1080px);
+        padding: 32px clamp(34px, 4vw, 48px);
+    }
+
+    #grammar-selection .grammar-topic-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    #grammar-selection .grammar-topic-card {
+        min-height: 104px;
+        padding: 17px 18px;
+    }
+
+    .grammar-content > :not(table),
+    .grammar-learning-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .grammar-content table {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        overflow: hidden;
+    }
+
+    .grammar-content th,
+    .grammar-content td {
+        min-width: 0;
+        padding: 14px 16px;
+        line-height: 1.55;
+    }
+
+    .grammar-content .grammar-learning-card {
+        gap: 18px;
+        padding: 26px 28px;
+    }
+
+    .grammar-content .grammar-learning-card > h3:first-child {
+        padding-bottom: 12px;
+    }
+
+    .grammar-content .grammar-table-wrap {
+        overflow: hidden;
+    }
+
+    .grammar-heading-language-pair,
+    .grammar-text-pair,
+    .grammar-inline-language-pair {
+        column-gap: clamp(24px, 4vw, 52px);
+    }
+
+    .grammar-page .grammar-topbar,
+    #skriveguide .guide-topbar {
+        margin-bottom: 26px;
+    }
+
+    .grammar-page .grammar-lesson-nav,
+    #skriveguide .guide-nav.btn-row {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    .app-footer {
+        margin-top: 34px;
+        padding-inline: 24px;
+    }
 }
