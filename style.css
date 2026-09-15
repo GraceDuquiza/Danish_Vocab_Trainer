@@ -4070,3 +4070,659 @@ button.category-option.is-selected {
         padding-inline: 24px;
     }
 }
+
+/* ======================================================================
+   NORDIC EDITION — warm minimalism, natural colour and quiet structure
+   ====================================================================== */
+:root {
+    --brand-600: #3f665a;
+    --brand-700: #315348;
+    --brand-800: #203f37;
+    --text: #1d2925;
+    --muted: #5d6862;
+    --muted-2: #77817b;
+    --card: #fffefa;
+    --border: #d9d8cf;
+    --ring: #b94c43;
+    --ocean-deep: #203f37;
+    --ocean: #3f665a;
+    --lagoon: #6f8c7b;
+    --seafoam: #e6ece5;
+    --sky: #f0eee6;
+    --sunlit: #fffefa;
+    --nordic-paper: #f4f1e8;
+    --nordic-surface: #fffefa;
+    --nordic-pine: #315348;
+    --nordic-red: #b94c43;
+    --nordic-ochre: #c59b52;
+    --nordic-blue: #607f8c;
+    --nordic-shadow: 0 18px 50px rgba(39, 52, 46, .09);
+}
+
+html,
+body {
+    background: var(--nordic-paper);
+    color: var(--text);
+}
+
+body {
+    background-image:
+        linear-gradient(rgba(49, 83, 72, .025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(49, 83, 72, .025) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-attachment: fixed;
+}
+
+.container {
+    width: min(1240px, calc(100% - 48px));
+    min-height: calc(100dvh - 48px);
+    margin: 24px auto;
+    padding: clamp(26px, 4vw, 52px);
+    overflow: hidden;
+    background: rgba(255, 254, 250, .97);
+    border: 1px solid #d6d5cc;
+    border-radius: 8px;
+    box-shadow: var(--nordic-shadow);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+.container::before {
+    right: auto;
+    width: 112px;
+    height: 7px;
+    background: linear-gradient(90deg, var(--nordic-red) 0 68%, #f3ddd8 68% 76%, var(--nordic-pine) 76%);
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 0;
+    color: var(--nordic-pine);
+    background: none;
+    font-size: clamp(1.45rem, 1.25rem + .9vw, 2rem);
+    font-weight: 760;
+    letter-spacing: -.035em;
+}
+
+h1::before {
+    display: inline-grid;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    content: "D";
+    place-items: center;
+    color: #fffefa;
+    background: var(--nordic-red);
+    border-radius: 3px;
+    font-size: .9rem;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.home-welcome {
+    width: min(100%, 760px);
+    margin: clamp(52px, 10vh, 104px) auto 0;
+    text-align: left;
+}
+
+.home-welcome__eyebrow {
+    min-height: 0;
+    margin-bottom: 18px;
+    padding: 0 0 7px;
+    color: var(--nordic-red);
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--nordic-red);
+    border-radius: 0;
+    font-size: .69rem;
+    letter-spacing: .18em;
+}
+
+.home-welcome h2 {
+    max-width: 680px;
+    color: #263c35;
+    font-size: clamp(2rem, 1.45rem + 2.4vw, 3.4rem);
+    font-weight: 650;
+    letter-spacing: -.055em;
+    line-height: 1.05;
+}
+
+.home-welcome > p:last-child {
+    max-width: 56ch;
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-size: clamp(1rem, .95rem + .25vw, 1.12rem);
+    line-height: 1.7;
+}
+
+#main-buttons {
+    width: min(100%, 1040px);
+    gap: 12px;
+    margin-top: clamp(28px, 5vw, 52px);
+}
+
+#main-buttons > button {
+    min-height: 116px;
+    margin: 0;
+    padding: 22px;
+    color: var(--text);
+    background: var(--nordic-surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: none;
+    transition: transform .16s ease, border-color .16s ease, background-color .16s ease;
+}
+
+#main-buttons > button:nth-child(n) {
+    background: var(--nordic-surface);
+}
+
+#main-buttons > button::after {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    width: 34px;
+    height: 4px;
+    background: var(--nordic-pine);
+    border: 0;
+    border-radius: 0;
+}
+
+#main-buttons > button:nth-child(2)::after { background: var(--nordic-red); }
+#main-buttons > button:nth-child(3)::after { background: var(--nordic-ochre); }
+#main-buttons > button:nth-child(4)::after { background: var(--nordic-blue); }
+
+#main-buttons > button:hover {
+    color: var(--text);
+    background: #f8f6ef;
+    border-color: #9fa79f;
+    box-shadow: none;
+    transform: translateY(-2px);
+}
+
+.home-nav-icon,
+#main-buttons > button:nth-child(n) .home-nav-icon {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+    color: #fffefa;
+    background: var(--nordic-pine);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+#main-buttons > button:nth-child(2) .home-nav-icon { background: var(--nordic-red); }
+#main-buttons > button:nth-child(3) .home-nav-icon { background: var(--nordic-ochre); }
+#main-buttons > button:nth-child(4) .home-nav-icon { background: var(--nordic-blue); }
+
+.home-nav-text strong {
+    color: #263c35;
+    font-size: 1.04rem;
+}
+
+.home-nav-text small {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.mode-topbar,
+#skriveguide .guide-topbar,
+.grammar-page .grammar-topbar {
+    background: #efede5;
+    border: 0;
+    border-left: 4px solid var(--nordic-pine);
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.mode-heading h2,
+.grammar-page > h2,
+#skriveguide #guide-title,
+.card h2,
+#quiz-word {
+    color: var(--nordic-pine);
+}
+
+.mode-kicker,
+.grammar-section-label {
+    color: var(--nordic-red);
+    letter-spacing: .14em;
+}
+
+#study-to-home,
+#quiz-to-home,
+.guide-topbar #back-to-quiz-btn,
+#skriveguide .guide-topbar #back-to-quiz-btn,
+.grammar-home-btn,
+.grammar-topbar button,
+.grammar-page .grammar-topbar button:first-child {
+    color: var(--nordic-pine);
+    background: #fffefa;
+    border: 1px solid #c9c9c0;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.grammar-topbar button:last-child,
+.grammar-home-btn,
+#skriveguide .guide-topbar #back-to-quiz-btn,
+.guide-topbar #back-to-quiz-btn {
+    color: #fffefa;
+    background: var(--nordic-pine);
+    border-color: var(--nordic-pine);
+}
+
+#study-to-home:hover,
+#quiz-to-home:hover,
+.grammar-topbar button:hover,
+.grammar-page .grammar-topbar button:first-child:hover,
+.grammar-home-btn:hover,
+#skriveguide .guide-topbar #back-to-quiz-btn:hover,
+.guide-topbar #back-to-quiz-btn:hover {
+    color: #fffefa;
+    background: #24463c;
+    border-color: #24463c;
+    box-shadow: none;
+}
+
+select {
+    color: var(--text);
+    background: #fffefa;
+    border: 1px solid #babbb2;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.card,
+#quiz-question,
+#quiz-category-select,
+.grammar-page,
+#skriveguide .guide-page {
+    background: var(--nordic-surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.card,
+#quiz-question {
+    border-top: 5px solid var(--nordic-red);
+}
+
+.btn-row > button,
+#prev-btn,
+#next-btn,
+#prev-question-btn,
+#next-question-btn,
+#prev-page,
+#next-page,
+.grammar-page .grammar-lesson-nav > button,
+.grammar-page .grammar-lesson-nav > button:first-child,
+.grammar-page .grammar-lesson-nav > button:last-child,
+#skriveguide .guide-nav.btn-row > button:first-child,
+#skriveguide .guide-nav.btn-row > button:last-child {
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+#prev-btn,
+#prev-question-btn,
+#prev-page,
+.grammar-lesson-nav > button:first-child {
+    color: var(--nordic-pine);
+    background: #fffefa;
+    border-color: #bfc1b8;
+}
+
+#next-btn,
+#next-question-btn,
+#next-page,
+.grammar-lesson-nav > button:last-child {
+    color: #fffefa;
+    background: var(--nordic-pine);
+    border-color: var(--nordic-pine);
+    box-shadow: none;
+}
+
+#prev-btn:hover,
+#prev-question-btn:hover,
+#prev-page:hover,
+.grammar-lesson-nav > button:first-child:hover {
+    color: var(--nordic-pine);
+    background: #efede5;
+    border-color: #969e96;
+}
+
+#next-btn:hover,
+#next-question-btn:hover,
+#next-page:hover,
+.grammar-lesson-nav > button:last-child:hover {
+    background: #24463c;
+    border-color: #24463c;
+}
+
+.guide-counter,
+.guide-nav .guide-counter,
+.grammar-lesson-nav .guide-counter {
+    color: var(--nordic-pine);
+    background: #ece9df;
+    border: 0;
+    border-radius: 3px;
+}
+
+#quiz-mode .reverse-toggle,
+.reverse-toggle {
+    color: var(--nordic-pine);
+    background: #eeece4;
+    border: 1px solid #d5d4cb;
+    border-radius: 4px;
+}
+
+#quiz-mode .reverse-toggle input {
+    accent-color: var(--nordic-red);
+}
+
+#quiz-mode .reverse-toggle strong,
+.quiz-setup-intro h3,
+#quiz-mode button.category-option span {
+    color: #263c35;
+}
+
+.quiz-step {
+    color: #863930;
+    background: #f4e4df;
+    border: 0;
+    border-radius: 3px;
+}
+
+button.category-option,
+.grammar-topic-card {
+    color: var(--text);
+    background: #fffefa;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+button.category-option:hover,
+button.category-option:focus-visible,
+.grammar-topic-card:hover {
+    color: var(--nordic-pine);
+    background: #efede5;
+    border-color: #9da49d;
+    box-shadow: none;
+    transform: translateY(-2px);
+}
+
+button.category-option.is-selected {
+    color: var(--nordic-pine);
+    background: #e3e9e2;
+    border-color: var(--nordic-pine);
+    box-shadow: inset 4px 0 var(--nordic-pine);
+}
+
+.grammar-topic-card::after {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    width: 28px;
+    height: 3px;
+    background: var(--nordic-ochre);
+    border-radius: 0;
+}
+
+.grammar-topic-card:nth-child(3n + 2),
+.grammar-topic-card:nth-child(3n) {
+    background: #fffefa;
+}
+
+#quiz-mode #score {
+    color: var(--nordic-pine);
+    background: #e4e9e2;
+    border: 0;
+    border-radius: 3px;
+}
+
+#quiz-mode #quit-quiz-btn {
+    color: #923d36;
+    background: #fffefa;
+    border-color: #d5aaa5;
+    border-radius: 4px;
+}
+
+#quiz-mode .choice-btn {
+    color: var(--text);
+    background: #fffefa;
+    border: 1px solid #cfcec5;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+#quiz-mode .choice-btn::before {
+    color: var(--nordic-pine);
+    background: #e8ebe5;
+    border: 0;
+    border-radius: 3px;
+}
+
+#quiz-mode .choice-btn:hover {
+    color: var(--text);
+    background: #f2f0e8;
+    border-color: #929c94;
+}
+
+#quiz-mode .choice-btn.correct,
+#quiz-mode .choice-btn.correct:hover,
+#quiz-mode .choice-btn.correct:disabled {
+    color: #255b43;
+    background: #e3eee6;
+    border-color: #6f9d7f;
+}
+
+#quiz-mode .choice-btn.wrong,
+#quiz-mode .choice-btn.wrong:hover,
+#quiz-mode .choice-btn.wrong:disabled {
+    color: #863930;
+    background: #f6e5e1;
+    border-color: #c97870;
+}
+
+.grammar-learning-card,
+#skriveguide .box,
+#skriveguide .konj-card {
+    background: #fffefa;
+    border-color: #d8d6cc;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.grammar-learning-card {
+    border-left: 4px solid var(--nordic-pine);
+}
+
+.grammar-learning-card:nth-child(3n + 2) { border-left-color: var(--nordic-ochre); }
+.grammar-learning-card:nth-child(3n) { border-left-color: var(--nordic-blue); }
+
+.grammar-learning-card > h3:first-child {
+    color: var(--nordic-pine);
+    border-bottom-color: #dedbd1;
+}
+
+.grammar-content table {
+    border-color: #d6d4ca;
+    border-radius: 4px;
+}
+
+.grammar-content th,
+.grammar-content thead th {
+    color: #263c35;
+    background: #e9e7df;
+}
+
+.grammar-content .grammar-example-table .grammar-shared-column,
+.grammar-content .grammar-conjunction-table tr > :first-child,
+.grammar-content .grammar-preposition-table tr > :first-child {
+    background: #f4f2eb;
+}
+
+.grammar-content .grammar-example,
+.grammar-example,
+#skriveguide .callout,
+#skriveguide .callout.info {
+    background: #edf0eb;
+    border-color: #abbcaf;
+}
+
+.grammar-tip,
+#skriveguide .callout.tip {
+    background: #f5eedf;
+    border-left-color: var(--nordic-ochre);
+}
+
+.grammar-rule {
+    background: #e8ece6;
+    border-color: #b9c5bb;
+}
+
+.cookie-banner {
+    background: #fffefa;
+    border-color: #cbc9bf;
+    border-radius: 6px;
+    box-shadow: 0 16px 44px rgba(39, 52, 46, .18);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+.cookie-btn {
+    border-radius: 4px;
+}
+
+.cookie-btn--primary {
+    background: var(--nordic-pine);
+    border-color: var(--nordic-pine);
+}
+
+.app-footer {
+    color: #68726c;
+    background: #efede5;
+    border-top-color: #d5d3c9;
+    border-radius: 4px;
+}
+
+.app-footer a,
+.cookie-settings-btn {
+    color: var(--nordic-pine);
+}
+
+.policy-page {
+    background: #fffefa;
+    border: 1px solid #d6d5cc;
+    border-radius: 6px;
+    box-shadow: var(--nordic-shadow);
+}
+
+.policy-back-link {
+    color: var(--nordic-pine);
+}
+
+.policy-section {
+    border-color: #d8d6cc;
+}
+
+.policy-section h2,
+.policy-table th {
+    color: var(--nordic-pine);
+}
+
+.policy-table th {
+    background: #e9e7df;
+}
+
+@media (min-width: 901px) {
+    .container {
+        width: min(1240px, calc(100% - 64px));
+        min-height: calc(100dvh - 48px);
+        margin-block: 24px;
+        padding: 38px clamp(42px, 5vw, 68px) 30px;
+    }
+
+    .container > h1 {
+        font-size: clamp(1.55rem, 1.8vw, 2rem);
+    }
+
+    #main-buttons {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    #main-buttons > button {
+        align-content: flex-start;
+        min-height: 176px;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        background: var(--nordic-paper);
+    }
+
+    .container {
+        width: 100%;
+        min-height: 100dvh;
+        margin: 0;
+        padding: 22px 14px 18px;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .container::before {
+        width: 88px;
+        height: 6px;
+    }
+
+    h1 {
+        justify-content: flex-start;
+        font-size: 1.3rem;
+    }
+
+    h1::before {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .home-welcome {
+        margin-top: clamp(42px, 8vh, 70px);
+    }
+
+    .home-welcome h2 {
+        font-size: clamp(1.8rem, 9vw, 2.55rem);
+    }
+
+    #main-buttons > button {
+        min-height: 92px;
+        padding: 16px;
+        border-radius: 4px;
+    }
+
+    .home-nav-icon {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+        border-radius: 3px;
+    }
+
+    .mode-topbar,
+    .grammar-page,
+    #skriveguide .guide-page {
+        border-radius: 4px;
+    }
+
+    .grammar-learning-card {
+        border-radius: 4px;
+    }
+}
