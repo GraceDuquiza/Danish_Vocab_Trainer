@@ -186,7 +186,7 @@ const skriveguide = [
                 </p>
                 <p>
                     Ledsætning:
-                    <span class="conjunction">C</span> + <span class="subject">S</span> + <span class="adverb">A</span> +
+                    <span class="conjunction">K</span> + <span class="subject">S</span> + <span class="adverb">A</span> +
                     <span class="verb-v1">V1</span>
                 </p>
             </aside>
