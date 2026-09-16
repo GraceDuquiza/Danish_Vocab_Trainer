@@ -8,22 +8,23 @@ const praepositionGrammarPages = [
         titleEn: "What is a preposition?",
         content: `
             <p lang="da">
-                En præposition kaldes også et forholdsord. Den viser et forhold mellem personer, ting, steder, tider eller
-                handlinger. Præpositioner bøjes ikke.
+                En præposition kaldes også et forholdsord. Den viser et forhold mellem personer, 
+                ting, steder, tider eller handlinger. Præpositioner bøjes ikke.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >A preposition shows a relationship between people, objects, places, times, or actions. Prepositions do not
-                    inflect.</em
-                >
+                <em>
+                    A preposition shows a relationship between people, objects, places, times, or actions. 
+                    Prepositions do not inflect.
+                </em>
             </p>
             <table class="grammar-example-table grammar-preposition-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Forhold</strong><em class="grammar-english" lang="en">Relationship</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Forhold</strong>
+                                <em class="grammar-english" lang="en">Relationship</em>
+                            </span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -32,54 +33,97 @@ const praepositionGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Sted</span><em lang="en">Place</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Sted</span>
+                                <em lang="en">Place</em>
+                            </span>
                         </td>
                         <td>Bogen ligger <u>på</u> bordet.</td>
                         <td class="grammar-english" lang="en"><em>The book is on the table.</em></td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Retning</span><em lang="en">Direction</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Retning</span>
+                                <em lang="en">Direction</em>
+                            </span>
                         </td>
                         <td>Hun går <u>til</u> stationen.</td>
-                        <td class="grammar-english" lang="en"><em>She walks to the station.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>
+                                She walks to the station.
+                            </em>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Tid</span><em lang="en">Time</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Tid</span>
+                                <em lang="en">Time</em>
+                            </span>
                         </td>
                         <td>Vi mødes <u>om</u> en time.</td>
-                        <td class="grammar-english" lang="en"><em>We will meet in an hour.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>
+                                We will meet in an hour.
+                            </em>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Oprindelse</span><em lang="en">Origin</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Oprindelse</span>
+                                <em lang="en">Origin</em>
+                            </span>
                         </td>
                         <td>Brevet er <u>fra</u> kommunen.</td>
-                        <td class="grammar-english" lang="en"><em>The letter is from the municipality.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>
+                                The letter is from the municipality.
+                            </em>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Selskab</span><em lang="en">Company</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Selskab</span>
+                                <em lang="en">Company</em>
+                            </span>
                         </td>
                         <td>Jeg rejser <u>med</u> min ven.</td>
-                        <td class="grammar-english" lang="en"><em>I am travelling with my friend.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>
+                                I am travelling with my friend.
+                            </em>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Emne</span><em lang="en">Topic</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Emne</span>
+                                <em lang="en">Topic</em>
+                            </span>
                         </td>
                         <td>Vi taler <u>om</u> filmen.</td>
-                        <td class="grammar-english" lang="en"><em>We are talking about the film.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>
+                                We are talking about the film.
+                            </em>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Hurtig test:</strong> En præposition står ofte foran et ord eller en gruppe ord: på bordet, med hende,
-                    efter arbejdet.
+                    <strong>Hurtig test:</strong> 
+                    En præposition står ofte foran et ord eller en gruppe ord: 
+                    på bordet, med hende, efter arbejdet.
                 </p>
-                <p class="grammar-english" lang="en"><em>A preposition often comes before a word or phrase.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        A preposition often comes before a word or phrase.
+                    </em>
+                    </p>
             </aside>
         `
     },
@@ -89,26 +133,31 @@ const praepositionGrammarPages = [
         titleEn: "Preposition and complement",
         content: `
             <p lang="da">
-                Det ord eller den gruppe, som står efter præpositionen, kaldes præpositionens <strong>styrelse</strong>.
+                Det ord eller den gruppe, som står efter præpositionen, 
+                kaldes præpositionens <strong>styrelse</strong>.
                 Præpositionen og styrelsen danner tilsammen et præpositionsled.
             </p>
             <p class="grammar-english" lang="en">
-                <em>The word or phrase following the preposition is its complement. Together they form a prepositional phrase.</em>
+                <em>
+                    The word or phrase following the preposition is its complement. 
+                    Together they form a prepositional phrase.
+                </em>
             </p>
             <table class="grammar-preposition-table">
                 <thead>
                     <tr>
                         <th><strong>Præposition</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Styrelse</strong><em class="grammar-english" lang="en">Complement</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Styrelse</strong>
+                                <em class="grammar-english" lang="en">Complement</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hele leddet</strong
-                                ><em class="grammar-english" lang="en">Complete phrase</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Hele leddet</strong>
+                                <em class="grammar-english" lang="en">Complete phrase</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -141,17 +190,24 @@ const praepositionGrammarPages = [
                 </tbody>
             </table>
             <div class="grammar-example">
-                <p lang="da">Bogen ligger <u>på</u> det lille bord. Præposition: på. Styrelse: det lille bord.</p>
+                <p lang="da">Bogen ligger <u>på</u> det lille bord. 
+                    Præposition: på. Styrelse: det lille bord.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>The book is on the small table. Preposition: på. Complement: det lille bord.</em>
+                    <em>
+                        The book is on the small table. Preposition: på. Complement: det lille bord.
+                    </em>
                 </p>
             </div>
             <aside class="grammar-rule">
                 <p lang="da">
-                    Præpositionen er kun det lille ord. Hele forbindelsen kaldes et præpositionsled: i + København = i København.
+                    Præpositionen er kun det lille ord. Hele forbindelsen kaldes et 
+                    præpositionsled: i + København = i København.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>The preposition is only the small word; the full combination is the prepositional phrase.</em>
+                    <em>
+                        The preposition is only the small word; the full combination is the prepositional phrase.
+                    </em>
                 </p>
             </aside>
         `
@@ -161,8 +217,14 @@ const praepositionGrammarPages = [
         titleDa: "Hvad kan stå efter en præposition?",
         titleEn: "What can follow a preposition?",
         content: `
-            <p lang="da">Styrelsen kan være et substantiv, et pronomen, en navnemåde eller en ledsætning.</p>
-            <p class="grammar-english" lang="en"><em>The complement can be a noun, pronoun, infinitive, or clause.</em></p>
+            <p lang="da">
+                Styrelsen kan være et substantiv, et pronomen, en navnemåde eller en ledsætning.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    The complement can be a noun, pronoun, infinitive, or clause.
+                </em>
+            </p>
             <table class="grammar-example-table grammar-preposition-table">
                 <thead>
                     <tr>
@@ -175,34 +237,48 @@ const praepositionGrammarPages = [
                     <tr>
                         <td>Substantiv</td>
                         <td>Børnene kom hjem <u>fra</u> børnehaven.</td>
-                        <td class="grammar-english" lang="en"><em>The children came home from kindergarten.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>The children came home from kindergarten.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>Pronomen</td>
                         <td>Ulla ventede <u>på</u> ham.</td>
-                        <td class="grammar-english" lang="en"><em>Ulla waited for him.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>Ulla waited for him.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>Infinitiv</td>
                         <td>Hun er bange <u>for</u> at gå alene.</td>
-                        <td class="grammar-english" lang="en"><em>She is afraid of walking alone.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>She is afraid of walking alone.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>At-ledsætning</td>
                         <td>Vi venter <u>på</u>, at han kommer.</td>
-                        <td class="grammar-english" lang="en"><em>We are waiting for him to come.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>We are waiting for him to come.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>Indirekte spørgsmål</td>
                         <td>Hun tænker <u>på</u>, om han har tid.</td>
-                        <td class="grammar-english" lang="en"><em>She is wondering whether he has time.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>She is wondering whether he has time.</em>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da">Når styrelsen er en ledsætning, bruger eksemplerne i denne guide komma: på, at …; på, om …</p>
+                <p lang="da">Når styrelsen er en ledsætning, 
+                    bruger eksemplerne i denne guide komma: på, at …; på, om …
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>When the complement is a clause, this guide places a comma before it.</em>
+                    <em>
+                        When the complement is a clause, this guide places a comma before it.
+                    </em>
                 </p>
             </aside>
         `
@@ -212,21 +288,29 @@ const praepositionGrammarPages = [
         titleDa: "Præpositioner for sted",
         titleEn: "Prepositions of place",
         content: `
-            <p lang="da">Stedspræpositioner fortæller, hvor en person eller ting befinder sig.</p>
-            <p class="grammar-english" lang="en"><em>Prepositions of place show where a person or object is located.</em></p>
+            <p lang="da">
+                Stedspræpositioner fortæller, hvor en person eller ting befinder sig.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Prepositions of place show where a person or object is located.
+                </em>
+            </p>
             <table class="grammar-preposition-table grammar-preposition-detail-table">
                 <thead>
                     <tr>
                         <th><strong>Præposition</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Dansk</strong><em class="grammar-english" lang="en">English</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Dansk</strong>
+                                <em class="grammar-english" lang="en">English</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -234,77 +318,90 @@ const praepositionGrammarPages = [
                     <tr>
                         <td>i</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">inde i et område</span><em lang="en">inside an area</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">inde i et område</span>
+                                <em lang="en">inside an area</em>
+                            </span>
                         </td>
                         <td>Børnene er <u>i</u> huset.</td>
                     </tr>
                     <tr>
                         <td>på</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">flade eller aktivitet</span><em lang="en">surface or activity</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">flade eller aktivitet</span>
+                                <em lang="en">surface or activity</em>
+                            </span>
                         </td>
                         <td>Koppen står <u>på</u> bordet.</td>
                     </tr>
                     <tr>
                         <td>ved</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">tæt på et punkt</span><em lang="en">near a point</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">tæt på et punkt</span>
+                                <em lang="en">near a point</em>
+                            </span>
                         </td>
                         <td>Vi mødes <u>ved</u> stationen.</td>
                     </tr>
                     <tr>
                         <td>hos</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">hos person eller fagperson</span><em lang="en">at a person's place</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">hos person eller fagperson</span>
+                                <em lang="en">at a person's place</em>
+                            </span>
                         </td>
                         <td>Jeg er <u>hos</u> lægen.</td>
                     </tr>
                     <tr>
                         <td>under</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">lavere end</span><em lang="en">below</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">lavere end</span>
+                                <em lang="en">below</em>
+                            </span>
                         </td>
                         <td>Tasken står <u>under</u> bordet.</td>
                     </tr>
                     <tr>
                         <td>over</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">højere end</span><em lang="en">above</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">højere end</span>
+                                <em lang="en">above</em>
+                            </span>
                         </td>
                         <td>Lampen hænger <u>over</u> bordet.</td>
                     </tr>
                     <tr>
                         <td>foran / bag</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">forside / bagside</span><em lang="en">in front / behind</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">forside / bagside</span>
+                                <em lang="en">in front / behind</em>
+                            </span>
                         </td>
                         <td>Bilen holder <u>foran</u> huset.</td>
                     </tr>
                     <tr>
                         <td>mellem</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">ting på hver side</span><em lang="en">between items</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">ting på hver side</span>
+                                <em lang="en">between items</em>
+                            </span>
                         </td>
                         <td>Stolen står <u>mellem</u> bordet og vinduet.</td>
                     </tr>
                     <tr>
                         <td>blandt</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">inde i en gruppe</span><em lang="en">among a group</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">inde i en gruppe</span>
+                                <em lang="en">among a group</em>
+                            </span>
                         </td>
                         <td>Hun stod <u>blandt</u> vennerne.</td>
                     </tr>
@@ -318,24 +415,30 @@ const praepositionGrammarPages = [
         titleEn: "I, på, hos, and ved",
         content: `
             <p lang="da">
-                Valget følger ofte faste danske mønstre. Reglerne hjælper, men hele udtryk og lokale undtagelser skal også læres.
+                Valget følger ofte faste danske mønstre. Reglerne hjælper, 
+                men hele udtryk og lokale undtagelser skal også læres.
             </p>
             <p class="grammar-english" lang="en">
-                <em>The choice often follows fixed Danish patterns. Learn complete expressions and local exceptions too.</em>
+                <em>
+                    The choice often follows fixed Danish patterns. 
+                    Learn complete expressions and local exceptions too.
+                </em>
             </p>
             <table class="grammar-preposition-table grammar-preposition-detail-table">
                 <thead>
                     <tr>
                         <th><strong>Præposition</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Dansk</strong><em class="grammar-english" lang="en">English</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Dansk</strong>
+                                <em class="grammar-english" lang="en">English</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempler</strong><em class="grammar-english" lang="en">Examples</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempler</strong>
+                                <em class="grammar-english" lang="en">Examples</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -343,38 +446,40 @@ const praepositionGrammarPages = [
                     <tr>
                         <td>i</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">lande, byer, rum, beholdere</span
-                                ><em lang="en">countries, cities, rooms, containers</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">lande, byer, rum, beholdere</span>
+                                <em lang="en">countries, cities, rooms, containers</em>
+                            </span>
                         </td>
                         <td><u>i</u> Danmark, <u>i</u> Aarhus, <u>i</u> huset, <u>i</u> bilen</td>
                     </tr>
                     <tr>
                         <td>på</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">flader, øer, aktiviteter</span
-                                ><em lang="en">surfaces, islands, activities</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">flader, øer, aktiviteter</span>
+                                <em lang="en">surfaces, islands, activities</em>
+                            </span>
                         </td>
                         <td><u>på</u> bordet, <u>på</u> Fyn, <u>på</u> arbejde</td>
                     </tr>
                     <tr>
                         <td>hos</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">person eller fagperson</span><em lang="en">person or professional</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">person eller fagperson</span>
+                                <em lang="en">person or professional</em>
+                            </span>
                         </td>
                         <td><u>hos</u> mine forældre, <u>hos</u> tandlægen</td>
                     </tr>
                     <tr>
                         <td>ved</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">tæt på et punkt</span><em lang="en">near a specific point</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">tæt på et punkt</span>
+                                <em lang="en">near a specific point</em>
+                            </span>
                         </td>
                         <td><u>ved</u> indgangen, <u>ved</u> stationen</td>
                     </tr>
@@ -382,10 +487,14 @@ const praepositionGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Lær hele udtrykket:</strong> på universitetet, ved universitetet og til universitetet har forskellige
-                    betydninger.
+                    <strong>Lær hele udtrykket:</strong> på universitetet, 
+                    ved universitetet og til universitetet har forskellige betydninger.
                 </p>
-                <p class="grammar-english" lang="en"><em>Learn the whole expression together with its meaning.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Learn the whole expression together with its meaning.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -394,21 +503,29 @@ const praepositionGrammarPages = [
         titleDa: "Retning og bevægelse",
         titleEn: "Direction and movement",
         content: `
-            <p lang="da">Retningspræpositioner viser målet, udgangspunktet eller vejen for en bevægelse.</p>
-            <p class="grammar-english" lang="en"><em>Prepositions of direction show a destination, origin, or path.</em></p>
+            <p lang="da">
+                Retningspræpositioner viser målet, udgangspunktet eller vejen for en bevægelse.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Prepositions of direction show a destination, origin, or path.
+                </em>
+            </p>
             <table class="grammar-preposition-table grammar-preposition-detail-table">
                 <thead>
                     <tr>
                         <th><strong>Præposition</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Dansk</strong><em class="grammar-english" lang="en">English</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Dansk</strong>
+                                <em class="grammar-english" lang="en">English</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -416,66 +533,80 @@ const praepositionGrammarPages = [
                     <tr>
                         <td>til</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">mål</span><em lang="en">destination</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">mål</span>
+                                <em lang="en">destination</em>
+                            </span>
                         </td>
                         <td>Hun går <u>til</u> stationen.</td>
                     </tr>
                     <tr>
                         <td>fra</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">udgangspunkt</span><em lang="en">origin</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">udgangspunkt</span>
+                                <em lang="en">origin</em>
+                            </span>
                         </td>
                         <td>Han kommer <u>fra</u> Odense.</td>
                     </tr>
                     <tr>
                         <td>mod / imod</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">i retning af</span><em lang="en">towards</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">i retning af</span>
+                                <em lang="en">towards</em>
+                            </span>
                         </td>
                         <td>Bilen kører <u>mod</u> centrum.</td>
                     </tr>
                     <tr>
                         <td>gennem</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">fra side til side</span><em lang="en">through</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">fra side til side</span>
+                                <em lang="en">through</em>
+                            </span>
                         </td>
                         <td>Vi gik <u>gennem</u> parken.</td>
                     </tr>
                     <tr>
                         <td>forbi</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">passerer et sted</span><em lang="en">past a place</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">passerer et sted</span>
+                                <em lang="en">past a place</em>
+                            </span>
                         </td>
                         <td>Bussen kører <u>forbi</u> skolen.</td>
                     </tr>
                     <tr>
                         <td>over / langs</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">hen over / følger en kant</span><em lang="en">across / along</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">hen over / følger en kant</span>
+                                <em lang="en">across / along</em>
+                            </span>
                         </td>
                         <td>Vi går <u>over</u> gaden og <u>langs</u> stranden.</td>
                     </tr>
                     <tr>
                         <td>ind i / ud af</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">bevægelse ind / ud</span><em lang="en">movement in / out</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">bevægelse ind / ud</span>
+                                <em lang="en">movement in / out</em>
+                            </span>
                         </td>
                         <td>Hun går <u>ind i</u> huset. Han går <u>ud af</u> bilen.</td>
                     </tr>
                     <tr>
                         <td>hen til</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">frem til et punkt</span><em lang="en">up to a point</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">frem til et punkt</span>
+                                <em lang="en">up to a point</em>
+                            </span>
                         </td>
                         <td>Kom <u>hen til</u> mig.</td>
                     </tr>
@@ -483,10 +614,13 @@ const praepositionGrammarPages = [
             </table>
             <aside class="grammar-rule">
                 <p lang="da">
-                    <strong>Hjem og hjemme:</strong> Jeg går hjem (retning). Jeg er hjemme (sted). Brug normalt ikke til foran hjem.
+                    <strong>Hjem og hjemme:</strong> Jeg går hjem (retning). 
+                    Jeg er hjemme (sted). Brug normalt ikke til foran hjem.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Use hjem for direction and hjemme for location. Normally omit til before hjem.</em>
+                    <em>
+                        Use hjem for direction and hjemme for location. Normally omit til before hjem.
+                    </em>
                 </p>
             </aside>
         `
@@ -496,21 +630,29 @@ const praepositionGrammarPages = [
         titleDa: "Præpositioner for tid",
         titleEn: "Prepositions of time",
         content: `
-            <p lang="da">Tidspræpositioner viser et tidspunkt, en periode, en begyndelse eller en afslutning.</p>
-            <p class="grammar-english" lang="en"><em>Prepositions of time express a point, period, beginning, or ending.</em></p>
+            <p lang="da">Tidspræpositioner viser et tidspunkt, en periode, 
+                en begyndelse eller en afslutning.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Prepositions of time express a point, period, beginning, or ending.
+                </em>
+            </p>
             <table class="grammar-preposition-table grammar-preposition-detail-table">
                 <thead>
                     <tr>
                         <th><strong>Præposition</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Dansk</strong><em class="grammar-english" lang="en">English</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Dansk</strong>
+                                <em class="grammar-english" lang="en">English</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -518,81 +660,95 @@ const praepositionGrammarPages = [
                     <tr>
                         <td>i</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">måned, år, del af dagen, varighed</span
-                                ><em lang="en">month, year, part of day, duration</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">måned, år, del af dagen, varighed</span>
+                                <em lang="en">month, year, part of day, duration</em>
+                            </span>
                         </td>
                         <td>i juli, i 2026, i morges, i to timer</td>
                     </tr>
                     <tr>
                         <td>på</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">ugedag eller plan</span><em lang="en">weekday or plan</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">ugedag eller plan</span>
+                                <em lang="en">weekday or plan</em>
+                            </span>
                         </td>
                         <td>på mandag, på fredag aften</td>
                     </tr>
                     <tr>
                         <td>om</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">fremtid eller gentagelse</span><em lang="en">future or repetition</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">fremtid eller gentagelse</span>
+                                <em lang="en">future or repetition</em>
+                            </span>
                         </td>
                         <td>om en time, om morgenen</td>
                     </tr>
                     <tr>
                         <td>for … siden</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">tid tilbage fra nu</span><em lang="en">ago</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">tid tilbage fra nu</span>
+                                <em lang="en">ago</em>
+                            </span>
                         </td>
                         <td>for tre år siden</td>
                     </tr>
                     <tr>
                         <td>siden</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">begyndelse frem til nu</span><em lang="en">since a starting point</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">begyndelse frem til nu</span>
+                                <em lang="en">since a starting point</em>
+                            </span>
                         </td>
                         <td>siden 2024</td>
                     </tr>
                     <tr>
                         <td>fra … til</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">start og slutning</span><em lang="en">start and end</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">start og slutning</span>
+                                <em lang="en">start and end</em>
+                            </span>
                         </td>
                         <td>fra klokken 8 til 16</td>
                     </tr>
                     <tr>
                         <td>før / efter</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">tidligere / senere</span><em lang="en">before / after</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">tidligere / senere</span>
+                                <em lang="en">before / after</em>
+                            </span>
                         </td>
                         <td>før mødet, efter arbejdet</td>
                     </tr>
                     <tr>
                         <td>under / inden</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">i løbet af / senest før</span><em lang="en">during / by</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">i løbet af / senest før</span>
+                                <em lang="en">during / by</em>
+                            </span>
                         </td>
                         <td>under mødet, inden fredag</td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da">Lær faste tidsudtryk som hele forbindelser: i går, i nat, på fredag, om morgenen og til sommer.</p>
-                <p class="grammar-english" lang="en"><em>Learn fixed time expressions as complete phrases.</em></p>
+                <p lang="da">
+                    Lær faste tidsudtryk som hele forbindelser: i går, i nat, 
+                    på fredag, om morgenen og til sommer.
+                </p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Learn fixed time expressions as complete phrases.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -612,55 +768,76 @@ const praepositionGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">i + varighed</span><em lang="en">for a duration</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">i + varighed</span>
+                                <em lang="en">for a duration</em>
+                            </span>
                         </td>
                         <td>Jeg har boet i Danmark <u>i</u> fem år.</td>
-                        <td class="grammar-english" lang="en"><em>I have lived in Denmark for five years.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>I have lived in Denmark for five years.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">om + fremtid</span><em lang="en">in a future period</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">om + fremtid</span>
+                                <em lang="en">in a future period</em>
+                        </span>
                         </td>
                         <td>Toget kommer <u>om</u> ti minutter.</td>
-                        <td class="grammar-english" lang="en"><em>The train will arrive in ten minutes.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>The train will arrive in ten minutes.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">for … siden</span><em lang="en">ago</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">for … siden</span>
+                                <em lang="en">ago</em>
+                            </span>
                         </td>
                         <td>Jeg flyttede hertil <u>for</u> tre år <u>siden</u>.</td>
-                        <td class="grammar-english" lang="en"><em>I moved here three years ago.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>I moved here three years ago.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">siden + startpunkt</span><em lang="en">since a starting point</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">siden + startpunkt</span>
+                                <em lang="en">since a starting point</em>
+                            </span>
                         </td>
                         <td>Jeg har arbejdet her <u>siden</u> januar.</td>
-                        <td class="grammar-english" lang="en"><em>I have worked here since January.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>I have worked here since January.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">på + tidsforbrug</span><em lang="en">completed within</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">på + tidsforbrug</span>
+                                <em lang="en">completed within</em>
+                            </span>
                         </td>
                         <td>Hun læste bogen <u>på</u> to dage.</td>
-                        <td class="grammar-english" lang="en"><em>She read the book in two days.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>She read the book in two days.</em>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Sammenlign:</strong> Jeg læste i to timer = aktiviteten varede to timer. Jeg læste bogen på to timer =
-                    bogen blev færdig.
+                    <strong>Sammenlign:</strong> Jeg læste i to timer = aktiviteten varede to timer. 
+                    Jeg læste bogen på to timer = bogen blev færdig.
                 </p>
-                <p class="grammar-english" lang="en"><em>Compare duration with the time used to complete something.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Compare duration with the time used to complete something.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -674,14 +851,16 @@ const praepositionGrammarPages = [
                     <tr>
                         <th><strong>Præposition</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Dansk</strong><em class="grammar-english" lang="en">English</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Dansk</strong>
+                                <em class="grammar-english" lang="en">English</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -689,88 +868,100 @@ const praepositionGrammarPages = [
                     <tr>
                         <td>af</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">oprindelse, materiale, del</span><em lang="en">origin, material, part</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">oprindelse, materiale, del</span>
+                                <em lang="en">origin, material, part</em>
+                            </span>
                         </td>
                         <td>et bord af træ; en af vennerne</td>
                     </tr>
                     <tr>
                         <td>efter</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">senere end, søgen</span><em lang="en">after, search</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">senere end, søgen</span>
+                                <em lang="en">after, search</em>
+                            </span>
                         </td>
                         <td>efter mødet; lede efter nøgler</td>
                     </tr>
                     <tr>
                         <td>for</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">fordel, formål</span><em lang="en">benefit, purpose</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">fordel, formål</span>
+                                <em lang="en">benefit, purpose</em>
+                            </span>
                         </td>
                         <td>kæmpe for frihed; for at lære</td>
                     </tr>
                     <tr>
                         <td>fra / til</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">udgangspunkt / mål</span><em lang="en">origin / destination</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">udgangspunkt / mål</span>
+                                <em lang="en">origin / destination</em>
+                            </span>
                         </td>
                         <td>fra København; til skolen</td>
                     </tr>
                     <tr>
                         <td>med</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">selskab, middel</span><em lang="en">company, means</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">selskab, middel</span>
+                                <em lang="en">company, means</em>
+                            </span>
                         </td>
                         <td>med Anna; med tog</td>
                     </tr>
                     <tr>
                         <td>mod</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">retning, opposition</span><em lang="en">direction, opposition</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">retning, opposition</span>
+                                <em lang="en">direction, opposition</em>
+                            </span>
                         </td>
                         <td>mod nord; kæmpe mod sygdom</td>
                     </tr>
                     <tr>
                         <td>om</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">emne, tid</span><em lang="en">topic, time</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">emne, tid</span>
+                                <em lang="en">topic, time</em>
+                            </span>
                         </td>
                         <td>tale om filmen; om en time</td>
                     </tr>
                     <tr>
                         <td>over / under</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">højere / lavere</span><em lang="en">above / below</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">højere / lavere</span>
+                                <em lang="en">above / below</em>
+                            </span>
                         </td>
                         <td>over bordet; under stolen</td>
                     </tr>
                     <tr>
                         <td>på</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">flade, aktivitet, dag</span><em lang="en">surface, activity, day</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">flade, aktivitet, dag</span>
+                                <em lang="en">surface, activity, day</em>
+                            </span>
                         </td>
                         <td>på bordet; på arbejde; på fredag</td>
                     </tr>
                     <tr>
                         <td>ved</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">tæt på, ved hjælp af</span><em lang="en">near, by means of</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">tæt på, ved hjælp af</span>
+                                <em lang="en">near, by means of</em>
+                            </span>
                         </td>
                         <td>ved døren; ved at øve</td>
                     </tr>
@@ -778,10 +969,13 @@ const praepositionGrammarPages = [
             </table>
             <aside class="grammar-rule">
                 <p lang="da">
-                    En præposition kan have flere betydninger. Oversættelsen afhænger af sammenhængen, så lær hele udtrykket.
+                    En præposition kan have flere betydninger. 
+                    Oversættelsen afhænger af sammenhængen, så lær hele udtrykket.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>A preposition can have several meanings. Learn the complete phrase in context.</em>
+                    <em>
+                        A preposition can have several meanings. Learn the complete phrase in context.
+                    </em>
                 </p>
             </aside>
         `
@@ -791,105 +985,134 @@ const praepositionGrammarPages = [
         titleDa: "Sammensatte præpositioner",
         titleEn: "Multi-word prepositions",
         content: `
-            <p lang="da">Nogle præpositioner består af flere ord og fungerer som én fast enhed.</p>
+            <p lang="da">
+                Nogle præpositioner består af flere ord og fungerer som én fast enhed.
+            </p>
             <p class="grammar-english" lang="en">
-                <em>Some prepositions consist of several words and function as one fixed unit.</em>
+                <em>
+                    Some prepositions consist of several words and function as one fixed unit.
+                </em>
             </p>
             <table class="grammar-fixed-combination-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Fast forbindelse</strong
-                                ><em class="grammar-english" lang="en">Fixed combination and meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Fast forbindelse</strong>
+                                <em class="grammar-english" lang="en">Fixed combination and meaning</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">på grund af</span><em lang="en">because of</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">på grund af</span>
+                                <em lang="en">because of</em>
+                            </span>
                         </th>
                         <td>Kampen blev aflyst <u>på grund af</u> regnen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">i stedet for</span><em lang="en">instead of</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">i stedet for</span>
+                                <em lang="en">instead of</em>
+                            </span>
                         </th>
                         <td>Vi tog toget <u>i stedet for</u> bilen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">ved siden af</span><em lang="en">next to</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">ved siden af</span>
+                                <em lang="en">next to</em>
+                            </span>
                         </th>
                         <td>Hun sidder <u>ved siden af</u> mig.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">i nærheden af</span><em lang="en">near</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">i nærheden af</span>
+                                <em lang="en">near</em>
+                            </span>
                         </th>
                         <td>Der ligger en butik <u>i nærheden af</u> stationen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">i løbet af</span><em lang="en">during</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">i løbet af</span>
+                                <em lang="en">during</em>
+                            </span>
                         </th>
                         <td>Jeg ringer <u>i løbet af</u> dagen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">på trods af</span><em lang="en">despite</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">på trods af</span>
+                                <em lang="en">despite</em>
+                            </span>
                         </th>
                         <td>De gik ud <u>på trods af</u> regnen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">i forhold til</span><em lang="en">in relation to</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">i forhold til</span>
+                                <em lang="en">in relation to</em>
+                            </span>
                         </th>
                         <td>Prisen er høj <u>i forhold til</u> kvaliteten.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">i forbindelse med</span><em lang="en">in connection with</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">i forbindelse med</span>
+                                <em lang="en">in connection with</em>
+                            </span>
                         </th>
                         <td>Vejen er lukket <u>i forbindelse med</u> arbejdet.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">sammen med</span><em lang="en">together with</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">sammen med</span>
+                                <em lang="en">together with</em>
+                            </span>
                         </th>
                         <td>Jeg rejser <u>sammen med</u> min familie.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">ved hjælp af</span><em lang="en">with the help of</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">ved hjælp af</span>
+                                <em lang="en">with the help of</em>
+                            </span>
                         </th>
                         <td>Vi løste opgaven <u>ved hjælp af</u> en app.</td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da">Mange sammensatte præpositioner slutter på <strong>af</strong>. Hele udtrykket styrer næste led.</p>
+                <p lang="da">
+                    Mange sammensatte præpositioner slutter på <strong>af</strong>. 
+                    Hele udtrykket styrer næste led.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>Many multi-word prepositions end in af. The complete expression governs the following phrase.</em>
+                    <em>
+                        Many multi-word prepositions end in af. 
+                        The complete expression governs the following phrase.
+                    </em>
                 </p>
             </aside>
         `
@@ -899,89 +1122,120 @@ const praepositionGrammarPages = [
         titleDa: "Verbum + præposition",
         titleEn: "Verb + preposition",
         content: `
-            <p lang="da">Mange verber bruges med en bestemt præposition. Lær verbet og præpositionen som én enhed.</p>
+            <p lang="da">Mange verber bruges med en bestemt præposition. 
+                Lær verbet og præpositionen som én enhed.
+            </p>
             <p class="grammar-english" lang="en">
-                <em>Many verbs take a particular preposition. Learn the combination as one unit.</em>
+                <em>
+                    Many verbs take a particular preposition. 
+                    Learn the combination as one unit.
+                </em>
             </p>
             <table class="grammar-fixed-combination-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Fast forbindelse</strong
-                                ><em class="grammar-english" lang="en">Fixed combination and meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Fast forbindelse</strong>
+                                <em class="grammar-english" lang="en">Fixed combination and meaning</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">lede efter</span><em lang="en">look for</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">lede efter</span>
+                                <em lang="en">look for</em>
+                            </span>
                         </th>
                         <td>Jeg leder <u>efter</u> mine nøgler.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">vente på</span><em lang="en">wait for</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">vente på</span>
+                                <em lang="en">wait for</em>
+                            </span>
                         </th>
                         <td>Vi venter <u>på</u> bussen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">interessere sig for</span><em lang="en">be interested in</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">interessere sig for</span>
+                                <em lang="en">be interested in</em>
+                            </span>
                         </th>
                         <td>Han interesserer sig <u>for</u> historie.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">regne med</span><em lang="en">count on</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">regne med</span>
+                                <em lang="en">count on</em>
+                            </span>
                         </th>
                         <td>Du kan regne <u>med</u> mig.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">bede om</span><em lang="en">ask for</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">bede om</span>
+                                <em lang="en">ask for</em>
+                            </span>
                         </th>
                         <td>Jeg vil bede <u>om</u> hjælp.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">finde ud af</span><em lang="en">find out</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">finde ud af</span>
+                                <em lang="en">find out</em>
+                            </span>
                         </th>
                         <td>Jeg skal finde ud <u>af</u> det.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">passe på</span><em lang="en">watch out for</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">passe på</span>
+                                <em lang="en">watch out for</em>
+                            </span>
                         </th>
                         <td>Pas <u>på</u> bilen!</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">synes om</span><em lang="en">like</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">synes om</span>
+                                <em lang="en">like</em>
+                            </span>
                         </th>
                         <td>Jeg synes <u>om</u> hendes idé.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">handle om</span><em lang="en">be about</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">handle om</span>
+                                <em lang="en">be about</em>
+                            </span>
                         </th>
                         <td>Bogen handler <u>om</u> en familie.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">tænke på / over</span><em lang="en">think about / consider</em></span
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">tænke på / over</span>
+                                <em lang="en">think about / consider</em>
+                            </span
                             >
                         </th>
                         <td>Jeg tænker <u>på</u> dig / <u>over</u> dit forslag.</td>
@@ -990,10 +1244,14 @@ const praepositionGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Spørge efter</strong> en person eller ting. <strong>Spørge om</strong> information om et emne.
+                    <strong>Spørge efter</strong> en person eller ting. <strong>
+                    Spørge om</strong> information om et emne.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Use spørge efter when seeking someone or something; spørge om when asking about a topic.</em>
+                    <em>
+                        Use spørge efter when seeking someone or something; 
+                        spørge om when asking about a topic.
+                    </em>
                 </p>
             </aside>
         `
@@ -1003,101 +1261,135 @@ const praepositionGrammarPages = [
         titleDa: "Adjektiv + præposition",
         titleEn: "Adjective + preposition",
         content: `
-            <p lang="da">Adjektiver kan kræve en bestemt præposition. Lær hele forbindelsen med et eksempel.</p>
+            <p lang="da">
+                Adjektiver kan kræve en bestemt præposition. 
+                Lær hele forbindelsen med et eksempel.
+            </p>
             <p class="grammar-english" lang="en">
-                <em>Adjectives may require a particular preposition. Learn the complete combination.</em>
+                <em>
+                    Adjectives may require a particular preposition. 
+                    Learn the complete combination.
+                </em>
             </p>
             <table class="grammar-fixed-combination-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Fast forbindelse</strong
-                                ><em class="grammar-english" lang="en">Fixed combination and meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Fast forbindelse</strong>
+                                <em class="grammar-english" lang="en">Fixed combination and meaning</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">træt af</span><em lang="en">tired of</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">træt af</span>
+                                <em lang="en">tired of</em>
+                            </span>
                         </th>
                         <td>Jeg er træt <u>af</u> at vente.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">glad for</span><em lang="en">happy about</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">glad for</span>
+                                <em lang="en">happy about</em>
+                            </span>
                         </th>
                         <td>Hun er glad <u>for</u> sin gave.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">bange for</span><em lang="en">afraid of</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">bange for</span>
+                                <em lang="en">afraid of</em>
+                            </span>
                         </th>
                         <td>Han er bange <u>for</u> hunde.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">sikker på</span><em lang="en">sure of</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">sikker på</span>
+                                <em lang="en">sure of</em>
+                            </span>
                         </th>
                         <td>Jeg er sikker <u>på</u> svaret.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">interesseret i</span><em lang="en">interested in</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">interesseret i</span>
+                                <em lang="en">interested in</em>
+                            </span>
                         </th>
                         <td>Hun er interesseret <u>i</u> musik.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">vred på / over</span><em lang="en">angry with / about</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">vred på / over</span>
+                                <em lang="en">angry with / about</em>
+                            </span>
                         </th>
                         <td>Vred <u>på</u> sin bror / <u>over</u> beslutningen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">god / dårlig til</span><em lang="en">good / bad at</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">god / dårlig til</span>
+                                <em lang="en">good / bad at</em>
+                            </span>
                         </th>
                         <td>Han er god <u>til</u> dansk.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">stolt af</span><em lang="en">proud of</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">stolt af</span>
+                                <em lang="en">proud of</em>
+                            </span>
                         </th>
                         <td>De er stolte <u>af</u> deres datter.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">klar til</span><em lang="en">ready to</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">klar til</span>
+                                <em lang="en">ready to</em>
+                            </span>
                         </th>
                         <td>Vi er klar <u>til</u> at gå.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">enig med / i</span><em lang="en">agree with a person / idea</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">enig med / i</span>
+                                <em lang="en">agree with a person / idea</em>
+                            </span>
                         </th>
                         <td>Enig <u>med</u> dig / <u>i</u> forslaget.</td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-rule">
-                <p lang="da">Ved <strong>vred</strong> og <strong>sur</strong> bruges ofte på om personen og over om sagen.</p>
+                <p lang="da">
+                    Ved <strong>vred</strong> og <strong>sur</strong> 
+                    bruges ofte på om personen og over om sagen.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>With vred and sur, på often refers to a person and over to an issue.</em>
+                    <em>
+                        With vred and sur, på often refers to a person and over to an issue.
+                    </em>
                 </p>
             </aside>
         `
@@ -1107,20 +1399,26 @@ const praepositionGrammarPages = [
         titleDa: "Substantiv + præposition",
         titleEn: "Noun + preposition",
         content: `
-            <p lang="da">Nogle substantiver indgår i faste forbindelser med præpositioner.</p>
-            <p class="grammar-english" lang="en"><em>Some nouns form fixed combinations with prepositions.</em></p>
+            <p lang="da">
+                Nogle substantiver indgår i faste forbindelser med præpositioner.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>Some nouns form fixed combinations with prepositions.</em>
+            </p>
             <table class="grammar-fixed-combination-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Fast forbindelse</strong
-                                ><em class="grammar-english" lang="en">Fixed combination and meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Fast forbindelse</strong>
+                                <em class="grammar-english" lang="en">Fixed combination and meaning</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span
                             >
                         </th>
                     </tr>
@@ -1128,75 +1426,91 @@ const praepositionGrammarPages = [
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">interesse for</span><em lang="en">interest in</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">interesse for</span>
+                                <em lang="en">interest in</em>
+                            </span>
                         </th>
                         <td>Hun har stor interesse for sprog.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">behov for</span><em lang="en">need for</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">behov for</span>
+                                <em lang="en">need for</em>
+                            </span>
                         </th>
                         <td>Der er behov for flere boliger.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">mulighed for</span><em lang="en">opportunity to</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">mulighed for</span>
+                                <em lang="en">opportunity to</em>
+                            </span>
                         </th>
                         <td>Vi har mulighed for at deltage.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">grund til</span><em lang="en">reason for</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">grund til</span>
+                                <em lang="en">reason for</em>
+                            </span>
                         </th>
                         <td>Der er ingen grund til bekymring.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"><span lang="da">svar på</span><em lang="en">answer to</em></span>
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">svar på</span>
+                                <em lang="en">answer to</em>
+                            </span>
                         </th>
                         <td>Jeg kender ikke svaret på spørgsmålet.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">forskel på</span><em lang="en">difference between</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">forskel på</span>
+                                <em lang="en">difference between</em>
+                            </span>
                         </th>
                         <td>Hvad er forskellen på de to ord?</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">fordel ved</span><em lang="en">advantage of</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">fordel ved</span>
+                                <em lang="en">advantage of</em>
+                            </span>
                         </th>
                         <td>Fordelen ved cyklen er prisen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">problem med</span><em lang="en">problem with</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">problem med</span>
+                                <em lang="en">problem with</em>
+                            </span>
                         </th>
                         <td>Der er et problem med computeren.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">invitation til</span><em lang="en">invitation to</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">invitation til</span>
+                                <em lang="en">invitation to</em>
+                            </span>
                         </th>
                         <td>Vi fik en invitation til festen.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">erfaring med</span><em lang="en">experience with</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">erfaring med</span>
+                                <em lang="en">experience with</em>
+                            </span>
                         </th>
                         <td>Hun har erfaring med kundeservice.</td>
                     </tr>
@@ -1209,21 +1523,28 @@ const praepositionGrammarPages = [
         titleDa: "Pronominer efter præpositioner",
         titleEn: "Pronouns after prepositions",
         content: `
-            <p lang="da">Efter en præposition bruger man objektformen: mig, dig, ham, hende, os, jer og dem.</p>
-            <p class="grammar-english" lang="en"><em>After a preposition, use the object form of a personal pronoun.</em></p>
+            <p lang="da">
+                Efter en præposition bruger man objektformen: mig, dig, ham, hende, os, jer og dem.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    After a preposition, use the object form of a personal pronoun.
+                </em>
+            </p>
             <table class="grammar-comparison-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Subjektform</strong><em class="grammar-english" lang="en">Subject form</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Subjektform</strong>
+                                <em class="grammar-english" lang="en">Subject form</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Objektform</strong
-                                ><em class="grammar-english" lang="en">After a preposition</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Objektform</strong>
+                                <em class="grammar-english" lang="en">After a preposition</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -1252,8 +1573,12 @@ const praepositionGrammarPages = [
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da"><strong>Ikke:</strong> mellem dig og jeg. <strong>Korrekt:</strong> mellem dig og mig.</p>
-                <p class="grammar-english" lang="en"><em>Both pronouns following mellem use the object form.</em></p>
+                <p lang="da">
+                    <strong>Ikke:</strong> mellem dig og jeg. <strong>Korrekt:</strong> mellem dig og mig.
+                </p>
+                <p class="grammar-english" lang="en">
+                    <em>Both pronouns following mellem use the object form.</em>
+                </p>
             </aside>
         `
     },
@@ -1263,14 +1588,14 @@ const praepositionGrammarPages = [
         titleEn: "Preposition at the end of a sentence",
         content: `
             <p lang="da">
-                På dansk kan en præposition naturligt stå sidst, når styrelsen er underforstået, står tidligere eller er et
-                spørgeord.
+                På dansk kan en præposition naturligt stå sidst, når styrelsen er underforstået, 
+                står tidligere eller er et spørgeord.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >In Danish, a preposition can naturally appear at the end when its complement is understood, appears earlier, or
-                    is a question word.</em
-                >
+                <em>
+                    In Danish, a preposition can naturally appear at the end when its complement is understood, 
+                    appears earlier, or is a question word.
+                </em>
             </p>
             <table class="grammar-preposition-table">
                 <thead>
@@ -1278,10 +1603,10 @@ const praepositionGrammarPages = [
                         <th><strong>Situation</strong></th>
                         <th><strong>Eksempel</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Underforstået led</strong
-                                ><em class="grammar-english" lang="en">Understood phrase</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Underforstået led</strong>
+                                <em class="grammar-english" lang="en">Understood phrase</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1319,10 +1644,10 @@ const praepositionGrammarPages = [
                     <strong>Hvem taler du med?</strong> naturligt.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Formal Danish may place the preposition first, but sentence-final placement is natural in ordinary
-                        Danish.</em
-                    >
+                    <em>
+                        Formal Danish may place the preposition first, 
+                        but sentence-final placement is natural in ordinary Danish.
+                    </em>
                 </p>
             </aside>
         `
@@ -1332,66 +1657,76 @@ const praepositionGrammarPages = [
         titleDa: "Adverbial eller præpositionsobjekt?",
         titleEn: "Adverbial or prepositional object?",
         content: `
-            <p lang="da">Et præpositionsled kan fortælle om sted eller tid, fuldende et verbum eller beskrive et substantiv.</p>
+            <p lang="da">
+                Et præpositionsled kan fortælle om sted eller tid, 
+                fuldende et verbum eller beskrive et substantiv.
+            </p>
             <p class="grammar-english" lang="en">
-                <em>A prepositional phrase can express place or time, complete a verb, or modify a noun.</em>
+                <em>
+                    A prepositional phrase can express place or time, complete a verb, or modify a noun.
+                </em>
             </p>
             <table class="grammar-fixed-combination-table grammar-function-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Funktion</strong
-                                ><em class="grammar-english" lang="en">Function and meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Funktion</strong>
+                                <em class="grammar-english" lang="en">Function and meaning</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Spørgsmål og eksempel</strong
-                                ><em class="grammar-english" lang="en">Question and example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Spørgsmål og eksempel</strong>
+                                <em class="grammar-english" lang="en">Question and example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">Adverbial: sted</span><em lang="en">Place adverbial</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">Adverbial: sted</span>
+                                <em lang="en">Place adverbial</em>
+                            </span>
                         </th>
                         <td><strong>Hvor?</strong> Bogen ligger <u>på</u> bordet.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">Adverbial: tid</span><em lang="en">Time adverbial</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">Adverbial: tid</span>
+                                <em lang="en">Time adverbial</em>
+                            </span>
                         </th>
                         <td><strong>Hvornår?</strong> Toget kommer <u>om</u> en time.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">Adverbial: måde eller middel</span
-                                ><em lang="en">Manner or means adverbial</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">Adverbial: måde eller middel</span
+                                >
+                                <em lang="en">Manner or means adverbial</em>
+                            </span>
                         </th>
                         <td><strong>Hvordan?</strong> Vi rejser <u>med</u> tog.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">Præpositionsobjekt</span><em lang="en">Prepositional object</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">Præpositionsobjekt</span>
+                                <em lang="en">Prepositional object</em>
+                            </span>
                         </th>
                         <td><strong>Hvem/hvad + fast verbum?</strong> Jeg tænker <u>på</u> Laura.</td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">Del af en substantivgruppe</span><em lang="en">Part of a noun phrase</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">Del af en substantivgruppe</span>
+                                <em lang="en">Part of a noun phrase</em>
+                            </span>
                         </th>
                         <td><strong>Hvilken person/ting?</strong> Pigen <u>med</u> det lyse hår smiler.</td>
                     </tr>
@@ -1402,22 +1737,26 @@ const praepositionGrammarPages = [
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">Præpositionsobjekt</span><em lang="en">Prepositional object</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">Præpositionsobjekt</span>
+                                <em lang="en">Prepositional object</em>
+                            </span>
                         </th>
                         <td>
-                            Peter venter <u>på</u> sin bror.<span class="grammar-english" lang="en">Who is Peter waiting for?</span>
+                            Peter venter <u>på</u> sin bror.
+                            <span class="grammar-english" lang="en">Who is Peter waiting for?</span>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <span class="grammar-fixed-heading"
-                                ><span lang="da">Stedsadverbial</span><em lang="en">Place adverbial</em></span
-                            >
+                            <span class="grammar-fixed-heading">
+                                <span lang="da">Stedsadverbial</span>
+                                <em lang="en">Place adverbial</em>
+                            </span>
                         </th>
                         <td>
-                            Peter venter <u>på</u> stationen.<span class="grammar-english" lang="en">Where is Peter waiting?</span>
+                            Peter venter <u>på</u> stationen.
+                            <span class="grammar-english" lang="en">Where is Peter waiting?</span>
                         </td>
                     </tr>
                 </tbody>
@@ -1433,101 +1772,112 @@ const praepositionGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hvad vil du udtrykke?</strong
-                                ><em class="grammar-english" lang="en">What do you mean?</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Hvad vil du udtrykke?</strong>
+                                <em class="grammar-english" lang="en">What do you mean?</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Typisk valg</strong
-                                ><em class="grammar-english" lang="en">Typical choice</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Typisk valg</strong>
+                                <em class="grammar-english" lang="en">Typical choice</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Inde i rum, by eller land</span
-                                ><em lang="en">Inside a room, city, or country</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Inde i rum, by eller land</span>
+                                <em lang="en">Inside a room, city, or country</em>
+                            </span>
                         </td>
                         <td>i</td>
                         <td>i huset, i Aarhus</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Flade eller aktivitet</span><em lang="en">Surface or activity</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Flade eller aktivitet</span>
+                                <em lang="en">Surface or activity</em>
+                            </span>
                         </td>
                         <td>på</td>
                         <td>på bordet, på arbejde</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Person eller fagperson</span><em lang="en">Person or professional</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Person eller fagperson</span>
+                                <em lang="en">Person or professional</em>
+                            </span>
                         </td>
                         <td>hos</td>
                         <td>hos min ven, hos lægen</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Tæt ved et punkt</span><em lang="en">Near a point</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Tæt ved et punkt</span>
+                                <em lang="en">Near a point</em>
+                            </span>
                         </td>
                         <td>ved</td>
                         <td>ved døren</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Destination / udgangspunkt</span><em lang="en">Destination / origin</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Destination / udgangspunkt</span>
+                                <em lang="en">Destination / origin</em>
+                            </span>
                         </td>
                         <td>til / fra</td>
                         <td>til skolen, fra Odense</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Varighed / fremtid</span><em lang="en">Duration / future</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Varighed / fremtid</span>
+                                <em lang="en">Duration / future</em>
+                            </span>
                         </td>
                         <td>i / om</td>
                         <td>i tre timer, om ti minutter</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Fortid / startpunkt</span><em lang="en">Past / starting point</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Fortid / startpunkt</span>
+                                <em lang="en">Past / starting point</em>
+                            </span>
                         </td>
                         <td>for … siden / siden</td>
                         <td>for to år siden, siden mandag</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Fast forbindelse</span><em lang="en">Fixed combination</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Fast forbindelse</span>
+                                <em lang="en">Fixed combination</em>
+                            </span>
                         </td>
                         <td>lær hele udtrykket</td>
                         <td>vente på, glad for</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Pronomen</span><em lang="en">Pronoun</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Pronomen</span>
+                                <em lang="en">Pronoun</em>
+                            </span>
                         </td>
                         <td>objektform</td>
                         <td>med mig, til hende</td>
@@ -1545,14 +1895,16 @@ const praepositionGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Forkert</strong><em class="grammar-english" lang="en">Incorrect</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Forkert</strong>
+                                <em class="grammar-english" lang="en">Incorrect</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Korrekt</strong><em class="grammar-english" lang="en">Correct</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Korrekt</strong>
+                                <em class="grammar-english" lang="en">Correct</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1562,14 +1914,18 @@ const praepositionGrammarPages = [
                         <td class="grammar-result grammar-result--correct">Jeg bor i Danmark.</td>
                     </tr>
                     <tr class="grammar-correction-reason">
-                        <td colspan="2">Lande bruges normalt med i.<br /><em lang="en">Countries normally use i.</em></td>
+                        <td colspan="2">Lande bruges normalt med i.<br />
+                            <em lang="en">Countries normally use i.</em
+                        ></td>
                     </tr>
                     <tr>
                         <td class="grammar-result grammar-result--incorrect">Jeg går til hjem.</td>
                         <td class="grammar-result grammar-result--correct">Jeg går hjem.</td>
                     </tr>
                     <tr class="grammar-correction-reason">
-                        <td colspan="2">Hjem bruges normalt uden til.<br /><em lang="en">Hjem normally omits til.</em></td>
+                        <td colspan="2">Hjem bruges normalt uden til.<br />
+                            <em lang="en">Hjem normally omits til.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td class="grammar-result grammar-result--incorrect">Jeg er hjem.</td>
@@ -1587,7 +1943,9 @@ const praepositionGrammarPages = [
                         <td class="grammar-result grammar-result--correct">Vi ses på mandag.</td>
                     </tr>
                     <tr class="grammar-correction-reason">
-                        <td colspan="2">En fremtidig ugedag bruger på.<br /><em lang="en">A future weekday uses på.</em></td>
+                        <td colspan="2">En fremtidig ugedag bruger på.<br />
+                            <em lang="en">A future weekday uses på.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td class="grammar-result grammar-result--incorrect">Jeg kommer i en time.</td>
@@ -1595,7 +1953,8 @@ const praepositionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            Om viser fremtid efter en periode.<br /><em lang="en">Om expresses a future time after a period.</em>
+                            Om viser fremtid efter en periode.<br />
+                            <em lang="en">Om expresses a future time after a period.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1604,9 +1963,8 @@ const praepositionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            Varighed bruger i; siden kræver et startpunkt.<br /><em lang="en"
-                                >Duration uses i; siden requires a starting point.</em
-                            >
+                            Varighed bruger i; siden kræver et startpunkt.<br />
+                            <em lang="en">Duration uses i; siden requires a starting point.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1622,7 +1980,8 @@ const praepositionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            Brug objektform efter en præposition.<br /><em lang="en">Use the object form after a preposition.</em>
+                            Brug objektform efter en præposition.<br />
+                            <em lang="en">Use the object form after a preposition.</em>
                         </td>
                     </tr>
                 </tbody>
@@ -1882,10 +2241,10 @@ const praepositionGrammarPages = [
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Kort forklaring</strong
-                                ><em class="grammar-english" lang="en">Short explanation</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Kort forklaring</strong>
+                                <em class="grammar-english" lang="en">Short explanation</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1944,15 +2303,22 @@ const praepositionGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Din vigtigste vane:</strong> Lær ikke præpositionen alene. Lær hele udtrykket: vente på bussen,
+                    <strong>Din vigtigste vane:</strong> Lær ikke præpositionen alene. 
+                    Lær hele udtrykket: vente på bussen,
                     interesseret i musik, på mandag, i Danmark og hos lægen.
                 </p>
-                <p class="grammar-english" lang="en"><em>Do not learn the preposition alone. Learn the complete phrase.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Do not learn the preposition alone. Learn the complete phrase.
+                    </em>
+                </p>
             </aside>
             <div class="grammar-example">
                 <p>Jeg venter på bussen ved stationen, fordi jeg skal til Aarhus.</p>
                 <p class="grammar-english" lang="en">
-                    <em>I am waiting for the bus at the station because I am going to Aarhus.</em>
+                    <em>
+                        I am waiting for the bus at the station because I am going to Aarhus.
+                    </em>
                 </p>
             </div>
         `
