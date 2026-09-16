@@ -1,432 +1,532 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danish-English Learning Guide</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Danish-English Learning Guide</title>
 
-    <!-- Use the versioned URL to bust cache -->
-        <link rel="stylesheet" href="./style.css?v=65">
+        <!-- Use the versioned URL to bust cache -->
+        <link rel="stylesheet" href="./style.css?v=72" />
 
-    <!-- Icons -->
-    <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="./icons/icon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./icons/icon-16.png">
-    <!-- PWA -->
-    <link rel="manifest" href="./manifest.webmanifest">
+        <!-- Icons -->
+        <link rel="icon" type="image/svg+xml" href="./icons/dk-learn-badge-owl.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./icons/icon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./icons/icon-16.png" />
+        <!-- PWA -->
+        <link rel="manifest" href="./manifest.webmanifest" />
 
-    <!-- iOS icon (needed so it doesn’t use a screenshot) -->
-    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+        <!-- iOS icon (needed so it doesn’t use a screenshot) -->
+        <link rel="apple-touch-icon" href="./icons/icon-192.png" />
 
+        <!-- SEO / Social -->
+        <meta
+            name="description"
+            content="Danish Vocabulary Trainer – study, quiz &amp; skriveguide. Learn verbs, nouns, adjectives, and connectors with examples. Offline-ready PWA."
+        />
+        <meta property="og:title" content="Danish Vocabulary Trainer" />
+        <meta
+            property="og:description"
+            content="Study mode, quizzes, and a simple skriveguide. Learn Danish words with examples. Offline-ready PWA."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/" />
+        <meta property="og:image" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/icons/icon-512.png" />
+        <meta name="twitter:image" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/icons/icon-512.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Danish Vocabulary Trainer" />
+        <meta
+            name="twitter:description"
+            content="Study, quiz &amp; skriveguide for Danish learners. Offline-ready PWA."
+        />
+    </head>
+    <body>
+        <main class="container">
+            <h1>Danish-English Learning Guide</h1>
 
-    <!-- SEO / Social -->
-    <meta name="description" content="Danish Vocabulary Trainer – study, quiz &amp; skriveguide. Learn verbs, nouns, adjectives, and connectors with examples. Offline-ready PWA.">
-    <meta property="og:title" content="Danish Vocabulary Trainer">
-    <meta property="og:description" content="Study mode, quizzes, and a simple skriveguide. Learn Danish words with examples. Offline-ready PWA.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/">
-    <meta property="og:image" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/icons/icon-512.png">
-    <meta name="twitter:image" content="https://graceduquiza.github.io/Danish_Vocab_Trainer/icons/icon-512.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Danish Vocabulary Trainer">
-    <meta name="twitter:description" content="Study, quiz &amp; skriveguide for Danish learners. Offline-ready PWA.">
-</head>
-<body>
-    <main class="container">
-        <h1>Danish-English Learning Guide</h1>
+            <section class="home-welcome" id="home-welcome" aria-labelledby="home-welcome-title">
+                <p class="home-welcome__eyebrow">Danish study tools</p>
+                <h2 id="home-welcome-title">What would you like to practise?</h2>
+                <p>Choose an area below to study vocabulary, take a quiz, improve your writing, or review grammar.</p>
+            </section>
 
-        <section class="home-welcome" id="home-welcome" aria-labelledby="home-welcome-title">
-            <p class="home-welcome__eyebrow">Danish study tools</p>
-            <h2 id="home-welcome-title">What would you like to practise?</h2>
-            <p>Choose an area below to study vocabulary, take a quiz, improve your writing, or review grammar.</p>
-        </section>
-
-        <nav id="main-buttons" aria-label="Main learning areas">
-            <button type="button" id="nav-vocabulary">
-                <span class="home-nav-icon" aria-hidden="true">Aa</span>
-                <span class="home-nav-text"><strong>Vocabulary</strong><small>Study words and examples</small></span>
-            </button>
-            <button type="button" id="start-quiz-btn">
-                <span class="home-nav-icon" aria-hidden="true">✓</span>
-                <span class="home-nav-text"><strong>Quiz</strong><small>Test what you remember</small></span>
-            </button>
-            <button type="button" id="nav-skriveguide">
-                <span class="home-nav-icon" aria-hidden="true">✎</span>
-                <span class="home-nav-text"><strong>Skriveguide</strong><small>Build stronger writing</small></span>
-            </button>
-            <button type="button" id="nav-grammatik">
-                <span class="home-nav-icon" aria-hidden="true">A</span>
-                <span class="home-nav-text"><strong>Grammatik</strong><small>Review language rules</small></span>
-            </button>
-        </nav>
-
-        <!-- STUDY MODE -->
-        <div id="study-mode" class="is-hidden">
-            <header class="mode-topbar study-topbar">
-                <div class="mode-heading">
-                    <span class="mode-kicker">Learning mode</span>
-                    <h2>Vocabulary</h2>
-                </div>
-                <button type="button" class="return-home-btn" id="study-to-home">
-                    <span aria-hidden="true">←</span>
-                    Return home
+            <nav id="main-buttons" aria-label="Main learning areas">
+                <button type="button" id="nav-vocabulary">
+                    <span class="home-nav-icon" aria-hidden="true">Aa</span>
+                    <span class="home-nav-text"
+                        ><strong>Vocabulary</strong><small>Study words and examples</small></span
+                    >
                 </button>
-            </header>
+                <button type="button" id="start-quiz-btn">
+                    <span class="home-nav-icon" aria-hidden="true">✓</span>
+                    <span class="home-nav-text"><strong>Quiz</strong><small>Test what you remember</small></span>
+                </button>
+                <button type="button" id="nav-skriveguide">
+                    <span class="home-nav-icon" aria-hidden="true">✎</span>
+                    <span class="home-nav-text"><strong>Skriveguide</strong><small>Build stronger writing</small></span>
+                </button>
+                <button type="button" id="nav-grammatik">
+                    <span class="home-nav-icon" aria-hidden="true">A</span>
+                    <span class="home-nav-text"><strong>Grammatik</strong><small>Review language rules</small></span>
+                </button>
+            </nav>
 
-            <label for="category-select">Choose category:</label>
-            <select id="category-select">
-                <option value="verber">Verber</option>
-                <option value="substantiver">Substantiver</option>
-                <option value="adjektiver">Adjektiver</option>
-                <option value="adverbKonjunktion">Adverbier &amp; Konjunktioner</option>
-            </select>
+            <!-- STUDY MODE -->
+            <div id="study-mode" class="is-hidden">
+                <header class="mode-topbar study-topbar">
+                    <div class="mode-heading">
+                        <span class="mode-kicker">Learning mode</span>
+                        <h2>Vocabulary</h2>
+                    </div>
+                    <button type="button" class="return-home-btn" id="study-to-home">
+                        <span aria-hidden="true">←</span>
+                        Return home
+                    </button>
+                </header>
 
-            <div id="word-card" class="card">
-                <h2 id="study-danish-word">Ord</h2>
-                <p><strong>English:</strong> <span id="english-meaning">Meaning</span></p>
-                <p><strong>Example:</strong> <span id="example-sentence">Example sentence here</span></p>
+                <label for="category-select">Choose category:</label>
+                <select id="category-select">
+                    <option value="verber">Verber</option>
+                    <option value="substantiver">Substantiver</option>
+                    <option value="adjektiver">Adjektiver</option>
+                    <option value="adverbKonjunktion">Adverbier &amp; Konjunktioner</option>
+                </select>
+
+                <div id="word-card" class="card">
+                    <h2 id="study-danish-word">Ord</h2>
+                    <p><strong>English:</strong> <span id="english-meaning">Meaning</span></p>
+                    <p><strong>Example:</strong> <span id="example-sentence">Example sentence here</span></p>
+                </div>
+
+                <div class="btn-row">
+                    <button type="button" id="prev-btn">Previous</button>
+                    <button type="button" id="next-btn">Next</button>
+                </div>
             </div>
 
-            <div class="btn-row">
-                <button type="button" id="prev-btn">Previous</button>
-                <button type="button" id="next-btn">Next</button>
+            <!-- QUIZ MODE -->
+            <div id="quiz-mode" class="is-hidden">
+                <header class="mode-topbar quiz-topbar">
+                    <div class="mode-heading">
+                        <span class="mode-kicker">Practice mode</span>
+                        <h2>Quiz</h2>
+                    </div>
+                    <button type="button" class="return-home-btn" id="quiz-to-home">
+                        <span aria-hidden="true">←</span>
+                        Return home
+                    </button>
+                </header>
+
+                <!-- ✅ Move reverse switch here -->
+                <label class="reverse-toggle">
+                    <input type="checkbox" id="reverse-mode" />
+                    <span>
+                        <strong>Reverse direction</strong>
+                        <small id="reverse-direction-label" aria-live="polite">Danish → English</small>
+                    </span>
+                </label>
+                <div id="quiz-category-select">
+                    <div class="quiz-setup-intro">
+                        <span class="quiz-step">Step 1</span>
+                        <h3>Choose a category</h3>
+                        <p>Select the vocabulary group you want to practise.</p>
+                    </div>
+                    <button type="button" class="category-option" data-category="verber">
+                        <span>Verber</span><small>Verbs</small>
+                    </button>
+                    <button type="button" class="category-option" data-category="substantiver">
+                        <span>Substantiver</span><small>Nouns</small>
+                    </button>
+                    <button type="button" class="category-option" data-category="adjektiver">
+                        <span>Adjektiver</span><small>Adjectives</small>
+                    </button>
+                    <button type="button" class="category-option" data-category="adverbKonjunktion">
+                        <span>Adverbier &amp; konjunktioner</span><small>Adverbs &amp; conjunctions</small>
+                    </button>
+                </div>
+
+                <section class="quiz-session" aria-label="Quiz question">
+                    <div class="quiz-session-toolbar">
+                        <p id="score" aria-live="polite">Score: 0/0</p>
+                        <button type="button" id="quit-quiz-btn" class="is-hidden">End quiz</button>
+                    </div>
+
+                    <!-- QUIZ QUESTION DISPLAY -->
+                    <div id="quiz-question">
+                        <span class="quiz-question-label">Choose the correct answer</span>
+                        <h2 id="quiz-word">Ord</h2>
+                    </div>
+
+                    <!-- MULTIPLE CHOICE OPTIONS -->
+                    <div id="choices" class="choice-container"></div>
+
+                    <!-- QUIZ CONTROLS -->
+                    <div class="controls">
+                        <button type="button" id="show-answer-btn" class="is-hidden">Show answer</button>
+                        <button type="button" id="mark-correct-btn" class="is-hidden">Correct</button>
+                        <button type="button" id="mark-wrong-btn" class="is-hidden">Incorrect</button>
+                        <button type="button" id="prev-question-btn" class="is-hidden">← Previous</button>
+                        <button type="button" id="next-question-btn" class="is-hidden">Next →</button>
+                    </div>
+                </section>
             </div>
-        </div>
 
-        <!-- QUIZ MODE -->
-        <div id="quiz-mode" class="is-hidden">
-            <header class="mode-topbar quiz-topbar">
-                <div class="mode-heading">
-                    <span class="mode-kicker">Practice mode</span>
-                    <h2>Quiz</h2>
-                </div>
-                <button type="button" class="return-home-btn" id="quiz-to-home">
-                    <span aria-hidden="true">←</span>
-                    Return home
-                </button>
-            </header>
+            <!-- Skriveguide Page -->
+            <div id="skriveguide" class="is-hidden">
+                <div class="guide-page">
+                    <div class="guide-topbar">
+                        <button type="button" id="back-to-quiz-btn" aria-label="Return to the main menu">
+                            ← Return home
+                        </button>
+                    </div>
 
-            <!-- ✅ Move reverse switch here -->
-            <label class="reverse-toggle">
-                <input type="checkbox" id="reverse-mode">
-                <span>
-                    <strong>Reverse direction</strong>
-                    <small id="reverse-direction-label" aria-live="polite">Danish → English</small>
-                </span>
-            </label>
-            <div id="quiz-category-select">
-                <div class="quiz-setup-intro">
-                    <span class="quiz-step">Step 1</span>
-                    <h3>Choose a category</h3>
-                    <p>Select the vocabulary group you want to practise.</p>
+                    <h2 id="guide-title">Titel</h2>
+                    <div id="guide-content"></div>
+
+                    <div class="guide-nav btn-row" role="group" aria-label="Skriveguide navigation">
+                        <button type="button" id="prev-page" aria-label="Previous page">← Previous</button>
+                        <span class="guide-counter" id="guide-counter">1 / 1</span>
+                        <button type="button" id="next-page" aria-label="Next page">Next →</button>
+                    </div>
                 </div>
-                <button type="button" class="category-option" data-category="verber">
-                    <span>Verber</span><small>Verbs</small>
-                </button>
-                <button type="button" class="category-option" data-category="substantiver">
-                    <span>Substantiver</span><small>Nouns</small>
-                </button>
-                <button type="button" class="category-option" data-category="adjektiver">
-                    <span>Adjektiver</span><small>Adjectives</small>
-                </button>
-                <button type="button" class="category-option" data-category="adverbKonjunktion">
-                    <span>Adverbier &amp; konjunktioner</span><small>Adverbs &amp; conjunctions</small>
-                </button>
             </div>
 
-            <section class="quiz-session" aria-label="Quiz question">
-                <div class="quiz-session-toolbar">
-                    <p id="score" aria-live="polite">Score: 0/0</p>
-                    <button type="button" id="quit-quiz-btn" class="is-hidden">End quiz</button>
-                </div>
+            <!-- Grammar topic selection -->
+            <section id="grammar-selection" class="is-hidden" aria-labelledby="grammar-selection-title">
+                <div class="grammar-page">
+                    <button type="button" class="grammar-home-btn" id="grammar-to-home">← Return home</button>
+                    <h2 id="grammar-selection-title" lang="da" tabindex="-1">Grammatik</h2>
+                    <p lang="da">Vælg et emne, og lær dansk grammatik trin for trin.</p>
+                    <p lang="en">Choose a topic and learn Danish grammar step by step.</p>
 
-                <!-- QUIZ QUESTION DISPLAY -->
-                <div id="quiz-question">
-                    <span class="quiz-question-label">Choose the correct answer</span>
-                    <h2 id="quiz-word">Ord</h2>
-                </div>
-
-                <!-- MULTIPLE CHOICE OPTIONS -->
-                <div id="choices" class="choice-container"></div>
-
-                <!-- QUIZ CONTROLS -->
-                <div class="controls">
-                    <button type="button" id="show-answer-btn" class="is-hidden">Show answer</button>
-                    <button type="button" id="mark-correct-btn" class="is-hidden">Correct</button>
-                    <button type="button" id="mark-wrong-btn" class="is-hidden">Incorrect</button>
-                    <button type="button" id="prev-question-btn" class="is-hidden">← Previous</button>
-                    <button type="button" id="next-question-btn" class="is-hidden">Next →</button>
+                    <nav class="grammar-topic-grid" aria-label="Grammar topics">
+                        <button type="button" class="grammar-topic-card" id="open-adverb-lesson">
+                            <span lang="da">Adverbier</span>
+                            <span lang="en">Adverbs</span>
+                        </button>
+                        <button type="button" class="grammar-topic-card" id="open-noun-lesson">
+                            <span lang="da">Substantiver</span>
+                            <span lang="en">Nouns</span>
+                        </button>
+                        <button type="button" class="grammar-topic-card" id="open-adjective-lesson">
+                            <span lang="da">Adjektiver</span>
+                            <span lang="en">Adjectives</span>
+                        </button>
+                        <button type="button" class="grammar-topic-card" id="open-pronoun-lesson">
+                            <span lang="da">Pronominer</span>
+                            <span lang="en">Pronouns</span>
+                        </button>
+                        <button type="button" class="grammar-topic-card" id="open-verb-lesson">
+                            <span lang="da">Verber</span>
+                            <span lang="en">Verbs</span>
+                        </button>
+                        <button type="button" class="grammar-topic-card" id="open-conjunction-lesson">
+                            <span lang="da">Konjunktioner</span>
+                            <span lang="en">Conjunctions</span>
+                        </button>
+                        <button type="button" class="grammar-topic-card" id="open-preposition-lesson">
+                            <span lang="da">Præpositioner</span>
+                            <span lang="en">Prepositions</span>
+                        </button>
+                        <button type="button" class="grammar-topic-card" id="open-word-order-lesson">
+                            <span lang="da">Ordstilling</span>
+                            <span lang="en">Word order</span>
+                        </button>
+                    </nav>
                 </div>
             </section>
-        </div>
 
-        <!-- Skriveguide Page -->
-        <div id="skriveguide" class="is-hidden">
-            <div class="guide-page">
-                <div class="guide-topbar">
-                    <button type="button" id="back-to-quiz-btn" aria-label="Return to the main menu">← Return home</button>
-                </div>
+            <!-- Adverb lesson -->
+            <section id="adverb-lesson" class="is-hidden" aria-labelledby="adverb-lesson-title">
+                <article class="grammar-page">
+                    <nav class="grammar-topbar" aria-label="Adverb lesson destinations">
+                        <button type="button" id="adverb-to-grammar">← All topics</button>
+                        <button type="button" id="adverb-to-home">Return home</button>
+                    </nav>
 
-                <h2 id="guide-title">Titel</h2>
-                <div id="guide-content"></div>
+                    <p class="grammar-section-label" id="adverb-section-label">Adverbier – Adverbs</p>
+                    <h2 id="adverb-lesson-title" tabindex="-1">Adverbier – Adverbs</h2>
+                    <div id="adverb-lesson-content" class="grammar-content" aria-live="polite"></div>
 
-                <div class="guide-nav btn-row" role="group" aria-label="Skriveguide navigation">
-                    <button type="button" id="prev-page" aria-label="Previous page">← Previous</button>
-                    <span class="guide-counter" id="guide-counter">1 / 1</span>
-                    <button type="button" id="next-page" aria-label="Next page">Next →</button>
-                </div>
+                    <nav class="grammar-lesson-nav btn-row" aria-label="Adverb lesson navigation">
+                        <button type="button" id="adverb-prev" aria-label="Previous adverb lesson section">
+                            ← Previous
+                        </button>
+                        <span class="guide-counter" id="adverb-counter" aria-live="polite">1 / …</span>
+                        <button type="button" id="adverb-next" aria-label="Next adverb lesson section">Next →</button>
+                    </nav>
+                </article>
+            </section>
+
+            <!-- Noun lesson -->
+            <section id="noun-lesson" class="is-hidden" aria-labelledby="noun-lesson-title">
+                <article class="grammar-page">
+                    <nav class="grammar-topbar" aria-label="Noun lesson destinations">
+                        <button type="button" id="noun-to-grammar">← All topics</button>
+                        <button type="button" id="noun-to-home">Return home</button>
+                    </nav>
+
+                    <p class="grammar-section-label">Substantiver – Nouns</p>
+                    <h2 id="noun-lesson-title" tabindex="-1">Substantiver – Nouns</h2>
+                    <div id="noun-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                    <nav class="grammar-lesson-nav btn-row" aria-label="Noun lesson navigation">
+                        <button type="button" id="noun-prev" aria-label="Previous noun lesson section">
+                            ← Previous
+                        </button>
+                        <span class="guide-counter" id="noun-counter" aria-live="polite">1 / …</span>
+                        <button type="button" id="noun-next" aria-label="Next noun lesson section">Next →</button>
+                    </nav>
+                </article>
+            </section>
+
+            <!-- Adjective lesson -->
+            <section id="adjective-lesson" class="is-hidden" aria-labelledby="adjective-lesson-title">
+                <article class="grammar-page">
+                    <nav class="grammar-topbar" aria-label="Adjective lesson destinations">
+                        <button type="button" id="adjective-to-grammar">← All topics</button>
+                        <button type="button" id="adjective-to-home">Return home</button>
+                    </nav>
+
+                    <p class="grammar-section-label">Adjektiver – Adjectives</p>
+                    <h2 id="adjective-lesson-title" tabindex="-1">Adjektiver – Adjectives</h2>
+                    <div id="adjective-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                    <nav class="grammar-lesson-nav btn-row" aria-label="Adjective lesson navigation">
+                        <button type="button" id="adjective-prev" aria-label="Previous adjective lesson section">
+                            ← Previous
+                        </button>
+                        <span class="guide-counter" id="adjective-counter" aria-live="polite">1 / …</span>
+                        <button type="button" id="adjective-next" aria-label="Next adjective lesson section">
+                            Next →
+                        </button>
+                    </nav>
+                </article>
+            </section>
+
+            <!-- Pronoun lesson -->
+            <section id="pronoun-lesson" class="is-hidden" aria-labelledby="pronoun-lesson-title">
+                <article class="grammar-page">
+                    <nav class="grammar-topbar" aria-label="Pronoun lesson destinations">
+                        <button type="button" id="pronoun-to-grammar">← All topics</button>
+                        <button type="button" id="pronoun-to-home">Return home</button>
+                    </nav>
+
+                    <p class="grammar-section-label">Pronominer – Pronouns</p>
+                    <h2 id="pronoun-lesson-title" tabindex="-1">Pronominer – Pronouns</h2>
+                    <div id="pronoun-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                    <nav class="grammar-lesson-nav btn-row" aria-label="Pronoun lesson navigation">
+                        <button type="button" id="pronoun-prev" aria-label="Previous pronoun lesson section">
+                            ← Previous
+                        </button>
+                        <span class="guide-counter" id="pronoun-counter" aria-live="polite">1 / …</span>
+                        <button type="button" id="pronoun-next" aria-label="Next pronoun lesson section">Next →</button>
+                    </nav>
+                </article>
+            </section>
+
+            <!-- Verb lesson -->
+            <section id="verb-lesson" class="is-hidden" aria-labelledby="verb-lesson-title">
+                <article class="grammar-page">
+                    <nav class="grammar-topbar" aria-label="Verb lesson destinations">
+                        <button type="button" id="verb-to-grammar">← All topics</button>
+                        <button type="button" id="verb-to-home">Return home</button>
+                    </nav>
+
+                    <p class="grammar-section-label">Verber – Verbs</p>
+                    <h2 id="verb-lesson-title" tabindex="-1">Verber – Verbs</h2>
+                    <div id="verb-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                    <nav class="grammar-lesson-nav btn-row" aria-label="Verb lesson navigation">
+                        <button type="button" id="verb-prev" aria-label="Previous verb lesson section">
+                            ← Previous
+                        </button>
+                        <span class="guide-counter" id="verb-counter" aria-live="polite">1 / …</span>
+                        <button type="button" id="verb-next" aria-label="Next verb lesson section">Next →</button>
+                    </nav>
+                </article>
+            </section>
+
+            <!-- Conjunction lesson -->
+            <section id="conjunction-lesson" class="is-hidden" aria-labelledby="conjunction-lesson-title">
+                <article class="grammar-page">
+                    <nav class="grammar-topbar" aria-label="Conjunction lesson destinations">
+                        <button type="button" id="conjunction-to-grammar">← All topics</button>
+                        <button type="button" id="conjunction-to-home">Return home</button>
+                    </nav>
+
+                    <p class="grammar-section-label">Konjunktioner – Conjunctions</p>
+                    <h2 id="conjunction-lesson-title" tabindex="-1">Konjunktioner – Conjunctions</h2>
+                    <div id="conjunction-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                    <nav class="grammar-lesson-nav btn-row" aria-label="Conjunction lesson navigation">
+                        <button type="button" id="conjunction-prev" aria-label="Previous conjunction lesson section">
+                            ← Previous
+                        </button>
+                        <span class="guide-counter" id="conjunction-counter" aria-live="polite">1 / …</span>
+                        <button type="button" id="conjunction-next" aria-label="Next conjunction lesson section">
+                            Next →
+                        </button>
+                    </nav>
+                </article>
+            </section>
+
+            <!-- Preposition lesson -->
+            <section id="preposition-lesson" class="is-hidden" aria-labelledby="preposition-lesson-title">
+                <article class="grammar-page">
+                    <nav class="grammar-topbar" aria-label="Preposition lesson destinations">
+                        <button type="button" id="preposition-to-grammar">← All topics</button>
+                        <button type="button" id="preposition-to-home">Return home</button>
+                    </nav>
+
+                    <p class="grammar-section-label">Præpositioner – Prepositions</p>
+                    <h2 id="preposition-lesson-title" tabindex="-1">Præpositioner – Prepositions</h2>
+                    <div id="preposition-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                    <nav class="grammar-lesson-nav btn-row" aria-label="Preposition lesson navigation">
+                        <button type="button" id="preposition-prev" aria-label="Previous preposition lesson section">
+                            ← Previous
+                        </button>
+                        <span class="guide-counter" id="preposition-counter" aria-live="polite">1 / …</span>
+                        <button type="button" id="preposition-next" aria-label="Next preposition lesson section">
+                            Next →
+                        </button>
+                    </nav>
+                </article>
+            </section>
+
+            <!-- Word-order lesson -->
+            <section id="word-order-lesson" class="is-hidden" aria-labelledby="word-order-lesson-title">
+                <article class="grammar-page">
+                    <nav class="grammar-topbar" aria-label="Word-order lesson destinations">
+                        <button type="button" id="word-order-to-grammar">← All topics</button>
+                        <button type="button" id="word-order-to-home">Return home</button>
+                    </nav>
+
+                    <p class="grammar-section-label">Ordstilling – Word order</p>
+                    <h2 id="word-order-lesson-title" tabindex="-1">Ordstilling – Word order</h2>
+                    <!-- Grammar color legend -->
+                    <div class="grammar-legend" aria-label="Grammar color guide">
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color subject"></span>
+                            Subjekt (S)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color verb-v1"></span>
+                            Verbal1/Finit (V1)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color verb-v2"></span>
+                            Verbal2/Infinit (V2)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color adverb"></span>
+                            Adverbial (A)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color object"></span>
+                            Objekt (O)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color indirectobject"></span>
+                            Indirekte objekt (IO)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color conjunction"></span>
+                            Konjunktion (K)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color predicative"></span>
+                            Subjektsprædikativ (SP)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color object-predicative"></span>
+                            Objektsprædikativ (OP)
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color formal-subject"></span>
+                            Foreløbigt subjekt
+                        </span>
+
+                        <span class="grammar-legend-item">
+                            <span class="grammar-legend-color real-subject"></span>
+                            Egentligt subjekt
+                        </span>
+                    </div>
+                    <div id="word-order-lesson-content" class="grammar-content" aria-live="polite"></div>
+
+                    <nav class="grammar-lesson-nav btn-row" aria-label="Word-order lesson navigation">
+                        <button type="button" id="word-order-prev" aria-label="Previous word-order lesson section">
+                            ← Previous
+                        </button>
+                        <span class="guide-counter" id="word-order-counter" aria-live="polite">1 / …</span>
+                        <button type="button" id="word-order-next" aria-label="Next word-order lesson section">
+                            Next →
+                        </button>
+                    </nav>
+                </article>
+            </section>
+
+            <!-- SCRIPT FILES -->
+            <script src="./verber.js" defer></script>
+            <script src="./substantiver.js" defer></script>
+            <script src="./adjektiver.js" defer></script>
+            <script src="./adverbKonjunktion.js" defer></script>
+            <script src="./skriveguide.js" defer></script>
+            <script src="./Grammatik_Adverbiel.js" defer></script>
+            <script src="./Grammatik_Substantiv.js" defer></script>
+            <script src="./Grammatik_Adjektiv.js" defer></script>
+            <script src="./Grammatik_Pronomen.js" defer></script>
+            <script src="./Grammatik_Verber.js" defer></script>
+            <script src="./Grammatik_Konjunktion.js" defer></script>
+            <script src="./Grammatik_Præpositioner.js" defer></script>
+            <script src="./Grammatik_Ordstilling.js" defer></script>
+            <script src="./script.js?v=38" defer></script>
+            <script src="./quiz.js?v=5" defer></script>
+            <!-- Site footer -->
+            <footer class="app-footer">
+                <p class="footer-credit">
+                    Designed and developed by Grace D. O ·
+                    <a href="https://graceduquiza.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                </p>
+                <nav class="footer-links" aria-label="Privacy links">
+                    <button type="button" class="cookie-settings-btn" id="cookie-settings">Cookie settings</button>
+                    <a href="./cookie-policy.html">Cookie and privacy notice</a>
+                </nav>
+            </footer>
+        </main>
+
+        <div
+            class="cookie-banner is-hidden"
+            id="cookie-banner"
+            role="dialog"
+            aria-live="polite"
+            aria-labelledby="cookie-title"
+            aria-describedby="cookie-text"
+        >
+            <div class="cookie-banner__content">
+                <h2 id="cookie-title">Cookie preferences</h2>
+                <p id="cookie-text">
+                    This site uses optional Google Analytics cookies to understand visits and improve the Danish-English
+                    Learning Guide. Analytics only starts if you accept, and you can change your choice later from
+                    Cookie settings. <a href="./cookie-policy.html">Read the cookie and privacy notice</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button type="button" class="cookie-btn cookie-btn--secondary" id="cookie-decline">Decline</button>
+                <button type="button" class="cookie-btn cookie-btn--primary" id="cookie-accept">
+                    Accept analytics
+                </button>
             </div>
         </div>
-
-
-        <!-- Grammar topic selection -->
-        <section id="grammar-selection" class="is-hidden" aria-labelledby="grammar-selection-title">
-            <div class="grammar-page">
-                <button type="button" class="grammar-home-btn" id="grammar-to-home">← Return home</button>
-                <h2 id="grammar-selection-title" lang="da" tabindex="-1">Grammatik</h2>
-                <p lang="da">Vælg et emne, og lær dansk grammatik trin for trin.</p>
-                <p lang="en">Choose a topic and learn Danish grammar step by step.</p>
-
-                <nav class="grammar-topic-grid" aria-label="Grammar topics">
-                    <button type="button" class="grammar-topic-card" id="open-adverb-lesson">
-                        <span lang="da">Adverbier</span>
-                        <span lang="en">Adverbs</span>
-                    </button>
-                    <button type="button" class="grammar-topic-card" id="open-noun-lesson">
-                        <span lang="da">Substantiver</span>
-                        <span lang="en">Nouns</span>
-                    </button>
-                    <button type="button" class="grammar-topic-card" id="open-adjective-lesson">
-                        <span lang="da">Adjektiver</span>
-                        <span lang="en">Adjectives</span>
-                    </button>
-                    <button type="button" class="grammar-topic-card" id="open-pronoun-lesson">
-                        <span lang="da">Pronominer</span>
-                        <span lang="en">Pronouns</span>
-                    </button>
-                    <button type="button" class="grammar-topic-card" id="open-verb-lesson">
-                        <span lang="da">Verber</span>
-                        <span lang="en">Verbs</span>
-                    </button>
-                    <button type="button" class="grammar-topic-card" id="open-conjunction-lesson">
-                        <span lang="da">Konjunktioner</span>
-                        <span lang="en">Conjunctions</span>
-                    </button>
-                    <button type="button" class="grammar-topic-card" id="open-preposition-lesson">
-                        <span lang="da">Præpositioner</span>
-                        <span lang="en">Prepositions</span>
-                    </button>
-                    <button type="button" class="grammar-topic-card" id="open-word-order-lesson">
-                        <span lang="da">Ordstilling</span>
-                        <span lang="en">Word order</span>
-                    </button>
-                </nav>
-
-            </div>
-        </section>
-
-        <!-- Adverb lesson -->
-        <section id="adverb-lesson" class="is-hidden" aria-labelledby="adverb-lesson-title">
-            <article class="grammar-page">
-                <nav class="grammar-topbar" aria-label="Adverb lesson destinations">
-                    <button type="button" id="adverb-to-grammar">← All topics</button>
-                    <button type="button" id="adverb-to-home">Return home</button>
-                </nav>
-
-                <p class="grammar-section-label" id="adverb-section-label">Adverbier – Adverbs</p>
-                <h2 id="adverb-lesson-title" tabindex="-1">Adverbier – Adverbs</h2>
-                <div id="adverb-lesson-content" class="grammar-content" aria-live="polite"></div>
-
-                <nav class="grammar-lesson-nav btn-row" aria-label="Adverb lesson navigation">
-                    <button type="button" id="adverb-prev" aria-label="Previous adverb lesson section">← Previous</button>
-                    <span class="guide-counter" id="adverb-counter" aria-live="polite">1 / …</span>
-                    <button type="button" id="adverb-next" aria-label="Next adverb lesson section">Next →</button>
-                </nav>
-            </article>
-        </section>
-
-        <!-- Noun lesson -->
-        <section id="noun-lesson" class="is-hidden" aria-labelledby="noun-lesson-title">
-            <article class="grammar-page">
-                <nav class="grammar-topbar" aria-label="Noun lesson destinations">
-                    <button type="button" id="noun-to-grammar">← All topics</button>
-                    <button type="button" id="noun-to-home">Return home</button>
-                </nav>
-
-                <p class="grammar-section-label">Substantiver – Nouns</p>
-                <h2 id="noun-lesson-title" tabindex="-1">Substantiver – Nouns</h2>
-                <div id="noun-lesson-content" class="grammar-content" aria-live="polite"></div>
-
-                <nav class="grammar-lesson-nav btn-row" aria-label="Noun lesson navigation">
-                    <button type="button" id="noun-prev" aria-label="Previous noun lesson section">← Previous</button>
-                    <span class="guide-counter" id="noun-counter" aria-live="polite">1 / …</span>
-                    <button type="button" id="noun-next" aria-label="Next noun lesson section">Next →</button>
-                </nav>
-            </article>
-        </section>
-
-        <!-- Adjective lesson -->
-        <section id="adjective-lesson" class="is-hidden" aria-labelledby="adjective-lesson-title">
-            <article class="grammar-page">
-                <nav class="grammar-topbar" aria-label="Adjective lesson destinations">
-                    <button type="button" id="adjective-to-grammar">← All topics</button>
-                    <button type="button" id="adjective-to-home">Return home</button>
-                </nav>
-
-                <p class="grammar-section-label">Adjektiver – Adjectives</p>
-                <h2 id="adjective-lesson-title" tabindex="-1">Adjektiver – Adjectives</h2>
-                <div id="adjective-lesson-content" class="grammar-content" aria-live="polite"></div>
-
-                <nav class="grammar-lesson-nav btn-row" aria-label="Adjective lesson navigation">
-                    <button type="button" id="adjective-prev" aria-label="Previous adjective lesson section">← Previous</button>
-                    <span class="guide-counter" id="adjective-counter" aria-live="polite">1 / …</span>
-                    <button type="button" id="adjective-next" aria-label="Next adjective lesson section">Next →</button>
-                </nav>
-            </article>
-        </section>
-
-        <!-- Pronoun lesson -->
-        <section id="pronoun-lesson" class="is-hidden" aria-labelledby="pronoun-lesson-title">
-            <article class="grammar-page">
-                <nav class="grammar-topbar" aria-label="Pronoun lesson destinations">
-                    <button type="button" id="pronoun-to-grammar">← All topics</button>
-                    <button type="button" id="pronoun-to-home">Return home</button>
-                </nav>
-
-                <p class="grammar-section-label">Pronominer – Pronouns</p>
-                <h2 id="pronoun-lesson-title" tabindex="-1">Pronominer – Pronouns</h2>
-                <div id="pronoun-lesson-content" class="grammar-content" aria-live="polite"></div>
-
-                <nav class="grammar-lesson-nav btn-row" aria-label="Pronoun lesson navigation">
-                    <button type="button" id="pronoun-prev" aria-label="Previous pronoun lesson section">← Previous</button>
-                    <span class="guide-counter" id="pronoun-counter" aria-live="polite">1 / …</span>
-                    <button type="button" id="pronoun-next" aria-label="Next pronoun lesson section">Next →</button>
-                </nav>
-            </article>
-        </section>
-
-        <!-- Verb lesson -->
-        <section id="verb-lesson" class="is-hidden" aria-labelledby="verb-lesson-title">
-            <article class="grammar-page">
-                <nav class="grammar-topbar" aria-label="Verb lesson destinations">
-                    <button type="button" id="verb-to-grammar">← All topics</button>
-                    <button type="button" id="verb-to-home">Return home</button>
-                </nav>
-
-                <p class="grammar-section-label">Verber – Verbs</p>
-                <h2 id="verb-lesson-title" tabindex="-1">Verber – Verbs</h2>
-                <div id="verb-lesson-content" class="grammar-content" aria-live="polite"></div>
-
-                <nav class="grammar-lesson-nav btn-row" aria-label="Verb lesson navigation">
-                    <button type="button" id="verb-prev" aria-label="Previous verb lesson section">← Previous</button>
-                    <span class="guide-counter" id="verb-counter" aria-live="polite">1 / …</span>
-                    <button type="button" id="verb-next" aria-label="Next verb lesson section">Next →</button>
-                </nav>
-            </article>
-        </section>
-
-        <!-- Conjunction lesson -->
-        <section id="conjunction-lesson" class="is-hidden" aria-labelledby="conjunction-lesson-title">
-            <article class="grammar-page">
-                <nav class="grammar-topbar" aria-label="Conjunction lesson destinations">
-                    <button type="button" id="conjunction-to-grammar">← All topics</button>
-                    <button type="button" id="conjunction-to-home">Return home</button>
-                </nav>
-
-                <p class="grammar-section-label">Konjunktioner – Conjunctions</p>
-                <h2 id="conjunction-lesson-title" tabindex="-1">Konjunktioner – Conjunctions</h2>
-                <div id="conjunction-lesson-content" class="grammar-content" aria-live="polite"></div>
-
-                <nav class="grammar-lesson-nav btn-row" aria-label="Conjunction lesson navigation">
-                    <button type="button" id="conjunction-prev" aria-label="Previous conjunction lesson section">← Previous</button>
-                    <span class="guide-counter" id="conjunction-counter" aria-live="polite">1 / …</span>
-                    <button type="button" id="conjunction-next" aria-label="Next conjunction lesson section">Next →</button>
-                </nav>
-            </article>
-        </section>
-
-        <!-- Preposition lesson -->
-        <section id="preposition-lesson" class="is-hidden" aria-labelledby="preposition-lesson-title">
-            <article class="grammar-page">
-                <nav class="grammar-topbar" aria-label="Preposition lesson destinations">
-                    <button type="button" id="preposition-to-grammar">← All topics</button>
-                    <button type="button" id="preposition-to-home">Return home</button>
-                </nav>
-
-                <p class="grammar-section-label">Præpositioner – Prepositions</p>
-                <h2 id="preposition-lesson-title" tabindex="-1">Præpositioner – Prepositions</h2>
-                <div id="preposition-lesson-content" class="grammar-content" aria-live="polite"></div>
-
-                <nav class="grammar-lesson-nav btn-row" aria-label="Preposition lesson navigation">
-                    <button type="button" id="preposition-prev" aria-label="Previous preposition lesson section">← Previous</button>
-                    <span class="guide-counter" id="preposition-counter" aria-live="polite">1 / …</span>
-                    <button type="button" id="preposition-next" aria-label="Next preposition lesson section">Next →</button>
-                </nav>
-            </article>
-        </section>
-
-        <!-- Word-order lesson -->
-        <section id="word-order-lesson" class="is-hidden" aria-labelledby="word-order-lesson-title">
-            <article class="grammar-page">
-                <nav class="grammar-topbar" aria-label="Word-order lesson destinations">
-                    <button type="button" id="word-order-to-grammar">← All topics</button>
-                    <button type="button" id="word-order-to-home">Return home</button>
-                </nav>
-
-                <p class="grammar-section-label">Ordstilling – Word order</p>
-                <h2 id="word-order-lesson-title" tabindex="-1">Ordstilling – Word order</h2>
-                <div id="word-order-lesson-content" class="grammar-content" aria-live="polite"></div>
-
-                <nav class="grammar-lesson-nav btn-row" aria-label="Word-order lesson navigation">
-                    <button type="button" id="word-order-prev" aria-label="Previous word-order lesson section">← Previous</button>
-                    <span class="guide-counter" id="word-order-counter" aria-live="polite">1 / …</span>
-                    <button type="button" id="word-order-next" aria-label="Next word-order lesson section">Next →</button>
-                </nav>
-            </article>
-        </section>
-
-        <!-- SCRIPT FILES -->
-        <script src="./verber.js" defer></script>
-        <script src="./substantiver.js" defer></script>
-        <script src="./adjektiver.js" defer></script>
-        <script src="./adverbKonjunktion.js" defer></script>
-        <script src="./skriveguide.js" defer></script>
-        <script src="./Grammatik_Adverbiel.js" defer></script>
-        <script src="./Grammatik_Substantiv.js" defer></script>
-        <script src="./Grammatik_Adjektiv.js" defer></script>
-        <script src="./Grammatik_Pronomen.js" defer></script>
-        <script src="./Grammatik_Verber.js" defer></script>
-        <script src="./Grammatik_Konjunktion.js" defer></script>
-        <script src="./Grammatik_Præpositioner.js" defer></script>
-        <script src="./Grammatik_Ordstilling.js" defer></script>
-        <script src="./script.js?v=36" defer></script>
-        <script src="./quiz.js?v=4" defer></script>
-
-
-
-        <footer class="app-footer">
-            <p>Danish Vocab Trainer</p>
-            <p>Designed and developed by Grace
-                <a href="https://graceduquiza.github.io/" target="_blank" rel="noopener noreferrer">Portfolio
-                </a>
-            </p>
-            <p class="footer-links">
-                <button type="button" class="cookie-settings-btn" id="cookie-settings">Cookie settings</button>
-                <a href="./cookie-policy.html">Cookie and privacy notice</a>
-            </p>
-        </footer>
-
-    </main>
-
-    <div class="cookie-banner is-hidden" id="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-title" aria-describedby="cookie-text">
-        <div class="cookie-banner__content">
-            <h2 id="cookie-title">Cookie preferences</h2>
-            <p id="cookie-text">This site uses optional Google Analytics cookies to understand visits and improve the Danish-English Learning Guide. Analytics only starts if you accept, and you can change your choice later from Cookie settings. <a href="./cookie-policy.html">Read the cookie and privacy notice</a>.</p>
-        </div>
-        <div class="cookie-banner__actions">
-            <button type="button" class="cookie-btn cookie-btn--secondary" id="cookie-decline">Decline</button>
-            <button type="button" class="cookie-btn cookie-btn--primary" id="cookie-accept">Accept analytics</button>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

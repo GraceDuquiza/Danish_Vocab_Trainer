@@ -25,7 +25,11 @@ window.addEventListener("DOMContentLoaded", function () {
     let isHomeView = true;
 
     window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+    window.gtag =
+        window.gtag ||
+        function gtag() {
+            window.dataLayer.push(arguments);
+        };
     window.gtag("consent", "default", {
         analytics_storage: "denied",
         ad_storage: "denied",
@@ -79,13 +83,13 @@ window.addEventListener("DOMContentLoaded", function () {
     function clearGoogleAnalyticsCookies() {
         const cookieNames = document.cookie
             .split(";")
-            .map(cookie => cookie.trim().split("=")[0])
-            .filter(name => name === "_ga" || name === "_gid" || name === "_gat" || name.startsWith("_ga_"));
+            .map((cookie) => cookie.trim().split("=")[0])
+            .filter((name) => name === "_ga" || name === "_gid" || name === "_gat" || name.startsWith("_ga_"));
         const host = window.location.hostname;
         const domains = ["", host, host.startsWith(".") ? host : `.${host}`];
 
-        cookieNames.forEach(name => {
-            domains.forEach(domain => deleteCookie(name, domain));
+        cookieNames.forEach((name) => {
+            domains.forEach((domain) => deleteCookie(name, domain));
         });
     }
 
@@ -159,139 +163,139 @@ window.addEventListener("DOMContentLoaded", function () {
     // ------------------------------------------------------------------
     // SHARED STATE (Study uses `index`; quiz.js manages its own state)
     // ------------------------------------------------------------------
-    let index = 0;                 // current position in currentList (Study Mode)
-    let currentList = [];          // active word list for Study Mode
-    window.currentList = [];       // exposed so quiz.js can reuse same list
+    let index = 0; // current position in currentList (Study Mode)
+    let currentList = []; // active word list for Study Mode
+    window.currentList = []; // exposed so quiz.js can reuse same list
 
     // ------------------------------------------------------------------
     // STUDY MODE — DOM references
     // ------------------------------------------------------------------
-    const studyModeEl    = document.getElementById("study-mode");
-    const studyDanishEl  = document.getElementById("study-danish-word");
-    const englishEl      = document.getElementById("english-meaning");
-    const exampleEl      = document.getElementById("example-sentence");
-    const nextBtn        = document.getElementById("next-btn");
-    const prevBtn        = document.getElementById("prev-btn");
+    const studyModeEl = document.getElementById("study-mode");
+    const studyDanishEl = document.getElementById("study-danish-word");
+    const englishEl = document.getElementById("english-meaning");
+    const exampleEl = document.getElementById("example-sentence");
+    const nextBtn = document.getElementById("next-btn");
+    const prevBtn = document.getElementById("prev-btn");
     const categorySelect = document.getElementById("category-select");
     const studyToHomeBtn = document.getElementById("study-to-home");
-    const studyNavRow    = studyModeEl?.querySelector(".btn-row");
+    const studyNavRow = studyModeEl?.querySelector(".btn-row");
 
     // ------------------------------------------------------------------
     // QUIZ — DOM references (routing only; logic lives in quiz.js)
     // ------------------------------------------------------------------
-    const startQuizBtn        = document.getElementById("start-quiz-btn");
-    const quizModeEl          = document.getElementById("quiz-mode");
-    const quizCategorySelect  = document.getElementById("quiz-category-select");
-    const nextQuestionBtn     = document.getElementById("next-question-btn");
-    const prevQuestionBtn     = document.getElementById("prev-question-btn");
-    const quitQuizBtn         = document.getElementById("quit-quiz-btn");
-    const quizToHomeBtn       = document.getElementById("quiz-to-home");
-    const choicesContainer    = document.getElementById("choices");
-    const quizWordEl          = document.getElementById("quiz-word");
-    const scoreDisplay        = document.getElementById("score");
-    const mainButtons         = document.getElementById("main-buttons"); // Start/Skriveguide row
-    const homeWelcome         = document.getElementById("home-welcome");
-    const navVocabulary       = document.getElementById("nav-vocabulary");
-    const btnRow              = document.querySelector(".btn-row");      // Prev/Next container row
+    const startQuizBtn = document.getElementById("start-quiz-btn");
+    const quizModeEl = document.getElementById("quiz-mode");
+    const quizCategorySelect = document.getElementById("quiz-category-select");
+    const nextQuestionBtn = document.getElementById("next-question-btn");
+    const prevQuestionBtn = document.getElementById("prev-question-btn");
+    const quitQuizBtn = document.getElementById("quit-quiz-btn");
+    const quizToHomeBtn = document.getElementById("quiz-to-home");
+    const choicesContainer = document.getElementById("choices");
+    const quizWordEl = document.getElementById("quiz-word");
+    const scoreDisplay = document.getElementById("score");
+    const mainButtons = document.getElementById("main-buttons"); // Start/Skriveguide row
+    const homeWelcome = document.getElementById("home-welcome");
+    const navVocabulary = document.getElementById("nav-vocabulary");
+    const btnRow = document.querySelector(".btn-row"); // Prev/Next container row
 
     // ------------------------------------------------------------------
     // SKRIVEGUIDE — DOM references
     // ------------------------------------------------------------------
-    const navSkriveguide  = document.getElementById("nav-skriveguide"); // open Skriveguide from menu
-    const skriveguideEl   = document.getElementById("skriveguide");     // whole guide section
-    const guideTitleEl    = document.getElementById("guide-title");
-    const guideContentEl  = document.getElementById("guide-content");
-    const guideCounterEl  = document.getElementById("guide-counter");
-    const guidePrevBtn    = document.getElementById("prev-page");
-    const guideNextBtn    = document.getElementById("next-page");
-    const guideBackBtn    = document.getElementById("back-to-quiz-btn");
-    let currentGuidePage  = 0;
+    const navSkriveguide = document.getElementById("nav-skriveguide"); // open Skriveguide from menu
+    const skriveguideEl = document.getElementById("skriveguide"); // whole guide section
+    const guideTitleEl = document.getElementById("guide-title");
+    const guideContentEl = document.getElementById("guide-content");
+    const guideCounterEl = document.getElementById("guide-counter");
+    const guidePrevBtn = document.getElementById("prev-page");
+    const guideNextBtn = document.getElementById("next-page");
+    const guideBackBtn = document.getElementById("back-to-quiz-btn");
+    let currentGuidePage = 0;
 
     // ------------------------------------------------------------------
     // GRAMMATIK — DOM references and lesson state
     // ------------------------------------------------------------------
-    const navGrammatik        = document.getElementById("nav-grammatik");
-    const grammarSelectionEl  = document.getElementById("grammar-selection");
+    const navGrammatik = document.getElementById("nav-grammatik");
+    const grammarSelectionEl = document.getElementById("grammar-selection");
     const openAdverbLessonBtn = document.getElementById("open-adverb-lesson");
-    const grammarToHomeBtn    = document.getElementById("grammar-to-home");
-    const adverbLessonEl      = document.getElementById("adverb-lesson");
-    const adverbTitleEl       = document.getElementById("adverb-lesson-title");
-    const adverbContentEl     = document.getElementById("adverb-lesson-content");
-    const adverbCounterEl     = document.getElementById("adverb-counter");
-    const adverbPrevBtn       = document.getElementById("adverb-prev");
-    const adverbNextBtn       = document.getElementById("adverb-next");
-    const adverbToGrammarBtn  = document.getElementById("adverb-to-grammar");
-    const adverbToHomeBtn     = document.getElementById("adverb-to-home");
+    const grammarToHomeBtn = document.getElementById("grammar-to-home");
+    const adverbLessonEl = document.getElementById("adverb-lesson");
+    const adverbTitleEl = document.getElementById("adverb-lesson-title");
+    const adverbContentEl = document.getElementById("adverb-lesson-content");
+    const adverbCounterEl = document.getElementById("adverb-counter");
+    const adverbPrevBtn = document.getElementById("adverb-prev");
+    const adverbNextBtn = document.getElementById("adverb-next");
+    const adverbToGrammarBtn = document.getElementById("adverb-to-grammar");
+    const adverbToHomeBtn = document.getElementById("adverb-to-home");
     let currentAdverbPage = 0;
     const openNounLessonBtn = document.getElementById("open-noun-lesson");
-    const nounLessonEl      = document.getElementById("noun-lesson");
-    const nounTitleEl       = document.getElementById("noun-lesson-title");
-    const nounContentEl     = document.getElementById("noun-lesson-content");
-    const nounCounterEl     = document.getElementById("noun-counter");
-    const nounPrevBtn       = document.getElementById("noun-prev");
-    const nounNextBtn       = document.getElementById("noun-next");
-    const nounToGrammarBtn  = document.getElementById("noun-to-grammar");
-    const nounToHomeBtn     = document.getElementById("noun-to-home");
+    const nounLessonEl = document.getElementById("noun-lesson");
+    const nounTitleEl = document.getElementById("noun-lesson-title");
+    const nounContentEl = document.getElementById("noun-lesson-content");
+    const nounCounterEl = document.getElementById("noun-counter");
+    const nounPrevBtn = document.getElementById("noun-prev");
+    const nounNextBtn = document.getElementById("noun-next");
+    const nounToGrammarBtn = document.getElementById("noun-to-grammar");
+    const nounToHomeBtn = document.getElementById("noun-to-home");
     let currentNounPage = 0;
     const openAdjectiveLessonBtn = document.getElementById("open-adjective-lesson");
-    const adjectiveLessonEl      = document.getElementById("adjective-lesson");
-    const adjectiveTitleEl       = document.getElementById("adjective-lesson-title");
-    const adjectiveContentEl     = document.getElementById("adjective-lesson-content");
-    const adjectiveCounterEl     = document.getElementById("adjective-counter");
-    const adjectivePrevBtn       = document.getElementById("adjective-prev");
-    const adjectiveNextBtn       = document.getElementById("adjective-next");
-    const adjectiveToGrammarBtn  = document.getElementById("adjective-to-grammar");
-    const adjectiveToHomeBtn     = document.getElementById("adjective-to-home");
+    const adjectiveLessonEl = document.getElementById("adjective-lesson");
+    const adjectiveTitleEl = document.getElementById("adjective-lesson-title");
+    const adjectiveContentEl = document.getElementById("adjective-lesson-content");
+    const adjectiveCounterEl = document.getElementById("adjective-counter");
+    const adjectivePrevBtn = document.getElementById("adjective-prev");
+    const adjectiveNextBtn = document.getElementById("adjective-next");
+    const adjectiveToGrammarBtn = document.getElementById("adjective-to-grammar");
+    const adjectiveToHomeBtn = document.getElementById("adjective-to-home");
     let currentAdjectivePage = 0;
     const openPronounLessonBtn = document.getElementById("open-pronoun-lesson");
-    const pronounLessonEl      = document.getElementById("pronoun-lesson");
-    const pronounTitleEl       = document.getElementById("pronoun-lesson-title");
-    const pronounContentEl     = document.getElementById("pronoun-lesson-content");
-    const pronounCounterEl     = document.getElementById("pronoun-counter");
-    const pronounPrevBtn       = document.getElementById("pronoun-prev");
-    const pronounNextBtn       = document.getElementById("pronoun-next");
-    const pronounToGrammarBtn  = document.getElementById("pronoun-to-grammar");
-    const pronounToHomeBtn     = document.getElementById("pronoun-to-home");
+    const pronounLessonEl = document.getElementById("pronoun-lesson");
+    const pronounTitleEl = document.getElementById("pronoun-lesson-title");
+    const pronounContentEl = document.getElementById("pronoun-lesson-content");
+    const pronounCounterEl = document.getElementById("pronoun-counter");
+    const pronounPrevBtn = document.getElementById("pronoun-prev");
+    const pronounNextBtn = document.getElementById("pronoun-next");
+    const pronounToGrammarBtn = document.getElementById("pronoun-to-grammar");
+    const pronounToHomeBtn = document.getElementById("pronoun-to-home");
     let currentPronounPage = 0;
     const openVerbLessonBtn = document.getElementById("open-verb-lesson");
-    const verbLessonEl      = document.getElementById("verb-lesson");
-    const verbTitleEl       = document.getElementById("verb-lesson-title");
-    const verbContentEl     = document.getElementById("verb-lesson-content");
-    const verbCounterEl     = document.getElementById("verb-counter");
-    const verbPrevBtn       = document.getElementById("verb-prev");
-    const verbNextBtn       = document.getElementById("verb-next");
-    const verbToGrammarBtn  = document.getElementById("verb-to-grammar");
-    const verbToHomeBtn     = document.getElementById("verb-to-home");
+    const verbLessonEl = document.getElementById("verb-lesson");
+    const verbTitleEl = document.getElementById("verb-lesson-title");
+    const verbContentEl = document.getElementById("verb-lesson-content");
+    const verbCounterEl = document.getElementById("verb-counter");
+    const verbPrevBtn = document.getElementById("verb-prev");
+    const verbNextBtn = document.getElementById("verb-next");
+    const verbToGrammarBtn = document.getElementById("verb-to-grammar");
+    const verbToHomeBtn = document.getElementById("verb-to-home");
     let currentVerbPage = 0;
     const openConjunctionLessonBtn = document.getElementById("open-conjunction-lesson");
-    const conjunctionLessonEl      = document.getElementById("conjunction-lesson");
-    const conjunctionTitleEl       = document.getElementById("conjunction-lesson-title");
-    const conjunctionContentEl     = document.getElementById("conjunction-lesson-content");
-    const conjunctionCounterEl     = document.getElementById("conjunction-counter");
-    const conjunctionPrevBtn       = document.getElementById("conjunction-prev");
-    const conjunctionNextBtn       = document.getElementById("conjunction-next");
-    const conjunctionToGrammarBtn  = document.getElementById("conjunction-to-grammar");
-    const conjunctionToHomeBtn     = document.getElementById("conjunction-to-home");
+    const conjunctionLessonEl = document.getElementById("conjunction-lesson");
+    const conjunctionTitleEl = document.getElementById("conjunction-lesson-title");
+    const conjunctionContentEl = document.getElementById("conjunction-lesson-content");
+    const conjunctionCounterEl = document.getElementById("conjunction-counter");
+    const conjunctionPrevBtn = document.getElementById("conjunction-prev");
+    const conjunctionNextBtn = document.getElementById("conjunction-next");
+    const conjunctionToGrammarBtn = document.getElementById("conjunction-to-grammar");
+    const conjunctionToHomeBtn = document.getElementById("conjunction-to-home");
     let currentConjunctionPage = 0;
     const openPrepositionLessonBtn = document.getElementById("open-preposition-lesson");
-    const prepositionLessonEl      = document.getElementById("preposition-lesson");
-    const prepositionTitleEl       = document.getElementById("preposition-lesson-title");
-    const prepositionContentEl     = document.getElementById("preposition-lesson-content");
-    const prepositionCounterEl     = document.getElementById("preposition-counter");
-    const prepositionPrevBtn       = document.getElementById("preposition-prev");
-    const prepositionNextBtn       = document.getElementById("preposition-next");
-    const prepositionToGrammarBtn  = document.getElementById("preposition-to-grammar");
-    const prepositionToHomeBtn     = document.getElementById("preposition-to-home");
+    const prepositionLessonEl = document.getElementById("preposition-lesson");
+    const prepositionTitleEl = document.getElementById("preposition-lesson-title");
+    const prepositionContentEl = document.getElementById("preposition-lesson-content");
+    const prepositionCounterEl = document.getElementById("preposition-counter");
+    const prepositionPrevBtn = document.getElementById("preposition-prev");
+    const prepositionNextBtn = document.getElementById("preposition-next");
+    const prepositionToGrammarBtn = document.getElementById("preposition-to-grammar");
+    const prepositionToHomeBtn = document.getElementById("preposition-to-home");
     let currentPrepositionPage = 0;
     const openWordOrderLessonBtn = document.getElementById("open-word-order-lesson");
-    const wordOrderLessonEl      = document.getElementById("word-order-lesson");
-    const wordOrderTitleEl       = document.getElementById("word-order-lesson-title");
-    const wordOrderContentEl     = document.getElementById("word-order-lesson-content");
-    const wordOrderCounterEl     = document.getElementById("word-order-counter");
-    const wordOrderPrevBtn       = document.getElementById("word-order-prev");
-    const wordOrderNextBtn       = document.getElementById("word-order-next");
-    const wordOrderToGrammarBtn  = document.getElementById("word-order-to-grammar");
-    const wordOrderToHomeBtn     = document.getElementById("word-order-to-home");
+    const wordOrderLessonEl = document.getElementById("word-order-lesson");
+    const wordOrderTitleEl = document.getElementById("word-order-lesson-title");
+    const wordOrderContentEl = document.getElementById("word-order-lesson-content");
+    const wordOrderCounterEl = document.getElementById("word-order-counter");
+    const wordOrderPrevBtn = document.getElementById("word-order-prev");
+    const wordOrderNextBtn = document.getElementById("word-order-next");
+    const wordOrderToGrammarBtn = document.getElementById("word-order-to-grammar");
+    const wordOrderToHomeBtn = document.getElementById("word-order-to-home");
     let currentWordOrderPage = 0;
 
     // ================================================================
@@ -299,47 +303,47 @@ window.addEventListener("DOMContentLoaded", function () {
     // ================================================================
     function displayWord(i) {
         if (!currentList || currentList.length === 0) {
-        if (studyDanishEl) studyDanishEl.textContent = "⚠️ No words loaded";
-        if (englishEl)     englishEl.textContent     = "-";
-        if (exampleEl) {
-            exampleEl.style.display = "none";
-            exampleEl.textContent   = "";
-        }
-        return;
+            if (studyDanishEl) studyDanishEl.textContent = "⚠️ No words loaded";
+            if (englishEl) englishEl.textContent = "-";
+            if (exampleEl) {
+                exampleEl.style.display = "none";
+                exampleEl.textContent = "";
+            }
+            return;
         }
 
         const word = currentList[i];
-        if (studyDanishEl) studyDanishEl.textContent = word?.danish  ?? "—";
-        if (englishEl)     englishEl.textContent     = word?.english ?? "—";
+        if (studyDanishEl) studyDanishEl.textContent = word?.danish ?? "—";
+        if (englishEl) englishEl.textContent = word?.english ?? "—";
 
         if (exampleEl) {
-        if (word?.example && word.example.trim() !== "") {
-            exampleEl.style.display = "block";
-            exampleEl.textContent   = word.example;
-        } else {
-            exampleEl.style.display = "none";
-            exampleEl.textContent   = "";
-        }
+            if (word?.example && word.example.trim() !== "") {
+                exampleEl.style.display = "block";
+                exampleEl.textContent = word.example;
+            } else {
+                exampleEl.style.display = "none";
+                exampleEl.textContent = "";
+            }
         }
     }
 
     function loadCategory(category) {
         index = 0;
         switch (category) {
-        case "verber":
-            currentList = (typeof verber !== "undefined") ? verber : [];
-            break;
-        case "substantiver":
-            currentList = (typeof substantiver !== "undefined") ? substantiver : [];
-            break;
-        case "adjektiver":
-            currentList = (typeof adjektiver !== "undefined") ? adjektiver : [];
-            break;
-        case "adverbKonjunktion":
-            currentList = (typeof adverbKonjunktion !== "undefined") ? adverbKonjunktion : [];
-            break;
-        default:
-            currentList = [];
+            case "verber":
+                currentList = typeof verber !== "undefined" ? verber : [];
+                break;
+            case "substantiver":
+                currentList = typeof substantiver !== "undefined" ? substantiver : [];
+                break;
+            case "adjektiver":
+                currentList = typeof adjektiver !== "undefined" ? adjektiver : [];
+                break;
+            case "adverbKonjunktion":
+                currentList = typeof adverbKonjunktion !== "undefined" ? adverbKonjunktion : [];
+                break;
+            default:
+                currentList = [];
         }
         window.currentList = currentList; // keep quiz.js in sync
         displayWord(index);
@@ -348,7 +352,7 @@ window.addEventListener("DOMContentLoaded", function () {
     // Study nav buttons
     nextBtn?.addEventListener("click", () => {
         if (currentList.length === 0) return;
-        index = (index + 1) % currentList.length;      // loop forward
+        index = (index + 1) % currentList.length; // loop forward
         displayWord(index);
     });
     prevBtn?.addEventListener("click", () => {
@@ -365,23 +369,23 @@ window.addEventListener("DOMContentLoaded", function () {
     // SKRIVEGUIDE — rendering + navigation (namespaced content)
     // ================================================================
     function renderGuidePage(i) {
-        const page = (Array.isArray(skriveguide) ? skriveguide[i] : null);
+        const page = Array.isArray(skriveguide) ? skriveguide[i] : null;
 
         if (!page) {
-        if (guideTitleEl)   guideTitleEl.textContent   = "⚠️ No guide content";
-        if (guideContentEl) guideContentEl.innerHTML   = "<p>Please check your skriveguide data.</p>";
-        if (guideCounterEl) guideCounterEl.textContent = "0 / 0";
-        if (guidePrevBtn)   guidePrevBtn.disabled      = true;
-        if (guideNextBtn)   guideNextBtn.disabled      = true;
-        return;
+            if (guideTitleEl) guideTitleEl.textContent = "⚠️ No guide content";
+            if (guideContentEl) guideContentEl.innerHTML = "<p>Please check your skriveguide data.</p>";
+            if (guideCounterEl) guideCounterEl.textContent = "0 / 0";
+            if (guidePrevBtn) guidePrevBtn.disabled = true;
+            if (guideNextBtn) guideNextBtn.disabled = true;
+            return;
         }
 
-        if (guideTitleEl)   guideTitleEl.textContent   = page.title || "Untitled";
-        if (guideContentEl) guideContentEl.innerHTML   = page.content || "";
+        if (guideTitleEl) guideTitleEl.textContent = page.title || "Untitled";
+        if (guideContentEl) guideContentEl.innerHTML = page.content || "";
         if (guideCounterEl) guideCounterEl.textContent = `${i + 1} / ${skriveguide.length}`;
 
-        if (guidePrevBtn) guidePrevBtn.disabled = (i === 0);
-        if (guideNextBtn) guideNextBtn.disabled = (i === skriveguide.length - 1);
+        if (guidePrevBtn) guidePrevBtn.disabled = i === 0;
+        if (guideNextBtn) guideNextBtn.disabled = i === skriveguide.length - 1;
     }
 
     function openSkriveguide(startIndex = 0) {
@@ -389,7 +393,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         // Hide study + quiz
         if (studyModeEl) studyModeEl.style.display = "none";
-        if (quizModeEl)  quizModeEl.style.display  = "none";
+        if (quizModeEl) quizModeEl.style.display = "none";
         if (homeWelcome) homeWelcome.style.display = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
@@ -402,12 +406,12 @@ window.addEventListener("DOMContentLoaded", function () {
         wordOrderLessonEl?.classList.add("is-hidden");
 
         // Hide main buttons row
-        if (startQuizBtn)   startQuizBtn.style.display   = "none";
+        if (startQuizBtn) startQuizBtn.style.display = "none";
         if (navSkriveguide) navSkriveguide.style.display = "none";
-        if (mainButtons)    mainButtons.style.display    = "none";
+        if (mainButtons) mainButtons.style.display = "none";
 
         // Show guide
-        if (skriveguideEl)  skriveguideEl.style.display  = "block";
+        if (skriveguideEl) skriveguideEl.style.display = "block";
 
         // Clamp and render
         currentGuidePage = Math.min(Math.max(startIndex, 0), (skriveguide?.length || 1) - 1);
@@ -421,7 +425,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         // Hide non-main sections
         if (skriveguideEl) skriveguideEl.style.display = "none";
-        if (quizModeEl)    quizModeEl.style.display    = "none";
+        if (quizModeEl) quizModeEl.style.display = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
@@ -433,13 +437,13 @@ window.addEventListener("DOMContentLoaded", function () {
         wordOrderLessonEl?.classList.add("is-hidden");
 
         // Show the home navigation hub.
-        if (studyModeEl)   studyModeEl.style.display   = "none";
-        if (homeWelcome)   homeWelcome.style.display   = "block";
+        if (studyModeEl) studyModeEl.style.display = "none";
+        if (homeWelcome) homeWelcome.style.display = "block";
         if (navVocabulary) navVocabulary.style.display = "";
-        if (startQuizBtn)   startQuizBtn.style.display   = "";
+        if (startQuizBtn) startQuizBtn.style.display = "";
         if (navSkriveguide) navSkriveguide.style.display = "";
         if (navGrammatik) navGrammatik.style.display = "";
-        if (mainButtons)    mainButtons.style.display    = "";
+        if (mainButtons) mainButtons.style.display = "";
 
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -450,14 +454,14 @@ window.addEventListener("DOMContentLoaded", function () {
     navSkriveguide?.addEventListener("click", () => openSkriveguide(0));
     guidePrevBtn?.addEventListener("click", () => {
         if (currentGuidePage > 0) {
-        currentGuidePage--;
-        renderGuidePage(currentGuidePage);
+            currentGuidePage--;
+            renderGuidePage(currentGuidePage);
         }
     });
     guideNextBtn?.addEventListener("click", () => {
         if (currentGuidePage < (skriveguide?.length || 1) - 1) {
-        currentGuidePage++;
-        renderGuidePage(currentGuidePage);
+            currentGuidePage++;
+            renderGuidePage(currentGuidePage);
         }
     });
     guideBackBtn?.addEventListener("click", goToMainMenu);
@@ -499,8 +503,7 @@ window.addEventListener("DOMContentLoaded", function () {
             const headingRow = table.querySelector("thead tr") || table.querySelector("tr");
             if (!headingRow) return;
 
-            const headingText = Array.from(headingRow.children)
-                .map((cell) => cell.textContent.trim().toLowerCase());
+            const headingText = Array.from(headingRow.children).map((cell) => cell.textContent.trim().toLowerCase());
 
             const danishColumn = headingText.findIndex((text) => text.includes("dansk"));
             const englishColumn = headingText.findIndex((text) => text.includes("english"));
@@ -590,12 +593,14 @@ window.addEventListener("DOMContentLoaded", function () {
 
     function arrangeGrammarLanguagePairs(container) {
         const isEnglishOnlyParagraph = (paragraph) => {
-            const meaningfulNodes = Array.from(paragraph.childNodes).filter((node) =>
-                node.nodeType === Node.ELEMENT_NODE || node.textContent.trim()
+            const meaningfulNodes = Array.from(paragraph.childNodes).filter(
+                (node) => node.nodeType === Node.ELEMENT_NODE || node.textContent.trim()
             );
-            return meaningfulNodes.length === 1
-                && meaningfulNodes[0].nodeType === Node.ELEMENT_NODE
-                && meaningfulNodes[0].matches("em, .grammar-english, [lang='en']");
+            return (
+                meaningfulNodes.length === 1 &&
+                meaningfulNodes[0].nodeType === Node.ELEMENT_NODE &&
+                meaningfulNodes[0].matches("em, .grammar-english, [lang='en']")
+            );
         };
 
         Array.from(container.querySelectorAll("p")).forEach((danish) => {
@@ -621,7 +626,10 @@ window.addEventListener("DOMContentLoaded", function () {
             );
             if (!english || english !== element.lastElementChild) return;
 
-            const precedingNodes = Array.from(element.childNodes).slice(0, Array.from(element.childNodes).indexOf(english));
+            const precedingNodes = Array.from(element.childNodes).slice(
+                0,
+                Array.from(element.childNodes).indexOf(english)
+            );
             const hasDanishText = precedingNodes.some((node) => node.textContent.trim());
             if (!hasDanishText) return;
 
@@ -638,9 +646,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderAdverbPage(pageIndex) {
-        const pages = (typeof adverbielPages !== "undefined" && Array.isArray(adverbielPages))
-            ? adverbielPages
-            : [];
+        const pages = typeof adverbielPages !== "undefined" && Array.isArray(adverbielPages) ? adverbielPages : [];
         const page = pages[pageIndex];
 
         if (!page) {
@@ -666,10 +672,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
         if (adverbContentEl) {
             adverbContentEl.innerHTML = page.content || "";
-            const singleColumnPageIds = new Set([
-                "section-6-4",
-                "section-7-2"
-            ]);
+            const singleColumnPageIds = new Set(["section-7-2"]);
             adverbContentEl.classList.toggle("grammar-single-column-page", singleColumnPageIds.has(page.id));
             markGrammarEnglishTranslations(adverbContentEl);
             arrangeGrammarLanguagePairs(adverbContentEl);
@@ -732,9 +735,8 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openAdverbLesson(startIndex = 0) {
-        const pageCount = (typeof adverbielPages !== "undefined" && Array.isArray(adverbielPages))
-            ? adverbielPages.length
-            : 0;
+        const pageCount =
+            typeof adverbielPages !== "undefined" && Array.isArray(adverbielPages) ? adverbielPages.length : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
@@ -749,9 +751,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderNounPage(pageIndex) {
-        const pages = (typeof substantivGrammarPages !== "undefined" && Array.isArray(substantivGrammarPages))
-            ? substantivGrammarPages
-            : [];
+        const pages =
+            typeof substantivGrammarPages !== "undefined" && Array.isArray(substantivGrammarPages)
+                ? substantivGrammarPages
+                : [];
         const page = pages[pageIndex];
 
         if (!page) {
@@ -788,9 +791,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openNounLesson(startIndex = 0) {
-        const pageCount = (typeof substantivGrammarPages !== "undefined" && Array.isArray(substantivGrammarPages))
-            ? substantivGrammarPages.length
-            : 0;
+        const pageCount =
+            typeof substantivGrammarPages !== "undefined" && Array.isArray(substantivGrammarPages)
+                ? substantivGrammarPages.length
+                : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
@@ -805,9 +809,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderAdjectivePage(pageIndex) {
-        const pages = (typeof adjektivGrammarPages !== "undefined" && Array.isArray(adjektivGrammarPages))
-            ? adjektivGrammarPages
-            : [];
+        const pages =
+            typeof adjektivGrammarPages !== "undefined" && Array.isArray(adjektivGrammarPages)
+                ? adjektivGrammarPages
+                : [];
         const page = pages[pageIndex];
 
         if (!page) {
@@ -844,9 +849,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openAdjectiveLesson(startIndex = 0) {
-        const pageCount = (typeof adjektivGrammarPages !== "undefined" && Array.isArray(adjektivGrammarPages))
-            ? adjektivGrammarPages.length
-            : 0;
+        const pageCount =
+            typeof adjektivGrammarPages !== "undefined" && Array.isArray(adjektivGrammarPages)
+                ? adjektivGrammarPages.length
+                : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
@@ -861,9 +867,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderPronounPage(pageIndex) {
-        const pages = (typeof pronomenGrammarPages !== "undefined" && Array.isArray(pronomenGrammarPages))
-            ? pronomenGrammarPages
-            : [];
+        const pages =
+            typeof pronomenGrammarPages !== "undefined" && Array.isArray(pronomenGrammarPages)
+                ? pronomenGrammarPages
+                : [];
         const page = pages[pageIndex];
 
         if (!page) {
@@ -900,9 +907,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openPronounLesson(startIndex = 0) {
-        const pageCount = (typeof pronomenGrammarPages !== "undefined" && Array.isArray(pronomenGrammarPages))
-            ? pronomenGrammarPages.length
-            : 0;
+        const pageCount =
+            typeof pronomenGrammarPages !== "undefined" && Array.isArray(pronomenGrammarPages)
+                ? pronomenGrammarPages.length
+                : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
@@ -917,9 +925,8 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderVerbPage(pageIndex) {
-        const pages = (typeof verbumGrammarPages !== "undefined" && Array.isArray(verbumGrammarPages))
-            ? verbumGrammarPages
-            : [];
+        const pages =
+            typeof verbumGrammarPages !== "undefined" && Array.isArray(verbumGrammarPages) ? verbumGrammarPages : [];
         const page = pages[pageIndex];
 
         if (!page) {
@@ -956,9 +963,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openVerbLesson(startIndex = 0) {
-        const pageCount = (typeof verbumGrammarPages !== "undefined" && Array.isArray(verbumGrammarPages))
-            ? verbumGrammarPages.length
-            : 0;
+        const pageCount =
+            typeof verbumGrammarPages !== "undefined" && Array.isArray(verbumGrammarPages)
+                ? verbumGrammarPages.length
+                : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
@@ -973,14 +981,16 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderConjunctionPage(pageIndex) {
-        const pages = (typeof konjunktionGrammarPages !== "undefined" && Array.isArray(konjunktionGrammarPages))
-            ? konjunktionGrammarPages
-            : [];
+        const pages =
+            typeof konjunktionGrammarPages !== "undefined" && Array.isArray(konjunktionGrammarPages)
+                ? konjunktionGrammarPages
+                : [];
         const page = pages[pageIndex];
 
         if (!page) {
             if (conjunctionTitleEl) conjunctionTitleEl.textContent = "No lesson content";
-            if (conjunctionContentEl) conjunctionContentEl.innerHTML = "<p>Please check the conjunction lesson data.</p>";
+            if (conjunctionContentEl)
+                conjunctionContentEl.innerHTML = "<p>Please check the conjunction lesson data.</p>";
             if (conjunctionCounterEl) conjunctionCounterEl.textContent = "0 / 0";
             if (conjunctionPrevBtn) conjunctionPrevBtn.disabled = true;
             if (conjunctionNextBtn) conjunctionNextBtn.disabled = true;
@@ -1012,9 +1022,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openConjunctionLesson(startIndex = 0) {
-        const pageCount = (typeof konjunktionGrammarPages !== "undefined" && Array.isArray(konjunktionGrammarPages))
-            ? konjunktionGrammarPages.length
-            : 0;
+        const pageCount =
+            typeof konjunktionGrammarPages !== "undefined" && Array.isArray(konjunktionGrammarPages)
+                ? konjunktionGrammarPages.length
+                : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
@@ -1030,14 +1041,16 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderPrepositionPage(pageIndex) {
-        const pages = (typeof praepositionGrammarPages !== "undefined" && Array.isArray(praepositionGrammarPages))
-            ? praepositionGrammarPages
-            : [];
+        const pages =
+            typeof praepositionGrammarPages !== "undefined" && Array.isArray(praepositionGrammarPages)
+                ? praepositionGrammarPages
+                : [];
         const page = pages[pageIndex];
 
         if (!page) {
             if (prepositionTitleEl) prepositionTitleEl.textContent = "No lesson content";
-            if (prepositionContentEl) prepositionContentEl.innerHTML = "<p>Please check the preposition lesson data.</p>";
+            if (prepositionContentEl)
+                prepositionContentEl.innerHTML = "<p>Please check the preposition lesson data.</p>";
             if (prepositionCounterEl) prepositionCounterEl.textContent = "0 / 0";
             if (prepositionPrevBtn) prepositionPrevBtn.disabled = true;
             if (prepositionNextBtn) prepositionNextBtn.disabled = true;
@@ -1069,9 +1082,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openPrepositionLesson(startIndex = 0) {
-        const pageCount = (typeof praepositionGrammarPages !== "undefined" && Array.isArray(praepositionGrammarPages))
-            ? praepositionGrammarPages.length
-            : 0;
+        const pageCount =
+            typeof praepositionGrammarPages !== "undefined" && Array.isArray(praepositionGrammarPages)
+                ? praepositionGrammarPages.length
+                : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
@@ -1088,9 +1102,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderWordOrderPage(pageIndex) {
-        const pages = (typeof ordstillingGrammarPages !== "undefined" && Array.isArray(ordstillingGrammarPages))
-            ? ordstillingGrammarPages
-            : [];
+        const pages =
+            typeof ordstillingGrammarPages !== "undefined" && Array.isArray(ordstillingGrammarPages)
+                ? ordstillingGrammarPages
+                : [];
         const page = pages[pageIndex];
 
         if (!page) {
@@ -1127,9 +1142,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function openWordOrderLesson(startIndex = 0) {
-        const pageCount = (typeof ordstillingGrammarPages !== "undefined" && Array.isArray(ordstillingGrammarPages))
-            ? ordstillingGrammarPages.length
-            : 0;
+        const pageCount =
+            typeof ordstillingGrammarPages !== "undefined" && Array.isArray(ordstillingGrammarPages)
+                ? ordstillingGrammarPages.length
+                : 0;
         hideHomeViews();
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
@@ -1314,7 +1330,7 @@ window.addEventListener("DOMContentLoaded", function () {
         const isGuideVisible = !!(skriveguideEl && skriveguideEl.offsetParent !== null);
         if (!isGuideVisible) return;
 
-        if (e.key === "ArrowLeft" && !guidePrevBtn?.disabled)  guidePrevBtn.click();
+        if (e.key === "ArrowLeft" && !guidePrevBtn?.disabled) guidePrevBtn.click();
         if (e.key === "ArrowRight" && !guideNextBtn?.disabled) guideNextBtn.click();
     });
 
@@ -1328,12 +1344,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
         // Hide & disable Prev/Next on landing
         if (prevQuestionBtn) {
-        prevQuestionBtn.style.display = "none";
-        prevQuestionBtn.setAttribute("disabled", "");
+            prevQuestionBtn.style.display = "none";
+            prevQuestionBtn.setAttribute("disabled", "");
         }
         if (nextQuestionBtn) {
-        nextQuestionBtn.style.display = "none";
-        nextQuestionBtn.setAttribute("disabled", "");
+            nextQuestionBtn.style.display = "none";
+            nextQuestionBtn.setAttribute("disabled", "");
         }
 
         // Optionally hide the inline row until quiz.js starts rendering
@@ -1354,9 +1370,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
         // Hide other sections
         if (skriveguideEl) skriveguideEl.style.display = "none";
-        if (studyModeEl)   studyModeEl.style.display   = "none";
-        if (homeWelcome)   homeWelcome.style.display   = "none";
-        if (startQuizBtn)  startQuizBtn.style.display  = "none";
+        if (studyModeEl) studyModeEl.style.display = "none";
+        if (homeWelcome) homeWelcome.style.display = "none";
+        if (startQuizBtn) startQuizBtn.style.display = "none";
         grammarSelectionEl?.classList.add("is-hidden");
         adverbLessonEl?.classList.add("is-hidden");
         nounLessonEl?.classList.add("is-hidden");
@@ -1369,7 +1385,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (mainButtons) mainButtons.style.display = "none";
 
         // Show quiz section + category selection
-        if (quizModeEl)         quizModeEl.style.display        = "block";
+        if (quizModeEl) quizModeEl.style.display = "block";
         if (quizCategorySelect) quizCategorySelect.style.display = "block";
 
         // Fresh-start UI cleanup to avoid any leftover Prev/Next/Quit
@@ -1408,16 +1424,20 @@ window.addEventListener("DOMContentLoaded", function () {
 
                 // Remove older registrations/caches so local servers always serve current files.
                 Promise.all([
-                    navigator.serviceWorker.getRegistrations().then(registrations =>
-                        Promise.all(registrations.map(registration => registration.unregister()))
-                    ),
-                    caches.keys().then(cacheNames =>
-                        Promise.all(
-                            cacheNames
-                                .filter(cacheName => cacheName.startsWith("dk-vocab-"))
-                                .map(cacheName => caches.delete(cacheName))
+                    navigator.serviceWorker
+                        .getRegistrations()
+                        .then((registrations) =>
+                            Promise.all(registrations.map((registration) => registration.unregister()))
+                        ),
+                    caches
+                        .keys()
+                        .then((cacheNames) =>
+                            Promise.all(
+                                cacheNames
+                                    .filter((cacheName) => cacheName.startsWith("dk-vocab-"))
+                                    .map((cacheName) => caches.delete(cacheName))
+                            )
                         )
-                    )
                 ])
                     .then(() => {
                         console.log("Local development: service worker cache disabled.");
@@ -1431,14 +1451,14 @@ window.addEventListener("DOMContentLoaded", function () {
 
                         sessionStorage.removeItem("dk-vocab-dev-cache-reset");
                     })
-                    .catch(err => console.error("Local cache cleanup failed:", err));
+                    .catch((err) => console.error("Local cache cleanup failed:", err));
                 return;
             }
 
             navigator.serviceWorker
                 .register("./sw.js", { scope: "./" })
-                .then(reg => console.log("SW registered:", reg.scope))
-                .catch(err => console.error("SW registration failed:", err));
+                .then((reg) => console.log("SW registered:", reg.scope))
+                .catch((err) => console.error("SW registration failed:", err));
         });
     }
 });
