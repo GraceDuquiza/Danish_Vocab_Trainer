@@ -105,23 +105,25 @@ async function buildJavascript(file) {
 
 async function listFiles(directory) {
     const entries = await readdir(directory, { withFileTypes: true });
-    const files = await Promise.all(entries.map(async entry => {
-        const entryPath = path.join(directory, entry.name);
-        return entry.isDirectory() ? listFiles(entryPath) : [entryPath];
-    }));
+    const files = await Promise.all(
+        entries.map(async (entry) => {
+            const entryPath = path.join(directory, entry.name);
+            return entry.isDirectory() ? listFiles(entryPath) : [entryPath];
+        })
+    );
 
     return files.flat();
 }
 
 async function verifyNoSourceMaps() {
     const generatedFiles = await listFiles(outputDirectory);
-    const sourceMapFiles = generatedFiles.filter(file => file.endsWith(".map"));
+    const sourceMapFiles = generatedFiles.filter((file) => file.endsWith(".map"));
 
     if (sourceMapFiles.length > 0) {
         throw new Error(`Unexpected source maps generated: ${sourceMapFiles.join(", ")}`);
     }
 
-    for (const file of generatedFiles.filter(file => /\.(?:css|html|js)$/u.test(file))) {
+    for (const file of generatedFiles.filter((file) => /\.(?:css|html|js)$/u.test(file))) {
         const content = await readFile(file, "utf8");
         if (/sourceMappingURL/iu.test(content)) {
             throw new Error(`Source map reference found in ${file}`);
@@ -142,7 +144,7 @@ async function build() {
         ...javascriptFiles.map(buildJavascript),
         buildCss(),
         cp(sourcePath("icons"), outputPath("icons"), { recursive: true }),
-        readFile(sourcePath("manifest.webmanifest"), "utf8").then(content =>
+        readFile(sourcePath("manifest.webmanifest"), "utf8").then((content) =>
             writeFile(outputPath("manifest.webmanifest"), JSON.stringify(JSON.parse(content)), "utf8")
         ),
         writeFile(outputPath(".nojekyll"), "", "utf8")

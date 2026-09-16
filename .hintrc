@@ -1,15 +1,11 @@
 {
-  "extends": [
-    "development"
-  ],
-  "hints": {
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "-webkit-text-size-adjust"
+    "extends": ["development"],
+    "hints": {
+        "compat-api/css": [
+            "default",
+            {
+                "ignore": ["-webkit-text-size-adjust"]
+            }
         ]
-      }
-    ]
-  }
+    }
 }
