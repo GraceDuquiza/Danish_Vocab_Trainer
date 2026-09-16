@@ -1,87 +1,83 @@
+# Danish Vocabulary Trainer
 
-# 🇩🇰 Danish Vocabulary Trainer
+A simple web app for learning and reviewing Danish vocabulary and grammar.
 
-A simple and effective web app to help users learn and practice Danish vocabulary, especially for oral exams. The app includes study and quiz modes for verbs, nouns, adjectives, and adverbs.
+I originally created this app for my own Danish studies and exam preparation. It includes vocabulary practice, quizzes, and bilingual Danish–English grammar lessons, so learners can review grammar rules without needing to translate everything separately.
 
-## ✨ Features
+The app is designed to be simple and easy to use on both desktop and mobile. It can be useful for learners preparing for Danish language exams or anyone who wants to continue practising Danish vocabulary and grammar.
 
-- ✅ Study Mode: Browse Danish words with English meanings and examples
-- 🧭 A focused home navigation hub for Vocabulary, Quiz, Skriveguide, and Grammatik
-- 🎯 Quiz Mode: Answer randomized multiple choice questions
-- 🔁 Reverse Mode: Practice English → Danish
-- 📱 Mobile responsive and accessible design
-- 🌲 Scandinavian-inspired visual theme with warm neutrals, natural accents, and calm learning surfaces
-- 🚪 Clearly styled Quit and Exit buttons
-- 🧩 Grammatik section with lessons rendered inside the existing single-page app
-- 🇩🇰🇬🇧 Bilingual Danish–English lesson about adverbs
-- 📘 Bilingual noun grammar guide with explanations, exercises, and answer keys
-- 📙 Bilingual adjective grammar guide covering agreement, definite forms, comparison, adjective/adverb use, exercises, and answers
-- 📕 Bilingual pronoun grammar guide adapted from `Pronomen.docx`, with personal, possessive, reflexive, relative, and indefinite pronouns, exercises, and answers
-- 📗 Bilingual verb grammar guide covering tense, verb phrases, modal verbs, passive voice, exercises, and answer keys
-- 🔗 Bilingual conjunction grammar guide adapted from `Konjunktion.docx`, with clause types, word order, punctuation, exercises, and answers
-- 📍 Bilingual preposition grammar guide adapted from `Praepositioner.docx`, covering place, direction, time, fixed combinations, exercises, and answers
-- 🧱 Bilingual word-order grammar guide adapted from `Ordstilling.docx`, covering sentence elements, V2, inversion, subordinate clauses, questions, objects, exercises, and answers
-- 🗂️ Mobile-friendly learning cards that group grammar rules, examples, and exercises into clear sections
+## Features
 
-## 📁 Project Structure
+- Study common Danish verbs, nouns, adjectives, adverbs, and conjunctions.
+- View English meanings together with practical Danish example sentences.
+- Practise vocabulary with randomized multiple-choice quizzes.
+- Switch between Danish-to-English and English-to-Danish quiz modes.
+- Use the writing guide for help with sentence structure, grammar, and written Danish.
+- Explore bilingual Danish–English grammar lessons with explanations, examples, exercises, and answer keys.
+- Install the app as a Progressive Web App (PWA) and continue studying offline.
+- Use the app comfortably on desktop, tablet, and mobile devices with a responsive design.
 
-```
-📦 danish-vocab-trainer/
-├── index.html
-├── style.css
-├── script.js
-├── quiz.js
-├── Grammatik_Adverbiel.js
-├── Grammatik_Substantiv.js
-├── Grammatik_Adjektiv.js
-├── Grammatik_Pronomen.js
-├── Grammatik_Verber.js
-├── Grammatik_Konjunktion.js
-├── Grammatik_Præpositioner.js
-├── Grammatik_Ordstilling.js
-├── verber.js
-├── substantiver.js
-├── adjektiver.js
-├── adverbKonjunktion.js
+## Local Development
+
+Clone or download the repository and run it through a local web server:
+
+```sh
+python -m http.server 8000
 ```
 
-`Grammatik_Adverbiel.js`, `Grammatik_Substantiv.js`, `Grammatik_Adjektiv.js`, `Grammatik_Pronomen.js`, `Grammatik_Verber.js`, `Grammatik_Konjunktion.js`, `Grammatik_Præpositioner.js`, and `Grammatik_Ordstilling.js` store the bilingual grammar lessons separately from the navigation and rendering logic. The lessons are displayed inside `index.html`; no separate grammar lesson pages are required.
+Then open:
 
-## 🚀 Development and deployment
+```text
+http://localhost:8000
+```
 
-The files in the repository root are the readable development source. To create the
-production site locally:
+Running the project through a local server allows navigation, caching, and other web features to work correctly.
+
+The service worker is disabled during local development to help prevent outdated cached files from interfering with changes.
+
+## Production Build
+
+Install the project dependencies:
 
 ```sh
 npm install
+```
+
+Create the optimized production build:
+
+```sh
 npm run build
 ```
 
-The generated `dist/` directory contains minified HTML and CSS plus minified,
-obfuscated JavaScript. Production source maps are disabled and the build fails if a
-source map file or reference is generated. `dist/` is intentionally ignored by Git.
+The generated production files are placed in:
 
-Pushing `main` runs `.github/workflows/deploy-pages.yml`, which builds and publishes
-only `dist/` to GitHub Pages. In **Settings > Pages**, set **Source** to
-**GitHub Actions** once; do not select deployment from the repository root.
+```text
+dist/
+```
 
-Obfuscation makes browser-delivered JavaScript harder to read, but it is not a
-security boundary. The browser must still receive the application and learning
-content, and the readable source remains visible when the GitHub repository is public.
+The `dist/` directory is generated locally and is not committed to the repository.
 
-During local development on `localhost` or `127.0.0.1`, the app automatically unregisters its service worker and clears its own PWA caches. If an older worker controls the first load, the page reloads once automatically and then continues without caching. Production remains offline-capable and checks the network before using cached static assets.
+When changes are pushed to the `main` branch, the GitHub Actions workflow automatically builds and deploys the application to GitHub Pages.
 
-## 🛠 Built With
+## Tech Stack
 
-- HTML5
-- CSS3 (Responsive, Accessible Design)
-- JavaScript (ES6)
+- HTML
+- CSS
+- JavaScript
+- Progressive Web App (PWA)
+- GitHub Actions
+- GitHub Pages
 
-## 👩‍💻 Author
+## Author
 
-**Grace Duquiza Olesen**  
-Computer Science student & web enthusiast living in Denmark  
-AOF & FVU Student
----
+**Grace Duquiza Olesen**
 
-> This project is created for educational and language learning purposes.
+Computer Science student based in Denmark.
+
+I created this project while learning Danish and preparing for Danish language exams. As I continue studying Danish, I use the app to review vocabulary and grammar and to keep practising what I have learned.
+
+## Purpose
+
+This project was created for educational and language-learning purposes.
+
+It started as a personal study tool, but I am sharing it publicly in the hope that it can also be useful for other Danish learners who want an easy way to review vocabulary and grammar in both Danish and English.
