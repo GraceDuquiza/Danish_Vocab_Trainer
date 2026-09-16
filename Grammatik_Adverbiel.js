@@ -1,4 +1,4 @@
-// Grammatik_Adverbiel.js — “book” pages generated faithfully from Adverbier.docx
+// Grammatik_Adverbiel.js 
 
 const adverbielPages = [
     {
@@ -14,17 +14,15 @@ const adverbielPages = [
                 <thead>
                     <tr>
                         <th class="grammar-danish" lang="da">
-                            <span class="grammar-language-text"
-                                >Et adverbium (biord) er et ord, som giver ekstra information om en handling, en egenskab, et andet
+                            <span class="grammar-language-text">Et adverbium (biord) er et ord, som giver ekstra information om en handling, en egenskab, et andet
                                 adverbium eller hele sætningen. Adverbier kan blandt andet fortælle hvornår, hvor, hvordan, hvor
-                                meget eller hvor sikkert noget er.</span
-                            >
+                                meget eller hvor sikkert noget er.
+                            </span>
                         </th>
                         <th class="grammar-english grammar-translation-panel" lang="en">
-                            <span class="grammar-language-text"
-                                >An adverb is a word that adds information about an action, a quality, another adverb, or the whole
-                                sentence. Adverbs can tell us when, where, how, to what degree, or how certain something is.</span
-                            >
+                            <span class="grammar-language-text">An adverb is a word that adds information about an action, a quality, another adverb, or the whole
+                                sentence. Adverbs can tell us when, where, how, to what degree, or how certain something is.
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -40,8 +38,8 @@ const adverbielPages = [
                             <p><strong>Hun taler langsomt.</strong></p>
                             <p><em>She speaks slowly.</em></p>
                             <p class="grammar-inline-language-pair">
-                                <span lang="da">“langsomt” beskriver måden, hun taler på</span
-                                ><span class="grammar-english" lang="en">Describes how she speaks</span>
+                                <span lang="da">“langsomt” beskriver måden, hun taler på</span>
+                                <span class="grammar-english" lang="en">Describes how she speaks</span>
                             </p>
                         </th>
                     </tr>
@@ -58,8 +56,8 @@ const adverbielPages = [
                             <p><strong>Det er meget svært.</strong></p>
                             <p><em>It is very difficult.</em></p>
                             <p class="grammar-inline-language-pair">
-                                <span lang="da">“meget” beskriver graden af “svært”</span
-                                ><span class="grammar-english" lang="en">Describes the degree of “difficult”</span>
+                                <span lang="da">“meget” beskriver graden af “svært”</span>
+                                <span class="grammar-english" lang="en">Describes the degree of “difficult”</span>
                             </p>
                         </th>
                     </tr>
@@ -76,8 +74,8 @@ const adverbielPages = [
                             <p><strong>Måske kommer han i morgen.</strong></p>
                             <p><em>Maybe he will come tomorrow.</em></p>
                             <p class="grammar-inline-language-pair">
-                                <span lang="da">“måske” viser usikkerhed om hele sætningen</span
-                                ><span class="grammar-english" lang="en">Shows uncertainty about the whole sentence</span>
+                                <span lang="da">“måske” viser usikkerhed om hele sætningen</span>
+                                <span class="grammar-english" lang="en">Shows uncertainty about the whole sentence</span>
                             </p>
                         </th>
                     </tr>
@@ -91,9 +89,7 @@ const adverbielPages = [
                 <thead>
                     <tr>
                         <th>
-                            <p class="grammar-paired-label">
-                                <strong lang="da">Husk</strong><strong class="grammar-english" lang="en">Remember</strong>
-                            </p>
+                            <p class="grammar-paired-label"><strong lang="da">Husk</strong><strong class="grammar-english" lang="en">Remember</strong></p>
                             <p>Adverbier giver ekstra information. Spørg fx: Hvornår? Hvor? Hvordan? Hvor meget? Hvor sikkert?</p>
                             <p><em>Adverbs add information. Ask: When? Where? How? To what degree? How certain?</em></p>
                         </th>
@@ -119,83 +115,82 @@ const adverbielPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hvad beskrives?</strong
-                                ><strong class="grammar-english" lang="en">What is described?</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Hvad beskrives?</strong><strong class="grammar-english" lang="en">What is described?</strong>
+                            </span>
                         </th>
                         <th lang="da"><strong>Dansk eksempel</strong></th>
                         <th class="grammar-english" lang="en"><strong>English example</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Kontrolspørgsmål</strong
-                                ><strong class="grammar-english" lang="en">Check question</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Kontrolspørgsmål</strong><strong class="grammar-english" lang="en">Check question</strong>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Et verbum</strong><strong class="grammar-english" lang="en">A verb</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Et verbum</strong><strong class="grammar-english" lang="en">A verb</strong>
+                            </span>
                         </td>
                         <td lang="da">Han løber <u>hurtigt</u>.</td>
                         <td class="grammar-english" lang="en">He runs quickly.</td>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hvordan løber han?</strong
-                                ><strong class="grammar-english" lang="en">How does he run?</strong></span
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Hvordan løber han?</strong>
+                                <strong class="grammar-english" lang="en">How does he run?</strong>
+                            </span
                             >
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Et adjektiv</strong
-                                ><strong class="grammar-english" lang="en">An adjective</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Et adjektiv</strong>
+                                <strong class="grammar-english" lang="en">An adjective</strong>
+                            </span>
                         </td>
                         <td lang="da">Opgaven er <u>meget</u> svær.</td>
                         <td class="grammar-english" lang="en">The task is very difficult.</td>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hvor svær?</strong
-                                ><strong class="grammar-english" lang="en">How difficult?</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Hvor svær?</strong>
+                                <strong class="grammar-english" lang="en">How difficult?</strong>
+                            </span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Et andet adverbium</strong
-                                ><strong class="grammar-english" lang="en">Another adverb</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Et andet adverbium</strong>
+                                <strong class="grammar-english" lang="en">Another adverb</strong>
+                            </span>
                         </td>
                         <td lang="da">Hun taler <u>meget</u> tydeligt.</td>
                         <td class="grammar-english" lang="en">She speaks very clearly.</td>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hvor tydeligt?</strong
-                                ><strong class="grammar-english" lang="en">How clearly?</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Hvor tydeligt?</strong>
+                                <strong class="grammar-english" lang="en">How clearly?</strong>
+                            </span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hele sætningen</strong
-                                ><strong class="grammar-english" lang="en">The whole sentence</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Hele sætningen</strong>
+                                <strong class="grammar-english" lang="en">The whole sentence</strong>
+                            </span>
                         </td>
                         <td lang="da"><u>Heldigvis</u> kom bussen.</td>
                         <td class="grammar-english" lang="en">Fortunately, the bus came.</td>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Talerens holdning</strong
-                                ><strong class="grammar-english" lang="en">The speaker’s attitude</strong></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Talerens holdning</strong>
+                                <strong class="grammar-english" lang="en">The speaker’s attitude</strong>
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -221,93 +216,93 @@ const adverbielPages = [
                 </thead>
                 <tbody>
                     <tr>
-                        <td lang="da">
-                            <strong>Tid</strong><span class="grammar-word-list">nu, snart, bagefter, altid</span
-                            ><span class="grammar-example-line">Jeg kommer <u>snart</u>.</span>
+                        <td lang="da"><strong>Tid</strong>
+                            <span class="grammar-word-list">nu, snart, bagefter, altid</span>
+                            <span class="grammar-example-line">Jeg kommer <u>snart</u>.</span>
                         </td>
-                        <td class="grammar-english" lang="en">
-                            <strong>Time</strong><span class="grammar-word-list">now, soon, afterwards, always</span
-                            ><span class="grammar-example-line">I am coming soon.</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td lang="da">
-                            <strong>Sted</strong><span class="grammar-word-list">her, der, hjemme, ude</span
-                            ><span class="grammar-example-line">Hun er <u>hjemme</u>.</span>
-                        </td>
-                        <td class="grammar-english" lang="en">
-                            <strong>Place</strong><span class="grammar-word-list">here, there, at home, outside</span
-                            ><span class="grammar-example-line">She is at home.</span>
+                        <td class="grammar-english" lang="en"><strong>Time</strong>
+                            <span class="grammar-word-list">now, soon, afterwards, always</span>
+                            <span class="grammar-example-line">I am coming soon.</span>
                         </td>
                     </tr>
                     <tr>
-                        <td lang="da">
-                            <strong>Måde</strong><span class="grammar-word-list">hurtigt, venligt, direkte</span
-                            ><span class="grammar-example-line">Han svarede <u>venligt</u>.</span>
+                        <td lang="da"><strong>Sted</strong>
+                            <span class="grammar-word-list">her, der, hjemme, ude</span>
+                            <span class="grammar-example-line">Hun er <u>hjemme</u>.</span>
                         </td>
-                        <td class="grammar-english" lang="en">
-                            <strong>Manner</strong><span class="grammar-word-list">quickly, kindly, directly</span
-                            ><span class="grammar-example-line">He answered kindly.</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td lang="da">
-                            <strong>Retning</strong><span class="grammar-word-list">ind, ud, hjem, herhen</span
-                            ><span class="grammar-example-line">Kom <u>herhen</u>.</span>
-                        </td>
-                        <td class="grammar-english" lang="en">
-                            <strong>Direction</strong><span class="grammar-word-list">in, out, home, over here</span
-                            ><span class="grammar-example-line">Come over here.</span>
+                        <td class="grammar-english" lang="en"><strong>Place</strong>
+                            <span class="grammar-word-list">here, there, at home, outside</span>
+                            <span class="grammar-example-line">She is at home.</span>
                         </td>
                     </tr>
                     <tr>
-                        <td lang="da">
-                            <strong>Grad</strong><span class="grammar-word-list">meget, lidt, temmelig, særdeles</span
-                            ><span class="grammar-example-line">Det er <u>meget</u> koldt.</span>
+                        <td lang="da"><strong>Måde</strong>
+                            <span class="grammar-word-list">hurtigt, venligt, direkte</span>
+                            <span class="grammar-example-line">Han svarede <u>venligt</u>.</span>
                         </td>
-                        <td class="grammar-english" lang="en">
-                            <strong>Degree</strong><span class="grammar-word-list">very, a little, rather, particularly</span
-                            ><span class="grammar-example-line">It is very cold.</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td lang="da">
-                            <strong>Sikkerhed</strong><span class="grammar-word-list">måske, nok, sikkert, muligvis</span
-                            ><span class="grammar-example-line">Hun kommer <u>måske</u>.</span>
-                        </td>
-                        <td class="grammar-english" lang="en">
-                            <strong>Certainty</strong><span class="grammar-word-list">maybe, probably, certainly, possibly</span
-                            ><span class="grammar-example-line">She may come.</span>
+                        <td class="grammar-english" lang="en"><strong>Manner</strong>
+                            <span class="grammar-word-list">quickly, kindly, directly</span>
+                            <span class="grammar-example-line">He answered kindly.</span>
                         </td>
                     </tr>
                     <tr>
-                        <td lang="da">
-                            <strong>Nægtelse</strong><span class="grammar-word-list">ikke, aldrig</span
-                            ><span class="grammar-example-line">Jeg spiser <u>ikke</u> kød.</span>
+                        <td lang="da"><strong>Retning</strong>
+                            <span class="grammar-word-list">ind, ud, hjem, herhen</span>
+                            <span class="grammar-example-line">Kom <u>herhen</u>.</span>
                         </td>
-                        <td class="grammar-english" lang="en">
-                            <strong>Negation</strong><span class="grammar-word-list">not, never</span
-                            ><span class="grammar-example-line">I do not eat meat.</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td lang="da">
-                            <strong>Holdning</strong><span class="grammar-word-list">heldigvis, desværre, naturligvis</span
-                            ><span class="grammar-example-line"><u>Desværre</u> er butikken lukket.</span>
-                        </td>
-                        <td class="grammar-english" lang="en">
-                            <strong>Attitude</strong><span class="grammar-word-list">fortunately, unfortunately, naturally</span
-                            ><span class="grammar-example-line">Unfortunately, the shop is closed.</span>
+                        <td class="grammar-english" lang="en"><strong>Direction</strong>
+                            <span class="grammar-word-list">in, out, home, over here</span>
+                            <span class="grammar-example-line">Come over here.</span>
                         </td>
                     </tr>
                     <tr>
-                        <td lang="da">
-                            <strong>Spørgsmål</strong><span class="grammar-word-list">hvor, hvornår, hvordan, hvorfor</span
-                            ><span class="grammar-example-line"><u>Hvor</u> bor du?</span>
+                        <td lang="da"><strong>Grad</strong>
+                            <span class="grammar-word-list">meget, lidt, temmelig, særdeles</span>
+                            <span class="grammar-example-line">Det er <u>meget</u> koldt.</span>
                         </td>
                         <td class="grammar-english" lang="en">
-                            <strong>Question</strong><span class="grammar-word-list">where, when, how, why</span
-                            ><span class="grammar-example-line">Where do you live?</span>
+                            <strong>Degree</strong><span class="grammar-word-list">very, a little, rather, particularly</span>
+                            <span class="grammar-example-line">It is very cold.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td lang="da"><strong>Sikkerhed</strong>
+                            <span class="grammar-word-list">måske, nok, sikkert, muligvis</span>
+                            <span class="grammar-example-line">Hun kommer <u>måske</u>.</span>
+                        </td>
+                        <td class="grammar-english" lang="en"><strong>Certainty</strong>
+                            <span class="grammar-word-list">maybe, probably, certainly, possibly</span>
+                            <span class="grammar-example-line">She may come.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td lang="da"><strong>Nægtelse</strong>
+                            <span class="grammar-word-list">ikke, aldrig</span>
+                            <span class="grammar-example-line">Jeg spiser <u>ikke</u> kød.</span>
+                        </td>
+                        <td class="grammar-english" lang="en"><strong>Negation</strong>
+                            <span class="grammar-word-list">not, never</span>
+                            <span class="grammar-example-line">I do not eat meat.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td lang="da"><strong>Holdning</strong>
+                            <span class="grammar-word-list">heldigvis, desværre, naturligvis</span>
+                            <span class="grammar-example-line"><u>Desværre</u> er butikken lukket.</span>
+                        </td>
+                        <td class="grammar-english" lang="en"><strong>Attitude</strong>
+                            <span class="grammar-word-list">fortunately, unfortunately, naturally</span>
+                            <span class="grammar-example-line">Unfortunately, the shop is closed.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td lang="da"><strong>Spørgsmål</strong>
+                            <span class="grammar-word-list">hvor, hvornår, hvordan, hvorfor</span>
+                            <span class="grammar-example-line"><u>Hvor</u> bor du?</span>
+                        </td>
+                        <td class="grammar-english" lang="en"><strong>Question</strong>
+                            <span class="grammar-word-list">where, when, how, why</span>
+                            <span class="grammar-example-line">Where do you live?</span>
                         </td>
                     </tr>
                 </tbody>
@@ -320,18 +315,13 @@ const adverbielPages = [
                     <tr>
                         <th>
                             <p class="grammar-paired-label">
-                                <strong lang="da">Læringsstrategi</strong
-                                ><strong class="grammar-english" lang="en">Learning strategy</strong>
+                                <strong lang="da">Læringsstrategi</strong><strong class="grammar-english" lang="en">Learning strategy</strong>
                             </p>
                             <p>
-                                Lær adverbier i grupper. Det er lettere at huske “tid”, “sted” og “måde” end en lang tilfældig
-                                ordliste.
+                                Lær adverbier i grupper. Det er lettere at huske “tid”, “sted” og “måde” end en lang tilfældig ordliste.
                             </p>
                             <p>
-                                <em
-                                    >Learn adverbs in groups. It is easier to remember “time”, “place”, and “manner” than one long
-                                    random list.</em
-                                >
+                                <em>Learn adverbs in groups. It is easier to remember “time”, “place”, and “manner” than one long random list.</em>
                             </p>
                         </th>
                     </tr>
@@ -359,10 +349,8 @@ const adverbielPages = [
                             præpositionsforbindelse.
                         </td>
                         <td class="grammar-english" lang="en">
-                            <em
-                                >An adverb is a word class. An adverbial is a function in the sentence. An adverbial can express
-                                time, place, manner, or reason. It may consist of an adverb, a noun, or a prepositional phrase.</em
-                            >
+                            <em>An adverb is a word class. An adverbial is a function in the sentence. An adverbial can express time, place, manner, or reason. 
+                            It may consist of an adverb, a noun, or a prepositional phrase.</em>
                         </td>
                     </tr>
                 </thead>
@@ -384,60 +372,59 @@ const adverbielPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Adverbium</span><span class="grammar-english" lang="en">Adverb</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Adverbium</span>
+                                <span class="grammar-english" lang="en">Adverb</span>
+                            </span>
                         </td>
                         <td>Hun synger <u>smukt</u>.<br /><em>She sings beautifully.</em></td>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">smukt = hvordan</span
-                                ><span class="grammar-english" lang="en">smukt = how</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">smukt = hvordan</span>
+                                <span class="grammar-english" lang="en">smukt = how</span>
+                            </span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Substantiv</span><span class="grammar-english" lang="en">Noun</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Substantiv</span><span class="grammar-english" lang="en">Noun</span>
+                            </span>
                         </td>
                         <td><u>Torsdag</u> spiller vi fodbold.<br /><em>On Thursday, we play football.</em></td>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">torsdag = hvornår</span
-                                ><span class="grammar-english" lang="en">torsdag = when</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">torsdag = hvornår</span><span class="grammar-english" lang="en">torsdag = when</span>
+                            </span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Præpositionsforbindelse</span
-                                ><span class="grammar-english" lang="en">Prepositional phrase</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Præpositionsforbindelse</span>
+                                <span class="grammar-english" lang="en">Prepositional phrase</span>
+                            </span>
                         </td>
                         <td><u>I morgen</u> bliver det koldt.<br /><em>It will be cold tomorrow.</em></td>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">i morgen = hvornår</span
-                                ><span class="grammar-english" lang="en">i morgen = when</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">i morgen = hvornår</span>
+                                <span class="grammar-english" lang="en">i morgen = when</span>
+                            </span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Adjektiv i adverbiel form</span
-                                ><span class="grammar-english" lang="en">Adjective used adverbially</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Adjektiv i adverbiel form</span><span class="grammar-english" lang="en">Adjective used adverbially</span>
+                            </span>
                         </td>
                         <td>Han cyklede <u>hurtigt</u>.<br /><em>He cycled quickly.</em></td>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">hurtigt = hvordan</span
-                                ><span class="grammar-english" lang="en">hurtigt = how</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">hurtigt = hvordan</span>
+                                <span class="grammar-english" lang="en">hurtigt = how</span>
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -458,14 +445,10 @@ const adverbielPages = [
                 <thead>
                     <tr>
                         <td lang="da">
-                            De fleste rene adverbier bøjes ikke. Ordet ændrer altså normalt ikke form. Nogle få adverbier kan dog
-                            gradbøjes, når vi sammenligner.
+                            De fleste rene adverbier bøjes ikke. Ordet ændrer altså normalt ikke form. Nogle få adverbier kan dog gradbøjes, når vi sammenligner.
                         </td>
                         <td class="grammar-english" lang="en">
-                            <em
-                                >Most pure adverbs do not change form. However, a few adverbs can be compared when we express
-                                different degrees.</em
-                            >
+                            <em>Most pure adverbs do not change form. However, a few adverbs can be compared when we express different degrees.</em>
                         </td>
                     </tr>
                 </thead>
@@ -481,8 +464,8 @@ const adverbielPages = [
                             <p><strong>Hun er temmelig træt. / Jeg vil naturligvis gerne med.</strong></p>
                             <p><em>She is rather tired. / Of course, I would like to come along.</em></p>
                             <p class="grammar-inline-language-pair">
-                                <span lang="da">“temmelig” og “naturligvis” ændrer ikke form</span
-                                ><span class="grammar-english" lang="en">“temmelig” and “naturligvis” do not change form</span>
+                                <span lang="da">“temmelig” og “naturligvis” ændrer ikke form</span>
+                                <span class="grammar-english" lang="en">“temmelig” and “naturligvis” do not change form</span>
                             </p>
                         </th>
                     </tr>
@@ -576,15 +559,9 @@ const adverbielPages = [
                             <p class="grammar-paired-label">
                                 <strong lang="da">Hovedregel</strong><strong class="grammar-english" lang="en">Main rule</strong>
                             </p>
+                            <p>Når et adjektiv bruges til at beskrive, hvordan en handling foregår, bruges normalt intetkønsformen med -t.</p>
                             <p>
-                                Når et adjektiv bruges til at beskrive, hvordan en handling foregår, bruges normalt intetkønsformen
-                                med -t.
-                            </p>
-                            <p>
-                                <em
-                                    >When an adjective is used to describe how an action happens, the neuter form ending in -t is
-                                    normally used.</em
-                                >
+                                <em>When an adjective is used to describe how an action happens, the neuter form ending in -t is normally used.</em>
                             </p>
                         </th>
                     </tr>
@@ -649,14 +626,11 @@ const adverbielPages = [
                 <thead>
                     <tr>
                         <th lang="da">
-                            Adjektiver på -ig og -lig skal have -t, når de fortæller, på hvilken måde noget sker. Du kan ofte
-                            omskrive med “på en ... måde”.
+                            Adjektiver på -ig og -lig skal have -t, når de fortæller, på hvilken måde noget sker. Du kan ofte omskrive med “på en ... måde”.
                         </th>
                         <th class="grammar-english" lang="en">
-                            <em
-                                >Adjectives ending in -ig and -lig take -t when they describe the manner in which something happens.
-                                You can often paraphrase with “in a ... way”.</em
-                            >
+                            <em>Adjectives ending in -ig and -lig take -t when they describe the manner in which something happens.
+                            You can often paraphrase with “in a ... way”.</em>
                         </th>
                     </tr>
                 </thead>
@@ -726,10 +700,8 @@ const adverbielPages = [
                             kan være korrekte, men brugen kan variere efter stil og sammenhæng.
                         </th>
                         <th class="grammar-english" lang="en">
-                            <em
-                                >With degree, time, place, and speaker attitude, -t is often optional in words ending in -ig and
-                                -lig. Both forms may be correct, though usage can vary by style and context.</em
-                            >
+                            <em>With degree, time, place, and speaker attitude, -t is often optional in words ending in -ig and
+                            -lig. Both forms may be correct, though usage can vary by style and context.</em>
                         </th>
                     </tr>
                 </thead>
@@ -751,46 +723,45 @@ const adverbielPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Grad</span><span class="grammar-english" lang="en">Degree</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Grad</span><span class="grammar-english" lang="en">Degree</span>
+                            </span>
                         </td>
                         <td>Jeg vil <u>frygtelig(t)</u> gerne med.</td>
                         <td>I would very much like to come.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Tid</span><span class="grammar-english" lang="en">Time</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Tid</span><span class="grammar-english" lang="en">Time</span>
+                            </span>
                         </td>
                         <td>Jeg står <u>tidlig(t)</u> op.</td>
                         <td>I get up early.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Sted</span><span class="grammar-english" lang="en">Place</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Sted</span><span class="grammar-english" lang="en">Place</span>
+                            </span>
                         </td>
                         <td>Huset er malet <u>udvendig(t)</u>.</td>
                         <td>The house is painted on the outside.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Holdning</span><span class="grammar-english" lang="en">Attitude</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Holdning</span><span class="grammar-english" lang="en">Attitude</span>
+                            </span>
                         </td>
                         <td><u>Personlig(t)</u> foretrækker jeg den blå.</td>
                         <td>Personally, I prefer the blue one.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Ord på -vis</span
-                                ><span class="grammar-english" lang="en">Words ending in -vis</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Ord på -vis</span><span class="grammar-english" lang="en">Words ending in -vis</span>
+                            </span>
                         </td>
                         <td>Vi er <u>delvis(t)</u> enige.</td>
                         <td>We partly agree.</td>
@@ -805,8 +776,7 @@ const adverbielPages = [
                     <tr>
                         <th>
                             <p class="grammar-paired-label">
-                                <strong lang="da">Praktisk råd</strong
-                                ><strong class="grammar-english" lang="en">Practical advice</strong>
+                                <strong lang="da">Praktisk råd</strong><strong class="grammar-english" lang="en">Practical advice</strong>
                             </p>
                             <p>Når ordet beskriver selve måden, en handling udføres på, vælg -t: “Hun svarede venligt.”</p>
                             <p>
@@ -828,14 +798,10 @@ const adverbielPages = [
                 <thead>
                     <tr>
                         <th lang="da">
-                            Rene adverbier kan kun bruges som adverbier. De får normalt ikke et ekstra -t, heller ikke når de ender
-                            på -vis.
+                            Rene adverbier kan kun bruges som adverbier. De får normalt ikke et ekstra -t, heller ikke når de ender på -vis.
                         </th>
                         <th class="grammar-english" lang="en">
-                            <em
-                                >Pure adverbs can only function as adverbs. They normally do not take an extra -t, even when they
-                                end in -vis.</em
-                            >
+                            <em>Pure adverbs can only function as adverbs. They normally do not take an extra -t, even when they end in -vis.</em>
                         </th>
                     </tr>
                 </thead>
@@ -1016,18 +982,15 @@ const adverbielPages = [
                     <tr>
                         <th>
                             <p class="grammar-paired-label">
-                                <strong lang="da">Den vigtigste ordstillingsregel</strong
-                                ><strong class="grammar-english" lang="en">The most important word-order rule</strong>
+                                <strong lang="da">Den vigtigste ordstillingsregel</strong>
+                                <strong class="grammar-english" lang="en">The most important word-order rule</strong>
                             </p>
                             <p>
-                                Hovedsætning: centraladverbiet står efter det bøjede verbum. Ledsætning: centraladverbiet står før
-                                det bøjede verbum.
+                                Hovedsætning: centraladverbiet står efter det bøjede verbum. Ledsætning: centraladverbiet står før det bøjede verbum.
                             </p>
                             <p>
-                                <em
-                                    >Main clause: the central adverb comes after the finite verb. Subordinate clause: the central
-                                    adverb comes before the finite verb.</em
-                                >
+                                <em>Main clause: the central adverb comes after the finite verb. Subordinate clause: the central
+                                adverb comes before the finite verb.</em>
                             </p>
                         </th>
                     </tr>
@@ -1155,10 +1118,8 @@ const adverbielPages = [
                             før subjektet.
                         </th>
                         <th class="grammar-english" lang="en">
-                            <em
-                                >Some adverbs can be placed first for emphasis. When an element comes first, the finite verb comes
-                                before the subject.</em
-                            >
+                            <em>Some adverbs can be placed first for emphasis. When an element comes first, the finite verb comes
+                            before the subject.</em>
                         </th>
                     </tr>
                 </thead>
@@ -1174,8 +1135,8 @@ const adverbielPages = [
                             <p><strong>Måske ringer Kirsten i aften.</strong></p>
                             <p><em>Maybe Kirsten will call tonight.</em></p>
                             <p class="grammar-inline-language-pair">
-                                <span lang="da">måske + ringer + Kirsten</span
-                                ><span class="grammar-english" lang="en">adverb + finite verb + subject</span>
+                                <span lang="da">måske + ringer + Kirsten</span>
+                                <span class="grammar-english" lang="en">adverb + finite verb + subject</span>
                             </p>
                         </th>
                     </tr>
@@ -1192,8 +1153,8 @@ const adverbielPages = [
                             <p><strong>Kirsten ringer måske i aften.</strong></p>
                             <p><em>Kirsten may call tonight.</em></p>
                             <p class="grammar-inline-language-pair">
-                                <span lang="da">subjekt + verbum + centraladverbium</span
-                                ><span class="grammar-english" lang="en">subject + verb + central adverb</span>
+                                <span lang="da">subjekt + verbum + centraladverbium</span>
+                                <span class="grammar-english" lang="en">subject + verb + central adverb</span>
                             </p>
                         </th>
                     </tr>
@@ -1215,10 +1176,8 @@ const adverbielPages = [
                             normalt lige foran det adjektiv eller adverbium, de beskriver.
                         </th>
                         <th class="grammar-english" lang="en">
-                            <em
-                                >Final adverbs often occur later in the sentence and describe manner, direction, or place. Degree
-                                adverbs normally appear directly before the adjective or adverb they modify.</em
-                            >
+                            <em>Final adverbs often occur later in the sentence and describe manner, direction, or place. Degree
+                            adverbs normally appear directly before the adjective or adverb they modify.</em>
                         </th>
                     </tr>
                 </thead>
@@ -1276,8 +1235,8 @@ const adverbielPages = [
                     <tr>
                         <th>
                             <p class="grammar-paired-label">
-                                <strong lang="da">Kort form = bevægelse</strong
-                                ><strong class="grammar-english" lang="en">Short form = movement</strong>
+                                <strong lang="da">Kort form = bevægelse</strong>
+                                <strong class="grammar-english" lang="en">Short form = movement</strong>
                             </p>
                             <p>Brug ofte den korte form, når nogen eller noget bevæger sig mod et sted.</p>
                             <p><em>Use the short form when someone or something moves toward a place.</em></p>
@@ -1294,8 +1253,8 @@ const adverbielPages = [
                     <tr>
                         <th>
                             <p class="grammar-paired-label">
-                                <strong lang="da">Lang form = position</strong
-                                ><strong class="grammar-english" lang="en">Long form = location</strong>
+                                <strong lang="da">Lang form = position</strong>
+                                <strong class="grammar-english" lang="en">Long form = location</strong>
                             </p>
                             <p>Brug ofte den lange form, når nogen eller noget allerede befinder sig på stedet.</p>
                             <p><em>Use the long form when someone or something is already located there.</em></p>
@@ -1457,10 +1416,8 @@ const adverbielPages = [
                                 loftet”.
                             </p>
                             <p>
-                                <em
-                                    >A place adverb normally does not stand directly before a noun. Say “oppe på loftet” (up in the
-                                    attic), not “oppe loftet”.</em
-                                >
+                                <em>A place adverb normally does not stand directly before a noun. Say “oppe på loftet” (up in the
+                                attic), not “oppe loftet”.</em>
                             </p>
                         </th>
                     </tr>
@@ -1487,10 +1444,8 @@ const adverbielPages = [
                             sikkerhed, udtrykke holdning eller forbinde information.
                         </th>
                         <th class="grammar-english" lang="en">
-                            <em
-                                >Central adverbs affect how we interpret the sentence. They can express negation, time, certainty,
-                                attitude, focus, or a connection to previous information.</em
-                            >
+                            <em>Central adverbs affect how we interpret the sentence. They can express negation, time, certainty,
+                            attitude, focus, or a connection to previous information.</em>
                         </th>
                     </tr>
                 </thead>
@@ -1514,9 +1469,9 @@ const adverbielPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Nægtelse</span><span class="grammar-english" lang="en">Negation</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Nægtelse</span><span class="grammar-english" lang="en">Negation</span>
+                            </span>
                         </td>
                         <td>ikke, aldrig</td>
                         <td>Han spiser ikke fisk.</td>
@@ -1524,10 +1479,10 @@ const adverbielPages = [
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Tid og hyppighed</span
-                                ><span class="grammar-english" lang="en">Time and frequency</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Tid og hyppighed</span>
+                                <span class="grammar-english" lang="en">Time and frequency</span>
+                            </span>
                         </td>
                         <td>altid, tit, allerede, stadig, snart</td>
                         <td>Hun har allerede spist.</td>
@@ -1535,9 +1490,9 @@ const adverbielPages = [
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Usikkerhed</span><span class="grammar-english" lang="en">Uncertainty</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Usikkerhed</span><span class="grammar-english" lang="en">Uncertainty</span>
+                            </span>
                         </td>
                         <td>måske, nok, vist, muligvis</td>
                         <td>Det kommer nok til at regne.</td>
@@ -1545,9 +1500,9 @@ const adverbielPages = [
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Sikkerhed</span><span class="grammar-english" lang="en">Certainty</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Sikkerhed</span><span class="grammar-english" lang="en">Certainty</span>
+                            </span>
                         </td>
                         <td>sikkert, selvfølgelig, naturligvis</td>
                         <td>Det kan du selvfølgelig.</td>
@@ -1555,9 +1510,9 @@ const adverbielPages = [
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Holdning</span><span class="grammar-english" lang="en">Attitude</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Holdning</span><span class="grammar-english" lang="en">Attitude</span>
+                            </span>
                         </td>
                         <td>heldigvis, desværre, faktisk</td>
                         <td>Heldigvis kom hun.</td>
@@ -1565,9 +1520,9 @@ const adverbielPages = [
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Fokus</span><span class="grammar-english" lang="en">Focus</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Fokus</span><span class="grammar-english" lang="en">Focus</span>
+                            </span>
                         </td>
                         <td>kun, også, lige</td>
                         <td>Jeg drak kun ét glas.</td>
@@ -1575,9 +1530,9 @@ const adverbielPages = [
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><span lang="da">Sammenhæng</span><span class="grammar-english" lang="en">Connection</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <span lang="da">Sammenhæng</span><span class="grammar-english" lang="en">Connection</span>
+                            </span>
                         </td>
                         <td>nemlig, derfor, alligevel, ellers</td>
                         <td>Hun er vegetar; derfor spiser hun ikke kød.</td>
@@ -1647,15 +1602,12 @@ const adverbielPages = [
                     <tr>
                         <th>
                             <p class="grammar-paired-label">
-                                <strong lang="da">Minihuskeremse</strong
-                                ><strong class="grammar-english" lang="en">Mini memory rule</strong>
+                                <strong lang="da">Minihuskeremse</strong>
+                                <strong class="grammar-english" lang="en">Mini memory rule</strong>
                             </p>
                             <p>Hovedsætning: verbet kommer før “ikke”. Ledsætning: “ikke” kommer før verbet.</p>
                             <p>
-                                <em
-                                    >Main clause: the verb comes before “ikke”. Subordinate clause: “ikke” comes before the
-                                    verb.</em
-                                >
+                                <em>Main clause: the verb comes before “ikke”. Subordinate clause: “ikke” comes before the verb.</em>
                             </p>
                         </th>
                     </tr>
@@ -1776,9 +1728,8 @@ const adverbielPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            Her beskriver “hurtig” navneordet “bil”, så det er et adjektiv.<br /><em
-                                >Here, “hurtig” describes the noun “bil”, so it is an adjective.</em
-                            >
+                            Her beskriver “hurtig” navneordet “bil”, så det er et adjektiv.<br />
+                            <em>Here, “hurtig” describes the noun “bil”, so it is an adjective.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1795,9 +1746,8 @@ const adverbielPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            “sandsynligvis” er et rent adverbium uden ekstra -t.<br /><em
-                                >“sandsynligvis” is a pure adverb with no extra -t.</em
-                            >
+                            “sandsynligvis” er et rent adverbium uden ekstra -t.<br />
+                            <em>“sandsynligvis” is a pure adverb with no extra -t.</em>
                         </td>
                     </tr>
                 </tbody>
@@ -1818,8 +1768,8 @@ const adverbielPages = [
                     <tr>
                         <th>
                             <p class="grammar-paired-label">
-                                <strong lang="da">Arbejd uden facit først</strong
-                                ><strong class="grammar-english" lang="en">Work without the answer key first</strong>
+                                <strong lang="da">Arbejd uden facit først</strong>
+                                <strong class="grammar-english" lang="en">Work without the answer key first</strong>
                             </p>
                             <p>Skriv hele sætninger. Forklar gerne, hvilken type adverbium du har fundet.</p>
                             <p><em>Write complete sentences. When possible, explain which type of adverb you found.</em></p>
@@ -1833,10 +1783,7 @@ const adverbielPages = [
             </h3>
             <p>Find adverbiet eller adverbierne, og skriv typen: tid, sted, måde, grad, sikkerhed, nægtelse eller spørgsmål.</p>
             <p>
-                <em
-                    >Identify the adverb or adverbs and write the type: time, place, manner, degree, certainty, negation, or
-                    question.</em
-                >
+                <em>Identify the adverb or adverbs and write the type: time, place, manner, degree, certainty, negation, or question.</em>
             </p>
             <p>1. Jeg kommer snart hjem.</p>
             <p>2. Hun taler meget tydeligt.</p>
@@ -2002,9 +1949,8 @@ const adverbielPages = [
                         <td>adverbial</td>
                         <td>adverbial</td>
                         <td>
-                            Et sætningsled med fx tid, sted eller måde.<br /><em
-                                >A sentence element expressing, for example, time, place, or manner.</em
-                            >
+                            Et sætningsled med fx tid, sted eller måde.<br />
+                            <em>A sentence element expressing, for example, time, place, or manner.</em>
                         </td>
                     </tr>
                     <tr>
@@ -2031,9 +1977,8 @@ const adverbielPages = [
                         <td>bøjet verbum</td>
                         <td>finite verb</td>
                         <td>
-                            Verbet med tid/person, fx “kommer”, “har”.<br /><em
-                                >The verb marked for tense/person, such as “kommer” or “har”.</em
-                            >
+                            Verbet med tid/person, fx “kommer”, “har”.<br />
+                            <em>The verb marked for tense/person, such as “kommer” or “har”.</em>
                         </td>
                     </tr>
                     <tr>
@@ -2071,18 +2016,16 @@ const adverbielPages = [
                     <tr>
                         <th>
                             <p class="grammar-paired-label">
-                                <strong lang="da">Afsluttende opsummering</strong
-                                ><strong class="grammar-english" lang="en">Final summary</strong>
+                                <strong lang="da">Afsluttende opsummering</strong>
+                                <strong class="grammar-english" lang="en">Final summary</strong>
                             </p>
                             <p>
                                 Adverbier giver ekstra information. Lær først typerne, derefter ordstillingen og til sidst reglerne
                                 for -t. Brug mange korte eksempler.
                             </p>
                             <p>
-                                <em
-                                    >Adverbs add information. Learn the types first, then word order, and finally the -t rules. Use
-                                    many short examples.</em
-                                >
+                                <em>Adverbs add information. Learn the types first, then word order, and finally the -t rules. Use
+                                many short examples.</em>
                             </p>
                         </th>
                     </tr>
