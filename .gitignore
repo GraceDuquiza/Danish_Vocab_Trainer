@@ -15,3 +15,5 @@ npm-debug.log*
 # Source documents not used by the website
 *.docx
 *.pdf
+
+AGENTS.md
