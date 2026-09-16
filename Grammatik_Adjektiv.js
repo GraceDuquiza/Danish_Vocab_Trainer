@@ -12,10 +12,7 @@ const adjektivGrammarPages = [
                 noget ser ud, føles eller er.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >An adjective describes a person, thing, place, or condition. For example, it tells us how someone or something
-                    looks, feels, or is.</em
-                >
+                <em>An adjective describes a person, thing, place, or condition. For example, it tells us how someone or something looks, feels, or is.</em>
             </p>
 
             <h3>To almindelige placeringer / Two common positions</h3>
@@ -23,9 +20,9 @@ const adjektivGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Placering</strong><em class="grammar-english" lang="en">Position</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Placering</strong><em class="grammar-english" lang="en">Position</em>
+                            </span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -34,20 +31,19 @@ const adjektivGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Foran substantivet</strong
-                                ><em class="grammar-english" lang="en">Before the noun</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Foran substantivet</strong>
+                                <em class="grammar-english" lang="en">Before the noun</em>
+                            </span>
                         </td>
                         <td lang="da">en <u>gammel</u> cykel</td>
                         <td class="grammar-english" lang="en"><em>an old bicycle</em></td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Efter et forbindelsesverbum</strong
-                                ><em class="grammar-english" lang="en">After a linking verb</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Efter et forbindelsesverbum</strong>
+                                <em class="grammar-english" lang="en">After a linking verb</em></span>
                         </td>
                         <td lang="da">Cyklen er <u>gammel</u>.</td>
                         <td class="grammar-english" lang="en"><em>The bicycle is old.</em></td>
@@ -76,29 +72,26 @@ const adjektivGrammarPages = [
                 flertal får det normalt <strong>-e</strong>.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >In the indefinite singular, the adjective normally uses its base form with common-gender nouns and adds -t with
-                    neuter nouns. In the plural, it normally adds -e.</em
-                >
+                <em>In the indefinite singular, the adjective normally uses its base form with common-gender nouns and adds -t with neuter nouns. In the plural, it normally adds -e.</em>
             </p>
 
             <table class="grammar-noun-table grammar-comparison-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">En-ord</strong><em class="grammar-english" lang="en">Common gender</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">En-ord</strong><em class="grammar-english" lang="en">Common gender</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Et-ord</strong><em class="grammar-english" lang="en">Neuter</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Et-ord</strong><em class="grammar-english" lang="en">Neuter</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Flertal</strong><em class="grammar-english" lang="en">Plural</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Flertal</strong><em class="grammar-english" lang="en">Plural</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -128,14 +121,10 @@ const adjektivGrammarPages = [
 
             <h3>Adjektivet efter være og blive / The adjective after være and blive</h3>
             <p lang="da">
-                Reglen gælder også, når adjektivet står efter for eksempel <strong>være</strong> eller <strong>blive</strong>: Bilen
-                er <u>stor</u>. Huset er <u>stort</u>. Husene er <u>store</u>.
+                Reglen gælder også, når adjektivet står efter for eksempel <strong>være</strong> eller <strong>blive</strong>: Bilen er <u>stor</u>. Huset er <u>stort</u>. Husene er <u>store</u>.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The same rule applies when the adjective follows verbs such as være (be) or blive (become): The car is big. The
-                    house is big. The houses are big.</em
-                >
+                <em>The same rule applies when the adjective follows verbs such as være (be) or blive (become): The car is big. The house is big. The houses are big.</em>
             </p>
         `
     },
@@ -146,8 +135,7 @@ const adjektivGrammarPages = [
         titleEn: "The definite form",
         content: `
             <p lang="da">
-                Efter <strong>den</strong>, <strong>det</strong> og <strong>de</strong> får adjektivet normalt <strong>-e</strong>.
-                Substantivet står også i bestemt form.
+                Efter <strong>den</strong>, <strong>det</strong> og <strong>de</strong> får adjektivet normalt <strong>-e</strong>. Substantivet står også i bestemt form.
             </p>
             <p class="grammar-english" lang="en">
                 <em>After den, det, and de, the adjective normally adds -e. The noun also appears in its definite form.</em>
@@ -175,14 +163,10 @@ const adjektivGrammarPages = [
 
             <h3>Efter ejestedord og genitiv / After possessives and genitives</h3>
             <p lang="da">
-                Efter <strong>min, mit, mine</strong> eller en genitiv bruger man normalt ikke den, det eller de: min
-                <u>nye</u> cykel, vores <u>nye</u> hus, Peters <u>nye</u> arbejde.
+                Efter <strong>min, mit, mine</strong> eller en genitiv bruger man normalt ikke den, det eller de: min <u>nye</u> cykel, vores <u>nye</u> hus, Peters <u>nye</u> arbejde.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >After min, mit, mine, or a genitive, den, det, and de are normally omitted: my new bicycle, our new house,
-                    Peter's new job.</em
-                >
+                <em>After min, mit, mine, or a genitive, den, det, and de are normally omitted: my new bicycle, our new house, Peter's new job.</em>
             </p>
 
             <aside class="grammar-rule">
@@ -200,33 +184,23 @@ const adjektivGrammarPages = [
         titleEn: "Spelling and special forms",
         content: `
             <p lang="da">
-                Nogle adjektiver ændrer stavning, når de får <strong>-t</strong> eller <strong>-e</strong>. Lær de hyppigste mønstre
-                sammen med et eksempel.
+                Nogle adjektiver ændrer stavning, når de får <strong>-t</strong> eller <strong>-e</strong>. Lær de hyppigste mønstre sammen med et eksempel.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Some adjectives change spelling when they add -t or -e. Learn the most common patterns together with an
-                    example.</em
-                >
+                <em>Some adjectives change spelling when they add -t or -e. Learn the most common patterns together with an example.</em>
             </p>
 
             <table class="grammar-noun-table grammar-comparison-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Grundform</strong><em class="grammar-english" lang="en">Base form</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Grundform</strong><em class="grammar-english" lang="en">Base form</em></span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Et-form</strong><em class="grammar-english" lang="en">Neuter form</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Et-form</strong><em class="grammar-english" lang="en">Neuter form</em></span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">E-form</strong><em class="grammar-english" lang="en">E-form</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">E-form</strong><em class="grammar-english" lang="en">E-form</em></span>
                         </th>
                     </tr>
                 </thead>
@@ -274,33 +248,23 @@ const adjektivGrammarPages = [
         titleEn: "Comparison of adjectives",
         content: `
             <p lang="da">
-                Når vi sammenligner, bruger vi grundform, komparativ og superlativ. Mange korte adjektiver får
-                <strong>-ere</strong> og <strong>-est</strong>.
+                Når vi sammenligner, bruger vi grundform, komparativ og superlativ. Mange korte adjektiver får <strong>-ere</strong> og <strong>-est</strong>.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >When comparing, we use the positive, comparative, and superlative forms. Many short adjectives add -ere and
-                    -est.</em
-                >
+                <em>When comparing, we use the positive, comparative, and superlative forms. Many short adjectives add -ere and -est.</em>
             </p>
 
             <table class="grammar-noun-table grammar-comparison-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Grundform</strong><em class="grammar-english" lang="en">Positive</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Grundform</strong><em class="grammar-english" lang="en">Positive</em></span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Komparativ</strong><em class="grammar-english" lang="en">Comparative</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Komparativ</strong><em class="grammar-english" lang="en">Comparative</em></span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Superlativ</strong><em class="grammar-english" lang="en">Superlative</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Superlativ</strong><em class="grammar-english" lang="en">Superlative</em></span>
                         </th>
                     </tr>
                 </thead>
@@ -335,14 +299,10 @@ const adjektivGrammarPages = [
 
             <h3>Sammenligning med end / Comparison with end</h3>
             <p lang="da">
-                Brug <strong>end</strong> efter komparativ: Min cykel er <u>billigere</u> end din. Denne opgave er
-                <u>mere interessant</u> end den første.
+                Brug <strong>end</strong> efter komparativ: Min cykel er <u>billigere</u> end din. Denne opgave er <u>mere interessant</u> end den første.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Use end (than) after the comparative: My bicycle is cheaper than yours. This exercise is more interesting than
-                    the first one.</em
-                >
+                <em>Use end (than) after the comparative: My bicycle is cheaper than yours. This exercise is more interesting than the first one.</em>
             </p>
         `
     },
@@ -353,23 +313,17 @@ const adjektivGrammarPages = [
         titleEn: "Adjective or adverb?",
         content: `
             <p lang="da">
-                Et adjektiv beskriver et substantiv eller et grundled. Et adverbium beskriver ofte et verbum, et adjektiv eller hele
-                sætningen.
+                Et adjektiv beskriver et substantiv eller et grundled. Et adverbium beskriver ofte et verbum, et adjektiv eller hele sætningen.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >An adjective describes a noun or subject. An adverb often describes a verb, an adjective, or the whole
-                    sentence.</em
-                >
+                <em>An adjective describes a noun or subject. An adverb often describes a verb, an adjective, or the whole sentence.</em>
             </p>
 
             <table class="grammar-noun-table grammar-example-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Funktion</strong><em class="grammar-english" lang="en">Function</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Funktion</strong><em class="grammar-english" lang="en">Function</em></span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -378,36 +332,28 @@ const adjektivGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Adjektiv</strong><em class="grammar-english" lang="en">Adjective</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Adjektiv</strong><em class="grammar-english" lang="en">Adjective</em></span>
                         </td>
                         <td lang="da">Hun har en <u>hurtig</u>bil.</td>
                         <td class="grammar-english" lang="en"><em>She has a fast car.</em></td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Adverbium</strong><em class="grammar-english" lang="en">Adverb</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Adverbium</strong><em class="grammar-english" lang="en">Adverb</em></span>
                         </td>
                         <td lang="da">Bilen kører <u>hurtigt</u>.</td>
                         <td class="grammar-english" lang="en"><em>The car drives fast.</em></td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Adjektiv</strong><em class="grammar-english" lang="en">Adjective</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Adjektiv</strong><em class="grammar-english" lang="en">Adjective</em></span>
                         </td>
                         <td lang="da">Opgaven er <u>nem</u>.</td>
                         <td class="grammar-english" lang="en"><em>The exercise is easy.</em></td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Adverbium</strong><em class="grammar-english" lang="en">Adverb</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Adverbium</strong><em class="grammar-english" lang="en">Adverb</em></span>
                         </td>
                         <td lang="da">Hun løser opgaven <u>nemt</u>.</td>
                         <td class="grammar-english" lang="en"><em>She solves the exercise easily.</em></td>
@@ -433,19 +379,14 @@ const adjektivGrammarPages = [
                 Mange adjektiver bruges sammen med en bestemt præposition. Det er bedst at lære hele forbindelsen som én enhed.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Many adjectives are used with a particular preposition. It is best to learn the complete expression as one
-                    unit.</em
-                >
+                <em>Many adjectives are used with a particular preposition. It is best to learn the complete expression as one unit.</em>
             </p>
 
             <table class="grammar-noun-table grammar-example-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Forbindelse</strong><em class="grammar-english" lang="en">Expression</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Forbindelse</strong><em class="grammar-english" lang="en">Expression</em></span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -495,14 +436,10 @@ const adjektivGrammarPages = [
                     <tr>
                         <th><strong>Nr.</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Sætning</strong><em class="grammar-english" lang="en">Sentence</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Sætning</strong><em class="grammar-english" lang="en">Sentence</em></span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Dit svar</strong><em class="grammar-english" lang="en">Your answer</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Dit svar</strong><em class="grammar-english" lang="en">Your answer</em></span>
                         </th>
                     </tr>
                 </thead>
@@ -543,10 +480,7 @@ const adjektivGrammarPages = [
         titleEn: "Exercise B: Comparison and function",
         content: `
             <p class="grammar-english" lang="en">
-                <em
-                    >Complete items 1–4 with the correct comparative or superlative. In items 5–8, choose the correct adjective or
-                    adverb form.</em
-                >
+                <em>Complete items 1–4 with the correct comparative or superlative. In items 5–8, choose the correct adjective or adverb form.</em>
             </p>
             <h3>Gradbøj adjektivet / Compare the adjective</h3>
             <p lang="da">1. Denne bog er ___ end den anden. (interessant)</p>
@@ -573,14 +507,10 @@ const adjektivGrammarPages = [
                     <tr>
                         <th><strong>Nr.</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Svar</strong><em class="grammar-english" lang="en">Answer</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Svar</strong><em class="grammar-english" lang="en">Answer</em></span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Regel</strong><em class="grammar-english" lang="en">Rule</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Regel</strong><em class="grammar-english" lang="en">Rule</em></span>
                         </th>
                     </tr>
                 </thead>
