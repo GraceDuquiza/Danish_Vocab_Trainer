@@ -1,4 +1,3 @@
-// Bilingual grammar lesson adapted from Ordstilling.docx.
 // Loaded as a classic script before script.js.
 const ordstillingGrammarPages = [
     {
@@ -8,14 +7,15 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Ordstilling er den rækkefølge, som sætningsleddene står i. Dansk har forholdsvis faste pladser for det finitte
-                    verbum, subjektet og centraladverbierne. Andre led kan flyttes for at skabe fokus.
+                    Ordstilling er den rækkefølge, som sætningsleddene står i. 
+                    Dansk har forholdsvis faste pladser for det finitte verbum, subjektet og centraladverbierne. 
+                    Andre led kan flyttes for at skabe fokus.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Word order is the sequence of sentence elements. Danish has fairly fixed positions for the finite verb,
-                        subject, and central adverbs. Other elements can move to create emphasis.</em
-                    >
+                    <em>
+                        Word order is the sequence of sentence elements. Danish has fairly fixed positions for the finite verb,
+                        subject, and central adverbs. Other elements can move to create emphasis.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table">
@@ -30,27 +30,43 @@ const ordstillingGrammarPages = [
                     <tr>
                         <th class="grammar-shared-column" scope="row">Neutral</th>
                         <td class="grammar-danish-column">
-                            <span class="subject">Jeg</span> <span class="verb-v1">læser</span> <span class="object">bogen</span>
+                            <span class="subject">Jeg</span> 
+                            <span class="verb-v1">læser</span> 
+                            <span class="object">bogen</span>
                             <span class="adverb">i dag</span>.
                         </td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>I am reading the book today.</em></td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>
+                                I am reading the book today.
+                            </em>
+                        </td>
                     </tr>
                     <tr>
                         <th class="grammar-shared-column" scope="row">Tid / Time</th>
                         <td class="grammar-danish-column">
-                            <span class="adverb">I dag</span> <span class="verb-v1">læser</span> <span class="subject">jeg</span>
+                            <span class="adverb">I dag</span> 
+                            <span class="verb-v1">læser</span> 
+                            <span class="subject">jeg</span>
                             <span class="object">bogen</span>.
                         </td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>Today I am reading the book.</em></td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>
+                                Today I am reading the book.
+                            </em>
+                        </td>
                     </tr>
                     <tr>
                         <th class="grammar-shared-column" scope="row">Objekt / Object</th>
                         <td class="grammar-danish-column">
-                            <span class="object">Bogen</span> <span class="verb-v1">læser</span> <span class="subject">jeg</span>
+                            <span class="object">Bogen</span> 
+                            <span class="verb-v1">læser</span> 
+                            <span class="subject">jeg</span>
                             <span class="adverb">i dag</span>.
                         </td>
                         <td class="grammar-english-column grammar-english" lang="en">
-                            <em>The book is what I am reading today.</em>
+                            <em>
+                                The book is what I am reading today.
+                            </em>
                         </td>
                     </tr>
                 </tbody>
@@ -58,13 +74,14 @@ const ordstillingGrammarPages = [
             <aside class="grammar-tip">
                 <div class="grammar-text-pair">
                     <p lang="da">
-                        Når et andet led end subjektet står først i en hovedsætning, står det finitte verbum stadig på anden plads.
+                        Når et andet led end subjektet står først i en hovedsætning, 
+                        står det finitte verbum stadig på anden plads.
                     </p>
                     <p class="grammar-english" lang="en">
-                        <em
-                            >When an element other than the subject comes first in a main clause, the finite verb still occupies the
-                            second position.</em
-                        >
+                        <em>
+                            When an element other than the subject comes first in a main clause, 
+                            the finite verb still occupies the second position.
+                        </em>
                     </p>
                 </div>
             </aside>
@@ -77,14 +94,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Ordstilling handler om sætningsleddenes funktion, ikke kun om ordklasser. Et sætningsled kan bestå af ét ord
-                    eller mange ord.
+                    Ordstilling handler om sætningsleddenes funktion, ikke kun om ordklasser. 
+                    Et sætningsled kan bestå af ét ord eller mange ord.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Word order concerns the function of sentence elements, not only word classes. An element may consist of one
-                        word or many words.</em
-                    >
+                    <em>
+                        Word order concerns the function of sentence elements, not only word classes. 
+                        An element may consist of one word or many words.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table">
@@ -99,7 +116,9 @@ const ordstillingGrammarPages = [
                     <tr>
                         <th class="grammar-shared-column" scope="row">S</th>
                         <td class="grammar-danish-column">subjekt: hvem eller hvad?</td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>subject: who or what?</em></td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>subject: who or what?</em>
+                        </td>
                     </tr>
                     <tr>
                         <th class="grammar-shared-column" scope="row">V</th>
@@ -111,31 +130,46 @@ const ordstillingGrammarPages = [
                     <tr>
                         <th class="grammar-shared-column" scope="row">DO / IO</th>
                         <td class="grammar-danish-column">direkte / indirekte objekt</td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>direct / indirect object</em></td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>direct / indirect object</em>
+                        </td>
                     </tr>
                     <tr>
                         <th class="grammar-shared-column" scope="row">SP / OP</th>
                         <td class="grammar-danish-column">subjekts- / objektsprædikativ</td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>subject / object complement</em></td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>subject / object complement</em>
+                        </td>
                     </tr>
                     <tr>
                         <th class="grammar-shared-column" scope="row">A / K</th>
                         <td class="grammar-danish-column">adverbial / konjunktional</td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>adverbial / conjunction element</em></td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>adverbial / conjunction element</em>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <section class="grammar-example">
                 <p lang="da">
-                    <strong
-                        ><span class="subject">Maria</span> <span class="verb-v1">gav</span>
-                        <span class="indirectobject">sin ven</span> <span class="object">en bog</span>
-                        <span class="adverb">i går</span>.</strong
-                    ><br />S = <span class="subject">Maria</span>; V = <span class="verb-v1">gav</span>; IO =
-                    <span class="indirectobject">sin ven</span>; DO = <span class="object">en bog</span>; A =
+                    <strong>
+                        <span class="subject">Maria</span> 
+                        <span class="verb-v1">gav</span>
+                        <span class="indirectobject">sin ven</span> 
+                        <span class="object">en bog</span>
+                        <span class="adverb">i går</span>.
+                    </strong>
+                    <br />S = <span class="subject">Maria</span>; V = 
+                    <span class="verb-v1">gav</span>; IO =
+                    <span class="indirectobject">sin ven</span>; DO = 
+                    <span class="object">en bog</span>; A =
                     <span class="adverb">i går</span>.
                 </p>
-                <p class="grammar-english" lang="en"><em>Maria gave her friend a book yesterday.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Maria gave her friend a book yesterday.
+                    </em>
+                </p>
             </section>
         `
     },
@@ -146,14 +180,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Det finitte verbum viser tid eller bydemåde. Nutid, datid og imperativ er finitte former. Navnemåde og
-                    tillægsformer er infinitte.
+                    Det finitte verbum viser tid eller bydemåde. Nutid, datid og imperativ er finitte former. 
+                    Navnemåde og tillægsformer er infinitte.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >The finite verb shows tense or the imperative. Present, past, and imperative forms are finite; infinitives
-                        and participles are non-finite.</em
-                    >
+                    <em>
+                        The finite verb shows tense or the imperative. Present, past, and imperative forms are finite; 
+                        infinitives and participles are non-finite.
+                    </em>
                 </p>
             </div>
             <table class="grammar-bilingual-table">
@@ -166,25 +200,44 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td><strong>Finit:</strong> <span class="verb-v1">spiser, spiste, spis</span></td>
-                        <td class="grammar-english" lang="en"><em>Finite: present, past, imperative</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>Finite: present, past, imperative</em>
+                        </td>
                     </tr>
                     <tr>
-                        <td><strong>Infinit:</strong> <span class="verb-v2">spise, spist, spisende</span></td>
-                        <td class="grammar-english" lang="en"><em>Non-finite: infinitive and participles</em></td>
+                        <td><strong>Infinit:</strong> 
+                            <span class="verb-v2">spise, spist, spisende</span>
+                        </td>
+                        <td class="grammar-english" lang="en">
+                            <em>
+                                Non-finite: infinitive and participles
+                            </em>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <section class="grammar-example">
                 <p lang="da">
-                    <span class="subject">Hun</span> <span class="verb-v1">har</span> <span class="adverb">ikke</span>
-                    <span class="verb-v2">læst</span> <span class="object">bogen</span>. <em>Har</em> er finit; <em>læst</em> er
-                    infinit.
+                    <span class="subject">Hun</span> 
+                    <span class="verb-v1">har</span> 
+                    <span class="adverb">ikke</span>
+                    <span class="verb-v2">læst</span> 
+                    <span class="object">bogen</span>. 
+                    <em>Har</em> er finit; <em>læst</em> er infinit.
                 </p>
-                <p class="grammar-english" lang="en"><em>She has not read the book. Har is finite; læst is non-finite.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        She has not read the book. Har is finite; læst is non-finite.
+                    </em>
+                </p>
             </section>
             <aside class="grammar-tip">
                 <p lang="da">Find altid det finitte verbum først.</p>
-                <p class="grammar-english" lang="en"><em>Always find the finite verb first.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Always find the finite verb first.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -204,30 +257,44 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <th class="grammar-shared-column" scope="row">Hovedsætning / Main clause</th>
-                        <td class="grammar-danish-column">
-                            Kan normalt stå alene: <span class="subject">Peter</span> <span class="verb-v1">løber</span>
+                        <td class="grammar-danish-column">Kan normalt stå alene: 
+                            <span class="subject">Peter</span> 
+                            <span class="verb-v1">løber</span>
                             <span class="adverb">hjem</span>.
                         </td>
                         <td class="grammar-english-column grammar-english" lang="en">
-                            <em>Can normally stand alone: Peter runs home.</em>
+                            <em>
+                                Can normally stand alone: Peter runs home.
+                            </em>
                         </td>
                     </tr>
                     <tr>
                         <th class="grammar-shared-column" scope="row">Ledsætning / Subordinate clause</th>
                         <td class="grammar-danish-column">
-                            Er underordnet: … <span class="conjunction">fordi</span> <span class="subject">Peter</span>
-                            <span class="adverb">ikke</span> <span class="verb-v1">har</span> <span class="object">tid</span>.
+                            Er underordnet: … 
+                            <span class="conjunction">fordi</span> 
+                            <span class="subject">Peter</span>
+                            <span class="adverb">ikke</span> 
+                            <span class="verb-v1">har</span> 
+                            <span class="object">tid</span>.
                         </td>
                         <td class="grammar-english-column grammar-english" lang="en">
-                            <em>Depends on a main clause: … because Peter has no time.</em>
+                            <em>
+                                Depends on a main clause: … because Peter has no time.
+                            </em>
                         </td>
                     </tr>
                     <tr>
                         <th class="grammar-shared-column" scope="row">Helsætning / Complete sentence</th>
                         <td class="grammar-danish-column">
-                            <span class="subject">Peter</span> <span class="verb-v1">løber</span> <span class="adverb">hjem</span>,
-                            <span class="conjunction">fordi</span> <span class="subject">han</span> <span class="adverb">ikke</span>
-                            <span class="verb-v1">har</span> <span class="object">tid</span>.
+                            <span class="subject">Peter</span> 
+                            <span class="verb-v1">løber</span> 
+                            <span class="adverb">hjem</span>,
+                            <span class="conjunction">fordi</span> 
+                            <span class="subject">han</span> 
+                            <span class="adverb">ikke</span>
+                            <span class="verb-v1">har</span> 
+                            <span class="object">tid</span>.
                         </td>
                         <td class="grammar-english-column grammar-english" lang="en">
                             <em>Peter runs home because he has no time.</em>
@@ -245,26 +312,36 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="verb-v1">finit verbum</span> + <span class="adverb">ikke</span><br /><span class="subject"
-                                >Peter</span
-                            >
-                            <span class="verb-v1">kommer</span> <span class="adverb">ikke</span>.
+                            <span class="verb-v1">finit verbum</span> + 
+                            <span class="adverb">ikke</span>
+                            <br />
+                            <span class="subject">Peter</span>
+                            <span class="verb-v1">kommer</span> 
+                            <span class="adverb">ikke</span>.
                         </td>
                         <td>
-                            <span class="subject">subjekt</span> + <span class="adverb">ikke</span> +
-                            <span class="verb-v1">finit verbum</span><br />… <span class="conjunction">fordi</span>
-                            <span class="subject">Peter</span> <span class="adverb">ikke</span> <span class="verb-v1">kommer</span>.
+                            <span class="subject">subjekt</span> + 
+                            <span class="adverb">ikke</span> +
+                            <span class="verb-v1">finit verbum</span>
+                            <br />… 
+                            <span class="conjunction">fordi</span>
+                            <span class="subject">Peter</span> 
+                            <span class="adverb">ikke</span> 
+                            <span class="verb-v1">kommer</span>.
                         </td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-rule">
                 <p lang="da">
-                    <strong>Ikke-testen:</strong> <em>ikke</em> står normalt efter det finitte verbum i en hovedsætning, men før det
-                    i en ledsætning.
+                    <strong>Ikke-testen:</strong> 
+                    <em>ikke</em> 
+                    står normalt efter det finitte verbum i en hovedsætning, men før det i en ledsætning.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Ikke normally follows the finite verb in a main clause but precedes it in a subordinate clause.</em>
+                    <em>
+                        Ikke normally follows the finite verb in a main clause but precedes it in a subordinate clause.
+                    </em>
                 </p>
             </aside>
         `
@@ -276,14 +353,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    V2 betyder, at det finitte verbum står på anden <strong>syntaktiske plads</strong> i en hovedsætning. Første
-                    plads kan være ét langt sætningsled.
+                    V2 betyder, at det finitte verbum står på anden <strong>syntaktiske plads</strong> i en hovedsætning. 
+                    Første plads kan være ét langt sætningsled.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >V2 means that the finite verb occupies the second syntactic position in a main clause. The first position
-                        may contain one long sentence element.</em
-                    >
+                    <em>
+                        V2 means that the finite verb occupies the second syntactic position in a main clause. 
+                        The first position may contain one long sentence element.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table">
@@ -296,35 +373,64 @@ const ordstillingGrammarPages = [
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="grammar-shared-column"><span class="subject">Jeg</span></td>
-                        <td class="grammar-danish-column"><span class="verb-v1">arbejder</span></td>
-                        <td class="grammar-english-column"><span class="adverb">hjemme i dag</span>.</td>
-                    </tr>
-                    <tr>
-                        <td class="grammar-shared-column"><span class="adverb">I dag</span></td>
-                        <td class="grammar-danish-column"><span class="verb-v1">arbejder</span></td>
-                        <td class="grammar-english-column"><span class="subject">jeg</span> <span class="adverb">hjemme</span>.</td>
-                    </tr>
-                    <tr>
-                        <td class="grammar-shared-column"><span class="adverb">Efter den lange ferie</span></td>
-                        <td class="grammar-danish-column"><span class="verb-v1">begyndte</span></td>
+                        <td class="grammar-shared-column">
+                            <span class="subject">Jeg</span>
+                        </td>
+                        <td class="grammar-danish-column">
+                            <span class="verb-v1">arbejder</span>
+                        </td>
                         <td class="grammar-english-column">
-                            <span class="subject">hun</span> <span class="adverb">på arbejde igen</span>.
+                            <span class="adverb">hjemme i dag</span>.
                         </td>
                     </tr>
                     <tr>
-                        <td class="grammar-shared-column"><span class="object">Den nye bog fra biblioteket</span></td>
-                        <td class="grammar-danish-column"><span class="verb-v1">har</span></td>
+                        <td class="grammar-shared-column">
+                            <span class="adverb">I dag</span>
+                        </td>
+                        <td class="grammar-danish-column">
+                            <span class="verb-v1">arbejder</span>
+                        </td>
                         <td class="grammar-english-column">
-                            <span class="subject">jeg</span> <span class="adverb">allerede</span> <span class="verb-v2">læst</span>.
+                            <span class="subject">jeg</span> 
+                            <span class="adverb">hjemme</span>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="grammar-shared-column">
+                            <span class="adverb">Efter den lange ferie</span>
+                        </td>
+                        <td class="grammar-danish-column">
+                            <span class="verb-v1">begyndte</span>
+                        </td>
+                        <td class="grammar-english-column">
+                            <span class="subject">hun</span> 
+                            <span class="adverb">på arbejde igen</span>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="grammar-shared-column">
+                            <span class="object">Den nye bog fra biblioteket</span>
+                        </td>
+                        <td class="grammar-danish-column">
+                            <span class="verb-v1">har</span>
+                        </td>
+                        <td class="grammar-english-column">
+                            <span class="subject">jeg</span> 
+                            <span class="adverb">allerede</span> 
+                            <span class="verb-v2">læst</span>.
                         </td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da"><em>Efter den lange ferie</em> er ét samlet tidsadverbial og fylder kun første plads.</p>
+                <p lang="da">
+                    <em>Efter den lange ferie</em> 
+                    er ét samlet tidsadverbial og fylder kun første plads.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>Efter den lange ferie is one complete time adverbial and occupies only the first position.</em>
+                    <em>
+                        Efter den lange ferie is one complete time adverbial and occupies only the first position.
+                    </em>
                 </p>
             </aside>
         `
@@ -336,13 +442,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Når subjektet står først, kaldes ordstillingen ligefrem. Det finitte verbum kommer umiddelbart efter subjektet.
+                    Når subjektet står først, kaldes ordstillingen ligefrem. Det finitte verbum kommer 
+                    umiddelbart efter subjektet.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >When the subject comes first, the order is subject-first. The finite verb immediately follows the
-                        subject.</em
-                    >
+                    <em>
+                        When the subject comes first, the order is subject-first. The finite verb immediately 
+                        follows the subject.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table">
@@ -356,38 +463,60 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
-                            <span class="verb-v2">V2</span> + <span class="object">O</span> + <span class="adverb">Slut-A</span>
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
+                            <span class="verb-v2">V2</span> + 
+                            <span class="object">O</span> + 
+                            <span class="adverb">Slut-A</span>
                         </td>
                         <td class="grammar-danish-column">
-                            <span class="subject">Jeg</span> <span class="verb-v1">har</span> <span class="adverb">ikke</span>
+                            <span class="subject">Jeg</span> 
+                            <span class="verb-v1">har</span> 
+                            <span class="adverb">ikke</span>
                             <span class="verb-v2">læst</span>
                         </td>
-                        <td class="grammar-english-column"><span class="object">bogen</span> <span class="adverb">endnu</span>.</td>
+                        <td class="grammar-english-column">
+                            <span class="object">bogen</span> 
+                            <span class="adverb">endnu</span>.
+                        </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
-                            <span class="object">O</span> + <span class="adverb">Slut-A</span>
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
+                            <span class="object">O</span> + 
+                            <span class="adverb">Slut-A</span>
                         </td>
                         <td class="grammar-danish-column">
-                            <span class="subject">Jeg</span> <span class="verb-v1">læser</span> <span class="adverb">ofte</span>
+                            <span class="subject">Jeg</span> 
+                            <span class="verb-v1">læser</span> 
+                            <span class="adverb">ofte</span>
                         </td>
                         <td class="grammar-english-column">
-                            <span class="object">bøger</span> <span class="adverb">om aftenen</span>.
+                            <span class="object">bøger</span> 
+                            <span class="adverb">om aftenen</span>.
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
-                            <span class="verb-v2">V2</span> + <span class="object">O</span> + <span class="adverb">Slut-A</span>
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
+                            <span class="verb-v2">V2</span> + 
+                            <span class="object">O</span> + 
+                            <span class="adverb">Slut-A</span>
                         </td>
                         <td class="grammar-danish-column">
-                            <span class="subject">Vi</span> <span class="verb-v1">vil</span> <span class="adverb">måske</span>
+                            <span class="subject">Vi</span> 
+                            <span class="verb-v1">vil</span> 
+                            <span class="adverb">måske</span>
                             <span class="verb-v2">købe</span>
                         </td>
                         <td class="grammar-english-column">
-                            <span class="object">en bil</span> <span class="adverb">næste år</span>.
+                            <span class="object">en bil</span> 
+                            <span class="adverb">næste år</span>.
                         </td>
                     </tr>
                 </tbody>
@@ -401,13 +530,13 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Når et andet led end subjektet står først, kommer det finitte verbum før subjektet. Dette kaldes inversion.
+                    Når et andet led end subjektet står først, 
+                    kommer det finitte verbum før subjektet. Dette kaldes inversion.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >When an element other than the subject comes first, the finite verb precedes the subject. This is
-                        inversion.</em
-                    >
+                    <em>
+                        When an element other than the subject comes first, the finite verb precedes the subject. 
+                        This is inversion.</em>
                 </p>
             </div>
             <table class="grammar-example-table grammar-focus-example-table">
@@ -416,9 +545,9 @@ const ordstillingGrammarPages = [
                         <th lang="da">Første led</th>
                         <th class="grammar-english" lang="en">Focus</th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -427,15 +556,18 @@ const ordstillingGrammarPages = [
                         <th scope="row" lang="da">Tid</th>
                         <td class="grammar-english" lang="en"><em>when</em></td>
                         <td>
-                            <span class="adverb">I morgen</span> <span class="verb-v1">kommer</span>
-                            <span class="subject">hun</span> <span class="adverb">tidligt</span>.
+                            <span class="adverb">I morgen</span> 
+                            <span class="verb-v1">kommer</span>
+                            <span class="subject">hun</span> 
+                            <span class="adverb">tidligt</span>.
                         </td>
                     </tr>
                     <tr>
                         <th scope="row" lang="da">Sted</th>
                         <td class="grammar-english" lang="en"><em>where</em></td>
                         <td>
-                            <span class="adverb">I Aarhus</span> <span class="verb-v1">bor</span>
+                            <span class="adverb">I Aarhus</span> 
+                            <span class="verb-v1">bor</span>
                             <span class="subject">min søster</span>.
                         </td>
                     </tr>
@@ -443,7 +575,9 @@ const ordstillingGrammarPages = [
                         <th scope="row" lang="da">Objekt</th>
                         <td class="grammar-english" lang="en"><em>what</em></td>
                         <td>
-                            <span class="object">Den bog</span> <span class="verb-v1">har</span> <span class="subject">jeg</span>
+                            <span class="object">Den bog</span> 
+                            <span class="verb-v1">har</span> 
+                            <span class="subject">jeg</span>
                             <span class="verb-v2">læst</span>.
                         </td>
                     </tr>
@@ -451,27 +585,41 @@ const ordstillingGrammarPages = [
                         <th scope="row" lang="da">Ledsætning</th>
                         <td class="grammar-english" lang="en"><em>time or condition</em></td>
                         <td>
-                            <span class="conjunction">Når</span> <span class="subject">jeg</span>
-                            <span class="verb-v1">kommer</span> <span class="adverb">hjem</span>, <span class="verb-v1">laver</span>
-                            <span class="subject">jeg</span> <span class="object">mad</span>.
+                            <span class="conjunction">Når</span> 
+                            <span class="subject">jeg</span>
+                            <span class="verb-v1">kommer</span> 
+                            <span class="adverb">hjem</span>, 
+                            <span class="verb-v1">laver</span>
+                            <span class="subject">jeg</span> 
+                            <span class="object">mad</span>.
                         </td>
                     </tr>
                 </tbody>
             </table>
             <section class="grammar-correction">
                 <p>
-                    <del
-                        ><span class="adverb">I dag</span> <span class="subject">jeg</span> <span class="verb-v1">har</span>
-                        <span class="adverb">ikke</span> <span class="object">tid</span>.</del
-                    >
+                    <del>
+                        <span class="adverb">I dag</span> 
+                        <span class="subject">jeg</span> 
+                        <span class="verb-v1">har</span>
+                        <span class="adverb">ikke</span> 
+                        <span class="object">tid</span>.
+                    </del>
                 </p>
                 <p>
-                    <strong
-                        ><span class="adverb">I dag</span> <span class="verb-v1">har</span> <span class="subject">jeg</span>
-                        <span class="adverb">ikke</span> <span class="object">tid</span>.</strong
-                    >
+                    <strong>
+                        <span class="adverb">I dag</span> 
+                        <span class="verb-v1">har</span> 
+                        <span class="subject">jeg</span>
+                        <span class="adverb">ikke</span> 
+                        <span class="object">tid</span>.
+                    </strong>
                 </p>
-                <p class="grammar-english" lang="en"><em>The finite verb remains second; the subject follows it.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        The finite verb remains second; the subject follows it.
+                    </em>
+                </p>
             </section>
         `
     },
@@ -481,15 +629,15 @@ const ordstillingGrammarPages = [
         titleEn: "Central adverbs in main clauses",
         content: `
             <div class="grammar-text-pair">
-                <p lang="da">
-                    Centraladverbier står tæt på verballedet: <em>ikke, aldrig, altid, ofte, sjældent, måske, gerne, nok, jo</em> og
+                <p lang="da">Centraladverbier står tæt på verballedet: 
+                    <em>ikke, aldrig, altid, ofte, sjældent, måske, gerne, nok, jo</em> og
                     <em>selvfølgelig</em>.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Central adverbs occur close to the verb phrase: ikke, aldrig, altid, often, rarely, perhaps, gladly,
-                        probably, indeed, and of course.</em
-                    >
+                    <em>
+                        Central adverbs occur close to the verb phrase: ikke, aldrig, altid, often, rarely, 
+                        perhaps, gladly, probably, indeed, and of course.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table grammar-focus-example-table">
@@ -498,34 +646,48 @@ const ordstillingGrammarPages = [
                         <th lang="da">Verballed</th>
                         <th class="grammar-english" lang="en">Focus</th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row" lang="da">Ét verbum</th>
-                        <td class="grammar-english" lang="en"><em>Adverb after the finite verb</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>Adverb after the finite verb</em>
+                        </td>
                         <td>
-                            <span class="subject">Hun</span> <span class="verb-v1">kommer</span> <span class="adverb">ikke</span>
+                            <span class="subject">Hun</span> 
+                            <span class="verb-v1">kommer</span> 
+                            <span class="adverb">ikke</span>
                             <span class="adverb">i morgen</span>.
                         </td>
                     </tr>
                     <tr>
                         <th scope="row" lang="da">Flere verber</th>
-                        <td class="grammar-english" lang="en"><em>Adverb between finite and non-finite verbs</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>Adverb between finite and non-finite verbs</em>
+                        </td>
                         <td>
-                            <span class="subject">Hun</span> <span class="verb-v1">har</span> <span class="adverb">aldrig</span>
-                            <span class="verb-v2">været</span> <span class="adverb">i Norge</span>.
+                            <span class="subject">Hun</span> 
+                            <span class="verb-v1">har</span> 
+                            <span class="adverb">aldrig</span>
+                            <span class="verb-v2">været</span> 
+                            <span class="adverb">i Norge</span>.
                         </td>
                     </tr>
                     <tr>
                         <th scope="row" lang="da">Måske først</th>
-                        <td class="grammar-english" lang="en"><em>Initial måske triggers inversion</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>Initial måske triggers inversion</em>
+                        </td>
                         <td>
-                            <span class="adverb">Måske</span> <span class="verb-v1">kommer</span> <span class="subject">hun</span>
+                            <span class="adverb">Måske</span> 
+                            <span class="verb-v1">kommer</span> 
+                            <span class="subject">hun</span>
                             <span class="adverb">i morgen</span>.
                         </td>
                     </tr>
@@ -540,14 +702,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    I en ledsætning står konjunktionen først, derefter subjektet, centraladverbiet og det finitte verbum.
-                    Rækkefølgen kaldes ofte SAV.
+                    I en ledsætning står konjunktionen først, derefter subjektet, 
+                    centraladverbiet og det finitte verbum. Rækkefølgen kaldes ofte SAV.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >In a subordinate clause, the conjunction is followed by the subject, central adverb, and finite verb. This
-                        is often called SAV.</em
-                    >
+                    <em>
+                        In a subordinate clause, the conjunction is followed by the subject, 
+                        central adverb, and finite verb. This is often called SAV.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table">
@@ -561,7 +723,8 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="conjunction">fordi</span> + <span class="subject">jeg</span> +
+                            <span class="conjunction">fordi</span> + 
+                            <span class="subject">jeg</span> +
                             <span class="adverb">ikke</span> +
                             <span class="verb-v1">har</span>
                         </td>
@@ -576,7 +739,8 @@ const ordstillingGrammarPages = [
 
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="conjunction">at</span> + <span class="subject">hun</span> +
+                            <span class="conjunction">at</span> + 
+                            <span class="subject">hun</span> +
                             <span class="adverb">måske</span> +
                             <span class="verb-v1">vil</span>
                         </td>
@@ -590,7 +754,8 @@ const ordstillingGrammarPages = [
 
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="conjunction">hvis</span> + <span class="subject">de</span> +
+                            <span class="conjunction">hvis</span> + 
+                            <span class="subject">de</span> +
                             <span class="adverb">aldrig</span> +
                             <span class="verb-v1">har</span>
                         </td>
@@ -606,11 +771,18 @@ const ordstillingGrammarPages = [
             </table>
             <aside class="grammar-rule">
                 <p lang="da">
-                    Ingen almindelig inversion i ledsætningen: … <span class="conjunction">fordi</span>
-                    <span class="subject">hun</span> <span class="adverb">i dag</span> <span class="adverb">ikke</span>
-                    <span class="verb-v1">har</span> <span class="object">tid</span>.
+                    Ingen almindelig inversion i ledsætningen: … 
+                    <span class="conjunction">fordi</span>
+                    <span class="subject">hun</span> <span class="adverb">i dag</span> 
+                    <span class="adverb">ikke</span>
+                    <span class="verb-v1">har</span> 
+                    <span class="object">tid</span>.
                 </p>
-                <p class="grammar-english" lang="en"><em>No ordinary inversion occurs in the subordinate clause.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        No ordinary inversion occurs in the subordinate clause.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -621,14 +793,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Når en ledsætning står først, fylder hele ledsætningen første plads. Det finitte verbum følger straks efter
-                    kommaet, og subjektet kommer bagefter.
+                    Når en ledsætning står først, fylder hele ledsætningen første plads. 
+                    Det finitte verbum følger straks efter kommaet, og subjektet kommer bagefter.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >When a subordinate clause comes first, the whole clause occupies the first position. The finite verb
-                        follows the comma, then the subject.</em
-                    >
+                    <em>
+                        When a subordinate clause comes first, the whole clause occupies the first position. 
+                        The finite verb follows the comma, then the subject.
+                    </em>
                 </p>
             </div>
             <table class="grammar-bilingual-table">
@@ -697,20 +869,29 @@ const ordstillingGrammarPages = [
             </table>
             <section class="grammar-correction">
                 <p>
-                    <del
-                        ><span class="conjunction">Hvis</span> <span class="subject">det</span> <span class="verb-v1">regner</span>,
-                        <span class="subject">vi</span> <span class="verb-v1">bliver</span> <span class="adverb">hjemme</span>.</del
-                    >
+                    <del>
+                        <span class="conjunction">Hvis</span> 
+                        <span class="subject">det</span> 
+                        <span class="verb-v1">regner</span>,
+                        <span class="subject">vi</span> 
+                        <span class="verb-v1">bliver</span> 
+                        <span class="adverb">hjemme</span>.
+                    </del>
                 </p>
                 <p>
-                    <strong
-                        ><span class="conjunction">Hvis</span> <span class="subject">det</span> <span class="verb-v1">regner</span>,
-                        <span class="verb-v1">bliver</span> <span class="subject">vi</span>
-                        <span class="adverb">hjemme</span>.</strong
-                    >
+                    <strong>
+                        <span class="conjunction">Hvis</span> 
+                        <span class="subject">det</span> 
+                        <span class="verb-v1">regner</span>,
+                        <span class="verb-v1">bliver</span> 
+                        <span class="subject">vi</span>
+                        <span class="adverb">hjemme</span>.
+                    </strong>
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>An initial subordinate clause triggers inversion in the main clause.</em>
+                    <em>
+                        An initial subordinate clause triggers inversion in the main clause.
+                    </em>
                 </p>
             </section>
         `
@@ -722,9 +903,13 @@ const ordstillingGrammarPages = [
         content: `
             <h3>Ja/nej-spørgsmål / Yes/no questions</h3>
             <div class="grammar-text-pair">
-                <p lang="da">Et ja/nej-spørgsmål begynder normalt med det finitte verbum og derefter subjektet.</p>
+                <p lang="da">
+                    Et ja/nej-spørgsmål begynder normalt med det finitte verbum og derefter subjektet.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>A yes/no question normally begins with the finite verb, followed by the subject.</em>
+                    <em>
+                        A yes/no question normally begins with the finite verb, followed by the subject.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table">
@@ -738,7 +923,8 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="verb-v1">V1</span> + <span class="subject">S</span> +
+                            <span class="verb-v1">V1</span> + 
+                            <span class="subject">S</span> +
                             <span class="adverb">A</span>
                         </td>
 
@@ -747,13 +933,18 @@ const ordstillingGrammarPages = [
                             <span class="subject">du</span>
                         </td>
 
-                        <td class="grammar-english-column"><span class="adverb">i morgen</span>?</td>
+                        <td class="grammar-english-column">
+                            <span class="adverb">i morgen</span>?
+                        </td>
                     </tr>
 
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="verb-v1">V1</span> + <span class="subject">S</span> + <span class="adverb">A</span> +
-                            <span class="verb-v2">V2</span> + <span class="object">O</span> +
+                            <span class="verb-v1">V1</span> + 
+                            <span class="subject">S</span> + 
+                            <span class="adverb">A</span> +
+                            <span class="verb-v2">V2</span> + 
+                            <span class="object">O</span> +
                             <span class="adverb">A</span>
                         </td>
 
@@ -775,17 +966,22 @@ const ordstillingGrammarPages = [
             <div class="grammar-text-pair">
                 <p lang="da">
                     Hvis hv-leddet ikke er subjekt, bruges hv-led + V + S:
-                    <strong
-                        ><span class="adverb">Hvor</span> <span class="verb-v1">bor</span> <span class="subject">du</span>?</strong
-                    >
+                    <strong>
+                        <span class="adverb">Hvor</span> 
+                        <span class="verb-v1">bor</span> 
+                        <span class="subject">du</span>?
+                    </strong>
                     Hvis hv-ordet er subjekt, kommer intet ekstra subjekt:
-                    <strong><span class="subject">Hvem</span> <span class="verb-v1">kommer</span>?</strong>
+                    <strong>
+                        <span class="subject">Hvem</span> 
+                        <span class="verb-v1">kommer</span>?
+                    </strong>
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >If the wh-element is not the subject, use wh + V + S. If the wh-word is the subject, do not add another
-                        subject.</em
-                    >
+                    <em>
+                        If the wh-element is not the subject, use wh + V + S. If the wh-word is the subject, 
+                        do not add another subject.
+                    </em>
                 </p>
             </div>
         `
@@ -797,13 +993,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Et direkte spørgsmål er en hovedsætning. Et indirekte spørgsmål er en ledsætning og har ledsætningsordstilling.
+                    Et direkte spørgsmål er en hovedsætning. Et indirekte spørgsmål er en ledsætning 
+                    og har ledsætningsordstilling.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >A direct question is a main clause. An indirect question is a subordinate clause and uses
-                        subordinate-clause word order.</em
-                    >
+                    <em>
+                        A direct question is a main clause. An indirect question is a subordinate clause and 
+                        uses subordinate-clause word order.
+                    </em>
                 </p>
             </div>
             <table class="grammar-bilingual-table">
@@ -892,20 +1089,29 @@ const ordstillingGrammarPages = [
             </table>
             <section class="grammar-correction">
                 <p>
-                    <del
-                        ><span class="subject">Jeg</span> <span class="verb-v1">ved</span> <span class="adverb">ikke</span>,
-                        <span class="conjunction">hvor</span> <span class="verb-v1">bor</span>
-                        <span class="subject">han</span>.</del
-                    >
+                    <del>
+                        <span class="subject">Jeg</span> 
+                        <span class="verb-v1">ved</span> <span class="adverb">ikke</span>,
+                        <span class="conjunction">hvor</span> 
+                        <span class="verb-v1">bor</span>
+                        <span class="subject">han</span>.
+                    </del>
                 </p>
                 <p>
-                    <strong
-                        ><span class="subject">Jeg</span> <span class="verb-v1">ved</span> <span class="adverb">ikke</span>,
-                        <span class="conjunction">hvor</span> <span class="subject">han</span>
-                        <span class="verb-v1">bor</span>.</strong
-                    >
+                    <strong>
+                        <span class="subject">Jeg</span> 
+                        <span class="verb-v1">ved</span> 
+                        <span class="adverb">ikke</span>,
+                        <span class="conjunction">hvor</span> 
+                        <span class="subject">han</span>
+                        <span class="verb-v1">bor</span>.
+                    </strong>
                 </p>
-                <p class="grammar-english" lang="en"><em>Indirect questions use subordinate-clause order.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Indirect questions use subordinate-clause order.
+                    </em>
+                </p>
             </section>
         `
     },
@@ -916,14 +1122,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Det direkte objekt står normalt efter hele verballedet og centraladverbiet. Når begge objekter er
-                    substantivgrupper, står det indirekte objekt normalt først.
+                    Det direkte objekt står normalt efter hele verballedet og centraladverbiet. 
+                    Når begge objekter er substantivgrupper, står det indirekte objekt normalt først.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >The direct object normally follows the complete verb phrase and central adverb. When both objects are noun
-                        phrases, the indirect object normally comes first.</em
-                    >
+                    <em>
+                        The direct object normally follows the complete verb phrase and central adverb. 
+                        When both objects are noun phrases, the indirect object normally comes first.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table">
@@ -937,7 +1143,9 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
                             <span class="object">DO</span>
                         </td>
 
@@ -949,13 +1157,17 @@ const ordstillingGrammarPages = [
                         </td>
 
                         <td class="grammar-english-column grammar-english" lang="en">
-                            <em>I often read the newspaper.</em>
+                            <em>
+                                I often read the newspaper.
+                            </em>
                         </td>
                     </tr>
 
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v2">V2</span> +
                             <span class="object">DO</span>
                         </td>
@@ -969,13 +1181,16 @@ const ordstillingGrammarPages = [
                         </td>
 
                         <td class="grammar-english-column grammar-english" lang="en">
-                            <em>She has not bought the car.</em>
+                            <em>
+                                She has not bought the car.
+                            </em>
                         </td>
                     </tr>
 
                     <tr>
                         <td class="grammar-shared-column">
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> +
                             <span class="indirectobject">IO</span> +
                             <span class="object">DO</span>
                         </td>
@@ -988,17 +1203,26 @@ const ordstillingGrammarPages = [
                         </td>
 
                         <td class="grammar-english-column grammar-english" lang="en">
-                            <em>She gave her sister a book.</em>
+                            <em>
+                                She gave her sister a book.
+                            </em>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    IO kan ofte omskrives med <em>til</em> eller <em>for</em>: <span class="subject">Hun</span>
-                    <span class="verb-v1">gav</span> <span class="object">en bog</span> <span class="adverb">til sin søster</span>.
+                    IO kan ofte omskrives med <em>til</em> eller <em>for</em>: 
+                    <span class="subject">Hun</span>
+                    <span class="verb-v1">gav</span> 
+                    <span class="object">en bog</span> 
+                    <span class="adverb">til sin søster</span>.
                 </p>
-                <p class="grammar-english" lang="en"><em>The indirect object can often be rephrased with til or for.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        The indirect object can often be rephrased with til or for.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -1008,9 +1232,13 @@ const ordstillingGrammarPages = [
         titleEn: "Pronoun objects",
         content: `
             <div class="grammar-text-pair">
-                <p lang="da">Et kort, ubetonet objektpronomen står i en simpel hovedsætning ofte før centraladverbiet.</p>
+                <p lang="da">
+                    Et kort, ubetonet objektpronomen står i en simpel hovedsætning ofte før centraladverbiet.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>In a simple main clause, a short unstressed object pronoun often precedes the central adverb.</em>
+                    <em>
+                        In a simple main clause, a short unstressed object pronoun often precedes the central adverb.
+                    </em>
                 </p>
             </div>
             <table class="grammar-bilingual-table">
@@ -1075,13 +1303,21 @@ const ordstillingGrammarPages = [
             <aside class="grammar-rule">
                 <p lang="da">
                     Med et finit og et infinit verbum står objektet ofte efter det infinitte verbum:
-                    <span class="subject">Hun</span> <span class="verb-v1">må</span> <span class="adverb">ikke</span>
-                    <span class="verb-v2">vide</span> <span class="object">det</span>. <span class="subject">Vi</span>
-                    <span class="verb-v1">har</span> <span class="adverb">aldrig</span> <span class="verb-v2">mødt</span>
+                    <span class="subject">Hun</span> 
+                    <span class="verb-v1">må</span> 
+                    <span class="adverb">ikke</span>
+                    <span class="verb-v2">vide</span> 
+                    <span class="object">det</span>. 
+                    <span class="subject">Vi</span>
+                    <span class="verb-v1">har</span> 
+                    <span class="adverb">aldrig</span> 
+                    <span class="verb-v2">mødt</span>
                     <span class="object">dem</span>.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>With a finite and non-finite verb, the object often follows the non-finite verb.</em>
+                    <em>
+                        With a finite and non-finite verb, the object often follows the non-finite verb.
+                    </em>
                 </p>
             </aside>
         `
@@ -1113,7 +1349,9 @@ const ordstillingGrammarPages = [
                             <span class="predicative">læge</span>.
                         </td>
                         <td class="grammar-english-column grammar-english" lang="en">
-                            <em>Describes the subject: The house is large. She became a doctor.</em>
+                            <em>
+                                Describes the subject: The house is large. She became a doctor.
+                            </em>
                         </td>
                     </tr>
                     <tr>
@@ -1126,7 +1364,9 @@ const ordstillingGrammarPages = [
                             <span class="object-predicative">rødt</span>.
                         </td>
                         <td class="grammar-english-column grammar-english" lang="en">
-                            <em>Describes the object: We painted the house red.</em>
+                            <em>
+                                Describes the object: We painted the house red.
+                            </em>
                         </td>
                     </tr>
                 </tbody>
@@ -1135,7 +1375,8 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> +
                             <span class="predicative">SP</span>
                         </td>
 
@@ -1148,7 +1389,9 @@ const ordstillingGrammarPages = [
 
                     <tr>
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="object">DO</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="object">DO</span> +
                             <span class="object-predicative">OP</span>
                         </td>
 
@@ -1170,14 +1413,15 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Måde, sted og tid står ofte i slutfeltet. En neutral rækkefølge kan være måde – sted – tid, men dansk tillader
-                    variation efter fokus og rytme.
+                    Måde, sted og tid står ofte i slutfeltet. En neutral rækkefølge kan være måde – sted – tid, 
+                    men dansk tillader variation efter fokus og rytme.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Manner, place, and time often occur in the final field. A neutral order may be manner–place–time, but
-                        Danish permits variation according to focus and rhythm.</em
-                    >
+                    <em>
+                        Manner, place, and time often occur in the final field. 
+                        A neutral order may be manner–place–time, but
+                        Danish permits variation according to focus and rhythm.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table grammar-focus-example-table">
@@ -1186,9 +1430,10 @@ const ordstillingGrammarPages = [
                         <th lang="da">Type</th>
                         <th class="grammar-english" lang="en">Focus</th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1235,11 +1480,16 @@ const ordstillingGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    Flyttes tid eller sted først, bruges inversion: <span class="adverb">Om aftenen</span>
+                    Flyttes tid eller sted først, bruges inversion: 
+                    <span class="adverb">Om aftenen</span>
                     <span class="verb-v1">arbejder</span> <span class="subject">hun</span>
                     <span class="adverb">på biblioteket</span>.
                 </p>
-                <p class="grammar-english" lang="en"><em>Moving time or place first triggers inversion.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Moving time or place first triggers inversion.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -1250,14 +1500,15 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Relativsætninger beskriver et substantiv eller pronomen. De indledes ofte med <em>som</em> eller <em>der</em> og
+                    Relativsætninger beskriver et substantiv eller pronomen. 
+                    De indledes ofte med <em>som</em> eller <em>der</em> og
                     har ledsætningsordstilling.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Relative clauses describe a noun or pronoun. They often begin with som or der and use subordinate-clause
-                        word order.</em
-                    >
+                    <em>
+                        Relative clauses describe a noun or pronoun. 
+                        They often begin with som or der and use subordinate-clause word order.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table grammar-focus-example-table">
@@ -1266,16 +1517,19 @@ const ordstillingGrammarPages = [
                         <th lang="da">Indleder</th>
                         <th class="grammar-english" lang="en">Function</th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row" lang="da">der</th>
-                        <td class="grammar-english" lang="en"><em>relative subject</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>relative subject</em>
+                        </td>
                         <td>
                             <span class="subject">Jeg</span>
                             <span class="verb-v1">kender</span>
@@ -1287,7 +1541,9 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr>
                         <th scope="row" lang="da">som</th>
-                        <td class="grammar-english" lang="en"><em>relative subject</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>relative subject</em>
+                        </td>
                         <td>
                             <span class="subject">Jeg</span>
                             <span class="verb-v1">kender</span>
@@ -1299,7 +1555,9 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr>
                         <th scope="row" lang="da">som</th>
-                        <td class="grammar-english" lang="en"><em>relative object</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>relative object</em>
+                        </td>
                         <td>
                             <span class="subject">Det</span>
                             <span class="verb-v1">er</span>
@@ -1313,7 +1571,9 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr>
                         <th scope="row" lang="da">udeladt som</th>
-                        <td class="grammar-english" lang="en"><em>omitted relative object</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>omitted relative object</em>
+                        </td>
                         <td>
                             <span class="subject">Det</span>
                             <span class="verb-v1">er</span>
@@ -1328,10 +1588,16 @@ const ordstillingGrammarPages = [
             </table>
             <aside class="grammar-rule">
                 <p lang="da">
-                    Når <em>der</em> er relativt subjekt, bruges intet ekstra subjekt: en pige, <span class="subject">der</span>
-                    <span class="verb-v1">arbejder</span> <span class="adverb">her</span>.
+                    Når <em>der</em> er relativt subjekt, bruges intet ekstra subjekt: en pige, 
+                    <span class="subject">der</span>
+                    <span class="verb-v1">arbejder</span> 
+                    <span class="adverb">her</span>.
                 </p>
-                <p class="grammar-english" lang="en"><em>When der is the relative subject, no additional subject follows.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        When der is the relative subject, no additional subject follows.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -1342,14 +1608,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    I direkte tale gengives de præcise ord. I indirekte tale bliver den citerede sætning en ledsætning, og
-                    ordstillingen ændres.
+                    I direkte tale gengives de præcise ord. I indirekte tale bliver den citerede sætning 
+                    en ledsætning, og ordstillingen ændres.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Direct speech reproduces exact words. In indirect speech, the quoted sentence becomes a subordinate clause
-                        and its word order changes.</em
-                    >
+                    <em>
+                        Direct speech reproduces exact words. In indirect speech, the quoted sentence becomes a 
+                        subordinate clause and its word order changes.
+                    </em>
                 </p>
             </div>
             <table class="grammar-bilingual-table">
@@ -1363,7 +1629,8 @@ const ordstillingGrammarPages = [
                     <tr>
                         <td>
                             <span class="subject">Hun</span>
-                            <span class="verb-v1">siger</span>: “<span class="subject">Jeg</span>
+                            <span class="verb-v1">siger</span>: “
+                            <span class="subject">Jeg</span>
                             <span class="verb-v1">kommer</span>
                             <span class="adverb">ikke</span>.”
                         </td>
@@ -1381,7 +1648,8 @@ const ordstillingGrammarPages = [
                     <tr>
                         <td>
                             <span class="subject">Han</span>
-                            <span class="verb-v1">spørger</span>: “<span class="verb-v1">Kommer</span>
+                            <span class="verb-v1">spørger</span>: “
+                            <span class="verb-v1">Kommer</span>
                             <span class="subject">du</span>?”
                         </td>
 
@@ -1397,7 +1665,8 @@ const ordstillingGrammarPages = [
                     <tr>
                         <td>
                             <span class="subject">Hun</span>
-                            <span class="verb-v1">spørger</span>: “<span class="adverb">Hvor</span>
+                            <span class="verb-v1">spørger</span>: “
+                            <span class="adverb">Hvor</span>
                             <span class="verb-v1">bor</span>
                             <span class="subject">han</span>?”
                         </td>
@@ -1414,7 +1683,8 @@ const ordstillingGrammarPages = [
                     <tr>
                         <td>
                             <span class="subject">Peter</span>
-                            <span class="verb-v1">siger</span>: “<span class="subject">Jeg</span>
+                            <span class="verb-v1">siger</span>: “
+                            <span class="subject">Jeg</span>
                             <span class="verb-v1">har</span>
                             <span class="adverb">aldrig</span>
                             <span class="verb-v2">set</span>
@@ -1435,9 +1705,13 @@ const ordstillingGrammarPages = [
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da">Kontrollér konjunktion eller spørgeord, ordstilling, pronomen og eventuelt tid.</p>
+                <p lang="da">
+                    Kontrollér konjunktion eller spørgeord, ordstilling, pronomen og eventuelt tid.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>Check the conjunction or question word, word order, pronouns, and sometimes tense.</em>
+                    <em>
+                        Check the conjunction or question word, word order, pronouns, and sometimes tense.
+                    </em>
                 </p>
             </aside>
         `
@@ -1449,19 +1723,20 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    <em>Det</em> bruges som formelt subjekt ved vejr, tid, generelle forhold og når indholdet følger senere.
+                    <em>Det</em> bruges som formelt subjekt ved vejr, tid, 
+                    generelle forhold og når indholdet følger senere.
                     <em>Der</em> introducerer ofte en ny eller ubestemt person eller ting.
                 </p>
 
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Det is a formal subject for weather, time, general conditions, or later content. Der often introduces a new
-                        or indefinite person or thing.</em
-                    >
+                    <em>
+                        Det is a formal subject for weather, time, general conditions, or later content. 
+                        Der often introduces a new or indefinite person or thing.
+                    </em>
                 </p>
             </div>
 
-            <!-- LOCAL LEGEND -->
+<!-- LOCAL LEGEND -->
             <div class="grammar-legend grammar-local-legend" aria-label="Formal and real subject color guide">
                 <span>
                     <span class="legend-dot formal-subject"></span>
@@ -1539,14 +1814,21 @@ const ordstillingGrammarPages = [
 
             <aside class="grammar-rule">
                 <p lang="da">
-                    Begge står på subjektets plads. Ved inversion: <span class="adverb">I haven</span>
-                    <span class="verb-v1">står</span> <span class="formal-subject">der</span>
-                    <span class="real-subject">en cykel</span>. <span class="adverb">I dag</span> <span class="verb-v1">er</span>
-                    <span class="formal-subject">det</span> <span class="predicative">koldt</span>.
+                    Begge står på subjektets plads. Ved inversion: 
+                    <span class="adverb">I haven</span>
+                    <span class="verb-v1">står</span> 
+                    <span class="formal-subject">der</span>
+                    <span class="real-subject">en cykel</span>. 
+                    <span class="adverb">I dag</span> 
+                    <span class="verb-v1">er</span>
+                    <span class="formal-subject">det</span> 
+                    <span class="predicative">koldt</span>.
                 </p>
 
                 <p class="grammar-english" lang="en">
-                    <em>Both occupy the subject position. Under inversion, they follow the finite verb.</em>
+                    <em>
+                        Both occupy the subject position. Under inversion, they follow the finite verb.
+                    </em>
                 </p>
             </aside>
         `
@@ -1559,12 +1841,21 @@ const ordstillingGrammarPages = [
             <h3>Fronting</h3>
             <div class="grammar-text-pair">
                 <p lang="da">
-                    Et led kan flyttes først for at blive fremhævet. V2-reglen gælder stadig: <span class="object">Ham</span>
-                    <span class="verb-v1">kender</span> <span class="subject">jeg</span> <span class="adverb">ikke</span>.
-                    <span class="adverb">På fredag</span> <span class="verb-v1">skal</span> <span class="subject">jeg</span>
+                    Et led kan flyttes først for at blive fremhævet. V2-reglen gælder stadig: 
+                    <span class="object">Ham</span>
+                    <span class="verb-v1">kender</span> 
+                    <span class="subject">jeg</span> 
+                    <span class="adverb">ikke</span>.
+                    <span class="adverb">På fredag</span> 
+                    <span class="verb-v1">skal</span> 
+                    <span class="subject">jeg</span>
                     <span class="adverb">til tandlægen</span>.
                 </p>
-                <p class="grammar-english" lang="en"><em>An element can move first for emphasis. The V2 rule still applies.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        An element can move first for emphasis. The V2 rule still applies.
+                    </em>
+                </p>
             </div>
             <h3>Det er … der/som / Cleft sentences</h3>
             <table class="grammar-bilingual-table">
@@ -1577,45 +1868,63 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="subject">Bodil</span> <span class="verb-v1">lavede</span>
+                            <span class="subject">Bodil</span> 
+                            <span class="verb-v1">lavede</span>
                             <span class="object">tegningerne</span>.
                         </td>
                         <td>
-                            <span class="formal-subject">Det</span> <span class="verb-v1">var</span>
-                            <span class="predicative">Bodil</span>, <span class="conjunction">der</span>
-                            <span class="verb-v1">lavede</span> <span class="object">tegningerne</span>.
+                            <span class="formal-subject">Det</span> 
+                            <span class="verb-v1">var</span>
+                            <span class="predicative">Bodil</span>, 
+                            <span class="conjunction">der</span>
+                            <span class="verb-v1">lavede</span> 
+                            <span class="object">tegningerne</span>.
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="subject">Picasso</span> <span class="verb-v1">malede</span>
+                            <span class="subject">Picasso</span> 
+                            <span class="verb-v1">malede</span>
                             <span class="object">billedet</span>.
                         </td>
                         <td>
-                            <span class="formal-subject">Det</span> <span class="verb-v1">er</span>
-                            <span class="predicative">det billede</span>, <span class="conjunction">som</span>
-                            <span class="subject">Picasso</span> <span class="verb-v1">malede</span>.
+                            <span class="formal-subject">Det</span> 
+                            <span class="verb-v1">er</span>
+                            <span class="predicative">det billede</span>, 
+                            <span class="conjunction">som</span>
+                            <span class="subject">Picasso</span> 
+                            <span class="verb-v1">malede</span>.
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="subject">Jeg</span> <span class="verb-v1">skal</span>
-                            <span class="adverb">til tandlæge</span> <span class="adverb">på fredag</span>.
+                            <span class="subject">Jeg</span> 
+                            <span class="verb-v1">skal</span>
+                            <span class="adverb">til tandlæge</span> 
+                            <span class="adverb">på fredag</span>.
                         </td>
                         <td>
-                            <span class="formal-subject">Det</span> <span class="verb-v1">er</span>
-                            <span class="predicative">på fredag</span>, <span class="subject">jeg</span>
-                            <span class="verb-v1">skal</span> <span class="adverb">til tandlæge</span>.
+                            <span class="formal-subject">Det</span> 
+                            <span class="verb-v1">er</span>
+                            <span class="predicative">på fredag</span>, 
+                            <span class="subject">jeg</span>
+                            <span class="verb-v1">skal</span> 
+                            <span class="adverb">til tandlæge</span>.
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="subject">Jeg</span> <span class="verb-v1">tænker</span> <span class="adverb">på dig</span>.
+                            <span class="subject">Jeg</span> 
+                            <span class="verb-v1">tænker</span> 
+                            <span class="adverb">på dig</span>.
                         </td>
                         <td>
-                            <span class="formal-subject">Det</span> <span class="verb-v1">er</span>
-                            <span class="predicative">dig</span>, <span class="subject">jeg</span>
-                            <span class="verb-v1">tænker</span> <span class="adverb">på</span>.
+                            <span class="formal-subject">Det</span> 
+                            <span class="verb-v1">er</span>
+                            <span class="predicative">dig</span>, 
+                            <span class="subject">jeg</span>
+                            <span class="verb-v1">tænker</span> 
+                            <span class="adverb">på</span>.
                         </td>
                     </tr>
                 </tbody>
@@ -1629,14 +1938,14 @@ const ordstillingGrammarPages = [
         content: `
             <div class="grammar-text-pair">
                 <p lang="da">
-                    I samtaler udelader vi ofte led, som er tydelige fra sammenhængen. Det fulde sætningsmønster er stadig
-                    underforstået.
+                    I samtaler udelader vi ofte led, som er tydelige fra sammenhængen. 
+                    Det fulde sætningsmønster er stadig underforstået.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >In conversation, we often omit elements that are clear from context. The complete sentence pattern is still
-                        understood.</em
-                    >
+                    <em>
+                        In conversation, we often omit elements that are clear from context. 
+                        The complete sentence pattern is still understood.
+                    </em>
                 </p>
             </div>
             <table class="grammar-example-table">
@@ -1649,34 +1958,55 @@ const ordstillingGrammarPages = [
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="grammar-shared-column"><span class="adverb">Hjem</span>.</td>
-                        <td class="grammar-danish-column">
-                            <span class="subject">Jeg</span> <span class="verb-v1">skal</span> <span class="adverb">hjem</span>.
+                        <td class="grammar-shared-column">
+                            <span class="adverb">Hjem</span>.
                         </td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>Home. / I am going home.</em></td>
+                        <td class="grammar-danish-column">
+                            <span class="subject">Jeg</span> 
+                            <span class="verb-v1">skal</span> 
+                            <span class="adverb">hjem</span>.
+                        </td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>Home. / I am going home.</em>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="grammar-shared-column"><span class="subject">Jens</span>.</td>
+                        <td class="grammar-shared-column">
+                            <span class="subject">Jens</span>.
+                        </td>
                         <td class="grammar-danish-column">
-                            <span class="subject">Jens</span> <span class="verb-v1">har</span> <span class="verb-v2">taget</span>
+                            <span class="subject">Jens</span> 
+                            <span class="verb-v1">har</span> 
+                            <span class="verb-v2">taget</span>
                             <span class="object">blyanten</span>.
                         </td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>Jens took the pencil.</em></td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>Jens took the pencil.</em>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="grammar-shared-column"><span class="adverb">Ikke i dag</span>.</td>
+                        <td class="grammar-shared-column">
+                            <span class="adverb">Ikke i dag</span>.
+                        </td>
                         <td class="grammar-danish-column">
-                            <span class="subject">Jeg</span> <span class="verb-v1">kan</span>
+                            <span class="subject">Jeg</span> 
+                            <span class="verb-v1">kan</span>
                             <span class="adverb">ikke i dag</span>.
                         </td>
-                        <td class="grammar-english-column grammar-english" lang="en"><em>Not today.</em></td>
+                        <td class="grammar-english-column grammar-english" lang="en">
+                            <em>Not today.</em>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da">Lær først den fulde sætning. Brug derefter korte svar, når sammenhængen er tydelig.</p>
+                <p lang="da">
+                    Lær først den fulde sætning. Brug derefter korte svar, når sammenhængen er tydelig.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>Learn the complete sentence first, then use short answers when the context is clear.</em>
+                    <em>
+                        Learn the complete sentence first, then use short answers when the context is clear.
+                    </em>
                 </p>
             </aside>
         `
@@ -1697,82 +2027,117 @@ const ordstillingGrammarPages = [
                 <tbody>
                     <tr>
                         <td class="grammar-shared-column">Hovedsætning?</td>
-                        <td class="grammar-danish-column"><span class="verb-v1">V2</span></td>
+                        <td class="grammar-danish-column">
+                            <span class="verb-v1">V2</span>
+                        </td>
                         <td class="grammar-english-column">
-                            <span class="adverb">I dag</span> <span class="verb-v1">kommer</span> <span class="subject">hun</span>.
+                            <span class="adverb">I dag</span> 
+                            <span class="verb-v1">kommer</span> 
+                            <span class="subject">hun</span>.
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">Subjekt først?</td>
-                        <td class="grammar-danish-column"><span class="subject">S</span> + <span class="verb-v1">V</span></td>
+                        <td class="grammar-danish-column">
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V</span>
+                        </td>
                         <td class="grammar-english-column">
-                            <span class="subject">Hun</span> <span class="verb-v1">kommer</span> <span class="adverb">i dag</span>.
+                            <span class="subject">Hun</span> 
+                            <span class="verb-v1">kommer</span> 
+                            <span class="adverb">i dag</span>.
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">Andet led først?</td>
                         <td class="grammar-danish-column">
-                            <span class="adverb">Led</span> + <span class="verb-v1">V</span> + <span class="subject">S</span>
+                            <span class="adverb">Led</span> + 
+                            <span class="verb-v1">V</span> + 
+                            <span class="subject">S</span>
                         </td>
                         <td class="grammar-english-column">
-                            <span class="adverb">I dag</span> <span class="verb-v1">kommer</span> <span class="subject">hun</span>.
+                            <span class="adverb">I dag</span> 
+                            <span class="verb-v1">kommer</span> 
+                            <span class="subject">hun</span>.
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">Ledsætning?</td>
                         <td class="grammar-danish-column">
-                            <span class="conjunction">K</span> + <span class="subject">S</span> + <span class="adverb">A</span> +
+                            <span class="conjunction">K</span> + 
+                            <span class="subject">S</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v1">V</span>
                         </td>
                         <td class="grammar-english-column">
-                            <span class="conjunction">fordi</span> <span class="subject">hun</span> <span class="adverb">ikke</span>
+                            <span class="conjunction">fordi</span> 
+                            <span class="subject">hun</span> 
+                            <span class="adverb">ikke</span>
                             <span class="verb-v1">kommer</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">Ledsætning først?</td>
                         <td class="grammar-danish-column">
-                            komma + <span class="verb-v1">V</span> + <span class="subject">S</span>
+                            komma + <span class="verb-v1">V</span> + 
+                            <span class="subject">S</span>
                         </td>
                         <td class="grammar-english-column">
-                            <span class="conjunction">Hvis</span> <span class="subject">hun</span>
-                            <span class="verb-v1">kommer</span>, <span class="verb-v1">bliver</span>
+                            <span class="conjunction">Hvis</span> 
+                            <span class="subject">hun</span>
+                            <span class="verb-v1">kommer</span>, 
+                            <span class="verb-v1">bliver</span>
                             <span class="subject">jeg</span> glad.
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">Ja/nej-spørgsmål?</td>
-                        <td class="grammar-danish-column"><span class="verb-v1">V</span> + <span class="subject">S</span></td>
+                        <td class="grammar-danish-column">
+                            <span class="verb-v1">V</span> + 
+                            <span class="subject">S</span>
+                        </td>
                         <td class="grammar-english-column">
-                            <span class="verb-v1">Kommer</span> <span class="subject">hun</span>?
+                            <span class="verb-v1">Kommer</span> 
+                            <span class="subject">hun</span>?
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">Hv-spørgsmål?</td>
                         <td class="grammar-danish-column">
-                            <span class="adverb">Hv</span> + <span class="verb-v1">V</span> + <span class="subject">S</span>
+                            <span class="adverb">Hv</span> + 
+                            <span class="verb-v1">V</span> + 
+                            <span class="subject">S</span>
                         </td>
                         <td class="grammar-english-column">
-                            <span class="adverb">Hvor</span> <span class="verb-v1">bor</span> <span class="subject">hun</span>?
+                            <span class="adverb">Hvor</span> 
+                            <span class="verb-v1">bor</span> 
+                            <span class="subject">hun</span>?
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">Indirekte spørgsmål?</td>
                         <td class="grammar-danish-column">ledsætningsordstilling</td>
                         <td class="grammar-english-column">
-                            <span class="subject">Jeg</span> <span class="verb-v1">ved</span> <span class="adverb">ikke</span>,
-                            <span class="conjunction">hvor</span> <span class="subject">hun</span> <span class="verb-v1">bor</span>.
+                            <span class="subject">Jeg</span> 
+                            <span class="verb-v1">ved</span> 
+                            <span class="adverb">ikke</span>,
+                            <span class="conjunction">hvor</span> 
+                            <span class="subject">hun</span> 
+                            <span class="verb-v1">bor</span>.
                         </td>
                     </tr>
                     <tr>
                         <td class="grammar-shared-column">Noget ubestemt?</td>
                         <td class="grammar-danish-column">
-                            <span class="formal-subject">der</span> + <span class="verb-v1">V</span> +
+                            <span class="formal-subject">der</span> + 
+                            <span class="verb-v1">V</span> +
                             <span class="real-subject">egentligt S</span>
                         </td>
                         <td class="grammar-english-column">
-                            <span class="formal-subject">Der</span> <span class="verb-v1">står</span>
-                            <span class="real-subject">en bil</span> <span class="adverb">udenfor</span>.
+                            <span class="formal-subject">Der</span> 
+                            <span class="verb-v1">står</span>
+                            <span class="real-subject">en bil</span> 
+                            <span class="adverb">udenfor</span>.
                         </td>
                     </tr>
                 </tbody>
@@ -1788,14 +2153,16 @@ const ordstillingGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Forkert</strong><em class="grammar-english" lang="en">Incorrect</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Forkert</strong>
+                                <em class="grammar-english" lang="en">Incorrect</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Korrekt</strong><em class="grammar-english" lang="en">Correct</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Korrekt</strong>
+                                <em class="grammar-english" lang="en">Correct</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1806,8 +2173,8 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <span lang="da">V2 efter et foranstillet tidsled.</span
-                            ><em lang="en">Use V2 after a fronted time expression.</em>
+                            <span lang="da">V2 efter et foranstillet tidsled.</span>
+                            <em lang="en">Use V2 after a fronted time expression.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1816,8 +2183,8 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <span lang="da">I en hovedsætning står det finitte verbum før <strong>ikke</strong>.</span
-                            ><em lang="en">In a main clause, the finite verb precedes ikke.</em>
+                            <span lang="da">I en hovedsætning står det finitte verbum før <strong>ikke</strong>.</span>
+                            <em lang="en">In a main clause, the finite verb precedes ikke.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1826,8 +2193,8 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <span lang="da">I en ledsætning står <strong>ikke</strong> før det finitte verbum.</span
-                            ><em lang="en">In a subordinate clause, ikke precedes the finite verb.</em>
+                            <span lang="da">I en ledsætning står <strong>ikke</strong> før det finitte verbum.</span>
+                            <em lang="en">In a subordinate clause, ikke precedes the finite verb.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1836,8 +2203,8 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <span lang="da">En indledende ledsætning giver inversion.</span
-                            ><em lang="en">An opening subordinate clause triggers inversion.</em>
+                            <span lang="da">En indledende ledsætning giver inversion.</span>
+                            <em lang="en">An opening subordinate clause triggers inversion.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1846,8 +2213,8 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <span lang="da">Indirekte spørgsmål har ledsætningsordstilling.</span
-                            ><em lang="en">Indirect questions use subordinate-clause order.</em>
+                            <span lang="da">Indirekte spørgsmål har ledsætningsordstilling.</span>
+                            <em lang="en">Indirect questions use subordinate-clause order.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1856,8 +2223,8 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <span lang="da">Centraladverbiet står mellem V1 og V2.</span
-                            ><em lang="en">The central adverb occurs between V1 and V2.</em>
+                            <span lang="da">Centraladverbiet står mellem V1 og V2.</span>
+                            <em lang="en">The central adverb occurs between V1 and V2.</em>
                         </td>
                     </tr>
                     <tr>
@@ -1866,8 +2233,8 @@ const ordstillingGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <span lang="da"><strong>Der</strong> introducerer et ubestemt egentligt subjekt.</span
-                            ><em lang="en">Der introduces an indefinite real subject.</em>
+                            <span lang="da"><strong>Der</strong> introducerer et ubestemt egentligt subjekt.</span>
+                            <em lang="en">Der introduces an indefinite real subject.</em>
                         </td>
                     </tr>
                 </tbody>
@@ -1913,8 +2280,8 @@ const ordstillingGrammarPages = [
             <section class="grammar-exercise">
                 <h3>D. Hovedsætning eller ledsætning?</h3>
                 <p>
-                    Placér <em>ikke</em>: Hun kommer i morgen. / Jeg ved, at hun kommer i morgen. / Vi køber bilen. / … fordi vi
-                    køber bilen.
+                    Placér <em>ikke</em>: Hun kommer i morgen. / Jeg ved, at hun kommer i morgen. / 
+                    Vi køber bilen. / … fordi vi køber bilen.
                 </p>
             </section>
             <section class="grammar-exercise">
@@ -2163,14 +2530,14 @@ const ordstillingGrammarPages = [
             </table>
             <aside class="grammar-rule">
                 <p lang="da">
-                    <strong>Din vigtigste vane:</strong> Find altid det finitte verbum og subjektet. Spørg derefter: hovedsætning
-                    eller ledsætning?
+                    <strong>Din vigtigste vane:</strong> Find altid det finitte verbum og subjektet. 
+                    Spørg derefter: hovedsætning eller ledsætning?
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Your most important habit: always find the finite verb and subject, then decide whether the clause is main
-                        or subordinate.</em
-                    >
+                    <em>
+                        Your most important habit: always find the finite verb and subject, 
+                        then decide whether the clause is main or subordinate.
+                    </em>
                 </p>
             </aside>
         `
