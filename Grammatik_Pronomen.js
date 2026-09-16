@@ -8,23 +8,25 @@ const pronomenGrammarPages = [
         titleEn: "What is a pronoun?",
         content: `
             <p lang="da">
-                Et pronomen kaldes også et stedord. Det kan erstatte et substantiv eller navn, pege på nogen eller noget, danne et
-                spørgsmål eller forbinde en relativ ledsætning med noget, der allerede er nævnt.
+                Et pronomen kaldes også et stedord. Det kan erstatte et substantiv eller navn, 
+                pege på nogen eller noget, danne et spørgsmål eller forbinde en relativ ledsætning med noget, 
+                der allerede er nævnt.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >A pronoun can replace a noun or name, point to someone or something, form a question, or connect a relative
-                    clause to something already mentioned.</em
-                >
+                <em>
+                    A pronoun can replace a noun or name, point to someone or something, form a question, 
+                    or connect a relative clause to something already mentioned.
+                </em>
             </p>
 
             <table class="grammar-noun-table grammar-example-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Funktion</strong><em class="grammar-english" lang="en">Function</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Funktion</strong>
+                                <em class="grammar-english" lang="en">Function</em>
+                            </span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -33,20 +35,20 @@ const pronomenGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Erstatter person</strong
-                                ><em class="grammar-english" lang="en">Replaces a person</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Erstatter person</strong>
+                                <em class="grammar-english" lang="en">Replaces a person</em>
+                            </span>
                         </td>
                         <td>Sofie har en bog. <u>Hun</u> læser.</td>
                         <td class="grammar-english" lang="en"><em>Sofie has a book. She reads.</em></td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Erstatter ting</strong
-                                ><em class="grammar-english" lang="en">Replaces a thing</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Erstatter ting</strong>
+                                <em class="grammar-english" lang="en">Replaces a thing</em>
+                            </span>
                         </td>
                         <td>Hun læser <u>den</u> hver aften.</td>
                         <td class="grammar-english" lang="en"><em>She reads it every evening.</em></td>
@@ -59,14 +61,16 @@ const pronomenGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Type</strong><em class="grammar-english" lang="en">Type</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Type</strong>
+                                <em class="grammar-english" lang="en">Type</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempler</strong><em class="grammar-english" lang="en">Examples</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempler</strong>
+                                <em class="grammar-english" lang="en">Examples</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -113,14 +117,16 @@ const pronomenGrammarPages = [
         titleEn: "Personal pronouns",
         content: `
             <p lang="da">
-                Personlige pronominer har forskellige former efter deres funktion. Subjektformen bruges som grundled. Objektformen
+                Personlige pronominer har forskellige former efter deres funktion. 
+                Subjektformen bruges som grundled. Objektformen
                 bruges som direkte eller indirekte objekt og efter en præposition.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Personal pronouns have different forms depending on their function. The subject form is used as the subject;
-                    the object form is used as an object and after a preposition.</em
-                >
+                <em>
+                    Personal pronouns have different forms depending on their function. 
+                    The subject form is used as the subject;
+                    the object form is used as an object and after a preposition.
+                </em>
             </p>
 
             <table class="grammar-noun-table grammar-comparison-table">
@@ -128,14 +134,16 @@ const pronomenGrammarPages = [
                     <tr>
                         <th><strong>Person</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Subjekt</strong><em class="grammar-english" lang="en">Subject</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Subjekt</strong>
+                                <em class="grammar-english" lang="en">Subject</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Objekt</strong><em class="grammar-english" lang="en">Object</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Objekt</strong>
+                                <em class="grammar-english" lang="en">Object</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -174,10 +182,13 @@ const pronomenGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Store bogstaver:</strong> I er altid med stort. De, Dem og Deres med stort er høflig tiltale.
+                    <strong>Store bogstaver:</strong> I er altid med stort. 
+                    De, Dem og Deres med stort er høflig tiltale.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>I is always capitalized. De, Dem, and Deres with capitals are formal polite forms.</em>
+                    <em>
+                        I is always capitalized. De, Dem, and Deres with capitals are formal polite forms.
+                    </em>
                 </p>
             </aside>
         `
@@ -188,23 +199,26 @@ const pronomenGrammarPages = [
         titleEn: "Subject or object form?",
         content: `
             <p lang="da">
-                Brug jeg, vi og de som subjekt. Brug mig, os og dem som objekt, efter en præposition og i udtryk som
+                Brug jeg, vi og de som subjekt. Brug mig, os og dem som objekt, 
+                efter en præposition og i udtryk som
                 <strong>Det er mig</strong>.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Use jeg, vi, and de as subjects. Use mig, os, and dem as objects, after a preposition, and in expressions such
-                    as Det er mig.</em
-                >
+                <em>
+                    Use jeg, vi, and de as subjects. Use mig, os, and dem as objects, 
+                    after a preposition, and in expressions such
+                    as Det er mig.
+                </em>
             </p>
 
             <table class="grammar-noun-table grammar-example-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Funktion</strong><em class="grammar-english" lang="en">Function</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Funktion</strong>
+                                <em class="grammar-english" lang="en">Function</em>
+                            </span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -240,7 +254,9 @@ const pronomenGrammarPages = [
                 <u>mig</u>.
             </p>
             <p class="grammar-english" lang="en">
-                <em>Remove the other person. The remaining sentence reveals whether the pronoun is a subject or object.</em>
+                <em>
+                    Remove the other person. The remaining sentence reveals whether the pronoun is a subject or object.
+                </em>
             </p>
 
             <h3>Vi/os og de/dem foran et andet ord</h3>
@@ -249,7 +265,9 @@ const pronomenGrammarPages = [
                 <u>dem</u> unge kræver objektform.
             </p>
             <p class="grammar-english" lang="en">
-                <em>Still choose the form from its role: subject form as subject and object form elsewhere.</em>
+                <em>
+                    Still choose the form from its role: subject form as subject and object form elsewhere.
+                </em>
             </p>
         `
     },
@@ -262,19 +280,20 @@ const pronomenGrammarPages = [
                 Possessive pronominer viser ejerskab. Formen bestemmes af det ejede substantivs køn og tal, ikke af ejerens køn.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Possessive pronouns show ownership. Their form is determined by the gender and number of the owned noun, not by
-                    the owner's gender.</em
-                >
+                <em>
+                    Possessive pronouns show ownership. Their form is determined by the gender and number of the owned noun, 
+                    not by the owner's gender.
+                </em>
             </p>
 
             <table class="grammar-noun-table grammar-comparison-table grammar-form-table--four-column">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Ejer</strong><em class="grammar-english" lang="en">Owner</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Ejer</strong>
+                                <em class="grammar-english" lang="en">Owner</em>
+                            </span>
                         </th>
                         <th><strong>En-ord</strong></th>
                         <th><strong>Et-ord</strong></th>
@@ -316,9 +335,14 @@ const pronomenGrammarPages = [
             </table>
             <aside class="grammar-rule">
                 <p lang="da">
-                    <strong>Ingen bestemt endelse:</strong> Skriv min bil og vores hus, ikke min bilen eller vores huset.
+                    <strong>Ingen bestemt endelse:</strong> Skriv min bil og vores hus, 
+                    ikke min bilen eller vores huset.
                 </p>
-                <p class="grammar-english" lang="en"><em>After a possessive, the noun does not take a definite ending.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        After a possessive, the noun does not take a definite ending.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -328,28 +352,30 @@ const pronomenGrammarPages = [
         titleEn: "Sin, sit, sine or hans/hendes?",
         content: `
             <p lang="da">
-                Sin, sit og sine viser tilbage til subjektet i den samme sætning. Hans og hendes viser normalt til en anden person
-                end subjektet.
+                Sin, sit og sine viser tilbage til subjektet i den samme sætning. 
+                Hans og hendes viser normalt til en anden person end subjektet.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Sin, sit, and sine refer back to the subject of the same clause. Hans and hendes normally refer to someone
-                    other than the subject.</em
-                >
+                <em>
+                    Sin, sit, and sine refer back to the subject of the same clause. 
+                    Hans and hendes normally refer to someone other than the subject.
+                </em>
             </p>
 
             <table class="grammar-noun-table grammar-correction-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Eksempel</strong><em class="grammar-english" lang="en">Example</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Eksempel</strong>
+                                <em class="grammar-english" lang="en">Example</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Betydning</strong><em class="grammar-english" lang="en">Meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Betydning</strong>
+                                <em class="grammar-english" lang="en">Meaning</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -394,7 +420,9 @@ const pronomenGrammarPages = [
                     <strong>Test:</strong> Tilhører tingen subjektet i samme sætning? Ja → sin/sit/sine. Nej → hans/hendes/deres.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Does the thing belong to the subject of the same clause? Yes → sin/sit/sine. No → hans/hendes/deres.</em>
+                    <em>
+                        Does the thing belong to the subject of the same clause? Yes → sin/sit/sine. No → hans/hendes/deres.
+                    </em>
                 </p>
             </aside>
         `
@@ -406,17 +434,19 @@ const pronomenGrammarPages = [
         content: `
             <p lang="da">Et refleksivt pronomen viser tilbage til subjektet. Subjekt og objekt er den samme person eller gruppe.</p>
             <p class="grammar-english" lang="en">
-                <em>A reflexive pronoun refers back to the subject. The subject and object are the same person or group.</em>
+                <em>
+                    A reflexive pronoun refers back to the subject. The subject and object are the same person or group.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-exercise-table">
                 <thead>
                     <tr>
                         <th><strong>Subjekt</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Refleksiv form</strong
-                                ><em class="grammar-english" lang="en">Reflexive form</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Refleksiv form</strong>
+                                <em class="grammar-english" lang="en">Reflexive form</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -457,21 +487,22 @@ const pronomenGrammarPages = [
             <h3>Almindelige refleksive verber / Common reflexive verbs</h3>
             <p lang="da">at vaske sig, barbere sig, sminke sig, sætte sig, skynde sig, glæde sig, føle sig og klare sig.</p>
             <p class="grammar-english" lang="en">
-                <em>to wash oneself, shave, put on makeup, sit down, hurry, look forward, feel, and manage.</em>
+                <em>
+                    to wash oneself, shave, put on makeup, sit down, hurry, look forward, feel, and manage.
+                </em>
             </p>
             <h3>Ordstilling med ikke / Word order with ikke</h3>
             <p lang="da">
                 Hovedsætning: <span class="subject">Jeg</span> <span class="verb">sætter</span>
                 <u><span class="object">mig</span></u> <span class="adverb">ikke</span>. Ledsætning: …
                 <span class="conjunction">fordi</span> <span class="subject">jeg</span> <span class="adverb">ikke</span>
-                <span class="verb">sætter</span> <u><span class="object">mig</span></u
-                >.
+                <span class="verb">sætter</span> <u><span class="object">mig</span></u>.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Main clause: reflexive pronoun before ikke. Subordinate clause: ikke before the finite verb and reflexive
-                    pronoun.</em
-                >
+                <em>
+                    Main clause: reflexive pronoun before ikke. Subordinate clause: 
+                    ikke before the finite verb and reflexive pronoun.
+                </em>
             </p>
         `
     },
@@ -481,23 +512,24 @@ const pronomenGrammarPages = [
         titleEn: "Demonstrative and interrogative pronouns",
         content: `
             <p lang="da">
-                Demonstrative pronominer peger på noget. Spørgende pronominer bruges til at spørge om personer, ting, valg eller
-                ejerskab.
+                Demonstrative pronominer peger på noget. Spørgende pronominer bruges til at spørge om personer, 
+                ting, valg eller ejerskab.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Demonstrative pronouns point to something. Interrogative pronouns ask about people, things, choices, or
-                    ownership.</em
-                >
+                <em>
+                    Demonstrative pronouns point to something. Interrogative pronouns ask about people, things, 
+                    choices, or ownership.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
                     <tr>
                         <th><strong>Form</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Brug</strong><em class="grammar-english" lang="en">Use</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Brug</strong>
+                                <em class="grammar-english" lang="en">Use</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -555,22 +587,25 @@ const pronomenGrammarPages = [
         titleEn: "Relative pronouns: som and der",
         content: `
             <p lang="da">
-                Relative pronominer forbinder en ledsætning med noget foran. Når relativordet er subjekt, kan både som og der ofte
+                Relative pronominer forbinder en ledsætning med noget foran. 
+                Når relativordet er subjekt, kan både som og der ofte
                 bruges. Når det er objekt, bruges som.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Relative pronouns connect a relative clause to something mentioned before. As the relative-clause subject, both
-                    som and der are often possible. As an object, use som.</em
-                >
+                <em>
+                    Relative pronouns connect a relative clause to something mentioned before. 
+                    As the relative-clause subject, both
+                    som and der are often possible. As an object, use som.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Funktion</strong><em class="grammar-english" lang="en">Function</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Funktion</strong>
+                                <em class="grammar-english" lang="en">Function</em>
+                            </span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -591,11 +626,13 @@ const pronomenGrammarPages = [
             </table>
             <aside class="grammar-rule">
                 <p lang="da">
-                    <strong>Hurtig regel:</strong> Der kan kun være subjekt i en relativ ledsætning. Som kan være subjekt eller
-                    objekt.
+                    <strong>Hurtig regel:</strong> Der kan kun være subjekt i en relativ ledsætning. 
+                    Som kan være subjekt eller objekt.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Der can only be the subject of a relative clause. Som can be a subject or object.</em>
+                    <em>
+                        Der can only be the subject of a relative clause. Som can be a subject or object.
+                    </em>
                 </p>
             </aside>
         `
@@ -606,11 +643,14 @@ const pronomenGrammarPages = [
         titleEn: "Hvis, hvor, and hvilket",
         content: `
             <p lang="da">
-                <strong>Hvis</strong> viser ejerskab. <strong>Hvor</strong> viser sted eller tid. <strong>Hvilket</strong> kan vise
-                tilbage til en hel sætning.
+                <strong>Hvis</strong> viser ejerskab. <strong>Hvor</strong> viser sted eller tid. 
+                <strong>Hvilket</strong> kan vise tilbage til en hel sætning.
             </p>
             <p class="grammar-english" lang="en">
-                <em>Hvis shows possession. Hvor refers to a place or time. Hvilket can refer back to a whole preceding clause.</em>
+                <em>
+                    Hvis shows possession. Hvor refers to a place or time. 
+                    Hvilket can refer back to a whole preceding clause.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <thead>
@@ -645,11 +685,14 @@ const pronomenGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    Brug hvor, når betydningen er <strong>i/på stedet eller tidspunktet</strong>. Brug som, når ordet er subjekt,
+                    Brug hvor, når betydningen er <strong>i/på stedet eller tidspunktet</strong>. 
+                    Brug som, når ordet er subjekt,
                     objekt eller del af en præpositionsforbindelse.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Use hvor for at/in a place or time; use som as a subject, object, or part of a prepositional phrase.</em>
+                    <em>
+                        Use hvor for at/in a place or time; use som as a subject, object, or part of a prepositional phrase.
+                    </em>
                 </p>
             </aside>
         `
@@ -660,14 +703,16 @@ const pronomenGrammarPages = [
         titleEn: "Indefinite and reciprocal pronouns",
         content: `
             <p lang="da">
-                Ubestemte pronominer henviser uden præcis identifikation. Nogen og noget bruges ofte i spørgsmål, nægtelser og
+                Ubestemte pronominer henviser uden præcis identifikation. 
+                Nogen og noget bruges ofte i spørgsmål, nægtelser og
                 betingelser. Nogle betyder normalt et faktisk antal.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Indefinite pronouns refer without precise identification. Nogen and noget often appear in questions, negatives,
-                    and conditions. Nogle normally means an actual number.</em
-                >
+                <em>
+                    Indefinite pronouns refer without precise identification. 
+                    Nogen and noget often appear in questions, negatives,
+                    and conditions. Nogle normally means an actual number.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <thead>
@@ -711,7 +756,9 @@ const pronomenGrammarPages = [
                 sig selv; de vasker hinanden betyder, at de vasker de andre.
             </p>
             <p class="grammar-english" lang="en">
-                <em>Hinanden expresses a reciprocal action. Compare reflexive sig with reciprocal hinanden.</em>
+                <em>
+                    Hinanden expresses a reciprocal action. Compare reflexive sig with reciprocal hinanden.
+                </em>
             </p>
         `
     },
@@ -721,14 +768,14 @@ const pronomenGrammarPages = [
         titleEn: "Der or det?",
         content: `
             <p lang="da">
-                Det bruges om vejr, tid og upersonlige forhold samt foran en infinitiv eller ledsætning. Der introducerer ofte en ny
-                eller ubestemt person eller ting senere i sætningen.
+                Det bruges om vejr, tid og upersonlige forhold samt foran en infinitiv eller ledsætning. 
+                Der introducerer ofte en ny eller ubestemt person eller ting senere i sætningen.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Det is used for weather, time, impersonal conditions, and before an infinitive or clause. Der often introduces
-                    a new or indefinite person or thing later in the sentence.</em
-                >
+                <em>
+                    Det is used for weather, time, impersonal conditions, and before an infinitive or clause. 
+                    Der often introduces a new or indefinite person or thing later in the sentence.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <thead>
@@ -775,14 +822,14 @@ const pronomenGrammarPages = [
         titleEn: "Placement of object pronouns",
         content: `
             <p lang="da">
-                Et kort, ubetonet objektpronomen står ofte tidligt i hovedsætningen. Placeringen afhænger af, om verballeddet har ét
-                eller flere verber.
+                Et kort, ubetonet objektpronomen står ofte tidligt i hovedsætningen. 
+                Placeringen afhænger af, om verballeddet har ét eller flere verber.
             </p>
 
             <p class="grammar-english" lang="en">
                 <em>
-                    A short unstressed object pronoun often appears early in a main clause. Its placement depends on whether the
-                    verb phrase contains one or several verbs.
+                    A short unstressed object pronoun often appears early in a main clause. 
+                    Its placement depends on whether the verb phrase contains one or several verbs.
                 </em>
             </p>
 
@@ -838,7 +885,9 @@ const pronomenGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
                             <span class="object">DO</span>
                         </td>
                     </tr>
@@ -854,7 +903,8 @@ const pronomenGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> +
                             <u><span class="object">DO</span></u> +
                             <span class="adverb">A</span>
                         </td>
@@ -871,7 +921,8 @@ const pronomenGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> +
                             <u><span class="object">DO</span></u> +
                             <span class="adverb">A</span>
                         </td>
@@ -890,7 +941,9 @@ const pronomenGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v2">V2</span> +
                             <u><span class="object">DO</span></u>
                         </td>
@@ -909,7 +962,9 @@ const pronomenGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v2">V2</span> +
                             <u><span class="object">DO</span></u>
                         </td>
@@ -929,7 +984,9 @@ const pronomenGrammarPages = [
             </p>
 
             <p class="grammar-english" lang="en">
-                <em> With two object pronouns, the indirect object normally comes first. </em>
+                <em> 
+                    With two object pronouns, the indirect object normally comes first. 
+                </em>
             </p>
         `
     },
@@ -942,14 +999,16 @@ const pronomenGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Spørgsmål</strong><em class="grammar-english" lang="en">Question</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Spørgsmål</strong>
+                                <em class="grammar-english" lang="en">Question</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Vælg</strong><em class="grammar-english" lang="en">Choose</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Vælg</strong>
+                                <em class="grammar-english" lang="en">Choose</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -993,14 +1052,16 @@ const pronomenGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Forkert</strong><em class="grammar-english" lang="en">Incorrect</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Forkert</strong>
+                                <em class="grammar-english" lang="en">Incorrect</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Korrekt</strong><em class="grammar-english" lang="en">Correct</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Korrekt</strong>
+                                <em class="grammar-english" lang="en">Correct</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1225,10 +1286,10 @@ const pronomenGrammarPages = [
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Kort forklaring</strong
-                                ><em class="grammar-english" lang="en">Short explanation</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Kort forklaring</strong>
+                                <em class="grammar-english" lang="en">Short explanation</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1277,14 +1338,15 @@ const pronomenGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Din vigtigste vane:</strong> Find først pronomenets funktion: subjekt, objekt, ejer, refleksivt led
+                    <strong>Din vigtigste vane:</strong>
+                    Find først pronomenets funktion: subjekt, objekt, ejer, refleksivt led
                     eller relativ forbindelse. Vælg derefter formen.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >First identify the pronoun's function: subject, object, possessor, reflexive element, or relative
-                        connection. Then choose the form.</em
-                    >
+                    <em>
+                        First identify the pronoun's function: subject, object, possessor, reflexive element, 
+                        or relative connection. Then choose the form.
+                    </em>
                 </p>
             </aside>
         `
