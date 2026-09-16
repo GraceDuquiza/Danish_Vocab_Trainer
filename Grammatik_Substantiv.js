@@ -7,14 +7,15 @@ const substantivGrammarPages = [
         titleEn: "What is a noun?",
         content: `
             <p lang="da">
-                Et substantiv kaldes også et navneord. Det er et ord, der giver navn til en person, et dyr, en ting, et sted, et
-                stof, en følelse eller en idé. På dansk er det bedst at lære substantivet sammen med en eller et.
+                Et substantiv kaldes også et navneord. Det er et ord, der giver navn til en person, 
+                et dyr, en ting, et sted, et stof, en følelse eller en idé. 
+                På dansk er det bedst at lære substantivet sammen med en eller et.
             </p>
             <p lang="en">
-                <em
-                    >A noun is a naming word. It names a person, animal, object, place, substance, feeling, or idea. In Danish, it
-                    is best to learn the noun together with en or et.</em
-                >
+                <em>
+                    A noun is a naming word. It names a person, animal, object, place, substance, feeling, or idea. 
+                    In Danish, it is best to learn the noun together with en or et.
+                </em>
             </p>
             <table class="grammar-noun-table">
                 <colgroup>
@@ -66,7 +67,11 @@ const substantivGrammarPages = [
                         <th>
                             <p><strong>Husk / Remember</strong></p>
                             <p>Lær ikke kun "bil". Lær "en bil". Lær ikke kun "hus". Lær "et hus".</p>
-                            <p><em>Do not learn only "bil". Learn "en bil". Do not learn only "hus". Learn "et hus".</em></p>
+                            <p>
+                                <em>
+                                    Do not learn only "bil". Learn "en bil". Do not learn only "hus". Learn "et hus".
+                                </em>
+                            </p>
                         </th>
                     </tr>
                 </thead>
@@ -79,16 +84,22 @@ const substantivGrammarPages = [
                 <li>
                     <p>
                         Kan ordet stå efter en, et, den, det, min eller mange? -
-                        <em>Can the word follow en, et, den, det, min, or mange?</em>
+                        <em>
+                            Can the word follow en, et, den, det, min, or mange?
+                        </em>
                     </p>
                 </li>
                 <li>
-                    <p>Kan ordet betegne noget eller nogen? - <em>Does the word name something or someone?</em></p>
+                    <p>Kan ordet betegne noget eller nogen? - 
+                        <em>Does the word name something or someone?</em>
+                    </p>
                 </li>
                 <li>
                     <p>
                         Kan ordet ofte bøjes: bil - bilen - biler - bilerne? -
-                        <em>Can the word often be inflected: bil - bilen - biler - bilerne?</em>
+                        <em>
+                            Can the word often be inflected: bil - bilen - biler - bilerne?
+                        </em>
                     </p>
                 </li>
             </ul>
@@ -117,14 +128,16 @@ const substantivGrammarPages = [
         titleEn: "En-words and et-words",
         content: `
             <p lang="da">
-                Danske substantiver tilhører én af to grupper: en-ord eller et-ord. Gruppen bestemmer både artiklen og den bestemte
-                form. Der findes ikke en regel, der virker for alle ord. Derfor skal en eller et læres sammen med substantivet.
+                Danske substantiver tilhører én af to grupper: en-ord eller et-ord. 
+                Gruppen bestemmer både artiklen og den bestemte form. Der findes ikke en regel, der virker for alle ord. 
+                Derfor skal en eller et læres sammen med substantivet.
             </p>
             <p lang="en">
-                <em
-                    >Danish nouns belong to one of two groups: en-words or et-words. The group determines both the article and the
-                    definite form. There is no rule that works for every noun, so learn en or et together with the noun.</em
-                >
+                <em>
+                    Danish nouns belong to one of two groups: en-words or et-words. 
+                    The group determines both the article and the definite form. 
+                    There is no rule that works for every noun, so learn en or et together with the noun.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-comparison-table--two-column">
                 <colgroup>
@@ -134,29 +147,31 @@ const substantivGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">En-ord</strong><span class="grammar-english" lang="en">Common gender</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">En-ord</strong>
+                                <span class="grammar-english" lang="en">Common gender</span>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Et-ord</strong><span class="grammar-english" lang="en">Neuter</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Et-ord</strong>
+                                <span class="grammar-english" lang="en">Neuter</span>
+                            </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="grammar-comparison-forms">
                         <td lang="da">
-                            <strong>Artikel:</strong> en<br /><strong>Eksempler:</strong> en bil, en dag, en uge<br /><strong
-                                >Bestemt form:</strong
-                            >
+                            <strong>Artikel:</strong> en<br />
+                            <strong>Eksempler:</strong> en bil, en dag, en uge<br />
+                            <strong>Bestemt form:</strong>
                             bilen, dagen, ugen
                         </td>
                         <td lang="da">
-                            <strong>Artikel:</strong> et<br /><strong>Eksempler:</strong> et hus, et flag, et år<br /><strong
-                                >Bestemt form:</strong
-                            >
+                            <strong>Artikel:</strong> et<br />
+                            <strong>Eksempler:</strong> et hus, et flag, et år<br />
+                            <strong>Bestemt form:</strong>
                             huset, flaget, året
                         </td>
                     </tr>
@@ -172,19 +187,25 @@ const substantivGrammarPages = [
                 <li>
                     <p>
                         Mange ord for mennesker, dyr og planter er en-ord: en pige, en hund, en blomst. -
-                        <em>Many words for people, animals, and plants are en-words.</em>
+                        <em>
+                            Many words for people, animals, and plants are en-words.
+                        </em>
                     </p>
                 </li>
                 <li>
                     <p>
                         Mange substantiver på -e er en-ord: en uge, en taske, en maskine. -
-                        <em>Many nouns ending in -e are en-words.</em>
+                        <em>
+                            Many nouns ending in -e are en-words.
+                        </em>
                     </p>
                 </li>
                 <li>
                     <p>
                         Ord på -hed, -dom, -else, -ing, -ning og -inde er normalt en-ord. -
-                        <em>Nouns ending in -hed, -dom, -else, -ing, -ning, and -inde are normally en-words.</em>
+                        <em>
+                            Nouns ending in -hed, -dom, -else, -ing, -ning, and -inde are normally en-words.
+                        </em>
                     </p>
                 </li>
             </ul>
@@ -197,14 +218,14 @@ const substantivGrammarPages = [
                         <th>
                             <p><strong>Pas på / Be careful</strong></p>
                             <p>
-                                Mønstrene hjælper, men der er undtagelser: et menneske, et barn, et dyr og et træ. Tjek en ordbog,
-                                når du er usikker.
+                                Mønstrene hjælper, men der er undtagelser: et menneske, et barn, et dyr og et træ. 
+                                Tjek en ordbog, når du er usikker.
                             </p>
                             <p>
-                                <em
-                                    >The patterns help, but there are exceptions: et menneske, et barn, et dyr, and et træ. Check a
-                                    dictionary when unsure.</em
-                                >
+                                <em>
+                                    The patterns help, but there are exceptions: et menneske, et barn, et dyr, and et træ. 
+                                    Check a dictionary when unsure.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -220,14 +241,14 @@ const substantivGrammarPages = [
         titleEn: "The four basic forms",
         content: `
             <p lang="da">
-                Et substantiv ændrer form efter tal (én eller flere) og bestemthed (ny/ukendt eller kendt). Derfor har de fleste
-                substantiver fire grundformer.
+                Et substantiv ændrer form efter tal (én eller flere) og bestemthed (ny/ukendt eller kendt). 
+                Derfor har de fleste substantiver fire grundformer.
             </p>
             <p lang="en">
-                <em
-                    >A noun changes according to number (one or more) and definiteness (new/unspecified or known/specified).
-                    Therefore, most nouns have four basic forms.</em
-                >
+                <em>
+                    A noun changes according to number (one or more) and definiteness (new/unspecified or known/specified).
+                    Therefore, most nouns have four basic forms.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-form-table--four-column">
                 <colgroup>
@@ -286,14 +307,15 @@ const substantivGrammarPages = [
             </table>
             <h3 id="rod-og-endelse-stem-and-ending">Rod og endelse / Stem and ending</h3>
             <p lang="da">
-                Roden er den del af ordet, der bærer grundbetydningen. Endelsen viser for eksempel bestemt form eller flertal. Du
+                Roden er den del af ordet, der bærer grundbetydningen. 
+                Endelsen viser for eksempel bestemt form eller flertal. Du
                 behøver ikke huske de tekniske ord for at tale dansk, men de kan hjælpe dig med stavning.
             </p>
             <p lang="en">
-                <em
-                    >The stem carries the basic meaning. The ending can show definiteness or plural. You do not need the technical
-                    terms to speak Danish, but they can help with spelling.</em
-                >
+                <em>
+                    The stem carries the basic meaning. The ending can show definiteness or plural. 
+                    You do not need the technical terms to speak Danish, but they can help with spelling.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table">
                 <colgroup>
@@ -330,14 +352,15 @@ const substantivGrammarPages = [
         titleEn: "Singular and plural",
         content: `
             <p lang="da">
-                Ental betyder én person eller ting. Flertal betyder flere. Dansk har ikke kun én flertalsendelse. De almindeligste
-                mønstre er -er, -e eller ingen endelse. Nogle ord ændrer også vokal.
+                Ental betyder én person eller ting. Flertal betyder flere. Dansk har ikke kun én flertalsendelse. 
+                De almindeligste mønstre er -er, -e eller ingen endelse. Nogle ord ændrer også vokal.
             </p>
             <p lang="en">
-                <em
-                    >Singular means one person or thing. Plural means more than one. Danish does not have one single plural ending.
-                    Common patterns are -er, -e, or no ending. Some nouns also change their vowel.</em
-                >
+                <em>
+                    Singular means one person or thing. Plural means more than one. 
+                    Danish does not have one single plural ending.
+                    Common patterns are -er, -e, or no ending. Some nouns also change their vowel.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -368,25 +391,28 @@ const substantivGrammarPages = [
                             <strong>Ingen flertalsendelse</strong><span class="grammar-word-list">et år → året → år → årene</span>
                         </td>
                         <td lang="en">
-                            <strong>No plural ending</strong
-                            ><span class="grammar-word-list">a year → the year → years → the years</span>
+                            <strong>No plural ending</strong>
+                            <span class="grammar-word-list">a year → the year → years → the years</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Vokalen ændres</strong><span class="grammar-word-list">et barn → barnet → børn → børnene</span>
+                            <strong>Vokalen ændres</strong>
+                            <span class="grammar-word-list">et barn → barnet → børn → børnene</span>
                         </td>
                         <td lang="en">
-                            <strong>Vowel change</strong
-                            ><span class="grammar-word-list">a child → the child → children → the children</span>
+                            <strong>Vowel change</strong>
+                            <span class="grammar-word-list">a child → the child → children → the children</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Vokalen ændres</strong><span class="grammar-word-list">en mand → manden → mænd → mændene</span>
+                            <strong>Vokalen ændres</strong>
+                            <span class="grammar-word-list">en mand → manden → mænd → mændene</span>
                         </td>
                         <td lang="en">
-                            <strong>Vowel change</strong><span class="grammar-word-list">a man → the man → men → the men</span>
+                            <strong>Vowel change</strong>
+                            <span class="grammar-word-list">a man → the man → men → the men</span>
                         </td>
                     </tr>
                 </tbody>
@@ -404,17 +430,17 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Læringsstrategi</strong
-                            ><span class="grammar-example-line"
-                                >Lær ikke kun entalsformen. Skriv hele rækken, især hvis flertallet ændrer stavning.</span
-                            >
+                            <strong>Læringsstrategi</strong>
+                            <span class="grammar-example-line">
+                                Lær ikke kun entalsformen. Skriv hele rækken, især hvis flertallet ændrer stavning.
+                            </span>
                         </td>
                         <td lang="en">
-                            <strong>Learning strategy</strong
-                            ><span class="grammar-example-line"
-                                >Do not learn only the singular. Write the complete pattern, especially when the plural changes
-                                spelling.</span
-                            >
+                            <strong>Learning strategy</strong>
+                            <span class="grammar-example-line">
+                                Do not learn only the singular. Write the complete pattern, 
+                                especially when the plural changes spelling.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -433,11 +459,11 @@ const substantivGrammarPages = [
                 identificeret.
             </p>
             <p lang="en">
-                <em
-                    >Use the indefinite form when mentioning something for the first time or when it does not matter exactly which
+                <em>
+                    Use the indefinite form when mentioning something for the first time or when it does not matter exactly which
                     person or thing you mean. Use the definite form when the person or thing is already known, previously mentioned,
-                    or clearly identified.</em
-                >
+                    or clearly identified.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -449,12 +475,14 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Jeg så en hund. Hunden løb efter en bold.</strong
-                            ><span class="grammar-example-line">Første omtale: en hund. Anden omtale: hunden.</span>
+                            <strong>Jeg så en hund. Hunden løb efter en bold.</strong>
+                            <span class="grammar-example-line">Første omtale: en hund. Anden omtale: hunden.</span>
                         </td>
                         <td lang="en">
-                            <strong>I saw a dog. The dog ran after a ball.</strong
-                            ><span class="grammar-example-line">First mention: a dog. Second mention: the dog.</span>
+                            <strong>I saw a dog. The dog ran after a ball.</strong>
+                            <span class="grammar-example-line">
+                                First mention: a dog. Second mention: the dog.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -469,7 +497,8 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Ny information</strong><span class="grammar-example-line">Der står en cykel udenfor.</span>
+                            <strong>Ny information</strong>
+                            <span class="grammar-example-line">Der står en cykel udenfor.</span>
                         </td>
                         <td lang="en">
                             <strong>New information</strong><span class="grammar-example-line">There is a bicycle outside.</span>
@@ -512,8 +541,8 @@ const substantivGrammarPages = [
                             <strong>Bestemt flertal</strong><span class="grammar-example-line">Bøgerne på bordet er mine.</span>
                         </td>
                         <td lang="en">
-                            <strong>Definite plural</strong
-                            ><span class="grammar-example-line">The books on the table are mine.</span>
+                            <strong>Definite plural</strong>
+                            <span class="grammar-example-line">The books on the table are mine.</span>
                         </td>
                     </tr>
                 </tbody>
@@ -531,16 +560,16 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Hurtig regel</strong
-                            ><span class="grammar-example-line"
-                                >Første gang: ofte ubestemt. Næste gang eller allerede kendt: ofte bestemt.</span
-                            >
+                            <strong>Hurtig regel</strong>
+                            <span class="grammar-example-line">
+                                Første gang: ofte ubestemt. Næste gang eller allerede kendt: ofte bestemt.
+                            </span>
                         </td>
                         <td lang="en">
-                            <strong>Quick rule</strong
-                            ><span class="grammar-example-line"
-                                >First mention: usually indefinite. Later mention or already known: usually definite.</span
-                            >
+                            <strong>Quick rule</strong>
+                            <span class="grammar-example-line">
+                                First mention: usually indefinite. Later mention or already known: usually definite.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -562,11 +591,11 @@ const substantivGrammarPages = [
                 flere.
             </p>
             <p lang="en">
-                <em
-                    >After være or blive, jobs, roles, and nationality often appear without en or et when the noun states what a
+                <em>
+                    After være or blive, jobs, roles, and nationality often appear without en or et when the noun states what a
                     person is or becomes. Use the article when there is an adjective or when you mean one particular or possible
-                    person among several.</em
-                >
+                    person among several.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -578,22 +607,22 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Uden artikel</strong
-                            ><span class="grammar-example-line">Hun er læge. Han blev student sidste år.</span>
+                            <strong>Uden artikel</strong>
+                            <span class="grammar-example-line">Hun er læge. Han blev student sidste år.</span>
                         </td>
                         <td lang="en">
-                            <strong>Without an article</strong
-                            ><span class="grammar-example-line">She is a doctor. He became a graduate/student last year.</span>
+                            <strong>Without an article</strong>
+                            <span class="grammar-example-line">She is a doctor. He became a graduate/student last year.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Med artikel</strong
-                            ><span class="grammar-example-line">Hun er en dygtig læge. Jeg vil gerne tale med en læge.</span>
+                            <strong>Med artikel</strong>
+                            <span class="grammar-example-line">Hun er en dygtig læge. Jeg vil gerne tale med en læge.</span>
                         </td>
                         <td lang="en">
-                            <strong>With an article</strong
-                            ><span class="grammar-example-line">She is a skilled doctor. I would like to speak with a doctor.</span>
+                            <strong>With an article</strong>
+                            <span class="grammar-example-line">She is a skilled doctor. I would like to speak with a doctor.</span>
                         </td>
                     </tr>
                 </tbody>
@@ -615,11 +644,11 @@ const substantivGrammarPages = [
                 taler om dem generelt, står de normalt uden en eller et.
             </p>
             <p lang="en">
-                <em
-                    >Some nouns describe things that we do not normally count as separate items. These may be drinks, food,
+                <em>
+                    Some nouns describe things that we do not normally count as separate items. These may be drinks, food,
                     materials, or abstract ideas, such as coffee, tea, water, wine, salt, rice, love, and democracy. When speaking
-                    about them generally, we normally do not use en or et.</em
-                >
+                    about them generally, we normally do not use en or et.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -631,25 +660,25 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Generel betydning</strong
-                            ><span class="grammar-example-line">Vil du have kaffe? Hun drikker ikke vin.</span>
+                            <strong>Generel betydning</strong>
+                            <span class="grammar-example-line">Vil du have kaffe? Hun drikker ikke vin.</span>
                         </td>
                         <td lang="en">
-                            <strong>General meaning</strong
-                            ><span class="grammar-example-line">Would you like coffee? She does not drink wine.</span>
+                            <strong>General meaning</strong>
+                            <span class="grammar-example-line">Would you like coffee? She does not drink wine.</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <p lang="da">
-                Når vi nævner en beholder, en portion eller en bestemt mængde, kan vi tælle udtrykket. Artiklen hører til beholderen
-                eller måleenheden - ikke til stoffet.
+                Når vi nævner en beholder, en portion eller en bestemt mængde, kan vi tælle udtrykket. 
+                Artiklen hører til beholderen eller måleenheden - ikke til stoffet.
             </p>
             <p lang="en">
-                <em
-                    >When we mention a container, a serving, or a specific quantity, the expression becomes countable. The article
-                    belongs to the container or unit - not to the substance.</em
-                >
+                <em>
+                    When we mention a container, a serving, or a specific quantity, the expression becomes countable. 
+                    The article belongs to the container or unit - not to the substance.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -661,12 +690,12 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>kaffe → en kop kaffe</strong
-                            ><span class="grammar-example-line">Generelt → tællelig mængde</span>
+                            <strong>kaffe → en kop kaffe</strong>
+                            <span class="grammar-example-line">Generelt → tællelig mængde</span>
                         </td>
                         <td lang="en">
-                            <strong>coffee → a cup of coffee</strong
-                            ><span class="grammar-example-line">General → countable quantity</span>
+                            <strong>coffee → a cup of coffee</strong>
+                            <span class="grammar-example-line">General → countable quantity</span>
                         </td>
                     </tr>
                     <tr>
@@ -674,35 +703,38 @@ const substantivGrammarPages = [
                             <strong>vand → et glas vand</strong><span class="grammar-example-line">Generelt → tællelig mængde</span>
                         </td>
                         <td lang="en">
-                            <strong>water → a glass of water</strong
-                            ><span class="grammar-example-line">General → countable quantity</span>
+                            <strong>water → a glass of water</strong>
+                            <span class="grammar-example-line">General → countable quantity</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>vin → en flaske vin</strong><span class="grammar-example-line">Generelt → tællelig mængde</span>
+                            <strong>vin → en flaske vin</strong>
+                            <span class="grammar-example-line">Generelt → tællelig mængde</span>
                         </td>
                         <td lang="en">
-                            <strong>wine → a bottle of wine</strong
-                            ><span class="grammar-example-line">General → countable quantity</span>
+                            <strong>wine → a bottle of wine</strong>
+                            <span class="grammar-example-line">General → countable quantity</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>salt → en pose salt</strong><span class="grammar-example-line">Generelt → tællelig mængde</span>
+                            <strong>salt → en pose salt</strong>
+                            <span class="grammar-example-line">Generelt → tællelig mængde</span>
                         </td>
                         <td lang="en">
-                            <strong>salt → a bag of salt</strong
-                            ><span class="grammar-example-line">General → countable quantity</span>
+                            <strong>salt → a bag of salt</strong>
+                            <span class="grammar-example-line">General → countable quantity</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>ris → en skål ris</strong><span class="grammar-example-line">Generelt → tællelig mængde</span>
+                            <strong>ris → en skål ris</strong>
+                            <span class="grammar-example-line">Generelt → tællelig mængde</span>
                         </td>
                         <td lang="en">
-                            <strong>rice → a bowl of rice</strong
-                            ><span class="grammar-example-line">General → countable quantity</span>
+                            <strong>rice → a bowl of rice</strong>
+                            <span class="grammar-example-line">General → countable quantity</span>
                         </td>
                     </tr>
                 </tbody>
@@ -720,17 +752,17 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Husk</strong
-                            ><span class="grammar-example-line"
-                                >Du tæller normalt ikke kaffe direkte. Du tæller portionen: én kop kaffe, to kopper kaffe.</span
-                            >
+                            <strong>Husk</strong>
+                            <span class="grammar-example-line">
+                                Du tæller normalt ikke kaffe direkte. Du tæller portionen: én kop kaffe, to kopper kaffe.
+                            </span>
                         </td>
                         <td lang="en">
-                            <strong>Remember</strong
-                            ><span class="grammar-example-line"
-                                >You do not normally count coffee directly. You count the serving: one cup of coffee, two cups of
-                                coffee.</span
-                            >
+                            <strong>Remember</strong>
+                            <span class="grammar-example-line">
+                                You do not normally count coffee directly. You count the serving: one cup of coffee, two cups of
+                                coffee.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -748,12 +780,12 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Talesprog på café</strong
-                            ><span class="grammar-example-line">På en café kan "to kaffe" betyde "to kopper kaffe".</span>
+                            <strong>Talesprog på café</strong>
+                            <span class="grammar-example-line">På en café kan "to kaffe" betyde "to kopper kaffe".</span>
                         </td>
                         <td lang="en">
-                            <strong>Colloquial café language</strong
-                            ><span class="grammar-example-line">In a café, "to kaffe" can mean "two cups of coffee".</span>
+                            <strong>Colloquial café language</strong>
+                            <span class="grammar-example-line">In a café, "to kaffe" can mean "two cups of coffee".</span>
                         </td>
                     </tr>
                 </tbody>
@@ -768,14 +800,15 @@ const substantivGrammarPages = [
         content: `
             <h3 id="faste-forbindelser-fixed-expressions">6.3 Faste forbindelser / Fixed expressions</h3>
             <p lang="da">
-                I nogle faste udtryk står substantivet uden artikel. Lær hele udtrykket som én enhed, fordi ordvalget ikke altid kan
-                forklares med en enkel regel.
+                I nogle faste udtryk står substantivet uden artikel. Lær hele udtrykket som én enhed, 
+                fordi ordvalget ikke altid kan forklares med en enkel regel.
             </p>
             <p lang="en">
-                <em
-                    >In some fixed expressions, the noun appears without an article. Learn the complete expression as one unit
-                    because the wording cannot always be explained by one simple rule.</em
-                >
+                <em>
+                    In some fixed expressions, the noun appears without an article. 
+                    Learn the complete expression as one unit
+                    because the wording cannot always be explained by one simple rule.
+                </em>
             </p>
             <table class="grammar-noun-table">
                 <colgroup>
@@ -836,11 +869,11 @@ const substantivGrammarPages = [
                 vigtigste forskel er: uden adjektiv siger vi bilen, men med adjektiv siger vi den store bil - ikke den store bilen.
             </p>
             <p lang="en">
-                <em
-                    >When an adjective comes before a noun, its form changes according to en-word, et-word, plural, and
+                <em>
+                    When an adjective comes before a noun, its form changes according to en-word, et-word, plural, and
                     definiteness. The key difference is: without an adjective, say bilen; with an adjective, say den store bil - not
-                    den store bilen.</em
-                >
+                    den store bilen.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -852,32 +885,32 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Ubestemt</strong
-                            ><span class="grammar-word-list">en stor bil · et stort hus · store biler / store huse</span>
+                            <strong>Ubestemt</strong>
+                            <span class="grammar-word-list">en stor bil · et stort hus · store biler / store huse</span>
                         </td>
                         <td lang="en">
-                            <strong>Indefinite</strong
-                            ><span class="grammar-word-list">a large car · a large house · large cars / large houses</span>
+                            <strong>Indefinite</strong>
+                            <span class="grammar-word-list">a large car · a large house · large cars / large houses</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Bestemt</strong
-                            ><span class="grammar-word-list">den store bil · det store hus · de store biler / de store huse</span>
+                            <strong>Bestemt</strong>
+                            <span class="grammar-word-list">den store bil · det store hus · de store biler / de store huse</span>
                         </td>
                         <td lang="en">
-                            <strong>Definite</strong
-                            ><span class="grammar-word-list">the large car · the large house · the large cars / houses</span>
+                            <strong>Definite</strong>
+                            <span class="grammar-word-list">the large car · the large house · the large cars / houses</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Ejestedord</strong
-                            ><span class="grammar-word-list">min store bil · mit store hus · mine store biler</span>
+                            <strong>Ejestedord</strong>
+                            <span class="grammar-word-list">min store bil · mit store hus · mine store biler</span>
                         </td>
                         <td lang="en">
-                            <strong>Possessive</strong
-                            ><span class="grammar-word-list">my large car · my large house · my large cars</span>
+                            <strong>Possessive</strong>
+                            <span class="grammar-word-list">my large car · my large house · my large cars</span>
                         </td>
                     </tr>
                 </tbody>
@@ -938,14 +971,14 @@ const substantivGrammarPages = [
         titleEn: "Compound nouns",
         content: `
             <p lang="da">
-                Et sammensat substantiv består af to eller flere ord, der skrives sammen på dansk. Det sidste ord er hovedordet. Det
-                bestemmer betydningens hoveddel, køn og bøjning.
+                Et sammensat substantiv består af to eller flere ord, der skrives sammen på dansk. 
+                Det sidste ord er hovedordet. Det bestemmer betydningens hoveddel, køn og bøjning.
             </p>
             <p lang="en">
-                <em
-                    >A compound noun consists of two or more words written together in Danish. The final word is the main word. It
-                    determines the main meaning, gender, and inflection.</em
-                >
+                <em>
+                    A compound noun consists of two or more words written together in Danish. 
+                    The final word is the main word. It determines the main meaning, gender, and inflection.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -961,48 +994,48 @@ const substantivGrammarPages = [
                             ><span class="grammar-example-line">Hovedordet bord er et et-ord.</span>
                         </td>
                         <td lang="en">
-                            <strong>glass + a table → a glass table</strong
-                            ><span class="grammar-example-line">The main word bord determines the gender.</span>
+                            <strong>glass + a table → a glass table</strong>
+                            <span class="grammar-example-line">The main word bord determines the gender.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>skole + et skema → et skoleskema</strong
-                            ><span class="grammar-example-line">Hovedordet skema er et et-ord.</span>
+                            <strong>skole + et skema → et skoleskema</strong>
+                            <span class="grammar-example-line">Hovedordet skema er et et-ord.</span>
                         </td>
                         <td lang="en">
-                            <strong>school + a schedule → a school schedule</strong
-                            ><span class="grammar-example-line">The main word skema determines the gender.</span>
+                            <strong>school + a schedule → a school schedule</strong>
+                            <span class="grammar-example-line">The main word skema determines the gender.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>telefon + et nummer → et telefonnummer</strong
-                            ><span class="grammar-example-line">Hovedordet nummer er et et-ord.</span>
+                            <strong>telefon + et nummer → et telefonnummer</strong>
+                            <span class="grammar-example-line">Hovedordet nummer er et et-ord.</span>
                         </td>
                         <td lang="en">
-                            <strong>telephone + a number → a telephone number</strong
-                            ><span class="grammar-example-line">The main word nummer determines the gender.</span>
+                            <strong>telephone + a number → a telephone number</strong>
+                            <span class="grammar-example-line">The main word nummer determines the gender.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>tog + en station → en togstation</strong
-                            ><span class="grammar-example-line">Hovedordet station er et en-ord.</span>
+                            <strong>tog + en station → en togstation</strong>
+                            <span class="grammar-example-line">Hovedordet station er et en-ord.</span>
                         </td>
                         <td lang="en">
-                            <strong>train + a station → a train station</strong
-                            ><span class="grammar-example-line">The main word station determines the gender.</span>
+                            <strong>train + a station → a train station</strong>
+                            <span class="grammar-example-line">The main word station determines the gender.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>familie + et billede → et familiebillede</strong
-                            ><span class="grammar-example-line">Hovedordet billede er et et-ord.</span>
+                            <strong>familie + et billede → et familiebillede</strong>
+                            <span class="grammar-example-line">Hovedordet billede er et et-ord.</span>
                         </td>
                         <td lang="en">
-                            <strong>family + a picture → a family picture</strong
-                            ><span class="grammar-example-line">The main word billede determines the gender.</span>
+                            <strong>family + a picture → a family picture</strong>
+                            <span class="grammar-example-line">The main word billede determines the gender.</span>
                         </td>
                     </tr>
                 </tbody>
@@ -1020,16 +1053,16 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Husk</strong
-                            ><span class="grammar-example-line"
-                                >Se på det sidste ord: en station → en togstation; et nummer → et telefonnummer.</span
-                            >
+                            <strong>Husk</strong>
+                            <span class="grammar-example-line">
+                                Se på det sidste ord: en station → en togstation; et nummer → et telefonnummer.
+                            </span>
                         </td>
                         <td lang="en">
-                            <strong>Remember</strong
-                            ><span class="grammar-example-line"
-                                >Look at the final word: en station → en togstation; et nummer → et telefonnummer.</span
-                            >
+                            <strong>Remember</strong>
+                                <span class="grammar-example-line">
+                                    Look at the final word: en station → en togstation; et nummer → et telefonnummer.
+                                </span>
                         </td>
                     </tr>
                 </tbody>
@@ -1043,14 +1076,14 @@ const substantivGrammarPages = [
         titleEn: "Genitive and possession",
         content: `
             <p lang="da">
-                Ejefald viser, hvem noget tilhører. Normalt sætter man -s direkte på navnet eller substantivet. Man bruger ikke
-                apostrof foran et almindeligt dansk ejefalds-s.
+                Ejefald viser, hvem noget tilhører. Normalt sætter man -s direkte på navnet eller substantivet. 
+                Man bruger ikke apostrof foran et almindeligt dansk ejefalds-s.
             </p>
             <p lang="en">
-                <em
-                    >The genitive shows who owns something. Normally, add -s directly to the name or noun. Do not use an apostrophe
-                    before an ordinary Danish genitive -s.</em
-                >
+                <em>
+                    The genitive shows who owns something. Normally, add -s directly to the name or noun. 
+                    Do not use an apostrophe before an ordinary Danish genitive -s.
+                </em>
             </p>
             <table class="grammar-noun-table">
                 <colgroup>
@@ -1068,40 +1101,40 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Almindeligt navn</strong
-                                ><span class="grammar-english" lang="en">Ordinary name</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Almindeligt navn</strong>
+                                <span class="grammar-english" lang="en">Ordinary name</span>
+                            </span>
                         </td>
                         <td lang="da">Peters bil; Sannes bog</td>
                         <td lang="en">Peter's car; Sanne's book</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Ender på s, x eller z</strong
-                                ><span class="grammar-english" lang="en">Ends in s, x, or z</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Ender på s, x eller z</strong>
+                                <span class="grammar-english" lang="en">Ends in s, x, or z</span>
+                            </span>
                         </td>
                         <td lang="da">Lars' cykel; Max' bog; Schweiz' flag</td>
                         <td lang="en">Lars's bicycle; Max's book; Switzerland's flag</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Forkortelse</strong
-                                ><span class="grammar-english" lang="en">Abbreviation</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Forkortelse</strong>
+                                <span class="grammar-english" lang="en">Abbreviation</span>
+                            </span>
                         </td>
                         <td lang="da">USA's præsident</td>
                         <td lang="en">the president of the USA</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Forkortelse der ender på s</strong
-                                ><span class="grammar-english" lang="en">Abbreviation ending in s</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Forkortelse der ender på s</strong>
+                                <span class="grammar-english" lang="en">Abbreviation ending in s</span>
+                            </span>
                         </td>
                         <td lang="da">SAS' fly</td>
                         <td lang="en">SAS's aircraft</td>
@@ -1144,18 +1177,18 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Avanceret afsnit</strong
-                            ><span class="grammar-example-line"
-                                >Læs dette efter de vigtigste regler. Staveændringer kan ikke altid gættes, så brug gerne en
-                                ordbog.</span
-                            >
+                            <strong>Avanceret afsnit</strong>
+                            <span class="grammar-example-line">
+                                Læs dette efter de vigtigste regler. Staveændringer kan ikke altid gættes, så brug gerne en
+                                ordbog.
+                            </span>
                         </td>
                         <td lang="en">
-                            <strong>Advanced section</strong
-                            ><span class="grammar-example-line"
-                                >Read this after the main rules. Spelling changes cannot always be predicted, so using a dictionary
-                                is normal.</span
-                            >
+                            <strong>Advanced section</strong>
+                            <span class="grammar-example-line">
+                                Read this after the main rules. Spelling changes cannot always be predicted, 
+                                so using a dictionary is normal.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -1166,10 +1199,10 @@ const substantivGrammarPages = [
                 Fordoblingen hjælper med at bevare den korte vokallyd.
             </p>
             <p lang="en">
-                <em
-                    >Some short words with a short vowel and one final consonant double the consonant when an ending is added. The
-                    doubling helps preserve the short vowel sound.</em
-                >
+                <em>
+                    Some short words with a short vowel and one final consonant double the consonant when an ending is added. 
+                    The doubling helps preserve the short vowel sound.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -1181,42 +1214,42 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>en kat → katten → katte → kattene</strong
-                            ><span class="grammar-example-line">t bliver til tt før endelsen</span>
+                            <strong>en kat → katten → katte → kattene</strong>
+                            <span class="grammar-example-line">t bliver til tt før endelsen</span>
                         </td>
                         <td lang="en">
-                            <strong>a cat → the cat → cats → the cats</strong
-                            ><span class="grammar-example-line">t doubles before the ending</span>
+                            <strong>a cat → the cat → cats → the cats</strong>
+                            <span class="grammar-example-line">t doubles before the ending</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>et glas → glasset → glas → glassene</strong
-                            ><span class="grammar-example-line">s bliver til ss før endelsen</span>
+                            <strong>et glas → glasset → glas → glassene</strong>
+                            <span class="grammar-example-line">s bliver til ss før endelsen</span>
                         </td>
                         <td lang="en">
-                            <strong>a glass → the glass → glasses → the glasses</strong
-                            ><span class="grammar-example-line">s doubles before the ending</span>
+                            <strong>a glass → the glass → glasses → the glasses</strong>
+                            <span class="grammar-example-line">s doubles before the ending</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>et hop → hoppet → hop → hoppene</strong
-                            ><span class="grammar-example-line">p bliver til pp før endelsen</span>
+                            <strong>et hop → hoppet → hop → hoppene</strong>
+                            <span class="grammar-example-line">p bliver til pp før endelsen</span>
                         </td>
                         <td lang="en">
-                            <strong>a jump → the jump → jumps → the jumps</strong
-                            ><span class="grammar-example-line">p doubles before the ending</span>
+                            <strong>a jump → the jump → jumps → the jumps</strong>
+                            <span class="grammar-example-line">p doubles before the ending</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>en kop → koppen → kopper → kopperne</strong
-                            ><span class="grammar-example-line">p bliver til pp før endelsen</span>
+                            <strong>en kop → koppen → kopper → kopperne</strong>
+                            <span class="grammar-example-line">p bliver til pp før endelsen</span>
                         </td>
                         <td lang="en">
-                            <strong>a cup → the cup → cups → the cups</strong
-                            ><span class="grammar-example-line">p doubles before the ending</span>
+                            <strong>a cup → the cup → cups → the cups</strong>
+                            <span class="grammar-example-line">p doubles before the ending</span>
                         </td>
                     </tr>
                 </tbody>
@@ -1231,14 +1264,14 @@ const substantivGrammarPages = [
         content: `
             <h3 id="ord-med-r-words-with-r">10.2 Ord med r / Words with r</h3>
             <p lang="da">
-                Når et substantiv allerede ender på r eller en r-lyd, kan endelserne være svære at høre. Skriv hele bøjningsrækken,
-                og læg mærke til den skrevne form.
+                Når et substantiv allerede ender på r eller en r-lyd, kan endelserne være svære at høre. 
+                Skriv hele bøjningsrækken, og læg mærke til den skrevne form.
             </p>
             <p lang="en">
-                <em
-                    >When a noun already ends in r or an r-sound, the endings can be difficult to hear. Write the complete
-                    inflection pattern and notice the written form.</em
-                >
+                <em>
+                    When a noun already ends in r or an r-sound, the endings can be difficult to hear. 
+                    Write the complete inflection pattern and notice the written form.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -1288,10 +1321,10 @@ const substantivGrammarPages = [
                 Derfor er ordbogen vigtig.
             </p>
             <p lang="en">
-                <em
-                    >In many nouns ending in -el, -en, and -er, an unstressed e disappears in some forms. Some nouns have two
-                    accepted forms. This is why a dictionary is useful.</em
-                >
+                <em>
+                    In many nouns ending in -el, -en, and -er, an unstressed e disappears in some forms. 
+                    Some nouns have two accepted forms. This is why a dictionary is useful.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -1303,52 +1336,52 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>et nummer → nummeret → numre → numrene</strong
-                            ><span class="grammar-example-line">e falder bort i flertal</span>
+                            <strong>et nummer → nummeret → numre → numrene</strong>
+                            <span class="grammar-example-line">e falder bort i flertal</span>
                         </td>
                         <td lang="en">
-                            <strong>a number → the number → numbers → the numbers</strong
-                            ><span class="grammar-example-line">e is dropped in the plural</span>
+                            <strong>a number → the number → numbers → the numbers</strong>
+                            <span class="grammar-example-line">e is dropped in the plural</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>en sommer → sommeren → somre → somrene</strong
-                            ><span class="grammar-example-line">e falder bort i flertal</span>
+                            <strong>en sommer → sommeren → somre → somrene</strong>
+                            <span class="grammar-example-line">e falder bort i flertal</span>
                         </td>
                         <td lang="en">
-                            <strong>a summer → the summer → summers → the summers</strong
-                            ><span class="grammar-example-line">e is dropped in the plural</span>
+                            <strong>a summer → the summer → summers → the summers</strong>
+                            <span class="grammar-example-line">e is dropped in the plural</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>en finger → fingeren → fingre → fingrene</strong
-                            ><span class="grammar-example-line">e falder bort i flertal</span>
+                            <strong>en finger → fingeren → fingre → fingrene</strong>
+                            <span class="grammar-example-line">e falder bort i flertal</span>
                         </td>
                         <td lang="en">
-                            <strong>a finger → the finger → fingers → the fingers</strong
-                            ><span class="grammar-example-line">e is dropped in the plural</span>
+                            <strong>a finger → the finger → fingers → the fingers</strong>
+                            <span class="grammar-example-line">e is dropped in the plural</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>en aften → aftenen / aftnen → aftener / aftner → aftenerne / aftnerne</strong
-                            ><span class="grammar-example-line">Begge former er korrekte.</span>
+                            <strong>en aften → aftenen / aftnen → aftener / aftner → aftenerne / aftnerne</strong>
+                            <span class="grammar-example-line">Begge former er korrekte.</span>
                         </td>
                         <td lang="en">
-                            <strong>an evening → the evening → evenings → the evenings</strong
-                            ><span class="grammar-example-line">Both Danish forms are correct.</span>
+                            <strong>an evening → the evening → evenings → the evenings</strong>
+                            <span class="grammar-example-line">Both Danish forms are correct.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>et væsen → væsenet / væsnet → væsener / væsner → væsenerne / væsnerne</strong
-                            ><span class="grammar-example-line">Begge former er korrekte.</span>
+                            <strong>et væsen → væsenet / væsnet → væsener / væsner → væsenerne / væsnerne</strong>
+                            <span class="grammar-example-line">Begge former er korrekte.</span>
                         </td>
                         <td lang="en">
-                            <strong>a being → the being → beings → the beings</strong
-                            ><span class="grammar-example-line">Both Danish forms are correct.</span>
+                            <strong>a being → the being → beings → the beings</strong>
+                            <span class="grammar-example-line">Both Danish forms are correct.</span>
                         </td>
                     </tr>
                 </tbody>
@@ -1366,17 +1399,17 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Ordbogen er din ven</strong
-                            ><span class="grammar-example-line"
-                                >Tjek hele rækken: artikel, bestemt form, flertal ubestemt og flertal bestemt.</span
-                            >
+                            <strong>Ordbogen er din ven</strong>
+                            <span class="grammar-example-line">
+                                Tjek hele rækken: artikel, bestemt form, flertal ubestemt og flertal bestemt.
+                            </span>
                         </td>
                         <td lang="en">
-                            <strong>Use a dictionary</strong
-                            ><span class="grammar-example-line"
-                                >Check the complete pattern: article, definite singular, indefinite plural, and definite
-                                plural.</span
-                            >
+                            <strong>Use a dictionary</strong>
+                            <span class="grammar-example-line">
+                                Check the complete pattern: article, definite singular, indefinite plural, 
+                                and definite plural.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -1394,10 +1427,10 @@ const substantivGrammarPages = [
                 substantiver opfattes ofte som et stof, en masse eller et abstrakt begreb: vand, kaffe, ris, kærlighed.
             </p>
             <p lang="en">
-                <em
-                    >Countable nouns can normally follow a number and have a plural form: one chair, two chairs. Uncountable nouns
-                    are often treated as a substance, mass, or abstract idea: water, coffee, rice, love.</em
-                >
+                <em>
+                    Countable nouns can normally follow a number and have a plural form: one chair, two chairs. 
+                    Uncountable nouns are often treated as a substance, mass, or abstract idea: water, coffee, rice, love.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <thead>
@@ -1409,34 +1442,34 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Tællelig</strong><span class="grammar-word-list">en stol · et æble · en idé</span
-                            ><span class="grammar-example-line">to stole · tre æbler · mange idéer</span>
+                            <strong>Tællelig</strong><span class="grammar-word-list">en stol · et æble · en idé</span>
+                            <span class="grammar-example-line">to stole · tre æbler · mange idéer</span>
                         </td>
                         <td lang="en">
-                            <strong>Countable</strong><span class="grammar-word-list">a chair · an apple · an idea</span
-                            ><span class="grammar-example-line">two chairs · three apples · many ideas</span>
+                            <strong>Countable</strong><span class="grammar-word-list">a chair · an apple · an idea</span>
+                            <span class="grammar-example-line">two chairs · three apples · many ideas</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Utællelig</strong><span class="grammar-word-list">vand · kaffe · ris · kærlighed</span
-                            ><span class="grammar-example-line">Jeg drikker vand. Hun køber ris.</span>
+                            <strong>Utællelig</strong><span class="grammar-word-list">vand · kaffe · ris · kærlighed</span>
+                            <span class="grammar-example-line">Jeg drikker vand. Hun køber ris.</span>
                         </td>
                         <td lang="en">
-                            <strong>Uncountable</strong><span class="grammar-word-list">water · coffee · rice · love</span
-                            ><span class="grammar-example-line">I drink water. She buys rice.</span>
+                            <strong>Uncountable</strong><span class="grammar-word-list">water · coffee · rice · love</span>
+                            <span class="grammar-example-line">I drink water. She buys rice.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Måleenhed + utælleligt ord</strong
-                            ><span class="grammar-word-list">en kop kaffe · et glas vand</span
-                            ><span class="grammar-example-line">Artiklen hører til kop eller glas.</span>
+                            <strong>Måleenhed + utælleligt ord</strong>
+                            <span class="grammar-word-list">en kop kaffe · et glas vand</span>
+                            <span class="grammar-example-line">Artiklen hører til kop eller glas.</span>
                         </td>
                         <td lang="en">
-                            <strong>Unit + uncountable noun</strong
-                            ><span class="grammar-word-list">a cup of coffee · a glass of water</span
-                            ><span class="grammar-example-line">The article belongs to cup or glass.</span>
+                            <strong>Unit + uncountable noun</strong>
+                            <span class="grammar-word-list">a cup of coffee · a glass of water</span>
+                            <span class="grammar-example-line">The article belongs to cup or glass.</span>
                         </td>
                     </tr>
                 </tbody>
@@ -1446,13 +1479,17 @@ const substantivGrammarPages = [
                 <li>
                     <p>
                         Kan du naturligt sige én, to, tre foran ordet? Så er det ofte tælleligt. -
-                        <em>Can you naturally say one, two, three before the noun? Then it is often countable.</em>
+                        <em>
+                            Can you naturally say one, two, three before the noun? Then it is often countable.
+                        </em>
                     </p>
                 </li>
                 <li>
                     <p>
                         Har du brug for kop, glas, pose eller kilo for at tælle det? Så er det ofte utælleligt. -
-                        <em>Do you need cup, glass, bag, or kilo to count it? Then it is often uncountable.</em>
+                        <em>
+                            Do you need cup, glass, bag, or kilo to count it? Then it is often uncountable.
+                        </em>
                     </p>
                 </li>
             </ul>
@@ -1469,16 +1506,16 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Betydningen kan ændre sig</strong
-                            ><span class="grammar-example-line"
-                                >Kaffe er normalt utælleligt. På en café kan "en kaffe" betyde én kop eller portion.</span
-                            >
+                            <strong>Betydningen kan ændre sig</strong>
+                            <span class="grammar-example-line">
+                                Kaffe er normalt utælleligt. På en café kan "en kaffe" betyde én kop eller portion.
+                            </span>
                         </td>
                         <td lang="en">
-                            <strong>Meaning can change</strong
-                            ><span class="grammar-example-line"
-                                >Kaffe is normally uncountable. In a café, "en kaffe" can mean one cup or serving.</span
-                            >
+                            <strong>Meaning can change</strong>
+                            <span class="grammar-example-line">
+                                Kaffe is normally uncountable. In a café, "en kaffe" can mean one cup or serving.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -1501,84 +1538,84 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Er det én ny person eller ting?</strong
-                            ><span class="grammar-word-list">Brug en/et + ubestemt form.</span
-                            ><span class="grammar-example-line">Jeg købte en bog.</span>
+                            <strong>Er det én ny person eller ting?</strong>
+                            <span class="grammar-word-list">Brug en/et + ubestemt form.</span>
+                            <span class="grammar-example-line">Jeg købte en bog.</span>
                         </td>
                         <td lang="en">
-                            <strong>Is it one new person or thing?</strong
-                            ><span class="grammar-word-list">Use en/et + the indefinite form.</span
-                            ><span class="grammar-example-line">I bought a book.</span>
+                            <strong>Is it one new person or thing?</strong>
+                            <span class="grammar-word-list">Use en/et + the indefinite form.</span>
+                            <span class="grammar-example-line">I bought a book.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Er personen eller tingen allerede kendt?</strong
-                            ><span class="grammar-word-list">Brug bestemt form.</span
-                            ><span class="grammar-example-line">Bogen er spændende.</span>
+                            <strong>Er personen eller tingen allerede kendt?</strong>
+                            <span class="grammar-word-list">Brug bestemt form.</span>
+                            <span class="grammar-example-line">Bogen er spændende.</span>
                         </td>
                         <td lang="en">
-                            <strong>Is the person or thing already known?</strong
-                            ><span class="grammar-word-list">Use the definite form.</span
-                            ><span class="grammar-example-line">The book is interesting.</span>
+                            <strong>Is the person or thing already known?</strong>
+                            <span class="grammar-word-list">Use the definite form.</span>
+                            <span class="grammar-example-line">The book is interesting.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Er der flere, men de er ikke bestemte?</strong
-                            ><span class="grammar-word-list">Brug flertal ubestemt.</span
-                            ><span class="grammar-example-line">Jeg købte bøger.</span>
+                            <strong>Er der flere, men de er ikke bestemte?</strong>
+                            <span class="grammar-word-list">Brug flertal ubestemt.</span>
+                            <span class="grammar-example-line">Jeg købte bøger.</span>
                         </td>
                         <td lang="en">
-                            <strong>Are there several unspecified things?</strong
-                            ><span class="grammar-word-list">Use the indefinite plural.</span
-                            ><span class="grammar-example-line">I bought books.</span>
+                            <strong>Are there several unspecified things?</strong>
+                            <span class="grammar-word-list">Use the indefinite plural.</span>
+                            <span class="grammar-example-line">I bought books.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Er der flere kendte ting?</strong><span class="grammar-word-list">Brug flertal bestemt.</span
-                            ><span class="grammar-example-line">Bøgerne ligger her.</span>
+                            <strong>Er der flere kendte ting?</strong><span class="grammar-word-list">Brug flertal bestemt.</span>
+                            <span class="grammar-example-line">Bøgerne ligger her.</span>
                         </td>
                         <td lang="en">
-                            <strong>Are there several known things?</strong
-                            ><span class="grammar-word-list">Use the definite plural.</span
-                            ><span class="grammar-example-line">The books are here.</span>
+                            <strong>Are there several known things?</strong>
+                            <span class="grammar-word-list">Use the definite plural.</span>
+                            <span class="grammar-example-line">The books are here.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Står der min/mit/mine eller ejefald?</strong
-                            ><span class="grammar-word-list">Brug ikke bestemt endelse.</span
-                            ><span class="grammar-example-line">min bog · Peters bog</span>
+                            <strong>Står der min/mit/mine eller ejefald?</strong>
+                            <span class="grammar-word-list">Brug ikke bestemt endelse.</span>
+                            <span class="grammar-example-line">min bog · Peters bog</span>
                         </td>
                         <td lang="en">
-                            <strong>Is there a possessive or genitive?</strong
-                            ><span class="grammar-word-list">Do not use the definite ending.</span
-                            ><span class="grammar-example-line">my book · Peter's book</span>
+                            <strong>Is there a possessive or genitive?</strong>
+                            <span class="grammar-word-list">Do not use the definite ending.</span>
+                            <span class="grammar-example-line">my book · Peter's book</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Er det et job efter være/blive?</strong
-                            ><span class="grammar-word-list">Ofte ingen artikel.</span
-                            ><span class="grammar-example-line">Hun er lærer.</span>
+                            <strong>Er det et job efter være/blive?</strong>
+                            <span class="grammar-word-list">Ofte ingen artikel.</span>
+                            <span class="grammar-example-line">Hun er lærer.</span>
                         </td>
                         <td lang="en">
-                            <strong>Is it a job after være/blive?</strong><span class="grammar-word-list">Often no article.</span
-                            ><span class="grammar-example-line">She is a teacher.</span>
+                            <strong>Is it a job after være/blive?</strong><span class="grammar-word-list">Often no article.</span>
+                            <span class="grammar-example-line">She is a teacher.</span>
                         </td>
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>Er det stof eller mad generelt?</strong
-                            ><span class="grammar-word-list">Ofte ingen artikel.</span
-                            ><span class="grammar-example-line">Jeg drikker kaffe.</span>
+                            <strong>Er det stof eller mad generelt?</strong>
+                            <span class="grammar-word-list">Ofte ingen artikel.</span>
+                            <span class="grammar-example-line">Jeg drikker kaffe.</span>
                         </td>
                         <td lang="en">
-                            <strong>Is it a substance or food in general?</strong
-                            ><span class="grammar-word-list">Often no article.</span
-                            ><span class="grammar-example-line">I drink coffee.</span>
+                            <strong>Is it a substance or food in general?</strong>
+                            <span class="grammar-word-list">Often no article.</span>
+                            <span class="grammar-example-line">I drink coffee.</span>
                         </td>
                     </tr>
                 </tbody>
@@ -1596,17 +1633,17 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>Når du er i tvivl</strong
-                            ><span class="grammar-example-line"
-                                >Er informationen ny eller kendt? Taler jeg om én ting, flere ting eller et stof generelt?</span
-                            >
+                            <strong>Når du er i tvivl</strong>
+                            <span class="grammar-example-line">
+                                Er informationen ny eller kendt? Taler jeg om én ting, flere ting eller et stof generelt?
+                            </span>
                         </td>
                         <td lang="en">
-                            <strong>When unsure</strong
-                            ><span class="grammar-example-line"
-                                >Is the information new or known? Am I talking about one thing, several things, or a substance in
-                                general?</span
-                            >
+                            <strong>When unsure</strong>
+                            <span class="grammar-example-line">
+                                Is the information new or known? Am I talking about one thing, several things, 
+                                or a substance in general?
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -1643,11 +1680,10 @@ const substantivGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Hvorfor?</strong> en er ental; børn er flertal.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >Why? en is singular; børn is plural.</em
-                            >
+                            <strong lang="da">Hvorfor?</strong> en er ental; børn er flertal.<br />
+                            <em class="grammar-english" lang="en">
+                                Why? en is singular; børn is plural.
+                            </em>
                         </td>
                     </tr>
                     <tr>
@@ -1668,11 +1704,10 @@ const substantivGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Hvorfor?</strong> Ingen bestemt endelse efter min.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >Why? Do not use the definite ending after min.</em
-                            >
+                            <strong lang="da">Hvorfor?</strong> Ingen bestemt endelse efter min.<br />
+                            <em class="grammar-english" lang="en">
+                                Why? Do not use the definite ending after min.
+                            </em>
                         </td>
                     </tr>
                     <tr>
@@ -1693,9 +1728,10 @@ const substantivGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Hvorfor?</strong> Undgå dobbelt bestemthed.<br /><em class="grammar-english" lang="en"
-                                >Why? Avoid double definiteness.</em
-                            >
+                            <strong lang="da">Hvorfor?</strong> Undgå dobbelt bestemthed.<br />
+                            <em class="grammar-english" lang="en">
+                                Why? Avoid double definiteness.
+                            </em>
                         </td>
                     </tr>
                     <tr>
@@ -1716,11 +1752,10 @@ const substantivGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Hvorfor?</strong> Adjektiv og substantiv skal stå i flertal.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >Why? The adjective and noun must both be plural.</em
-                            >
+                            <strong lang="da">Hvorfor?</strong> Adjektiv og substantiv skal stå i flertal.<br />
+                            <em class="grammar-english" lang="en">
+                                Why? The adjective and noun must both be plural.
+                            </em>
                         </td>
                     </tr>
                     <tr>
@@ -1735,11 +1770,10 @@ const substantivGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Hvorfor?</strong> Job efter være står ofte uden artikel.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >Why? A job after være often has no article.</em
-                            >
+                            <strong lang="da">Hvorfor?</strong> Job efter være står ofte uden artikel.<br />
+                            <em class="grammar-english" lang="en">
+                                Why? A job after være often has no article.
+                            </em>
                         </td>
                     </tr>
                     <tr>
@@ -1760,11 +1794,10 @@ const substantivGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Hvorfor?</strong> Generel betydning; en kaffe kan betyde én portion i talesprog.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >Why? General meaning; en kaffe can mean one serving colloquially.</em
-                            >
+                            <strong lang="da">Hvorfor?</strong> Generel betydning; en kaffe kan betyde én portion i talesprog.<br />
+                            <em class="grammar-english" lang="en">
+                                Why? General meaning; en kaffe can mean one serving colloquially.
+                            </em>
                         </td>
                     </tr>
                 </tbody>
@@ -1772,26 +1805,26 @@ const substantivGrammarPages = [
             <h3 id="tjek-din-tekst-check-your-text">Tjek din tekst / Check your text</h3>
             <ul class="grammar-checklist">
                 <li>
-                    <span lang="da">Har hvert tælleligt substantiv den rigtige artikel: en eller et?</span
-                    ><span class="grammar-english" lang="en"
-                        >Does each countable singular noun have the correct article: en or et?</span
-                    >
+                    <span lang="da">Har hvert tælleligt substantiv den rigtige artikel: en eller et?</span>
+                    <span class="grammar-english" lang="en">
+                        Does each countable singular noun have the correct article: en or et?
+                    </span>
                 </li>
                 <li>
-                    <span lang="da">Passer ental eller flertal til talordet?</span
-                    ><span class="grammar-english" lang="en">Does singular or plural agree with the number?</span>
+                    <span lang="da">Passer ental eller flertal til talordet?</span>
+                    <span class="grammar-english" lang="en">Does singular or plural agree with the number?</span>
                 </li>
                 <li>
-                    <span lang="da">Er informationen ny eller kendt?</span
-                    ><span class="grammar-english" lang="en">Is the information new or known?</span>
+                    <span lang="da">Er informationen ny eller kendt?</span>
+                    <span class="grammar-english" lang="en">Is the information new or known?</span>
                 </li>
                 <li>
-                    <span lang="da">Har du undgået dobbelt bestemthed?</span
-                    ><span class="grammar-english" lang="en">Have you avoided double definiteness?</span>
+                    <span lang="da">Har du undgået dobbelt bestemthed?</span>
+                    <span class="grammar-english" lang="en">Have you avoided double definiteness?</span>
                 </li>
                 <li>
-                    <span lang="da">Har du tjekket den korrekte flertalsform?</span
-                    ><span class="grammar-english" lang="en">Have you checked the correct plural form?</span>
+                    <span lang="da">Har du tjekket den korrekte flertalsform?</span>
+                    <span class="grammar-english" lang="en">Have you checked the correct plural form?</span>
                 </li>
             </ul>
         `
@@ -1825,14 +1858,14 @@ const substantivGrammarPages = [
                     <tr>
                         <th><strong>Nr.</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Ord</strong><span class="grammar-english" lang="en">Word</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Ord</strong><span class="grammar-english" lang="en">Word</span>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Dit svar</strong><span class="grammar-english" lang="en">Your answer</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Dit svar</strong><span class="grammar-english" lang="en">Your answer</span>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1900,8 +1933,8 @@ const substantivGrammarPages = [
                 <tbody>
                     <tr>
                         <td lang="da">
-                            <strong>en stol</strong
-                            ><span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
+                            <strong>en stol</strong>
+                            <span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
                         </td>
                         <td lang="en">
                             <strong>a chair</strong><span class="grammar-example-line">Write all four Danish forms.</span>
@@ -1909,8 +1942,8 @@ const substantivGrammarPages = [
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>et hus</strong
-                            ><span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
+                            <strong>et hus</strong>
+                            <span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
                         </td>
                         <td lang="en">
                             <strong>a house</strong><span class="grammar-example-line">Write all four Danish forms.</span>
@@ -1918,8 +1951,8 @@ const substantivGrammarPages = [
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>en kode</strong
-                            ><span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
+                            <strong>en kode</strong>
+                            <span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
                         </td>
                         <td lang="en">
                             <strong>a code</strong><span class="grammar-example-line">Write all four Danish forms.</span>
@@ -1927,8 +1960,8 @@ const substantivGrammarPages = [
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>en bil</strong
-                            ><span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
+                            <strong>en bil</strong>
+                            <span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
                         </td>
                         <td lang="en">
                             <strong>a car</strong><span class="grammar-example-line">Write all four Danish forms.</span>
@@ -1936,8 +1969,8 @@ const substantivGrammarPages = [
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>et glas</strong
-                            ><span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
+                            <strong>et glas</strong>
+                            <span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
                         </td>
                         <td lang="en">
                             <strong>a glass</strong><span class="grammar-example-line">Write all four Danish forms.</span>
@@ -1945,8 +1978,8 @@ const substantivGrammarPages = [
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>en lærer</strong
-                            ><span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
+                            <strong>en lærer</strong>
+                            <span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
                         </td>
                         <td lang="en">
                             <strong>a teacher</strong><span class="grammar-example-line">Write all four Danish forms.</span>
@@ -1954,8 +1987,8 @@ const substantivGrammarPages = [
                     </tr>
                     <tr>
                         <td lang="da">
-                            <strong>et nummer</strong
-                            ><span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
+                            <strong>et nummer</strong>
+                            <span class="grammar-example-line">bestemt: ____ · flertal: ____ · bestemt flertal: ____</span>
                         </td>
                         <td lang="en">
                             <strong>a number</strong><span class="grammar-example-line">Write all four Danish forms.</span>
@@ -2055,20 +2088,20 @@ const substantivGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Ord 1</strong><span class="grammar-english" lang="en">Word 1</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Ord 1</strong><span class="grammar-english" lang="en">Word 1</span>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Ord 2</strong><span class="grammar-english" lang="en">Word 2</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Ord 2</strong><span class="grammar-english" lang="en">Word 2</span>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Sammensat substantiv + artikel</strong
-                                ><span class="grammar-english" lang="en">Compound noun + article</span></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Sammensat substantiv + artikel</strong>
+                                <span class="grammar-english" lang="en">Compound noun + article</span>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -2282,25 +2315,33 @@ const substantivGrammarPages = [
                 <li>
                     <p>
                         1. vand eller et glas vand - begge kan være korrekte afhængigt af betydningen. -
-                        <em>water or a glass of water - both can be correct depending on meaning.</em>
+                        <em>
+                            water or a glass of water - both can be correct depending on meaning.
+                        </em>
                     </p>
                 </li>
                 <li>
                     <p>
                         2. salt eller en pose salt - generelt stof eller én tællelig pakke. -
-                        <em>salt or a bag of salt - general substance or one countable package.</em>
+                        <em>
+                            salt or a bag of salt - general substance or one countable package.
+                        </em>
                     </p>
                 </li>
                 <li>
                     <p>
                         3. kaffe eller to kopper kaffe - generelt eller to portioner. -
-                        <em>coffee or two cups of coffee - general or two servings.</em>
+                        <em>
+                            coffee or two cups of coffee - general or two servings.
+                        </em>
                     </p>
                 </li>
                 <li>
                     <p>
                         4. ris eller en skål ris - stof/mad eller én portion. -
-                        <em>rice or a bowl of rice - food/substance or one serving.</em>
+                        <em>
+                            rice or a bowl of rice - food/substance or one serving.
+                        </em>
                     </p>
                 </li>
             </ul>
@@ -2433,10 +2474,10 @@ const substantivGrammarPages = [
                             <p><strong>Din vigtigste vane / Your most important habit</strong></p>
                             <p>Når du lærer et nyt substantiv, så lær fire ting: artikel, bestemt form, flertal og et eksempel.</p>
                             <p>
-                                <em
-                                    >When learning a new noun, learn four things: the article, definite form, plural, and an
-                                    example.</em
-                                >
+                                <em>
+                                    When learning a new noun, learn four things: the article, definite form, plural, and an
+                                    example.
+                                </em>
                             </p>
                         </th>
                     </tr>
