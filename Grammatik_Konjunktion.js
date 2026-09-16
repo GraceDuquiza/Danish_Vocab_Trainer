@@ -1,5 +1,5 @@
 // Grammatik_Konjunktion.js
-// Bilingual conjunction lessons adapted from Konjunktion.docx.
+
 
 const konjunktionGrammarPages = [
     {
@@ -8,23 +8,20 @@ const konjunktionGrammarPages = [
         titleEn: "What is a conjunction?",
         content: `
             <p lang="da">
-                En konjunktion kaldes også et bindeord. Den forbinder ord, sætningsled eller hele sætninger. Konjunktioner bøjes
-                ikke.
+                En konjunktion kaldes også et bindeord. Den forbinder ord, sætningsled eller hele sætninger. Konjunktioner bøjes ikke.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >A conjunction is a linking word. It connects words, sentence elements, or entire clauses. Conjunctions do not
-                    inflect.</em
-                >
+                <em>
+                    A conjunction is a linking word. It connects words, sentence elements, or entire clauses. Conjunctions do not inflect.
+                </em>
             </p>
             <table class="grammar-example-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hvad forbindes?</strong
-                                ><em class="grammar-english" lang="en">What is connected?</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Hvad forbindes?</strong>
+                                <em class="grammar-english" lang="en">What is connected?</em>
+                            </span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -54,9 +51,8 @@ const konjunktionGrammarPages = [
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da">
-                    <strong>Hurtig test:</strong> Binder ordet to ting eller to sætninger sammen? Hvis ja, kan det være en
-                    konjunktion.
+                <p lang="da"><strong>Hurtig test:</strong> 
+                    Binder ordet to ting eller to sætninger sammen? Hvis ja, kan det være en konjunktion.
                 </p>
                 <p class="grammar-english" lang="en">
                     <em>Does the word connect two items or two clauses? If yes, it may be a conjunction.</em>
@@ -70,16 +66,22 @@ const konjunktionGrammarPages = [
         titleEn: "Main clause, subordinate clause, and complete sentence",
         content: `
             <h3>Hovedsætning / Main clause</h3>
-            <p lang="da">En hovedsætning kan normalt stå alene og give fuld mening. Den er ikke underordnet en anden sætning.</p>
-            <p class="grammar-english" lang="en"><em>A main clause can normally stand alone and express a complete thought.</em></p>
+            <p lang="da">
+                En hovedsætning kan normalt stå alene og give fuld mening. Den er ikke underordnet en anden sætning.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    A main clause can normally stand alone and express a complete thought.
+                </em>
+            </p>
             <div class="grammar-example">
                 <p lang="da">Jeg bliver hjemme.</p>
                 <p class="grammar-english" lang="en"><em>I am staying home.</em></p>
             </div>
             <h3>Ledsætning / Subordinate clause</h3>
             <p lang="da">
-                En ledsætning er underordnet en hovedsætning og kan normalt ikke stå alene. Den begynder ofte med at, fordi, hvis,
-                når eller selvom.
+                En ledsætning er underordnet en hovedsætning og kan normalt ikke stå alene. 
+                Den begynder ofte med at, fordi, hvis, når eller selvom.
             </p>
             <p class="grammar-english" lang="en">
                 <em>A subordinate clause depends on a main clause and normally cannot stand alone.</em>
@@ -89,17 +91,22 @@ const konjunktionGrammarPages = [
                 <p class="grammar-english" lang="en"><em>… because I am tired.</em></p>
             </div>
             <h3>Helsætning / Complete sentence</h3>
-            <p lang="da">En helsætning indeholder altid en hovedsætning og kan også indeholde en eller flere ledsætninger.</p>
-            <p class="grammar-english" lang="en">
-                <em>A complete sentence always contains a main clause and may contain subordinate clauses.</em>
-            </p>
+                <p lang="da">
+                    En helsætning indeholder altid en hovedsætning og kan også indeholde en eller flere ledsætninger.
+                </p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        A complete sentence always contains a main clause and may contain subordinate clauses.
+                    </em>
+                </p>
             <table class="grammar-bilingual-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Struktur</strong><em class="grammar-english" lang="en">Structure</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Struktur</strong>
+                                <em class="grammar-english" lang="en">Structure</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -135,19 +142,19 @@ const konjunktionGrammarPages = [
                 <strong>og, men, eller, for</strong> og <strong>så</strong>. <strong>Samt</strong> bruges især formelt.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Coordinating conjunctions connect elements or clauses at the same grammatical level. The most common are og,
-                    men, eller, for, and så. Samt is mainly formal.</em
-                >
+                <em>
+                    Coordinating conjunctions connect elements or clauses at the same grammatical level. 
+                    The most common are og, men, eller, for, and så. Samt is mainly formal.
+                </em>
             </p>
             <table class="grammar-example-table grammar-conjunction-table">
                 <thead>
                     <tr>
                         <th><strong>Konjunktion</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Betydning</strong><em class="grammar-english" lang="en">Meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Betydning</strong><em class="grammar-english" lang="en">Meaning</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -156,46 +163,60 @@ const konjunktionGrammarPages = [
                     <tr>
                         <td>og</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">tilføjelse</span><em lang="en">addition</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">tilføjelse</span>
+                                <em lang="en">addition</em>
+                            </span>
                         </td>
                         <td>Hun læser, <u>og</u> han skriver.</td>
                     </tr>
                     <tr>
                         <td>men</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">modsætning</span><em lang="en">contrast</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">modsætning</span>
+                                <em lang="en">contrast</em>
+                            </span>
                         </td>
                         <td>Jeg er træt, <u>men</u> jeg arbejder.</td>
                     </tr>
                     <tr>
                         <td>eller</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">valg</span><em lang="en">choice</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">valg</span>
+                                <em lang="en">choice</em>
+                            </span>
                         </td>
                         <td>Vil du have kaffe <u>eller</u> te?</td>
                     </tr>
                     <tr>
                         <td>for</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">forklaring</span><em lang="en">explanation</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">forklaring</span>
+                                <em lang="en">explanation</em>
+                            </span>
                         </td>
                         <td>Jeg går hjem, <u>for</u> jeg er træt.</td>
                     </tr>
                     <tr>
                         <td>så</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">resultat</span><em lang="en">result</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">resultat</span>
+                                <em lang="en">result</em>
+                            </span>
                         </td>
                         <td>Det regnede, <u>så</u> vi blev hjemme.</td>
                     </tr>
                     <tr>
                         <td>samt</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">formel tilføjelse</span><em lang="en">formal addition</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">formel tilføjelse</span>
+                                <em lang="en">formal addition</em>
+                            </span>
                         </td>
                         <td>Rapporten omfatter tekst <u>samt</u> billeder.</td>
                     </tr>
@@ -207,10 +228,10 @@ const konjunktionGrammarPages = [
                     Her samles de praktisk med de sideordnende konjunktioner.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Some materials use a separate coordinating subgroup for for and så. This guide treats them with the other
-                        coordinating conjunctions.</em
-                    >
+                    <em>
+                        Some materials use a separate coordinating subgroup for for and så. 
+                        This guide treats them with the other coordinating conjunctions.
+                    </em>
                 </p>
             </aside>
         `
@@ -222,27 +243,47 @@ const konjunktionGrammarPages = [
         content: `
             <h3>Og / And</h3>
             <p lang="da"><strong>Og</strong> tilføjer information eller forbinder to ens led.</p>
-            <p class="grammar-english" lang="en"><em>Og adds information or connects equivalent elements.</em></p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Og adds information or connects equivalent elements.
+                </em>
+            </p>
             <div class="grammar-example">
                 <p>Hun købte brød <u>og</u> mælk. · Hun lavede mad, <u>og</u> han vaskede op.</p>
-                <p class="grammar-english" lang="en"><em>She bought bread and milk. · She cooked, and he washed the dishes.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        She bought bread and milk. · She cooked, and he washed the dishes.
+                    </em>
+                </p>
             </div>
             <h3>Men / But</h3>
             <p lang="da"><strong>Men</strong> viser en modsætning, en begrænsning eller noget uventet.</p>
-            <p class="grammar-english" lang="en"><em>Men expresses contrast, limitation, or something unexpected.</em></p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Men expresses contrast, limitation, or something unexpected.
+                </em>
+            </p>
             <div class="grammar-example">
                 <p>Jeg er træt, <u>men</u> jeg vil gerne med. · Filmen var lang, <u>men</u> interessant.</p>
                 <p class="grammar-english" lang="en">
-                    <em>I am tired, but I would like to come. · The film was long but interesting.</em>
+                    <em>
+                        I am tired, but I would like to come. · The film was long but interesting.
+                    </em>
                 </p>
             </div>
             <h3>Eller / Or</h3>
             <p lang="da"><strong>Eller</strong> viser et valg, en mulighed eller et alternativ.</p>
-            <p class="grammar-english" lang="en"><em>Eller expresses a choice, possibility, or alternative.</em></p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Eller expresses a choice, possibility, or alternative.
+                </em>
+            </p>
             <div class="grammar-example">
                 <p>Skal vi gå <u>eller</u> tage bussen? · Vil du have te, <u>eller</u> vil du have kaffe?</p>
                 <p class="grammar-english" lang="en">
-                    <em>Shall we walk or take the bus? · Would you like tea, or would you like coffee?</em>
+                    <em>
+                        Shall we walk or take the bus? · Would you like tea, or would you like coffee?
+                    </em>
                 </p>
             </div>
             <aside class="grammar-rule">
@@ -250,7 +291,9 @@ const konjunktionGrammarPages = [
                     Når bindeordene forbinder enkelte ord eller led, skal de normalt være grammatiske enheder af samme slags.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>The connected words or elements should normally be grammatically parallel.</em>
+                    <em>
+                        The connected words or elements should normally be grammatically parallel.
+                    </em>
                 </p>
             </aside>
         `
@@ -266,14 +309,17 @@ const konjunktionGrammarPages = [
                 for bruges hovedsætningsordstilling.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >For introduces an explanatory main clause. Its meaning resembles fordi, but it keeps main-clause word
-                    order.</em
-                >
+                <em>
+                    For introduces an explanatory main clause. Its meaning resembles fordi, but it keeps main-clause word order.
+                </em>
             </p>
             <div class="grammar-example">
                 <p>Jeg går hjem, <u>for</u> jeg er træt. · <u>for</u> han <strong>er ikke</strong> træt</p>
-                <p class="grammar-english" lang="en"><em>I am going home, for I am tired. · main-clause order</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        I am going home, for I am tired. · main-clause order
+                    </em>
+                </p>
             </div>
             <h3>Så / So</h3>
             <p lang="da">
@@ -281,7 +327,9 @@ const konjunktionGrammarPages = [
                 <strong>derfor</strong>, men ordstillingen ændres.
             </p>
             <p class="grammar-english" lang="en">
-                <em>Så expresses a result. It can often be replaced by derfor, but the word order changes.</em>
+                <em>
+                    Så expresses a result. It can often be replaced by derfor, but the word order changes.
+                </em>
             </p>
             <table class="grammar-example-table">
                 <thead>
@@ -307,7 +355,9 @@ const konjunktionGrammarPages = [
             <aside class="grammar-tip">
                 <p lang="da"><strong>For:</strong> han er ikke træt. <strong>Fordi:</strong> han ikke er træt.</p>
                 <p class="grammar-english" lang="en">
-                    <em>For takes main-clause order; fordi introduces a subordinate clause.</em>
+                    <em>
+                        For takes main-clause order; fordi introduces a subordinate clause.
+                    </em>
                 </p>
             </aside>
         `
@@ -318,20 +368,23 @@ const konjunktionGrammarPages = [
         titleEn: "Subordinating conjunctions",
         content: `
             <p lang="da">
-                Underordnende konjunktioner indleder ledsætninger. De viser forholdet til hovedsætningen, for eksempel tid, årsag,
-                betingelse, formål eller modsætning.
+                Underordnende konjunktioner indleder ledsætninger. De viser forholdet til hovedsætningen, 
+                for eksempel tid, årsag, betingelse, formål eller modsætning.
             </p>
             <p class="grammar-english" lang="en">
-                <em>Subordinating conjunctions introduce subordinate clauses and show how they relate to the main clause.</em>
+                <em>
+                    Subordinating conjunctions introduce subordinate clauses and show how they relate to the main clause.
+                </em>
             </p>
             <table class="grammar-example-table grammar-conjunction-table">
                 <thead>
                     <tr>
                         <th><strong>Konjunktioner</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Betydning</strong><em class="grammar-english" lang="en">Meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Betydning</strong>
+                                <em class="grammar-english" lang="en">Meaning</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -340,60 +393,73 @@ const konjunktionGrammarPages = [
                     <tr>
                         <td>at, om</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Indhold</span><em lang="en">Content</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Indhold</span><em lang="en">Content</em>
+                            </span>
                         </td>
                         <td>Jeg tror, <u>at</u> hun kommer.</td>
                     </tr>
                     <tr>
                         <td>da, når, mens, før, efter at</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Tid</span><em lang="en">Time</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Tid</span><em lang="en">Time</em>
+                            </span>
                         </td>
                         <td>Jeg ringer, <u>når</u> jeg kommer hjem.</td>
                     </tr>
                     <tr>
                         <td>fordi, da, eftersom</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Årsag</span><em lang="en">Cause</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Årsag</span><em lang="en">Cause</em>
+                            </span>
                         </td>
                         <td>Jeg gik, <u>fordi</u> jeg var træt.</td>
                     </tr>
                     <tr>
                         <td>hvis, medmindre</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Betingelse</span><em lang="en">Condition</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Betingelse</span><em lang="en">Condition</em>
+                            </span>
                         </td>
                         <td>Vi går, <u>hvis</u> vejret er godt.</td>
                     </tr>
                     <tr>
                         <td>selvom, skønt</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Indrømmelse</span><em lang="en">Concession</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Indrømmelse</span><em lang="en">Concession</em>
+                            </span>
                         </td>
                         <td>Hun gik ud, <u>selvom</u> det regnede.</td>
                     </tr>
                     <tr>
                         <td>for at, så at</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Formål</span><em lang="en">Purpose</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Formål</span><em lang="en">Purpose</em>
+                            </span>
                         </td>
                         <td>Jeg skriver det ned, <u>så</u> jeg husker det.</td>
                     </tr>
                     <tr>
                         <td>så … at</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Følge</span><em lang="en">Result</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Følge</span><em lang="en">Result</em>
+                            </span>
                         </td>
                         <td>Han talte <u>så</u> lavt, <u>at</u> jeg intet hørte.</td>
                     </tr>
                     <tr>
                         <td>end, som om, ligesom</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Sammenligning</span><em lang="en">Comparison</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Sammenligning</span>
+                                <em lang="en">Comparison</em>
+                            </span>
                         </td>
                         <td>Hun løber hurtigere, <u>end</u> jeg gør.</td>
                     </tr>
@@ -404,7 +470,9 @@ const konjunktionGrammarPages = [
                     Konjunktionen er ikke selv et sætningsled. Den markerer forholdet mellem ledsætningen og resten af sætningen.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>The conjunction is not itself a sentence element; it marks the relationship between clauses.</em>
+                    <em>
+                        The conjunction is not itself a sentence element; it marks the relationship between clauses.
+                    </em>
                 </p>
             </aside>
         `
@@ -417,19 +485,31 @@ const konjunktionGrammarPages = [
             <h3>At / That</h3>
             <p lang="da"><strong>At</strong> indleder ofte indholdet i det, nogen siger, tænker, ved, håber eller føler.</p>
             <p class="grammar-english" lang="en">
-                <em>At often introduces a content clause expressing what someone says, thinks, knows, hopes, or feels.</em>
+                <em>
+                    At often introduces a content clause expressing what someone says, thinks, knows, hopes, or feels.
+                </em>
             </p>
             <div class="grammar-example">
                 <p>Hun siger, <u>at</u> hun kommer senere. · Jeg håber, <u>at</u> du har det godt.</p>
-                <p class="grammar-english" lang="en"><em>She says that she is coming later. · I hope that you are well.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        She says that she is coming later. · I hope that you are well.
+                    </em>
+                </p>
             </div>
             <h3>Om / Whether, if</h3>
             <p lang="da"><strong>Om</strong> indleder ofte et indirekte ja/nej-spørgsmål.</p>
-            <p class="grammar-english" lang="en"><em>Om often introduces an indirect yes/no question.</em></p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Om often introduces an indirect yes/no question.
+                </em>
+            </p>
             <div class="grammar-example">
                 <p>Jeg ved ikke, <u>om</u> han kommer. · Hun spørger, <u>om</u> vi har tid.</p>
                 <p class="grammar-english" lang="en">
-                    <em>I do not know whether he is coming. · She asks whether we have time.</em>
+                    <em>
+                        I do not know whether he is coming. · She asks whether we have time.
+                    </em>
                 </p>
             </div>
             <aside class="grammar-tip">
@@ -437,7 +517,9 @@ const konjunktionGrammarPages = [
                     Påstand eller oplysning: <strong>at</strong>. Usikkerhed eller indirekte spørgsmål: <strong>om</strong>.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Use at for a statement or fact; use om for uncertainty or an indirect question.</em>
+                    <em>
+                        Use at for a statement or fact; use om for uncertainty or an indirect question.
+                    </em>
                 </p>
             </aside>
         `
@@ -449,16 +531,19 @@ const konjunktionGrammarPages = [
         content: `
             <p lang="da">Tidskonjunktioner fortæller, hvornår to handlinger sker i forhold til hinanden.</p>
             <p class="grammar-english" lang="en">
-                <em>Time conjunctions show when two actions happen in relation to each other.</em>
+                <em>
+                    Time conjunctions show when two actions happen in relation to each other.
+                </em>
             </p>
             <table class="grammar-example-table grammar-conjunction-table">
                 <thead>
                     <tr>
                         <th><strong>Konjunktion</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Betydning</strong><em class="grammar-english" lang="en">Meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Betydning</strong>
+                                <em class="grammar-english" lang="en">Meaning</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -467,80 +552,89 @@ const konjunktionGrammarPages = [
                     <tr>
                         <td>da</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">bestemt fortid</span><em lang="en">specific past event</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">bestemt fortid</span>
+                                <em lang="en">specific past event</em>
+                            </span>
                         </td>
                         <td><u>Da</u> jeg kom hjem, sov børnene.</td>
                     </tr>
                     <tr>
                         <td>når</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">nutid, fremtid, gentagelse</span
-                                ><em lang="en">present, future, repetition</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">nutid, fremtid, gentagelse</span>
+                                <em lang="en">present, future, repetition</em>
+                            </span>
                         </td>
                         <td><u>Når</u> jeg kommer hjem, laver jeg mad.</td>
                     </tr>
                     <tr>
                         <td>mens</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">samtidig handling</span><em lang="en">simultaneous action</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">samtidig handling</span>
+                                <em lang="en">simultaneous action</em>
+                            </span>
                         </td>
                         <td>Jeg laver mad, <u>mens</u> du dækker bord.</td>
                     </tr>
                     <tr>
                         <td>før / inden</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">tidligere end</span><em lang="en">earlier than</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">tidligere end</span><em lang="en">earlier than</em>
+                            </span>
                         </td>
                         <td>Ring, <u>før</u> du kommer.</td>
                     </tr>
                     <tr>
                         <td>efter at</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">senere end</span><em lang="en">later than</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">senere end</span>
+                                <em lang="en">later than</em>
+                            </span>
                         </td>
                         <td>Vi gik, <u>efter at</u> filmen var slut.</td>
                     </tr>
                     <tr>
                         <td>indtil</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">frem til et tidspunkt</span><em lang="en">until a point in time</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">frem til et tidspunkt</span>
+                                <em lang="en">until a point in time</em>
+                            </span>
                         </td>
                         <td>Vent her, <u>indtil</u> jeg kommer.</td>
                     </tr>
                     <tr>
                         <td>siden</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">fra et tidligere tidspunkt</span><em lang="en">from an earlier point</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">fra et tidligere tidspunkt</span>
+                                <em lang="en">from an earlier point</em>
+                            </span>
                         </td>
                         <td>Hun har boet her, <u>siden</u> hun blev gift.</td>
                     </tr>
                     <tr>
                         <td>så snart som</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">straks efter</span><em lang="en">immediately after</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">straks efter</span>
+                                <em lang="en">immediately after</em>
+                            </span>
                         </td>
                         <td>Jeg ringer, <u>så snart</u> jeg ved mere.</td>
                     </tr>
                     <tr>
                         <td>så længe som</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">i hele perioden</span><em lang="en">throughout the period</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">i hele perioden</span>
+                                <em lang="en">throughout the period</em>
+                            </span>
                         </td>
                         <td>Du kan blive, <u>så længe</u> du vil.</td>
                     </tr>
@@ -551,7 +645,9 @@ const konjunktionGrammarPages = [
                     <strong>Da</strong>: én bestemt begivenhed i fortiden. <strong>Når</strong>: nutid, fremtid eller gentagelse.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Use da for one specific past event; use når for present, future, or repeated events.</em>
+                    <em>
+                        Use da for one specific past event; use når for present, future, or repeated events.
+                    </em>
                 </p>
             </aside>
         `
@@ -562,16 +658,20 @@ const konjunktionGrammarPages = [
         titleEn: "Causal conjunctions",
         content: `
             <p lang="da">Årsagskonjunktioner forklarer, hvorfor noget sker eller er tilfældet.</p>
-            <p class="grammar-english" lang="en"><em>Causal conjunctions explain why something happens or is true.</em></p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Causal conjunctions explain why something happens or is true.
+                </em>
+            </p>
             <table class="grammar-example-table grammar-conjunction-table">
                 <thead>
                     <tr>
                         <th><strong>Konjunktion</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Stil og nuance</strong
-                                ><em class="grammar-english" lang="en">Style and nuance</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Stil og nuance</strong>
+                                <em class="grammar-english" lang="en">Style and nuance</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -580,43 +680,47 @@ const konjunktionGrammarPages = [
                     <tr>
                         <td>fordi</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">almindelig, tydelig årsag</span><em lang="en">common, clear cause</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">almindelig, tydelig årsag</span>
+                                <em lang="en">common, clear cause</em>
+                            </span>
                         </td>
                         <td>Jeg gik hjem, <u>fordi</u> jeg var træt.</td>
                     </tr>
                     <tr>
                         <td>da</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">kendt baggrund</span><em lang="en">known background</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">kendt baggrund</span><em lang="en">known background</em>
+                            </span>
                         </td>
                         <td><u>Da</u> det var sent, tog vi en taxa.</td>
                     </tr>
                     <tr>
                         <td>eftersom</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">mere formel</span><em lang="en">more formal</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">mere formel</span><em lang="en">more formal</em>
+                            </span>
                         </td>
                         <td><u>Eftersom</u> alle er enige, fortsætter vi.</td>
                     </tr>
                     <tr>
                         <td>siden</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">årsag som tages for kendt</span><em lang="en">cause treated as known</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">årsag som tages for kendt</span>
+                                <em lang="en">cause treated as known</em>
+                            </span>
                         </td>
                         <td><u>Siden</u> du er her, kan du hjælpe.</td>
                     </tr>
                     <tr>
                         <td>idet</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">formel</span><em lang="en">formal</em></span>
+                            <span class="grammar-meaning-pair">
+                            <span lang="da">formel</span>
+                            <em lang="en">formal</em></span>
                         </td>
                         <td>Han afslog, <u>idet</u> han manglede tid.</td>
                     </tr>
@@ -625,7 +729,9 @@ const konjunktionGrammarPages = [
             <aside class="grammar-rule">
                 <p lang="da"><strong>Fordi</strong> indleder en ledsætning. <strong>For</strong> forbinder to hovedsætninger.</p>
                 <p class="grammar-english" lang="en">
-                    <em>Fordi takes subordinate-clause word order; for takes main-clause word order.</em>
+                    <em>
+                        Fordi takes subordinate-clause word order; for takes main-clause word order.
+                    </em>
                 </p>
             </aside>
         `
@@ -639,16 +745,19 @@ const konjunktionGrammarPages = [
                 Betingelseskonjunktioner fortæller, hvilken betingelse der skal være opfyldt, for at noget andet kan ske.
             </p>
             <p class="grammar-english" lang="en">
-                <em>Conditional conjunctions state the condition that must be met for something else to happen.</em>
+                <em>
+                    Conditional conjunctions state the condition that must be met for something else to happen.
+                </em>
             </p>
             <table class="grammar-example-table grammar-conjunction-table">
                 <thead>
                     <tr>
                         <th><strong>Konjunktion</strong></th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Betydning</strong><em class="grammar-english" lang="en">Meaning</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Betydning</strong>
+                                <em class="grammar-english" lang="en">Meaning</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -657,52 +766,60 @@ const konjunktionGrammarPages = [
                     <tr>
                         <td>hvis</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">almindelig betingelse</span><em lang="en">general condition</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">almindelig betingelse</span>
+                                <em lang="en">general condition</em>
+                            </span>
                         </td>
                         <td><u>Hvis</u> det regner, bliver vi hjemme.</td>
                     </tr>
                     <tr>
                         <td>medmindre</td>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">hvis ikke</span><em lang="en">if not</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">hvis ikke</span>
+                                <em lang="en">if not</em>
+                            </span>
                         </td>
                         <td>Vi går, <u>medmindre</u> det regner.</td>
                     </tr>
                     <tr>
                         <td>dersom</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">formelt hvis</span><em lang="en">formal if</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">formelt hvis</span>
+                                <em lang="en">formal if</em>
+                            </span>
                         </td>
                         <td><u>Dersom</u> du accepterer, sender vi aftalen.</td>
                     </tr>
                     <tr>
                         <td>såfremt</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">formelt hvis</span><em lang="en">formal if</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">formelt hvis</span>
+                                <em lang="en">formal if</em>
+                            </span>
                         </td>
                         <td>Du kan deltage, <u>såfremt</u> du tilmelder dig.</td>
                     </tr>
                     <tr>
                         <td>forudsat at</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">kun på denne betingelse</span><em lang="en">only under this condition</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">kun på denne betingelse</span>
+                                <em lang="en">only under this condition</em>
+                            </span>
                         </td>
                         <td>Du må låne bilen, <u>forudsat at</u> du kører forsigtigt.</td>
                     </tr>
                     <tr>
                         <td>bare / blot</td>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">uformel betingelse</span><em lang="en">informal condition</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">uformel betingelse</span>
+                                <em lang="en">informal condition</em>
+                            </span>
                         </td>
                         <td>Jeg hjælper dig, <u>bare</u> du spørger.</td>
                     </tr>
@@ -713,7 +830,9 @@ const konjunktionGrammarPages = [
                     <strong>Medmindre</strong> betyder allerede <strong>hvis ikke</strong>. Tilføj normalt ikke et ekstra ikke.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>Medmindre already means unless/if not, so do not normally add ikke.</em>
+                    <em>
+                        Medmindre already means unless/if not, so do not normally add ikke.
+                    </em>
                 </p>
             </aside>
         `
@@ -723,12 +842,13 @@ const konjunktionGrammarPages = [
         titleDa: "Indrømmelse og modsætning",
         titleEn: "Concession and contrast",
         content: `
-            <p lang="da">Disse konjunktioner viser, at hovedsætningen gælder, selv om noget andet kunne have været en hindring.</p>
+            <p lang="da">
+                Disse konjunktioner viser, at hovedsætningen gælder, selv om noget andet kunne have været en hindring.
+            </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >These conjunctions show that the main clause remains true even though something else could have been an
-                    obstacle.</em
-                >
+                <em>
+                    These conjunctions show that the main clause remains true even though something else could have been an obstacle.
+                </em>
             </p>
             <table class="grammar-example-table grammar-conjunction-table">
                 <thead>
@@ -772,9 +892,14 @@ const konjunktionGrammarPages = [
                 </tbody>
             </table>
             <aside class="grammar-tip">
-                <p lang="da"><strong>Selvom</strong> indleder en ledsætning. <strong>Men</strong> forbinder to hovedsætninger.</p>
+                <p lang="da">
+                    <strong>Selvom</strong> indleder en ledsætning. 
+                    <strong>Men</strong> forbinder to hovedsætninger.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>Selvom introduces a subordinate clause; men links two main clauses.</em>
+                    <em>
+                        Selvom introduces a subordinate clause; men links two main clauses.
+                    </em>
                 </p>
             </aside>
         `
@@ -785,14 +910,22 @@ const konjunktionGrammarPages = [
         titleEn: "Purpose and result",
         content: `
             <h3>Formål / Purpose</h3>
-            <p lang="da">Formål fortæller, hvorfor nogen gør noget, eller hvilket mål handlingen har.</p>
+            <p lang="da">
+                Formål fortæller, hvorfor nogen gør noget, eller hvilket mål handlingen har.
+            </p>
             <p class="grammar-english" lang="en">
-                <em>Purpose explains why someone does something or what goal the action has.</em>
+                <em>
+                    Purpose explains why someone does something or what goal the action has.
+                </em>
             </p>
             <div class="grammar-example">
-                <p>Jeg skriver det ned, <u>så</u> jeg kan huske det. · Jeg læser <u>for at</u> lære.</p>
+                <p>
+                    Jeg skriver det ned, <u>så</u> jeg kan huske det. · Jeg læser <u>for at</u> lære.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>I write it down so that I can remember it. · I read in order to learn.</em>
+                    <em>
+                        I write it down so that I can remember it. · I read in order to learn.
+                    </em>
                 </p>
             </div>
             <aside class="grammar-tip">
@@ -801,30 +934,40 @@ const konjunktionGrammarPages = [
                     <strong>så at</strong>.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >With the same subject, use for at + infinitive. With an explicit subject in the purpose clause, use så
-                        at.</em
-                    >
+                    <em>
+                        With the same subject, use for at + infinitive. With an explicit subject in the purpose clause, use så at.
+                    </em>
                 </p>
             </aside>
             <h3>Følge eller resultat / Result</h3>
-            <p lang="da">Den almindelige konstruktion er <strong>så + adjektiv/adverbium + at</strong>.</p>
-            <p class="grammar-english" lang="en"><em>A common result construction is så + adjective/adverb + at.</em></p>
+            <p lang="da">
+                Den almindelige konstruktion er <strong>så + adjektiv/adverbium + at</strong>.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    A common result construction is så + adjective/adverb + at.
+                </em>
+            </p>
             <div class="grammar-example">
                 <p>
                     Han talte <u>så</u> hurtigt, <u>at</u> jeg ikke forstod ham. · Vejret var <u>så</u> dårligt, <u>at</u> kampen
                     blev aflyst.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >He spoke so quickly that I did not understand him. · The weather was so bad that the match was
-                        cancelled.</em
-                    >
+                    <em>
+                        He spoke so quickly that I did not understand him. · The weather was so bad that the match was cancelled.
+                    </em>
                 </p>
             </div>
             <aside class="grammar-rule">
-                <p lang="da"><strong>Så at</strong> kan vise et tilsigtet mål. <strong>Så … at</strong> viser et resultat.</p>
-                <p class="grammar-english" lang="en"><em>Så at can express an intended purpose; så … at expresses a result.</em></p>
+                <p lang="da">
+                    <strong>Så at</strong> kan vise et tilsigtet mål. <strong>Så … at</strong> viser et resultat.
+                </p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        Så at can express an intended purpose; så … at expresses a result.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -833,8 +976,14 @@ const konjunktionGrammarPages = [
         titleDa: "Sammenligningskonjunktioner",
         titleEn: "Comparative conjunctions",
         content: `
-            <p lang="da">Sammenligningskonjunktioner bruges, når vi sammenligner personer, ting, handlinger eller grader.</p>
-            <p class="grammar-english" lang="en"><em>Comparative conjunctions compare people, things, actions, or degrees.</em></p>
+            <p lang="da">
+                Sammenligningskonjunktioner bruges, når vi sammenligner personer, ting, handlinger eller grader.
+            </p>
+            <p class="grammar-english" lang="en">
+                <em>
+                    Comparative conjunctions compare people, things, actions, or degrees.
+                </em>
+            </p>
             <table class="grammar-example-table">
                 <thead>
                     <tr>
@@ -847,37 +996,49 @@ const konjunktionGrammarPages = [
                     <tr>
                         <td>komparativ + end</td>
                         <td>Hun er højere, <u>end</u> jeg er.</td>
-                        <td class="grammar-english" lang="en"><em>She is taller than I am.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>She is taller than I am.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>så + adjektiv + som</td>
                         <td>Han er lige <u>så</u> gammel <u>som</u> mig.</td>
-                        <td class="grammar-english" lang="en"><em>He is as old as I am.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>He is as old as I am.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>som om</td>
                         <td>Han taler, <u>som om</u> han ved alt.</td>
-                        <td class="grammar-english" lang="en"><em>He speaks as if he knows everything.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>He speaks as if he knows everything.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>ligesom</td>
                         <td>Hun arbejder <u>ligesom</u> sin mor.</td>
-                        <td class="grammar-english" lang="en"><em>She works like her mother.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>She works like her mother.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>jo … jo/des</td>
                         <td><u>Jo</u> mere du øver, <u>jo</u> bedre bliver du.</td>
-                        <td class="grammar-english" lang="en"><em>The more you practise, the better you become.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>The more you practise, the better you become.</em>
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    I korte sammenligninger kan verbet være underforstået: Han er højere end mig. Mere formelt: Han er højere, end
-                    jeg er.
+                    I korte sammenligninger kan verbet være underforstået: Han er højere end mig. 
+                    Mere formelt: Han er højere, end jeg er.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em>A verb may be omitted in short comparisons. Include it in more formal language.</em>
+                    <em>
+                        A verb may be omitted in short comparisons. Include it in more formal language.
+                    </em>
                 </p>
             </aside>
         `
@@ -888,14 +1049,14 @@ const konjunktionGrammarPages = [
         titleEn: "Other subordinate-clause introducers",
         content: `
             <p lang="da">
-                Nogle ord indleder ledsætninger som konjunktioner, men tilhører andre ordklasser. Det gælder blandt andet relative
-                pronomener og hv-ord.
+                Nogle ord indleder ledsætninger som konjunktioner, men tilhører andre ordklasser. 
+                Det gælder blandt andet relative pronomener og hv-ord.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Some words introduce subordinate clauses like conjunctions but belong to other word classes, including relative
-                    pronouns and wh-words.</em
-                >
+                <em>
+                    Some words introduce subordinate clauses like conjunctions but belong to other word classes, 
+                    including relative pronouns and wh-words.
+                </em>
             </p>
             <h3>Der og som / Der and som</h3>
             <table class="grammar-bilingual-table">
@@ -926,24 +1087,35 @@ const konjunktionGrammarPages = [
             </table>
             <h3>Hv-ord / Wh-words</h3>
             <p lang="da">
-                Hvem, hvad, hvor, hvordan, hvornår og hvorfor kan indlede indirekte spørgsmål: Jeg ved ikke, hvornår toget kommer.
+                Hvem, hvad, hvor, hvordan, hvornår og hvorfor kan indlede indirekte spørgsmål: 
+                Jeg ved ikke, hvornår toget kommer.
             </p>
             <p class="grammar-english" lang="en">
-                <em>Wh-words can introduce indirect questions: I do not know when the train arrives.</em>
+                <em>
+                    Wh-words can introduce indirect questions: I do not know when the train arrives.
+                </em>
             </p>
             <h3>Hvis og hvor / Whose and where</h3>
             <div class="grammar-example">
-                <p>Jeg har en veninde, <u>hvis</u> datter læser medicin. · Aarhus er byen, <u>hvor</u> jeg bor.</p>
+                <p>
+                    Jeg har en veninde, <u>hvis</u> datter læser medicin. · Aarhus er byen, <u>hvor</u> jeg bor.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>I have a friend whose daughter studies medicine. · Aarhus is the city where I live.</em>
+                    <em>
+                        I have a friend whose daughter studies medicine. · Aarhus is the city where I live.
+                    </em>
                 </p>
             </div>
             <aside class="grammar-tip">
                 <p lang="da">
-                    Det vigtigste er at genkende, at ordene starter en ledsætning, selv om de ikke altid er konjunktioner i snæver
-                    grammatisk betydning.
+                    Det vigtigste er at genkende, at ordene starter en ledsætning, selv om de ikke altid er 
+                    konjunktioner i snæver grammatisk betydning.
                 </p>
-                <p class="grammar-english" lang="en"><em>The key is to recognize that they begin a subordinate clause.</em></p>
+                <p class="grammar-english" lang="en">
+                    <em>
+                        The key is to recognize that they begin a subordinate clause.
+                    </em>
+                </p>
             </aside>
         `
     },
@@ -955,13 +1127,14 @@ const konjunktionGrammarPages = [
         content: `
             <p lang="da">
                 I en hovedsætning står et centraladverbium som <strong>ikke</strong>
-                normalt efter det finitte verbum. I en ledsætning står det normalt mellem subjektet og det finitte verbum.
+                normalt efter det finitte verbum. I en ledsætning står det normalt mellem subjektet 
+                og det finitte verbum.
             </p>
 
             <p class="grammar-english" lang="en">
                 <em>
-                    In a main clause, ikke normally follows the finite verb. In a subordinate clause, it normally comes between the
-                    subject and finite verb.
+                    In a main clause, ikke normally follows the finite verb. In a subordinate clause, 
+                    it normally comes between the subject and finite verb.
                 </em>
             </p>
 
@@ -1021,7 +1194,9 @@ const konjunktionGrammarPages = [
                         <td>Ledsætning</td>
 
                         <td>
-                            <span class="conjunction">C</span> + <span class="subject">S</span> + <span class="adverb">A</span> +
+                            <span class="conjunction">C</span> + 
+                            <span class="subject">S</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v1">V1</span>
                         </td>
 
@@ -1038,7 +1213,9 @@ const konjunktionGrammarPages = [
                         <td>Hovedsætning, to verber</td>
 
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v2">V2</span>
                         </td>
 
@@ -1054,7 +1231,9 @@ const konjunktionGrammarPages = [
                         <td>Ledsætning, to verber</td>
 
                         <td>
-                            <span class="conjunction">C</span> + <span class="subject">S</span> + <span class="adverb">A</span> +
+                            <span class="conjunction">C</span> + 
+                            <span class="subject">S</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v1">V1</span> +
                             <span class="verb-v2">V2</span>
                         </td>
@@ -1074,15 +1253,19 @@ const konjunktionGrammarPages = [
             <aside class="grammar-rule">
                 <p lang="da">
                     Hovedsætning:
-                    <span class="verb-v1">verbet</span> før <span class="adverb">ikke</span>. Ledsætning:
-                    <span class="adverb">ikke</span> før det <span class="verb-v1">finitte verbum</span>.
+                    <span class="verb-v1">verbet</span> før 
+                    <span class="adverb">ikke</span>. Ledsætning:
+                    <span class="adverb">ikke</span> før det 
+                    <span class="verb-v1">finitte verbum</span>.
                 </p>
 
                 <p class="grammar-english" lang="en">
                     <em>
                         Main clause:
-                        <span class="verb-v1">verb</span> before <span class="adverb">ikke</span>. Subordinate clause:
-                        <span class="adverb">ikke</span> before the <span class="verb-v1">finite verb</span>.
+                        <span class="verb-v1">verb</span> before 
+                        <span class="adverb">ikke</span>. Subordinate clause:
+                        <span class="adverb">ikke</span> before the 
+                        <span class="verb-v1">finite verb</span>.
                     </em>
                 </p>
             </aside>
@@ -1090,9 +1273,8 @@ const konjunktionGrammarPages = [
             <h3>Ledsætning først / Subordinate clause first</h3>
 
             <p lang="da">
-                Når en ledsætning står først, fylder den første plads i hovedsætningen. Derfor kommer det finitte verbum før
-                subjektet:
-
+                Når en ledsætning står først, fylder den første plads i hovedsætningen. 
+                Derfor kommer det finitte verbum før subjektet:
                 <strong>
                     <u><span class="conjunction">Hvis</span></u>
                     <span class="subject">det</span>
@@ -1104,7 +1286,9 @@ const konjunktionGrammarPages = [
             </p>
 
             <p class="grammar-english" lang="en">
-                <em> A leading subordinate clause causes inversion in the main clause: If it rains, we stay home. </em>
+                <em> 
+                    A leading subordinate clause causes inversion in the main clause: If it rains, we stay home. 
+                </em>
             </p>
         `
     },
@@ -1115,14 +1299,14 @@ const konjunktionGrammarPages = [
         titleEn: "Commas",
         content: `
             <p lang="da">
-                Når to helsætninger eller en hovedsætning og en ledsætning forbindes, står der ofte komma mellem dem. Eksemplerne
-                her bruger komma omkring ledsætninger.
+                Når to helsætninger eller en hovedsætning og en ledsætning forbindes, 
+                står der ofte komma mellem dem. Eksemplerne her bruger komma omkring ledsætninger.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >A comma often separates two complete clauses or a main and subordinate clause. These examples use commas around
-                    subordinate clauses.</em
-                >
+                <em>
+                    A comma often separates two complete clauses or a main and subordinate clause. 
+                    These examples use commas around subordinate clauses.
+                </em>
             </p>
             <table class="grammar-bilingual-table">
                 <thead>
@@ -1156,23 +1340,25 @@ const konjunktionGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Find subjekt og finit verbum:</strong> To sæt med eget subjekt og finit verbum betyder to sætninger. Ét
+                    <strong>Find subjekt og finit verbum:</strong> 
+                    To sæt med eget subjekt og finit verbum betyder to sætninger. Ét
                     subjekt med to verber kræver ikke automatisk komma.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >Two sets, each with a subject and finite verb, mean two clauses. One subject with two verbs does not
-                        automatically require a comma.</em
-                    >
+                    <em>
+                        Two sets, each with a subject and finite verb, mean two clauses. 
+                        One subject with two verbs does not automatically require a comma.
+                    </em>
                 </p>
             </aside>
             <table class="grammar-example-table">
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Struktur</strong><em class="grammar-english" lang="en">Structure</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Struktur</strong>
+                                <em class="grammar-english" lang="en">Structure</em>
+                            </span>
                         </th>
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
@@ -1182,20 +1368,32 @@ const konjunktionGrammarPages = [
                     <tr>
                         <td>Ét subjekt</td>
                         <td>
-                            <span class="subject">Hun</span> <span class="verb">vaskede</span>
-                            <u><span class="conjunction">og</span></u> <span class="verb">strøg</span>
+                            <span class="subject">Hun</span> 
+                            <span class="verb">vaskede</span>
+                            <u><span class="conjunction">og</span></u> 
+                            <span class="verb">strøg</span>
                             <span class="object">tøjet</span>.
                         </td>
-                        <td class="grammar-english" lang="en"><em>She washed and ironed the clothes.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>She washed and ironed the clothes.</em>
+                        </td>
                     </tr>
                     <tr>
                         <td>To subjekter</td>
                         <td>
-                            <span class="subject">Hun</span> <span class="verb">vaskede</span> <span class="object">tøjet</span>,
-                            <u><span class="conjunction">og</span></u> <span class="subject">han</span>
-                            <span class="verb">strøg</span> <span class="object">det</span>.
+                            <span class="subject">Hun</span> 
+                            <span class="verb">vaskede</span> 
+                            <span class="object">tøjet</span>,
+                            <u><span class="conjunction">og</span></u> 
+                            <span class="subject">han</span>
+                            <span class="verb">strøg</span> 
+                            <span class="object">det</span>.
                         </td>
-                        <td class="grammar-english" lang="en"><em>She washed the clothes, and he ironed them.</em></td>
+                        <td class="grammar-english" lang="en">
+                            <em>
+                                She washed the clothes, and he ironed them.
+                            </em>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -1210,15 +1408,17 @@ const konjunktionGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Hvad vil du udtrykke?</strong
-                                ><em class="grammar-english" lang="en">What do you mean?</em></span
-                            >
+                            <span class="grammar-paired-label"><strong lang="da">Hvad vil du udtrykke?</strong>
+                                <em class="grammar-english" lang="en">
+                                    What do you mean?
+                                </em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Vælg</strong><em class="grammar-english" lang="en">Choose</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Vælg</strong>
+                                <em class="grammar-english" lang="en">Choose</em>
+                            </span>
                         </th>
                         <th><strong>Eksempel</strong></th>
                     </tr>
@@ -1226,103 +1426,130 @@ const konjunktionGrammarPages = [
                 <tbody>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Tilføjelse</span><em lang="en">Addition</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Tilføjelse</span>
+                                <em lang="en">Addition</em>
+                            </span>
                         </td>
                         <td>og</td>
                         <td>Hun læser, og han skriver.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Modsætning</span><em lang="en">Contrast</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Modsætning</span>
+                                <em lang="en">Contrast</em>
+                            </span>
                         </td>
                         <td>men</td>
                         <td>Jeg er træt, men jeg arbejder.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Valg</span><em lang="en">Choice</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Valg</span>
+                                <em lang="en">Choice</em>
+                            </span>
                         </td>
                         <td>eller</td>
                         <td>Kaffe eller te?</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Forklaring, hovedsætning</span><em lang="en">Explanation, main clause</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Forklaring, hovedsætning</span>
+                                <em lang="en">Explanation, main clause</em>
+                            </span>
                         </td>
                         <td>for</td>
                         <td>Jeg går, for jeg er træt.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Resultat, hovedsætning</span><em lang="en">Result, main clause</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Resultat, hovedsætning</span>
+                                <em lang="en">Result, main clause</em>
+                            </span>
                         </td>
                         <td>så</td>
                         <td>Det regnede, så vi blev hjemme.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Oplysning</span><em lang="en">Statement</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Oplysning</span>
+                                <em lang="en">Statement</em>
+                            </span>
                         </td>
                         <td>at</td>
                         <td>Jeg tror, at hun kommer.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Indirekte spørgsmål</span><em lang="en">Indirect question</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Indirekte spørgsmål</span>
+                                <em lang="en">Indirect question</em>
+                            </span>
                         </td>
                         <td>om</td>
                         <td>Jeg ved ikke, om hun kommer.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Tid</span><em lang="en">Time</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Tid</span>
+                                <em lang="en">Time</em>
+                            </span>
                         </td>
                         <td>når, da, mens</td>
                         <td>Jeg ringer, når jeg kommer.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Årsag, ledsætning</span><em lang="en">Cause, subordinate clause</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Årsag, ledsætning</span>
+                                <em lang="en">Cause, subordinate clause</em>
+                            </span>
                         </td>
                         <td>fordi</td>
                         <td>Jeg går, fordi jeg er træt.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Betingelse</span><em lang="en">Condition</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Betingelse</span>
+                                <em lang="en">Condition</em>
+                            </span>
                         </td>
                         <td>hvis, medmindre</td>
                         <td>Vi går, hvis vejret er godt.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Indrømmelse</span><em lang="en">Concession</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Indrømmelse</span>
+                                <em lang="en">Concession</em>
+                            </span>
                         </td>
                         <td>selvom</td>
                         <td>Hun gik, selvom det regnede.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"><span lang="da">Formål</span><em lang="en">Purpose</em></span>
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Formål</span>
+                                <em lang="en">Purpose</em>
+                            </span>
                         </td>
                         <td>for at, så at</td>
                         <td>Jeg læser for at lære.</td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="grammar-meaning-pair"
-                                ><span lang="da">Resultat af grad</span><em lang="en">Result of degree</em></span
-                            >
+                            <span class="grammar-meaning-pair">
+                                <span lang="da">Resultat af grad</span>
+                                <em lang="en">Result of degree</em>
+                            </span>
                         </td>
                         <td>så … at</td>
                         <td>Han talte så lavt, at jeg intet hørte.</td>
@@ -1340,14 +1567,16 @@ const konjunktionGrammarPages = [
                 <thead>
                     <tr>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Forkert</strong><em class="grammar-english" lang="en">Incorrect</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Forkert</strong>
+                                <em class="grammar-english" lang="en">Incorrect</em>
+                            </span>
                         </th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Korrekt</strong><em class="grammar-english" lang="en">Correct</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Korrekt</strong>
+                                <em class="grammar-english" lang="en">Correct</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1358,11 +1587,11 @@ const konjunktionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Forklaring:</strong> I en ledsætning står <em>ikke</em> før det finitte verbum.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >In a subordinate clause, ikke comes before the finite verb.</em
-                            >
+                            <strong lang="da">Forklaring:</strong> 
+                                I en ledsætning står <em>ikke</em> før det finitte verbum.<br />
+                                <em class="grammar-english"lang="en">
+                                    In a subordinate clause, ikke comes before the finite verb.
+                                </em>
                         </td>
                     </tr>
                     <tr>
@@ -1371,11 +1600,10 @@ const konjunktionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Forklaring:</strong> En indledende ledsætning giver inversion i hovedsætningen.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >A leading subordinate clause causes inversion in the main clause.</em
-                            >
+                            <strong lang="da">Forklaring:</strong> En indledende ledsætning giver inversion i hovedsætningen.<br />
+                            <em class="grammar-english" lang="en">
+                                A leading subordinate clause causes inversion in the main clause.
+                            </em>
                         </td>
                     </tr>
                     <tr>
@@ -1384,11 +1612,10 @@ const konjunktionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Forklaring:</strong> Et indirekte ja/nej-spørgsmål bruger <em>om</em>.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >An indirect yes/no question uses om.</em
-                            >
+                            <strong lang="da">Forklaring:</strong> Et indirekte ja/nej-spørgsmål bruger <em>om</em>.<br />
+                            <em class="grammar-english" lang="en">
+                                An indirect yes/no question uses om.
+                            </em>
                         </td>
                     </tr>
                     <tr>
@@ -1397,11 +1624,10 @@ const konjunktionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Forklaring:</strong> Efter <em>for</em> bruges hovedsætningsordstilling.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >For is followed by main-clause word order.</em
-                            >
+                            <strong lang="da">Forklaring:</strong> Efter <em>for</em> bruges hovedsætningsordstilling.<br />
+                                <em class="grammar-english" lang="en">
+                                    For is followed by main-clause word order.
+                                </em>
                         </td>
                     </tr>
                     <tr>
@@ -1410,11 +1636,10 @@ const konjunktionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Forklaring:</strong> <em>Medmindre</em> betyder allerede <em>hvis ikke</em>.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >Medmindre already means unless or if not.</em
-                            >
+                            <strong lang="da">Forklaring:</strong> <em>Medmindre</em> betyder allerede <em>hvis ikke</em>.<br />
+                                <em class="grammar-english" lang="en">
+                                    Medmindre already means unless or if not.
+                                </em>
                         </td>
                     </tr>
                     <tr>
@@ -1423,11 +1648,10 @@ const konjunktionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Forklaring:</strong> Konstruktionen <em>så … at</em> viser et resultat.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >The construction så … at expresses a result.</em
-                            >
+                            <strong lang="da">Forklaring:</strong> Konstruktionen <em>så … at</em> viser et resultat.<br />
+                                <em class="grammar-english" lang="en">
+                                    The construction så … at expresses a result.
+                                </em>
                         </td>
                     </tr>
                     <tr>
@@ -1436,11 +1660,10 @@ const konjunktionGrammarPages = [
                     </tr>
                     <tr class="grammar-correction-reason">
                         <td colspan="2">
-                            <strong lang="da">Forklaring:</strong> <em>Fordi</em> står normalt ikke sammen med <em>at</em>.<br /><em
-                                class="grammar-english"
-                                lang="en"
-                                >Fordi is not normally combined with at.</em
-                            >
+                            <strong lang="da">Forklaring:</strong> <em>Fordi</em> står normalt ikke sammen med <em>at</em>.<br />
+                                <em class="grammar-english" lang="en">
+                                    Fordi is not normally combined with at.
+                                </em>
                         </td>
                     </tr>
                 </tbody>
@@ -1448,27 +1671,28 @@ const konjunktionGrammarPages = [
             <h3>Tjek din tekst / Check your text</h3>
             <ul class="grammar-checklist">
                 <li>
-                    <span lang="da">Har hver ledsætning den rigtige konjunktion?</span
-                    ><span class="grammar-english" lang="en">Does each subordinate clause use the correct conjunction?</span>
+                    <span lang="da">Har hver ledsætning den rigtige konjunktion?</span>
+                        <span class="grammar-english" lang="en">
+                            Does each subordinate clause use the correct conjunction?
+                        </span>
                 </li>
                 <li>
-                    <span lang="da">Står <em>ikke</em> før det finitte verbum i ledsætninger?</span
-                    ><span class="grammar-english" lang="en"
-                        >Does <em>ikke</em> come before the finite verb in subordinate clauses?</span
-                    >
+                    <span lang="da">Står <em>ikke</em> før det finitte verbum i ledsætninger?</span>
+                        <span class="grammar-english" lang="en">
+                            Does <em>ikke</em> come before the finite verb in subordinate clauses?
+                        </span>
                 </li>
                 <li>
-                    <span lang="da">Har hovedsætningen inversion efter en indledende ledsætning?</span
-                    ><span class="grammar-english" lang="en"
-                        >Does the main clause use inversion after an opening subordinate clause?</span
-                    >
+                    <span lang="da">Har hovedsætningen inversion efter en indledende ledsætning?</span>
+                        <span class="grammar-english" lang="en">
+                            Does the main clause use inversion after an opening subordinate clause?
+                        </span>
                 </li>
                 <li>
-                    <span lang="da"
-                        >Har du valgt <em>at</em> til en oplysning og <em>om</em> til et indirekte ja/nej-spørgsmål?</span
-                    ><span class="grammar-english" lang="en"
-                        >Did you choose <em>at</em> for a statement and <em>om</em> for an indirect yes/no question?</span
-                    >
+                    <span lang="da">Har du valgt <em>at</em> til en oplysning og <em>om</em> til et indirekte ja/nej-spørgsmål?</span>
+                    <span class="grammar-english" lang="en">
+                        Did you choose <em>at</em> for a statement and <em>om</em> for an indirect yes/no question?
+                    </span>
                 </li>
             </ul>
         `
@@ -1694,10 +1918,10 @@ const konjunktionGrammarPages = [
                         <th lang="da">Dansk</th>
                         <th class="grammar-english" lang="en">English</th>
                         <th>
-                            <span class="grammar-paired-label"
-                                ><strong lang="da">Kort forklaring</strong
-                                ><em class="grammar-english" lang="en">Short explanation</em></span
-                            >
+                            <span class="grammar-paired-label">
+                                <strong lang="da">Kort forklaring</strong>
+                                <em class="grammar-english" lang="en">Short explanation</em>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1776,20 +2000,24 @@ const konjunktionGrammarPages = [
             </table>
             <aside class="grammar-tip">
                 <p lang="da">
-                    <strong>Din vigtigste vane:</strong> Spørg først, om du forbinder to lige led eller indleder en ledsætning. Vælg
-                    derefter efter betydning: tid, årsag, betingelse, modsætning, formål eller resultat.
+                    <strong>Din vigtigste vane:</strong> Spørg først, om du forbinder to lige led eller indleder en ledsætning.
+                    Vælg derefter efter betydning: tid, årsag, betingelse, modsætning, formål eller resultat.
                 </p>
                 <p class="grammar-english" lang="en">
-                    <em
-                        >First decide whether you connect equal elements or introduce a subordinate clause. Then choose according to
-                        meaning.</em
-                    >
+                    <em>
+                        First decide whether you connect equal elements or introduce a subordinate clause. 
+                        Then choose according to meaning.
+                    </em>
                 </p>
             </aside>
             <div class="grammar-example">
-                <p>Jeg bliver hjemme, fordi jeg er træt, men jeg arbejder videre i morgen.</p>
+                <p>
+                    Jeg bliver hjemme, fordi jeg er træt, men jeg arbejder videre i morgen.
+                </p>
                 <p class="grammar-english" lang="en">
-                    <em>I am staying home because I am tired, but I will continue working tomorrow.</em>
+                    <em>
+                        I am staying home because I am tired, but I will continue working tomorrow.
+                    </em>
                 </p>
             </div>
         `
