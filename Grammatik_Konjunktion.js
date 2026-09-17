@@ -331,7 +331,7 @@ const konjunktionGrammarPages = [
                     Så expresses a result. It can often be replaced by derfor, but the word order changes.
                 </em>
             </p>
-            <table class="grammar-example-table">
+            <table class="grammar-example-table grammar-focus-example-table">
                 <thead>
                     <tr>
                         <th><strong>Ord</strong></th>
@@ -1194,7 +1194,7 @@ const konjunktionGrammarPages = [
                         <td>Ledsætning</td>
 
                         <td>
-                            <span class="conjunction">C</span> + 
+                            <span class="conjunction">K</span> + 
                             <span class="subject">S</span> + 
                             <span class="adverb">A</span> +
                             <span class="verb-v1">V1</span>
@@ -1231,7 +1231,7 @@ const konjunktionGrammarPages = [
                         <td>Ledsætning, to verber</td>
 
                         <td>
-                            <span class="conjunction">C</span> + 
+                            <span class="conjunction">K</span> + 
                             <span class="subject">S</span> + 
                             <span class="adverb">A</span> +
                             <span class="verb-v1">V1</span> +

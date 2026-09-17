@@ -1951,6 +1951,11 @@ main {
         border-right: 1px solid var(--border);
     }
 
+    .grammar-content .grammar-bilingual-table .grammar-correction-reason td {
+        grid-column: 1 / -1;
+        border-right: 0;
+    }
+
     .grammar-content .grammar-example-table .grammar-shared-column {
         grid-column: 1 / -1;
         border-right: 0;
