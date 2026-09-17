@@ -79,10 +79,10 @@ const verbumGrammarPages = [
                                 fortælle, hvad jeg gør eller er, er det sandsynligvis et verbum.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >Try putting jeg (I) before the word: jeg spiser, jeg løber, jeg er. If the word tells what I do
-                                    or am, it is probably a verb.</em
-                                >
+                                <em>
+                                    Try putting jeg (I) before the word: jeg spiser, jeg løber, jeg er. 
+                                    If the word tells what I do or am, it is probably a verb.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -117,10 +117,10 @@ const verbumGrammarPages = [
                 Danske verber ændrer normalt ikke form efter personen. Nutidsformen er den samme med jeg, du, han, hun, vi og de.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Danish verbs normally do not change according to the subject. The present-tense form is the same with I, you,
-                    he, she, we, and they.</em
-                >
+                <em>
+                    Danish verbs normally do not change according to the subject. 
+                    The present-tense form is the same with I, you, he, she, we, and they.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-bilingual-table">
                 <colgroup>
@@ -189,10 +189,10 @@ const verbumGrammarPages = [
                 verber har i sætningen. Verballedet kan derfor bestå af ét verbum eller flere verber sammen.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >A verb is a word class. A verb phrase is the sentence element made up of one or more verbs. It may contain one
-                    verb or several verbs working together.</em
-                >
+                <em>
+                    A verb is a word class. A verb phrase is the sentence element made up of one or more verbs. 
+                    It may contain one verb or several verbs working together.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table">
                 <colgroup>
@@ -251,10 +251,10 @@ const verbumGrammarPages = [
                                 <u>bliver</u>. Se derefter, om der hører andre verbalformer til. Saml dem som ét verballed.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >First find the verb that carries tense: spiser, spiste, har, vil, or bliver. Then check whether
-                                    other verb forms belong with it. Treat the whole group as one verb phrase.</em
-                                >
+                                <em>
+                                    First find the verb that carries tense: spiser, spiste, har, vil, or bliver. Then check whether
+                                    other verb forms belong with it. Treat the whole group as one verb phrase.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -273,12 +273,12 @@ const verbumGrammarPages = [
                                 <em>He will not have forgotten the appointment.</em>
                             </p>
                             <p class="grammar-inline-language-pair">
-                                <span lang="da"
-                                    >Verballed: <u>vil have glemt</u>. Ikke er et adverbium og er ikke en del af verballedet.</span
-                                >
-                                <span class="grammar-english" lang="en"
-                                    >Verb phrase: vil have glemt. Ikke is an adverb and is not part of the verb phrase.</span
-                                >
+                                <span lang="da">
+                                    Verballed: <u>vil have glemt</u>. Ikke er et adverbium og er ikke en del af verballedet.
+                                </span>
+                                <span class="grammar-english" lang="en">
+                                    Verb phrase: vil have glemt. Ikke is an adverb and is not part of the verb phrase.
+                                </span>
                             </p>
                         </th>
                     </tr>
@@ -294,10 +294,10 @@ const verbumGrammarPages = [
                 <u>Spis</u> er verballedet.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >In a sentence such as Spis! (Eat!), the subject is normally not written. The understood subject is du or I.
-                    Spis is the verb phrase.</em
-                >
+                <em>
+                    In a sentence such as Spis! (Eat!), the subject is normally not written. 
+                    The understood subject is du or I. Spis is the verb phrase.
+                </em>
             </p>
             <table class="grammar-noun-table">
                 <colgroup>
@@ -332,11 +332,11 @@ const verbumGrammarPages = [
                 former. En infinit form viser ikke selv tid og skal ofte stå sammen med en finit form.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >A finite verb form can show tense or the imperative and can form the core of a clause. Present, past, and
+                <em>
+                    A finite verb form can show tense or the imperative and can form the core of a clause. Present, past, and
                     imperative forms are finite. A non-finite form does not show tense by itself and often appears with a finite
-                    verb.</em
-                >
+                    verb.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table">
                 <colgroup>
@@ -442,10 +442,10 @@ const verbumGrammarPages = [
                                 verber står i infinitte former.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >An ordinary Danish clause normally has only one finite verb in the same verb phrase. The other
-                                    verbs are non-finite.</em
-                                >
+                                <em>
+                                    An ordinary Danish clause normally has only one finite verb in the same verb phrase. 
+                                    The other verbs are non-finite.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -465,10 +465,10 @@ const verbumGrammarPages = [
                 Bydemåde og lang tillægsform er også vigtige.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >When learning a new verb, learn at least four forms: infinitive, present, past, and past participle. The
-                    imperative and present participle are also useful.</em
-                >
+                <em>
+                    When learning a new verb, learn at least four forms: infinitive, present, past, and past participle. 
+                    The imperative and present participle are also useful.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table">
                 <colgroup>
@@ -599,10 +599,10 @@ const verbumGrammarPages = [
                                 eksempel: Jeg <u>skriver</u> en mail.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >Write new verbs like this: at skrive - skriver - skrev - skrevet. Add an example: Jeg skriver
-                                    en mail.</em
-                                >
+                                <em>
+                                    Write new verbs like this: at skrive - skriver - skrev - skrevet. Add an example: 
+                                    Jeg skriver en mail.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -618,10 +618,11 @@ const verbumGrammarPages = [
                 eller have helt særlige former. Der findes flere mønstre, så brug en ordbog, når du er usikker.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Regular verbs follow a predictable pattern in the past and past participle. Irregular verbs may change their
-                    vowel or have special forms. There are several patterns, so use a dictionary when unsure.</em
-                >
+                <em>
+                    Regular verbs follow a predictable pattern in the past and past participle. 
+                    Irregular verbs may change their vowel or have special forms. 
+                    There are several patterns, so use a dictionary when unsure.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-form-table--four-column">
                 <colgroup>
@@ -717,14 +718,15 @@ const verbumGrammarPages = [
                 <span class="grammar-english grammar-heading-english" lang="en">Present tense</span>
             </h3>
             <p lang="da">
-                Nutid bruges om noget, der sker nu, gentager sig, eller gælder generelt. Den bruges også ofte om planlagt fremtid,
+                Nutid bruges om noget, der sker nu, gentager sig, eller gælder generelt. 
+                Den bruges også ofte om planlagt fremtid,
                 når en tidsangivelse gør fremtiden tydelig.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The present tense is used for something happening now, something repeated, or something generally true. It is
-                    also often used for a planned future when a time expression makes the future clear.</em
-                >
+                <em>
+                    The present tense is used for something happening now, something repeated, or something generally true. 
+                    It is also often used for a planned future when a time expression makes the future clear.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <colgroup>
@@ -787,10 +789,10 @@ const verbumGrammarPages = [
                                 <u>læse</u> -&gt; <u>læser</u>, at <u>køre</u> -&gt; <u>kører</u>.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >Many verbs form the present tense by adding -r to the infinitive: spise -&gt; spiser, læse
-                                    -&gt; læser, køre -&gt; kører.</em
-                                >
+                                <em>
+                                    Many verbs form the present tense by adding -r to the infinitive: spise -&gt; spiser, læse
+                                    -&gt; læser, køre -&gt; kører.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -806,10 +808,10 @@ const verbumGrammarPages = [
                 sidste uge eller for tre år siden står ofte sammen med datid.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The past tense is used for something that happened or was true before the time of speaking. A definite
-                    past-time expression such as yesterday, last week, or three years ago often goes with the past tense.</em
-                >
+                <em>
+                    The past tense is used for something that happened or was true before the time of speaking. 
+                    A definite past-time expression such as yesterday, last week, or three years ago often goes with the past tense.
+                </em>
             </p>
             <table class="grammar-noun-table">
                 <colgroup>
@@ -922,11 +924,11 @@ const verbumGrammarPages = [
                 relevant nu, om erfaringer på et ubestemt tidspunkt, eller om noget, der begyndte før og stadig gælder.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The present perfect is formed with the present tense of have or be plus a past participle. It is used for a
+                <em>
+                    The present perfect is formed with the present tense of have or be plus a past participle. It is used for a
                     past action relevant now, for experience at an unspecified time, or for something that began earlier and is
-                    still true.</em
-                >
+                    still true.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <colgroup>
@@ -989,10 +991,10 @@ const verbumGrammarPages = [
                                 førnutid, når tidspunktet ikke er vigtigt eller ikke er afsluttet: Jeg <u>har set</u> filmen.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >Use the past with a finished, definite time: Jeg så filmen i går. Use the present perfect when
-                                    the exact time is not important or the period is still open: Jeg har set filmen.</em
-                                >
+                                <em>
+                                    Use the past with a finished, definite time: Jeg så filmen i går. Use the present perfect when
+                                    the exact time is not important or the period is still open: Jeg har set filmen.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -1008,10 +1010,10 @@ const verbumGrammarPages = [
                 andet tidspunkt i fortiden.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The past perfect is formed with the past tense of have or be plus a past participle. It shows that something
-                    had already happened before another past event.</em
-                >
+                <em>
+                    The past perfect is formed with the past tense of have or be plus a past participle. 
+                    It shows that something had already happened before another past event.
+                </em>
             </p>
             <table class="grammar-noun-table">
                 <colgroup>
@@ -1109,10 +1111,10 @@ const verbumGrammarPages = [
                 modalverbum som skal eller vil.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Danish does not have one special future ending. Future meaning is often expressed with the present tense plus a
-                    time expression, or with a modal verb such as skal or vil.</em
-                >
+                <em>
+                    Danish does not have one special future ending. Future meaning is often expressed with the present tense plus a
+                    time expression, or with a modal verb such as skal or vil.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <colgroup>
@@ -1184,10 +1186,10 @@ const verbumGrammarPages = [
                                 direkte til det engelske future will.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >Vil often expresses willingness or intention. It is therefore not always a direct equivalent of
-                                    English future will.</em
-                                >
+                                <em>
+                                    Vil often expresses willingness or intention. It is therefore not always a direct equivalent of
+                                    English future will.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -1203,10 +1205,10 @@ const verbumGrammarPages = [
                 + have/være + kort tillægsform.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The future perfect shows that something will be completed before a later future point. It can be formed with
-                    vil or skal + have/be + a past participle.</em
-                >
+                <em>
+                    The future perfect shows that something will be completed before a later future point. 
+                    It can be formed with vil or skal + have/be + a past participle.
+                </em>
             </p>
             <table class="grammar-noun-table">
                 <colgroup>
@@ -1257,10 +1259,10 @@ const verbumGrammarPages = [
                 sidste -e fra navnemåden.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The imperative is used for commands, instructions, invitations, and requests. With many verbs, the final -e is
-                    removed from the infinitive.</em
-                >
+                <em>
+                    The imperative is used for commands, instructions, invitations, and requests. 
+                    With many verbs, the final -e is removed from the infinitive.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table">
                 <colgroup>
@@ -1351,10 +1353,10 @@ const verbumGrammarPages = [
             </h3>
             <p lang="da">Navnemåden er verbets grundform. Den står ofte med at, men efter et modalverbum bruges den uden at.</p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The infinitive is the basic form of the verb. It often appears with at (to), but after a modal verb it is used
-                    without at.</em
-                >
+                <em>
+                    The infinitive is the basic form of the verb. It often appears with at (to), 
+                    but after a modal verb it is used without at.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <colgroup>
@@ -1417,10 +1419,10 @@ const verbumGrammarPages = [
                                 <u>skal</u>, <u>vil</u>, <u>må</u>, <u>bør</u> og <u>tør</u> bruges navnemåden uden at.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >Not: Jeg kan at svømme. Correct: Jeg kan svømme. After kan, skal, vil, må, bør, and tør, use
-                                    the infinitive without at.</em
-                                >
+                                <em>
+                                    Not: Jeg kan at svømme. Correct: Jeg kan svømme. After kan, skal, vil, må, bør, and tør, use
+                                    the infinitive without at.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -1436,14 +1438,15 @@ const verbumGrammarPages = [
         titleEn: "Modal verbs",
         content: `
             <p lang="da">
-                Modalverber fortæller ikke kun, hvad der sker. De viser også mulighed, evne, nødvendighed, tilladelse, pligt, vilje
+                Modalverber fortæller ikke kun, hvad der sker. 
+                De viser også mulighed, evne, nødvendighed, tilladelse, pligt, vilje
                 eller mod. Verbet efter modalverbet står i navnemåde uden at.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Modal verbs add meanings such as possibility, ability, necessity, permission, obligation, willingness, or
-                    courage. The following verb is an infinitive without at.</em
-                >
+                <em>
+                    Modal verbs add meanings such as possibility, ability, necessity, permission, obligation, willingness, or
+                    courage. The following verb is an infinitive without at.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <colgroup>
@@ -1594,13 +1597,13 @@ const verbumGrammarPages = [
                                 <em>She has had to work for a long time.</em>
                             </p>
                             <p class="grammar-inline-language-pair">
-                                <span lang="da"
-                                    ><u>har</u> = finit hjælpeverbum; <u>måttet</u> = kort tillægsform; <u>arbejde</u> =
-                                    navnemåde.</span
-                                >
-                                <span class="grammar-english" lang="en"
-                                    >har = finite auxiliary; måttet = past participle; arbejde = infinitive.</span
-                                >
+                                <span lang="da">
+                                    <u>har</u> = finit hjælpeverbum; <u>måttet</u> = kort tillægsform; <u>arbejde</u> =
+                                    navnemåde.
+                                </span>
+                                <span class="grammar-english" lang="en">
+                                    har = finite auxiliary; måttet = past participle; arbejde = infinitive.
+                                </span>
                             </p>
                         </th>
                     </tr>
@@ -1621,10 +1624,10 @@ const verbumGrammarPages = [
                 gjort.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Auxiliary verbs combine with another verb to form tenses, passive constructions, or other verbal meanings. The
-                    most important are have, be, and become. Få can also express arranging for something to be done.</em
-                >
+                <em>
+                    Auxiliary verbs combine with another verb to form tenses, passive constructions, or other verbal meanings. The
+                    most important are have, be, and become. Få can also express arranging for something to be done.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table">
                 <colgroup>
@@ -1677,10 +1680,10 @@ const verbumGrammarPages = [
                 overgang til en ny tilstand eller position. Nogle verber kan bruge begge hjælpeverber, men betydningen ændrer sig.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Have is used in most perfect forms. Be is used especially when the participle describes a resulting state or a
-                    transition to a new state or position. Some verbs can use both auxiliaries, but the meaning changes.</em
-                >
+                <em>
+                    Have is used in most perfect forms. Be is used especially when the participle describes a resulting state or a
+                    transition to a new state or position. Some verbs can use both auxiliaries, but the meaning changes.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-comparison-table--two-column">
                 <colgroup>
@@ -1743,10 +1746,10 @@ const verbumGrammarPages = [
                                 <u>har gået</u> ti kilometer.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >Learn the auxiliary together with an example. Write, for example, at gå - hun er gået hjem, but
-                                    hun har gået ti kilometer.</em
-                                >
+                                <em>
+                                    Learn the auxiliary together with an example. Write, for example, at gå - hun er gået hjem, but
+                                    hun har gået ti kilometer.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -1766,14 +1769,14 @@ const verbumGrammarPages = [
                 <span class="grammar-english grammar-heading-english" lang="en">Past participle</span>
             </h3>
             <p lang="da">
-                Kort tillægsform bruges især efter have, være og blive. Den indgår i førnutid, førdatid og passiv. Den kan også
-                bruges som et adjektiv.
+                Kort tillægsform bruges især efter have, være og blive. Den indgår i førnutid, førdatid og passiv. 
+                Den kan også bruges som et adjektiv.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The past participle is used especially after have, be, and become. It forms the present perfect, past perfect,
-                    and passive. It can also function as an adjective.</em
-                >
+                <em>
+                    The past participle is used especially after have, be, and become. 
+                    It forms the present perfect, past perfect, and passive. It can also function as an adjective.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <colgroup>
@@ -1834,10 +1837,10 @@ const verbumGrammarPages = [
                 Den kan også bruges som adjektiv eller substantiv.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The present participle ends in -ende. It can describe an action happening at the same time as movement or a
-                    state. It may also function as an adjective or noun.</em
-                >
+                <em>
+                    The present participle ends in -ende. It can describe an action happening at the same time as movement or a
+                    state. It may also function as an adjective or noun.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <colgroup>
@@ -1927,10 +1930,10 @@ const verbumGrammarPages = [
                 handlingen rammer. Den, der udfører handlingen, kan nævnes med af, men kan også udelades.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >In an active sentence, the subject performs the action. In a passive sentence, the subject is the person or
-                    thing affected by the action. The agent can be added with af (by), but may be omitted.</em
-                >
+                <em>
+                    In an active sentence, the subject performs the action. In a passive sentence, the subject is the person or
+                    thing affected by the action. The agent can be added with af (by), but may be omitted.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-comparison-table--two-column">
                 <colgroup>
@@ -1976,10 +1979,10 @@ const verbumGrammarPages = [
                 S-passiv dannes med -s. Den bruges ofte i regler, instruktioner, skilte, opskrifter og generelle beskrivelser.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The s-passive is formed with -s. It is common in rules, instructions, signs, recipes, and general
-                    descriptions.</em
-                >
+                <em>
+                    The s-passive is formed with -s. It is common in rules, instructions, signs, recipes, and general
+                    descriptions.
+                </em>
             </p>
             <table class="grammar-noun-table">
                 <colgroup>
@@ -2038,10 +2041,10 @@ const verbumGrammarPages = [
                 bøjes i forskellige tider.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >The blive-passive is formed with blive plus a past participle. It often highlights the event or process and can
-                    be used in different tenses.</em
-                >
+                <em>
+                    The blive-passive is formed with blive plus a past participle. It often highlights the event or process and can
+                    be used in different tenses.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-example-table">
                 <colgroup>
@@ -2104,10 +2107,10 @@ const verbumGrammarPages = [
                                 konkret hændelse: Døren <u>bliver åbnet</u> nu.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >The s-passive often sounds general or rule-like: Døren åbnes kl. 8. The blive-passive
-                                    highlights a particular event: Døren bliver åbnet nu.</em
-                                >
+                                <em>
+                                    The s-passive often sounds general or rule-like: Døren åbnes kl. 8. The blive-passive
+                                    highlights a particular event: Døren bliver åbnet nu.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -2184,7 +2187,9 @@ const verbumGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
                             <span class="object">DO</span>
                         </td>
                     </tr>
@@ -2202,7 +2207,9 @@ const verbumGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="conjunction">C</span> + <span class="subject">S</span> + <span class="adverb">A</span> +
+                            <span class="conjunction">C</span> + 
+                            <span class="subject">S</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v1">V1</span> +
                             <span class="object">DO</span>
                         </td>
@@ -2220,7 +2227,9 @@ const verbumGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="subject">S</span> + <span class="verb-v1">V1</span> + <span class="adverb">A</span> +
+                            <span class="subject">S</span> + 
+                            <span class="verb-v1">V1</span> + 
+                            <span class="adverb">A</span> +
                             <span class="verb-v2">V2</span> +
                             <span class="object">DO</span>
                         </td>
@@ -2240,8 +2249,11 @@ const verbumGrammarPages = [
                         </td>
 
                         <td>
-                            <span class="conjunction">C</span> + <span class="subject">S</span> + <span class="adverb">A</span> +
-                            <span class="verb-v1">V1</span> + <span class="verb-v2">V2</span> +
+                            <span class="conjunction">C</span> + 
+                            <span class="subject">S</span> + 
+                            <span class="adverb">A</span> +
+                            <span class="verb-v1">V1</span> + 
+                            <span class="verb-v2">V2</span> +
                             <span class="object">DO</span>
                         </td>
                     </tr>
@@ -2271,13 +2283,15 @@ const verbumGrammarPages = [
                             <p class="grammar-inline-language-pair">
                                 <span lang="da">
                                     Hovedsætning:
-                                    <span class="verb-v1">har</span> + <span class="adverb">ikke</span> +
+                                    <span class="verb-v1">har</span> + 
+                                    <span class="adverb">ikke</span> +
                                     <span class="verb-v2">set</span>.
                                 </span>
 
                                 <span class="grammar-english" lang="en">
                                     Main clause:
-                                    <span class="verb-v1">har</span> + <span class="adverb">ikke</span> +
+                                    <span class="verb-v1">har</span> + 
+                                    <span class="adverb">ikke</span> +
                                     <span class="verb-v2">set</span>.
                                 </span>
                             </p>
@@ -2313,13 +2327,15 @@ const verbumGrammarPages = [
                             <p class="grammar-inline-language-pair">
                                 <span lang="da">
                                     Ledsætning:
-                                    <span class="adverb">ikke</span> + <span class="verb-v1">har</span> +
+                                    <span class="adverb">ikke</span> + 
+                                    <span class="verb-v1">har</span> +
                                     <span class="verb-v2">set</span>.
                                 </span>
 
                                 <span class="grammar-english" lang="en">
                                     Subordinate clause:
-                                    <span class="adverb">ikke</span> + <span class="verb-v1">har</span> +
+                                    <span class="adverb">ikke</span> + 
+                                    <span class="verb-v1">har</span> +
                                     <span class="verb-v2">set</span>.
                                 </span>
                             </p>
@@ -2385,10 +2401,10 @@ const verbumGrammarPages = [
                 I nogle verber viser en dobbelt konsonant, at vokalen foran er kort. Bevar stavemønstret i de bøjede former.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >In some verbs, a doubled consonant shows that the preceding vowel is short. Keep the spelling pattern in the
-                    inflected forms.</em
-                >
+                <em>
+                    In some verbs, a doubled consonant shows that the preceding vowel is short. 
+                    Keep the spelling pattern in the inflected forms.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-form-table--four-column">
                 <colgroup>
@@ -2454,14 +2470,14 @@ const verbumGrammarPages = [
                 <span class="grammar-english grammar-heading-english" lang="en">Verbs with r</span>
             </h3>
             <p lang="da">
-                Ved verber som køre, høre og svare kan forskellen mellem navnemåde og nutid være svær at høre. Nutid har normalt et
-                ekstra -r i skriften.
+                Ved verber som køre, høre og svare kan forskellen mellem navnemåde og nutid være svær at høre. 
+                Nutid har normalt et ekstra -r i skriften.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >With verbs such as køre, høre, and svare, the difference between the infinitive and present tense can be hard
-                    to hear. The present tense normally has an additional written -r.</em
-                >
+                <em>
+                    With verbs such as køre, høre, and svare, the difference between the infinitive and present tense 
+                    can be hard to hear. The present tense normally has an additional written -r.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-form-table--four-column">
                 <colgroup>
@@ -2549,10 +2565,10 @@ const verbumGrammarPages = [
                                 og derfor skal der stå Jeg kører ligesom Jeg spiser.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >If you are unsure about the present-tense r, replace the verb with spise. Jeg køre? becomes Jeg
-                                    spise?, showing that the correct form is Jeg kører, like Jeg spiser.</em
-                                >
+                                <em>
+                                    If you are unsure about the present-tense r, replace the verb with spise. Jeg køre? becomes Jeg
+                                    spise?, showing that the correct form is Jeg kører, like Jeg spiser.
+                                </em>
                             </p>
                         </th>
                     </tr>
@@ -2568,10 +2584,10 @@ const verbumGrammarPages = [
                 ordbogen ved tvivl.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Some infinitives end in a vowel other than -e. They follow their own spelling patterns. Learn the full set of
-                    forms and use a dictionary when unsure.</em
-                >
+                <em>
+                    Some infinitives end in a vowel other than -e. They follow their own spelling patterns. 
+                    Learn the full set of forms and use a dictionary when unsure.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-form-table--four-column">
                 <colgroup>
@@ -2631,10 +2647,10 @@ const verbumGrammarPages = [
                 Uregelmæssige verber kan ikke altid bøjes ved hjælp af en enkel regel. Lær især nutid, datid og kort tillægsform.
             </p>
             <p class="grammar-english" lang="en">
-                <em
-                    >Irregular verbs cannot always be inflected using a simple rule. Learn the present, past, and past participle
-                    forms.</em
-                >
+                <em>
+                    Irregular verbs cannot always be inflected using a simple rule. 
+                    Learn the present, past, and past participle forms.
+                </em>
             </p>
             <table class="grammar-noun-table grammar-comparison-table grammar-form-table--four-column">
                 <colgroup>
@@ -3820,10 +3836,10 @@ const verbumGrammarPages = [
                                 - skrevet. Jeg skriver en mail.
                             </p>
                             <p class="grammar-english" lang="en">
-                                <em
-                                    >When learning a new Danish verb, learn four forms and one complete sentence: at skrive -
-                                    skriver - skrev - skrevet. Jeg skriver en mail.</em
-                                >
+                                <em>
+                                    When learning a new Danish verb, learn four forms and one complete sentence: at skrive -
+                                    skriver - skrev - skrevet. Jeg skriver en mail.
+                                </em>
                             </p>
                         </th>
                     </tr>
